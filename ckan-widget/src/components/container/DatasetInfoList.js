@@ -1,22 +1,41 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 import DatasetInfo from '../presentational/DatasetInfo'
+import * as actions from '../../actions'
 
 
 class DatasetInfoList extends Component{
 
-    //TODO: add unique "key" prop.
+    componentDidMount() {
+        this.props.packageSearch()
+    }
 
     render(){
         //get list of datasets from dataset search here
-        let datasets = [1,2];
-        let datasetsList = datasets.map(function(name){
-            return <DatasetInfo />
+        let datasets = this.props.datasets
+        let total = this.props.total
+
+        const TotalDatasets = () => {
+            return <div>{ total } result(s)</div>
+        }
+
+        let datasetsList = datasets.map((dataset, i) => {
+            return <DatasetInfo  {...dataset} key={i} />
         });
+
+        datasetsList.unshift(TotalDatasets())
 
         return datasetsList
     }
 
 }
 
-export default DatasetInfoList;
+const mapStateToProps = state => {
+    return {
+        datasets: state.packageSearch.datasets,
+        total: state.packageSearch.total
+    }
+}
+
+export default connect(mapStateToProps, actions)(DatasetInfoList)

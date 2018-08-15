@@ -1,22 +1,25 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 import SearchBar from '../presentational/SearchBar'
+import * as actions from '../../actions'
 
 class DatasetSearchBar extends Component{
-    state ={
-        query: '',
-        results: []
+    constructor(props) {
+        super(props)
+        this.handleInputChange = this.handleInputChange.bind(this)
     }
 
-    handleInputChange = () => {
-        //add input change event
+    handleInputChange = (event) => {
+        let q = event.target.value
+        this.props.packageSearch({q: q})
     }
 
     render(){
         return(
-            //send aditional props and events in search bar
-            <SearchBar onChange={this.handleInputChange}/>
+            <SearchBar handleInputChange = {this.handleInputChange}/>
         )
     }
 }
-export default DatasetSearchBar;
+
+export default connect(null, actions)(DatasetSearchBar)

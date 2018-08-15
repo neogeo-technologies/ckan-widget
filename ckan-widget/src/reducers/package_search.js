@@ -5,6 +5,7 @@ import {
 
 const INITIAL_STATE = {
     datasets: [],
+    searchText: '',
     total: 0,
     error: ''
 }
