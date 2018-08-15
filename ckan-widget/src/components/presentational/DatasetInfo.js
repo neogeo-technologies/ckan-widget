@@ -3,18 +3,19 @@ import React, { Component } from 'react'
 class DatasetInfo extends Component{
 
     render(){
+        const { title, notes, metadata_modified, format, datatype } = this.props
         return(
            <div className="dataset-item">
-              <img className="" src="" alt="Image" />
-              <div className="dataset-body">
+                <img className="" src="" alt="Image" />
+                <div className="dataset-body">
+                <h2>{ title }</h2>
                   <span>
-                  Desc
+                  { notes }
                   </span>
-                <h2>Title</h2>
 
-                <p>1</p>
-                <p>2</p>
-                <p>3</p>
+                <p>Modified: {metadata_modified}</p>
+                <p>Formats: {format}</p>
+                <p>Datatype: {datatype}</p>
               </div>
            </div>
         )
