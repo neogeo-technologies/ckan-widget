@@ -1,11 +1,12 @@
 import {
     PACKAGE_SEARCH,
-    ERROR
+    ERROR,
+    UPDATE_ROWS
 } from '../actions/types'
 
 const INITIAL_STATE = {
     datasets: [],
-    searchText: '',
+    rows : 10,
     total: 0,
     error: ''
 }
@@ -13,9 +14,11 @@ const INITIAL_STATE = {
 export default function(state=INITIAL_STATE, action) {
     switch (action.type) {
         case PACKAGE_SEARCH:
-            return { ...state, datasets: action.payload.result.results, total: action.payload.result.count}
+            return {...state, datasets: action.payload.result.results, total: action.payload.result.count}
         case ERROR:
-            return { ...state, error: action.payload }
+            return {...state, error: action.payload}
+        case UPDATE_ROWS:
+            return {...state, rows: action.payload}
         default:
             return state
     }
