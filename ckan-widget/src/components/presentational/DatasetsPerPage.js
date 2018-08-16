@@ -13,7 +13,7 @@ class DatasetsPerPage extends Component {
     const { rows } = this.props
 
     return (
-      <div className='datasets-per-page'>
+      <div className="datasets-per-page">
         <label>Datasets per page: </label>
         <select value={rows} onChange={this.updateRowsState}>
           <option value='10'>10</option>

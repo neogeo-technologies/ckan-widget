@@ -28,7 +28,7 @@ class DatasetInfo extends Component{
         const formats = this.findFormats(resources)
         return(
            <div className="dataset-item">
-              <img className="dataset-icon" src="https://www.datasud.fr/wp-content/themes/crigepaca/assets/images/logo_region_paca.jpg" alt="Image" />
+              <img className="dataset-icon" src="https://www.datasud.fr/wp-content/themes/crigepaca/assets/images/logo_region_paca.jpg" alt="Description" />
               <div className="dataset-body">
                 <h2>{title}</h2>
                 <span>{notes}</span>

@@ -26,7 +26,7 @@ class Pagination extends Component {
       for (let i = 1; i <= pages; i++ ) {
         if (i === this.state.page) {
           links.push(
-            <li className='active' key={i}>
+            <li className="active" key={i}>
               <button type='button' onClick={e => this.handleClick(e, i)}>{i}</button>
             </li>
           )
