@@ -3,10 +3,10 @@ import React, { Component } from 'react'
 class SearchBar extends Component{
     render(){
         return(
-             <form className="search-item">
+            <form className="search-item" onSubmit={this.props.handleInputChange}>
                 <input
                     placeholder="Search datasets"
-                    ref={input => this.search = input}
+                    ref={this.props.search}
                     onChange={this.props.handleInputChange}
                 />
                 {/*Add autosugestion components here */}

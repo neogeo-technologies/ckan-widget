@@ -25,7 +25,7 @@ class DatasetInfoList extends Component{
 
         datasetsList.unshift(<TotalDatasets total={total} key={9999} />)
         datasetsList.unshift(<DatasetsPerPage rows={rows} key={99999}/>)
-        datasetsList.push(<Pagination key={999999} />)
+        datasetsList.push(<Pagination total={total} rows={rows} key={999999} />)
 
         return datasetsList
     }

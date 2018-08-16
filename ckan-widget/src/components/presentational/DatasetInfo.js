@@ -28,15 +28,13 @@ class DatasetInfo extends Component{
         const formats = this.findFormats(resources)
         return(
            <div className="dataset-item">
-                <img className="dataset-icon" src="https://www.datasud.fr/wp-content/themes/crigepaca/assets/images/logo_region_paca.jpg" alt="Image" />
-                <div className="dataset-body">
-                <h2>{ title }</h2>
-                <span>
-                { notes }
-                </span>
+              <img className="dataset-icon" src="https://www.datasud.fr/wp-content/themes/crigepaca/assets/images/logo_region_paca.jpg" alt="Image" />
+              <div className="dataset-body">
+                <h2>{title}</h2>
+                <span>{notes}</span>
                 <p>Modified: {datetime}</p>
-                <p>Formats: {formats.join(', ')}</p>
-                <p>Datatype: {datatype.join(', ')}</p>
+                <p>Formats: {formats !== undefined ? formats.join(', ') : 'N/A'}</p>
+                <p>Datatype: {datatype !== undefined ? datatype.join(', ') : 'N/A'}</p>
               </div>
            </div>
         )

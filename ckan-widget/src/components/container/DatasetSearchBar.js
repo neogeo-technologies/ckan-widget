@@ -5,19 +5,20 @@ import SearchBar from '../presentational/SearchBar'
 import * as actions from '../../actions'
 
 class DatasetSearchBar extends Component{
-    constructor(props) {
-        super(props)
+    constructor() {
+        super()
+        this.search = React.createRef()
         this.handleInputChange = this.handleInputChange.bind(this)
     }
 
-    handleInputChange = (event) => {
-        let q = event.target.value
-        this.props.packageSearch({q: q})
+    handleInputChange = e => {
+      e.preventDefault()
+      this.props.packageSearch({q: this.search.current.value})
     }
 
     render(){
         return(
-            <SearchBar handleInputChange = {this.handleInputChange}/>
+          <SearchBar search={this.search} handleInputChange={this.handleInputChange}/>
         )
     }
 }
