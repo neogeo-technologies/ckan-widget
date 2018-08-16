@@ -18,7 +18,7 @@ class DatasetInfoList extends Component{
         let resultName = (total == 1) ? 'result' : 'results';
 
         const TotalDatasets = () => {
-            return <div>{ total } {resultName}</div>
+            return <div className="datasets-total">{ total } {resultName}</div>
         }
 
         let datasetsList = datasets.map((dataset, i) => {
