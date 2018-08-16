@@ -26,3 +26,44 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+.dataset-item {
+  border: 1px solid #c4c4c4;
+  padding: 10px 20px;
+  margin: 24px 0;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dataset-body {
+    margin: 0 20px;
+  flex-grow: 1;
+  h2 {
+    margin-bottom: 0;
+  }
+}
+.dataset-icon{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border: 0;
+}
+.facet-item {
+  border: 2px solid #c4c4c4;
+  padding: 10px 20px;
+  margin: 10px 0;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.datasets-total{
+    float:left;
+}
+.search-item {
+  border: 2px solid #c4c4c4;
+  padding: 30px 20px;
+  margin: 10px 0;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}

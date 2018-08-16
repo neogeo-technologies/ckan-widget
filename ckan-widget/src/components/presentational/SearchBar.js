@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class SearchBar extends Component{
     render(){
         return(
-             <form>
+             <form className="search-item">
                 <input
                     placeholder="Search datasets"
                     ref={input => this.search = input}

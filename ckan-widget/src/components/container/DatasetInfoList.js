@@ -15,9 +15,10 @@ class DatasetInfoList extends Component{
         //get list of datasets from dataset search here
         let datasets = this.props.datasets
         let total = this.props.total
+        let resultName = (total == 1) ? 'result' : 'results';
 
         const TotalDatasets = () => {
-            return <div>{ total } result(s)</div>
+            return <div className="datasets-total">{ total } {resultName}</div>
         }
 
         let datasetsList = datasets.map((dataset, i) => {
