@@ -1,39 +1,27 @@
 import React, { Component } from 'react'
+import ReactPaginate from 'react-paginate';
 
 
 class Pagination extends Component {
-  renderPagination = () => {
-    let links = []
-    const { page, total, rows } = this.props
-    const pages = Math.ceil(total / rows)
-
-    if (total > rows) {
-        for (let i = 1; i <= pages; i++ ) {
-            if (i === page) {
-                links.push(
-                    <li className="active" key={i}>
-                        <button type='button' onClick={e => this.props.handlePagination(e, i)}>{i}</button>
-                    </li>
-                )
-            } else {
-            links.push(
-                <li key={i}>
-                    <button type='button' onClick={e => this.props.handlePagination(e, i)}>{i}</button>
-                </li>
-            )
-            }
-        }
+  render() {
+    const { pageCount } = this.props
+    if (pageCount > 1) {
+        return (
+            <ReactPaginate previousLabel={"previous"}
+                nextLabel={"next"}
+                breakLabel={<a href="">...</a>}
+                breakClassName={"break-me"}
+                pageCount={pageCount}
+                marginPagesDisplayed={2}
+                pageRangeDisplayed={5}
+                onPageChange={ data => this.props.handlePagination(data.selected) }
+                containerClassName={"pagination"}
+                subContainerClassName={"pages pagination"}
+                activeClassName={"active"} />
+        )
     }
 
-    return links
-  }
-
-  render() {
-    return (
-        <ul>
-            {this.renderPagination()}
-        </ul>
-    )
+    return(null)
   }
 }
 

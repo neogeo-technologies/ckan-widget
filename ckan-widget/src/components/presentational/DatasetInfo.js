@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import DatasetDetails from '../presentational/DatasetDetails'
+
 
 class DatasetInfo extends Component{
     findFormats = resources => {
@@ -26,16 +28,17 @@ class DatasetInfo extends Component{
         const datetime = this.formatDate(metadata_modified)
         const formats = this.findFormats(resources)
         return(
-           <div className="dataset-item">
-              <img className="dataset-icon" src="https://www.datasud.fr/wp-content/themes/crigepaca/assets/images/logo_region_paca.jpg" alt="Description" />
-              <div className="dataset-body">
-                <h2>{title}</h2>
-                <span>{notes}</span>
-                <p>Modified: {datetime}</p>
-                <p>Formats: {formats !== undefined ? formats.join(', ') : 'N/A'}</p>
-                <p>Datatype: {datatype !== undefined ? datatype.join(', ') : 'N/A'}</p>
-              </div>
-           </div>
+            <div className="dataset-item">
+                <img className="dataset-icon" src="https://www.datasud.fr/wp-content/themes/crigepaca/assets/images/logo_region_paca.jpg" alt="Description" />
+                <div className="dataset-body">
+                    <h2>{title}</h2>
+                    <span>{notes}</span>
+                    <p>Modified: {datetime}</p>
+                    <p>Formats: {formats !== undefined ? formats.join(', ') : 'N/A'}</p>
+                    <p>Datatype: {datatype !== undefined ? datatype.join(', ') : 'N/A'}</p>
+                </div>
+                <DatasetDetails {...this.props} />
+            </div>
         )
     }
 }

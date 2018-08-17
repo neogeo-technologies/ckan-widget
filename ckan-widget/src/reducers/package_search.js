@@ -8,7 +8,6 @@ const INITIAL_STATE = {
     search: '',
     rows: 10,
     total: 0,
-    page: 1,
     error: ''
 }
 
@@ -20,7 +19,6 @@ export default function(state=INITIAL_STATE, action) {
                 datasets: action.payload.result.results,
                 total: action.payload.result.count,
                 search: action.search,
-                page: action.page,
                 rows: action.rows
             }
         case ERROR:
