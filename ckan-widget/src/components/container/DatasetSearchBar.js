@@ -6,19 +6,20 @@ import * as actions from '../../actions'
 
 class DatasetSearchBar extends Component{
     constructor() {
-        super()
-        this.search = React.createRef()
-        this.handleInputChange = this.handleInputChange.bind(this)
+      super()
+      this.handleInputChange = this.handleInputChange.bind(this)
     }
 
-    handleInputChange = e => {
-      e.preventDefault()
-      this.props.packageSearch({q: this.search.current.value})
+    handleInputChange = (event, value) => {
+      if (event) {
+        event.preventDefault()
+      }
+      this.props.packageSearch({q: value})
     }
 
     render(){
         return(
-          <SearchBar search={this.search} handleInputChange={this.handleInputChange}/>
+          <SearchBar handleInputChange={this.handleInputChange}/>
         )
     }
 }

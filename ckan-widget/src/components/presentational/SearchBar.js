@@ -1,19 +1,73 @@
 import React, { Component } from 'react'
+import Autocomplete from 'react-autocomplete'
+import { packageAutocomplete } from '../../actions'
+
 
 class SearchBar extends Component{
+    constructor() {
+        super()
+        this.state = {
+            value: '',
+            suggestions: []
+        }
+    }
+
+    componentDidMount() {
+        packageAutocomplete().then(data => {
+            const suggestions = data.result
+            if (Array.isArray(suggestions) && suggestions.length) {
+                this.setState({ suggestions })
+            }
+        })
+    }
+
+    handleOnChange = (event, value) => {
+        this.setState({ value })
+        packageAutocomplete({ q: value }).then(data => {
+            const suggestions = data.result
+            if (Array.isArray(suggestions) && suggestions.length) {
+                this.setState({ suggestions })
+            }
+        })
+        this.props.handleInputChange(event, value)
+    }
+
+    handleOnSubmit = event => {
+        const value = this.state.value
+        this.props.handleInputChange(event, value)
+    }
+
     render(){
         return(
-            <form className="search-item" onSubmit={this.props.handleInputChange}>
-                <input
-                    placeholder="Search datasets"
-                    ref={this.props.search}
-                    onChange={this.props.handleInputChange}
+            <form className="search-item" onSubmit={this.handleOnSubmit}>
+                <Autocomplete
+                    inputProps={{
+                        id: 'datasets-autocomplete',
+                        placeholder: 'Search datasets'
+                    }}
+                    wrapperStyle={{ position: 'relative', display: 'inline-block' }}l
+                    value={this.state.value}
+                    items={this.state.suggestions}
+                    getItemValue={(item) => item.name}
+                    onSelect={(value, item) => {
+                        this.setState({ value, suggestions: [item] })
+                        this.props.handleInputChange(null, value)
+                    }}
+                    onChange={this.handleOnChange}
+                    renderMenu={children => (
+                        <div className="menu">
+                            {children}
+                        </div>
+                    )}
+                    renderItem={(item, isHighlighted) => (
+                        <div className={`item ${isHighlighted ? 'item-highlighted' : ''}`} key={item.match_displayed}>
+                            {item.match_displayed}
+                        </div>
+                    )}
                 />
-                {/*Add autosugestion components here */}
-                {/* <Suggestions results={this.state.results} /> */}
             </form>
-            )
+        )
     }
 }
 
-export default SearchBar;
+export default SearchBar

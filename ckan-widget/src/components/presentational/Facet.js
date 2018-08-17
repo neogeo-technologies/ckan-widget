@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 
 
 class Facet extends Component{
-
     render(){
         return(
             <div className="facet-item">
