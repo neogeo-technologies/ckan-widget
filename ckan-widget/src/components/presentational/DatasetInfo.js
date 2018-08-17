@@ -1,12 +1,6 @@
 import React, { Component } from 'react'
 
 class DatasetInfo extends Component{
-
-    formatDate = date => {
-        const d = new Date(date )
-        return d.toUTCString()
-    }
-
     findFormats = resources => {
         let formats = []
 
@@ -20,6 +14,11 @@ class DatasetInfo extends Component{
         }
 
         return formats
+    }
+
+    formatDate = date => {
+        const d = new Date(date )
+        return d.toUTCString()
     }
 
     render(){

@@ -9,25 +9,46 @@ import * as actions from '../../actions'
 
 
 class DatasetInfoList extends Component{
+    constructor() {
+        super()
+        this.handleDatasetsPerPage = this.handleDatasetsPerPage.bind(this)
+        this.handlePagination = this.handlePagination.bind(this)
+    }
 
     componentDidMount() {
         const { rows } = this.props
-        this.props.packageSearch({rows: rows})
+
+        this.props.packageSearch({ rows: rows })
+    }
+
+    handleDatasetsPerPage = rows => {
+        this.setState({ page: 1 })
+        this.props.packageSearch({ q: this.props.search, rows: rows })
+    }
+
+    handlePagination = (event, page) => {
+        event.preventDefault()
+
+        const { search, rows } = this.props
+        const start = (page - 1) * rows
+
+        this.props.packageSearch({ q: search, start: start, rows: rows, page: page })
     }
 
     render(){
-        //get list of datasets from dataset search here
-        const { datasets, total, rows } = this.props
+        const { datasets, total, rows, page } = this.props
+        let components = [
+            <TotalDatasets total={total} key={9999} />,
+            <DatasetsPerPage handleDatasetsPerPage={this.handleDatasetsPerPage} rows={rows} key={99999} />
+        ]
 
-        let datasetsList = datasets.map((dataset, i) => {
-            return <DatasetInfo  {...dataset} key={i} />
+        datasets.forEach((dataset, i) => {
+            components.push(<DatasetInfo {...dataset} key={i} />)
         });
 
-        datasetsList.unshift(<TotalDatasets total={total} key={9999} />)
-        datasetsList.unshift(<DatasetsPerPage rows={rows} key={99999}/>)
-        datasetsList.push(<Pagination total={total} rows={rows} key={999999} />)
+        components.push(<Pagination handlePagination={this.handlePagination} page={page} total={total} rows={rows} key={999999} />)
 
-        return datasetsList
+        return components
     }
 
 }
@@ -36,7 +57,9 @@ const mapStateToProps = state => {
     return {
         datasets: state.packageSearch.datasets,
         total: state.packageSearch.total,
-        rows: state.packageSearch.rows
+        rows: state.packageSearch.rows,
+        search: state.packageSearch.search,
+        page: state.packageSearch.page
     }
 }
 

@@ -1,37 +1,45 @@
 import React, { Component } from 'react'
 import Autocomplete from 'react-autocomplete'
+import { packageAutocomplete } from '../../actions'
+
 
 class SearchBar extends Component{
     constructor() {
         super()
         this.state = {
             value: '',
-            unitedStates: this.getStates()
+            suggestions: []
         }
     }
 
-    getStates = () => {
-        return [
-            { abbr: 'AL', name: 'Alabama' },
-            { abbr: 'AK', name: 'Alaska' },
-            { abbr: 'AZ', name: 'Arizona' },
-            { abbr: 'AR', name: 'Arkansas' },
-            { abbr: 'CA', name: 'California' }
-        ]
+    componentDidMount() {
+        packageAutocomplete().then(data => {
+            const suggestions = data.result
+            if (Array.isArray(suggestions) && suggestions.length) {
+                this.setState({ suggestions })
+            }
+        })
     }
 
-    getStatesOther = () => {
-        return [
-            { abbr: 'MK', name: 'Macedonia' },
-            { abbr: 'ES', name: 'Espana' },
-            { abbr: 'GR', name: 'Greece' },
-            { abbr: 'SRB', name: 'Serbia' }
-        ]
+    handleOnChange = (event, value) => {
+        this.setState({ value })
+        packageAutocomplete({ q: value }).then(data => {
+            const suggestions = data.result
+            if (Array.isArray(suggestions) && suggestions.length) {
+                this.setState({ suggestions })
+            }
+        })
+        this.props.handleInputChange(event, value)
+    }
+
+    handleOnSubmit = event => {
+        const value = this.state.value
+        this.props.handleInputChange(event, value)
     }
 
     render(){
         return(
-            <form className="search-item" onSubmit={this.props.handleInputChange}>
+            <form className="search-item" onSubmit={this.handleOnSubmit}>
                 <Autocomplete
                     inputProps={{
                         id: 'datasets-autocomplete',
@@ -39,26 +47,21 @@ class SearchBar extends Component{
                     }}
                     wrapperStyle={{ position: 'relative', display: 'inline-block' }}l
                     value={this.state.value}
-                    items={this.state.unitedStates}
+                    items={this.state.suggestions}
                     getItemValue={(item) => item.name}
                     onSelect={(value, item) => {
-                        console.log(value)
-                        this.setState({ value, unitedStates: [item] })
+                        this.setState({ value, suggestions: [item] })
                         this.props.handleInputChange(null, value)
                     }}
-                    onChange={(event, value) => {
-                        this.setState({ value })
-                        this.setState({ unitedStates: this.getStatesOther() })
-                        this.props.handleInputChange(event, value)
-                    }}
+                    onChange={this.handleOnChange}
                     renderMenu={children => (
                         <div className="menu">
                             {children}
                         </div>
                     )}
                     renderItem={(item, isHighlighted) => (
-                        <div className={`item ${isHighlighted ? 'item-highlighted' : ''}`} key={item.abbr}>
-                            {item.name}
+                        <div className={`item ${isHighlighted ? 'item-highlighted' : ''}`} key={item.match_displayed}>
+                            {item.match_displayed}
                         </div>
                     )}
                 />
@@ -67,4 +70,4 @@ class SearchBar extends Component{
     }
 }
 
-export default SearchBar;
+export default SearchBar
