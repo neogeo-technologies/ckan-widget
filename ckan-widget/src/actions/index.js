@@ -2,8 +2,7 @@ import axios from 'axios'
 
 import {
     PACKAGE_SEARCH,
-    ERROR,
-    FACET_SEARCH
+    ERROR
 } from './types'
 
 const SITE_URL = 'http://localhost:5000'

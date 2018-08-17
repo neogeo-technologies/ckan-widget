@@ -1,8 +1,6 @@
 import {
     PACKAGE_SEARCH,
-    ERROR,
-    UPDATE_ROWS,
-    FACET_SEARCH
+    ERROR
 } from '../actions/types'
 
 const INITIAL_STATE = {
@@ -29,8 +27,6 @@ export default function(state=INITIAL_STATE, action) {
             }
         case ERROR:
             return {...state, error: action.payload}
-        case FACET_SEARCH:
-            return {...state, facets: action.payload.result.search_facets}
         default:
             return state
     }
