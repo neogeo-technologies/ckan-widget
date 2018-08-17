@@ -3,6 +3,7 @@ import './App.css';
 import DatasetSearchBar from './components/container/DatasetSearchBar';
 import DatasetInfoList from './components/container/DatasetInfoList';
 import FacetList from './components/container/FacetList';
+import DatasetSort from './components/container/DatasetSort';
 
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
             <DatasetInfoList />
         </div>
          <div className="col-md-4">
+            <DatasetSort />
             <FacetList />
         </div>
       </div>
