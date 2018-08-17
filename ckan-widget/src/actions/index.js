@@ -5,11 +5,13 @@ import {
     ERROR
 } from './types'
 
-const SITE_URL = 'https://trouver.datasud.fr'
+const SITE_URL = 'http://localhost:5000'
 
 export function packageSearch({q='*:*', rows=10, start=0, page=1} = {}) {
+    let facetsParams = 'facet.field=' + JSON.stringify(["organization", "groups", "tags", "res_format", "license_id"]);
+
     return dispatch => {
-        axios.get(`${SITE_URL}/api/action/package_search?q=${q}&rows=${rows}&start=${start}`)
+        axios.get(`${SITE_URL}/api/action/package_search?q=${q}&rows=${rows}&start=${start}&${facetsParams}`)
             .then(response => {
                 dispatch({
                     type: PACKAGE_SEARCH,
