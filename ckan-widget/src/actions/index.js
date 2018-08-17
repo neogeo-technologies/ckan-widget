@@ -22,13 +22,18 @@ export function packageSearch({q='*:*', rows=10, start=0, page=1} = {}) {
                 })
             })
             .catch(error => {
+                let errorMsg = ''
                 if (error.response !== undefined) {
-                    dispatch({
-                        type: ERROR,
-                        payload: error.response.data
-                    });
+                    errorMsg = error.response.data
+                } else {
+                    errorMsg = error.message
                 }
-            });
+
+                dispatch({
+                    type: ERROR,
+                    payload: errorMsg
+                })
+            })
     }
 }
 
