@@ -7,7 +7,7 @@ import {
 
 const SITE_URL = 'https://trouver.datasud.fr'
 
-export function packageSearch({q='*:*', rows=10, start=0} = {}) {
+export function packageSearch({q='*:*', rows=10, start=0, page=0} = {}) {
     return dispatch => {
         axios.get(`${SITE_URL}/api/action/package_search?q=${q}&rows=${rows}&start=${start}`)
             .then(response => {
@@ -15,6 +15,7 @@ export function packageSearch({q='*:*', rows=10, start=0} = {}) {
                     type: PACKAGE_SEARCH,
                     search: q !== '*:*' ? q : '',
                     rows: rows,
+                    page: page,
                     payload: response.data
                 })
             })

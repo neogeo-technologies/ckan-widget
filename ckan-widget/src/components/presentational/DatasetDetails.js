@@ -22,10 +22,21 @@ class DatasetDetails extends Component {
     }
 
     render() {
-        const { name, notes, resources, dataset_creation_date, dataset_modification_date, dataset_publication_date } = this.props
-        const orgName = this.props.organization.name
+        const {
+            name,
+            notes,
+            resources,
+            dataset_creation_date,
+            dataset_modification_date,
+            dataset_publication_date,
+            organization,
+            collapsed
+        } = this.props
+        const orgName = organization !== null ? organization.name : 'N/A'
+        const collapseClass = collapsed ? 'fade' : ''
+
         return(
-            <div className="dataset-body">
+            <div className={"dataset-body " + collapseClass}>
                 <p>{notes}</p>
                 <p>Created on: {dataset_creation_date}</p>
                 <p>Publication date: {dataset_publication_date}</p>

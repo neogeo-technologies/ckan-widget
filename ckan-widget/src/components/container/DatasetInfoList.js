@@ -27,15 +27,14 @@ class DatasetInfoList extends Component{
     }
 
     handlePagination = page => {
-        console.log(page)
         const { search, rows } = this.props
-        const start = (page) * rows
+        const start = page * rows
 
-        this.props.packageSearch({ q: search, start: start, rows: rows })
+        this.props.packageSearch({ q: search, start: start, rows: rows, page: page })
     }
 
     render(){
-        const { datasets, total, rows, error } = this.props
+        const { datasets, total, rows, page, error } = this.props
         let components = [
             <TotalDatasets total={total} key={9999} />,
             <DatasetsPerPage handleDatasetsPerPage={this.handleDatasetsPerPage} rows={rows} key={99999} />
@@ -49,7 +48,15 @@ class DatasetInfoList extends Component{
             components.push(<DatasetInfo {...dataset} key={i} />)
         });
 
-        components.push(<Pagination handlePagination={this.handlePagination} pageCount={Math.ceil(total/rows)} total={total} rows={rows} key={9999999} />)
+        components.push(
+            <Pagination
+                handlePagination={this.handlePagination}
+                page={page}
+                pageCount={Math.ceil(total/rows)}
+                total={total}
+                rows={rows}
+                key={9999999} />
+        )
 
         return components
     }

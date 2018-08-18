@@ -4,13 +4,14 @@ import ReactPaginate from 'react-paginate';
 
 class Pagination extends Component {
   render() {
-    const { pageCount } = this.props
+    const { page, pageCount } = this.props
     if (pageCount > 1) {
         return (
-            <ReactPaginate previousLabel={"previous"}
-                nextLabel={"next"}
-                breakLabel={<a href="">...</a>}
+            <ReactPaginate previousLabel={"<<"}
+                nextLabel={">>"}
+                breakLabel={'...'}
                 breakClassName={"break-me"}
+                forcePage={page}
                 pageCount={pageCount}
                 marginPagesDisplayed={2}
                 pageRangeDisplayed={5}

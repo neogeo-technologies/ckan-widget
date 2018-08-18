@@ -19,7 +19,8 @@ export default function(state=INITIAL_STATE, action) {
                 datasets: action.payload.result.results,
                 total: action.payload.result.count,
                 search: action.search,
-                rows: action.rows
+                rows: action.rows,
+                page: action.page
             }
         case ERROR:
             return {...state, error: action.payload}
