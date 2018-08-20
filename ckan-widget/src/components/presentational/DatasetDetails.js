@@ -4,11 +4,13 @@ class DatasetDetails extends Component {
     renderResources = (resources, datasetName) => {
         let items = []
         resources.forEach((resource, i) => {
+            let restricted = JSON.parse(resource.restricted)
             items.push(
                 <li className="list-group-item d-flex align-items-center" key={i}>
                     <span className="badge badge-secondary">{resource.format}</span>
                     <a className="px-3" href={`https://trouver.datasud.fr/dataset/${datasetName}/resource/${resource.id}`}>{resource.name}</a>
-                    <span className="ml-auto">Modification date: {this.formatDate(resource.last_modified)}</span>
+                    <span className="ml-auto">Last modified at {this.formatDate(resource.last_modified)}</span>
+                    <span className="badge badge-secondary">{restricted.level}</span>
                 </li>
             )
         })

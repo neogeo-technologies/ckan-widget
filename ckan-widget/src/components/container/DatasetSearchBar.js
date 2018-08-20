@@ -5,11 +5,6 @@ import SearchBar from '../presentational/SearchBar'
 import * as actions from '../../actions'
 
 class DatasetSearchBar extends Component{
-    constructor() {
-      super()
-      this.handleInputChange = this.handleInputChange.bind(this)
-    }
-
     handleInputChange = (event, value) => {
       if (event) {
         event.preventDefault()

@@ -4,6 +4,9 @@ import DatasetSearchBar from './components/container/DatasetSearchBar';
 import DatasetInfoList from './components/container/DatasetInfoList';
 import FacetList from './components/container/FacetList';
 import DatasetSort from './components/container/DatasetSort';
+import TotalDatasets from './components/container/TotalDatasets'
+import DatasetsPerPage from './components/container/DatasetsPerPage'
+import Pagination from './components/container/Pagination'
 
 
 class App extends Component {
@@ -17,7 +20,10 @@ class App extends Component {
         </div>
         <div className="row">
           <div className="col-lg-8">
+                <TotalDatasets />
+                <DatasetsPerPage />
                 <DatasetInfoList />
+                <Pagination />
           </div>
           <div className="col-lg-4">
               <DatasetSort />
