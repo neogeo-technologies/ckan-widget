@@ -1,35 +1,35 @@
 import {
-    PACKAGE_SEARCH,
-    ERROR
-} from '../actions/types'
+  PACKAGE_SEARCH,
+  ERROR,
+} from '../actions/types';
 
 const INITIAL_STATE = {
-    datasets: [],
-    search: '',
-    rows: 10,
-    facets: [],
-    total: 0,
-    page: 0,
-    sort: 'score desc, metadata_modified desc',
-    error: ''
-}
+  datasets: [],
+  search: '',
+  rows: 10,
+  facets: [],
+  total: 0,
+  page: 0,
+  sort: 'score desc, metadata_modified desc',
+  error: '',
+};
 
-export default function(state=INITIAL_STATE, action) {
-    switch (action.type) {
-        case PACKAGE_SEARCH:
-            return {
-                ...state,
-                datasets: action.payload.result.results,
-                total: action.payload.result.count,
-                search: action.search,
-                page: action.page,
-                rows: action.rows,
-                facets: action.payload.result.search_facets,
-                sort: action.sort
-            }
-        case ERROR:
-            return {...state, error: action.payload}
-        default:
-            return state
-    }
+export default function (state = INITIAL_STATE, action) {
+  switch (action.type) {
+    case PACKAGE_SEARCH:
+      return {
+        ...state,
+        datasets: action.payload.result.results,
+        total: action.payload.result.count,
+        search: action.search,
+        page: action.page,
+        rows: action.rows,
+        facets: action.payload.result.search_facets,
+        sort: action.sort,
+      };
+    case ERROR:
+      return { ...state, error: action.payload };
+    default:
+      return state;
+  }
 }
