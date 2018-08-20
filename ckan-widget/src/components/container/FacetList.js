@@ -18,9 +18,22 @@ class FacetList extends Component {
   componentDidMount() {
     this.props.packageSearch();
   }
-    onClick = (data) => {
-      this.props.packageSearch({q: data})
+
+  onClick = (data) => {
+    const { rows, sort, search, facet_search } = this.props;
+    let fparams = '';
+    if(facet_search){
+        if(facet_search.includes(data)){
+            fparams = facet_search;
+        }else{
+            fparams = facet_search + '+' + data;
+        }
+    }else{
+        fparams = data;
     }
+
+    this.props.packageSearch({fq: fparams, rows: rows, sort: sort, q: search})
+  }
 
   render() {
     const { facets } = this.props;
@@ -36,7 +49,11 @@ class FacetList extends Component {
 }
 const mapStateToProps = state => {
   return {
-    facets: state.packageSearch.facets
+    facets: state.packageSearch.facets,
+    rows: state.packageSearch.rows,
+    sort: state.packageSearch.sort,
+    search: state.packageSearch.search,
+    facet_search: state.packageSearch.facet_search
   };
 };
 
