@@ -36,7 +36,8 @@ class DatasetInfoList extends Component{
     }
 
     render(){
-        const { datasets, total, rows, page, error } = this.props
+        const { datasets, total, rows, page, error, facet_search } = this.props
+
         let components = [
             <TotalDatasets total={total} key={9999} />,
             <DatasetsPerPage handleDatasetsPerPage={this.handleDatasetsPerPage} rows={rows} key={99999} />
@@ -73,7 +74,9 @@ const mapStateToProps = state => {
         search: state.packageSearch.search,
         page: state.packageSearch.page,
         sort: state.packageSearch.sort,
-        error: state.packageSearch.error
+        error: state.packageSearch.error,
+        facet_search: state.packageSearch.facet_search
+
     }
 }
 
