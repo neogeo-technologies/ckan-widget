@@ -37,14 +37,16 @@ class DatasetInfo extends Component{
         const datetime = this.formatDate(metadata_modified)
         const formats = this.findFormats(resources)
         return(
-            <div className="dataset-item" onClick={this.handleDatasetClick}>
-                <img className="dataset-icon" src="https://www.datasud.fr/wp-content/themes/crigepaca/assets/images/logo_region_paca.jpg" alt="Description" />
-                <div className="dataset-body">
-                    <h2 onClick={this.handleDatasetClick}>{title}</h2>
-                    <span>{notes.length > 130 ? `${notes.substring(0, 130)}...` : notes}</span>
-                    <p>Modified: {datetime}</p>
-                    <p>Formats: {formats !== undefined ? formats.join(', ') : 'N/A'}</p>
-                    <p>Datatype: {datatype !== undefined ? datatype.join(', ') : 'N/A'}</p>
+            <div>
+                <div className="dataset-item" onClick={this.handleDatasetClick}>
+                    <img className="dataset-icon" src="https://www.datasud.fr/wp-content/themes/crigepaca/assets/images/logo_region_paca.jpg" alt="Description" />
+                    <div className="dataset-body">
+                        <h2 onClick={this.handleDatasetClick}>{title}</h2>
+                        <span>{notes.length > 130 ? `${notes.substring(0, 130)}...` : notes}</span>
+                        <p>Modified: {datetime}</p>
+                        <p>Formats: {formats !== undefined ? formats.join(', ') : 'N/A'}</p>
+                        <p>Datatype: {datatype !== undefined ? datatype.join(', ') : 'N/A'}</p>
+                    </div>
                 </div>
                 <DatasetDetails collapsed={this.state.collapsed} {...this.props} />
             </div>

@@ -14,7 +14,8 @@ class DatasetSearchBar extends Component{
       if (event) {
         event.preventDefault()
       }
-      this.props.packageSearch({q: value})
+      const { rows } = this.props
+      this.props.packageSearch({ q: value, rows: rows })
     }
 
     render(){
@@ -24,4 +25,10 @@ class DatasetSearchBar extends Component{
     }
 }
 
-export default connect(null, actions)(DatasetSearchBar)
+const mapStateToProps = state => {
+  return {
+    rows: state.packageSearch.rows
+  }
+}
+
+export default connect(mapStateToProps, actions)(DatasetSearchBar)
