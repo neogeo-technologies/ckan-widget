@@ -23,14 +23,16 @@ class DatasetInfoList extends Component{
     }
 
     handleDatasetsPerPage = rows => {
-        this.props.packageSearch({ q: this.props.search, rows: rows })
+        const { search, sort } = this.props
+
+        this.props.packageSearch({ q: search, sort: sort, rows: rows })
     }
 
     handlePagination = page => {
-        const { search, rows } = this.props
+        const { search, rows, sort } = this.props
         const start = page * rows
 
-        this.props.packageSearch({ q: search, start: start, rows: rows, page: page })
+        this.props.packageSearch({ q: search, start: start, rows: rows, page: page, sort: sort })
     }
 
     render(){
@@ -70,6 +72,7 @@ const mapStateToProps = state => {
         rows: state.packageSearch.rows,
         search: state.packageSearch.search,
         page: state.packageSearch.page,
+        sort: state.packageSearch.sort,
         error: state.packageSearch.error
     }
 }
