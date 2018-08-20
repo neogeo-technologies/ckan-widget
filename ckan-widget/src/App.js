@@ -11,15 +11,15 @@ class App extends Component {
     return (
       <div className="App container-fluid">
         <DatasetSearchBar />
-         <div className="row">
-        <div className="col-md-8">
+        <div className="row">
+          <div className="col-md-8">
             <DatasetInfoList />
-        </div>
-         <div className="col-md-4">
+          </div>
+          <div className="col-md-4">
             <DatasetSort />
             <FacetList />
+          </div>
         </div>
-      </div>
       </div>
     );
   }
