@@ -43,8 +43,8 @@ class DatasetInfo extends Component{
                         <div className="col-lg-3 d-flex justify-content-center align-items-center">
                             <img className="img-thumbnail img-fluid" src="https://www.datasud.fr/wp-content/themes/crigepaca/assets/images/logo_region_paca.jpg" alt="logo" />
                         </div>
-                        <div className="col-lg-9">
-                            <h3><a href="#" onClick={this.handleDatasetClick}>{title}</a></h3>
+                        <div className="col-lg-9 dataset">
+                            <h3 className="title" onClick={this.handleDatasetClick}>{title}</h3>
                             <p className="text-muted">{notes.length > 130 ? `${notes.substring(0, 130)}...` : notes}</p>
                             <ul className="list-inline">
                               <li className="list-inline-item">Modified: {datetime}</li>
