@@ -5,7 +5,7 @@ import {
     ERROR
 } from './types'
 
-const SITE_URL = 'http://localhost:5000'
+const SITE_URL = 'https://trouver.datasud.fr'
 
 export function packageSearch({q='*:*', rows=10, start=0, page=1} = {}) {
     let facetsParams = 'facet.field=' + JSON.stringify(["organization", "groups", "tags", "res_format", "license_id"]);

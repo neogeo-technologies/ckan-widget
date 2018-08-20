@@ -8,6 +8,7 @@ class SearchBar extends Component{
         super()
         this.state = {
             value: '',
+            isOpen: false,
             suggestions: []
         }
     }
@@ -48,6 +49,9 @@ class SearchBar extends Component{
                     wrapperStyle={{ position: 'relative', display: 'inline-block' }}l
                     value={this.state.value}
                     items={this.state.suggestions}
+                    open={( this.state.value.length >= 1 && this.state.isOpen )}
+                    onMenuVisibilityChange={isOpen => this.setState({ isOpen })}
+                    autoHighlight={false}
                     getItemValue={(item) => item.name}
                     onSelect={(value, item) => {
                         this.setState({ value, suggestions: [item] })
