@@ -9,7 +9,8 @@ const INITIAL_STATE = {
     rows: 10,
     facets: [],
     total: 0,
-    page: 1,
+    page: 0,
+    sort: 'score desc, metadata_modified desc',
     error: ''
 }
 
@@ -23,7 +24,8 @@ export default function(state=INITIAL_STATE, action) {
                 search: action.search,
                 page: action.page,
                 rows: action.rows,
-                facets: action.payload.result.search_facets
+                facets: action.payload.result.search_facets,
+                sort: action.sort
             }
         case ERROR:
             return {...state, error: action.payload}

@@ -7,17 +7,18 @@ import {
 
 const SITE_URL = 'https://trouver.datasud.fr'
 
-export function packageSearch({q='*:*', rows=10, start=0, page=1} = {}) {
+export function packageSearch({ q = '*:*', rows = 10, start = 0, page = 0, sort = 'score desc, metadata_modified desc'} = {}) {
     let facetsParams = 'facet.field=' + JSON.stringify(["organization", "groups", "tags", "res_format", "license_id"]);
 
     return dispatch => {
-        axios.get(`${SITE_URL}/api/action/package_search?q=${q}&rows=${rows}&start=${start}&${facetsParams}`)
+        axios.get(`${SITE_URL}/api/action/package_search?q=${q}&rows=${rows}&start=${start}&${facetsParams}&sort=${sort}`)
             .then(response => {
                 dispatch({
                     type: PACKAGE_SEARCH,
                     search: q !== '*:*' ? q : '',
                     page: page,
                     rows: rows,
+                    sort: sort,
                     payload: response.data
                 })
             })

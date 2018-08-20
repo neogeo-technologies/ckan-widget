@@ -14,8 +14,8 @@ class DatasetSearchBar extends Component{
       if (event) {
         event.preventDefault()
       }
-      const { rows } = this.props
-      this.props.packageSearch({ q: value, rows: rows })
+      const { sort, rows } = this.props
+      this.props.packageSearch({ q: value, rows: rows, sort: sort })
     }
 
     render(){
@@ -27,7 +27,8 @@ class DatasetSearchBar extends Component{
 
 const mapStateToProps = state => {
   return {
-    rows: state.packageSearch.rows
+    rows: state.packageSearch.rows,
+    sort: state.packageSearch.sort
   }
 }
 
