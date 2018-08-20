@@ -45,7 +45,7 @@ class DatasetInfo extends Component{
                         </div>
                         <div className="col-lg-9 dataset">
                             <h3 className="title" onClick={this.handleDatasetClick}>{title}</h3>
-                            <p className="text-muted">{notes.length > 130 ? `${notes.substring(0, 130)}...` : notes}</p>
+                            <p className="text-muted">{notes && notes.length > 130 ? `${notes.substring(0, 130)}...` : notes}</p>
                             <ul className="list-inline">
                               <li className="list-inline-item">Modified: {datetime}</li>
                               <li className="list-inline-item">Formats: {formats !== undefined ? formats.join(', ') : 'N/A'}</li>
