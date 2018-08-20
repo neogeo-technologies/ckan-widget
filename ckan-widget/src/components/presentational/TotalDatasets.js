@@ -5,14 +5,16 @@ class TotalDatasets extends Component {
     const { total } = this.props;
     const resultName = (total === 1) ? 'result' : 'results';
 
-    return (
-      <div className="datasets-total">
-        {total}
-        {' '}
-        {resultName}
+    return(
+      <div className="">
+          <h2>
+              {total}
+              {' '}
+              {resultName}
+          </h2>
       </div>
-    );
+    )
   }
 }
 
-export default TotalDatasets;
+export default TotalDatasets

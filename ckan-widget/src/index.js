@@ -8,6 +8,7 @@ import registerServiceWorker from './registerServiceWorker';
 import App from './App';
 import reducers from './reducers';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'material-icons/iconfont/material-icons.css';
 
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 const store = createStoreWithMiddleware(reducers);
