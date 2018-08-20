@@ -12,6 +12,7 @@ const INITIAL_STATE = {
   page: 0,
   sort: 'score desc, metadata_modified desc',
   error: '',
+  facet_search: ''
 };
 
 export default function (state = INITIAL_STATE, action) {
@@ -26,6 +27,7 @@ export default function (state = INITIAL_STATE, action) {
         rows: action.rows,
         facets: action.payload.result.search_facets,
         sort: action.sort,
+        facet_search: action.facet_search
       };
     case ERROR:
       return { ...state, error: action.payload };

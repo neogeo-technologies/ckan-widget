@@ -7,7 +7,6 @@ import * as actions from '../../actions'
 class DatasetSearchBar extends Component{
     constructor() {
       super()
-      this.handleInputChange = this.handleInputChange.bind(this)
     }
 
     handleInputChange = (event, value) => {
