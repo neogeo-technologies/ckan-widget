@@ -40,13 +40,14 @@ class SearchBar extends Component{
 
     render(){
         return(
-            <form className="search-item" onSubmit={this.handleOnSubmit}>
+            <form className="my-5" onSubmit={this.handleOnSubmit}>
                 <Autocomplete
                     inputProps={{
                         id: 'datasets-autocomplete',
-                        placeholder: 'Search datasets'
+                        placeholder: 'Search datasets',
+                        className: 'form-control form-control-lg'
                     }}
-                    wrapperStyle={{ position: 'relative', display: 'inline-block' }}l
+                    wrapperStyle={{}}
                     value={this.state.value}
                     items={this.state.suggestions}
                     open={( this.state.value.length >= 1 && this.state.isOpen )}
@@ -59,13 +60,13 @@ class SearchBar extends Component{
                     }}
                     onChange={this.handleOnChange}
                     renderMenu={children => (
-                        <div className="menu">
+                        <div className="menu list-group">
                             {children}
                         </div>
                     )}
                     renderItem={(item, isHighlighted) => (
-                        <div className={`item ${isHighlighted ? 'item-highlighted' : ''}`} key={item.match_displayed}>
-                            {item.match_displayed}
+                        <div className={`list-group-item list-group-item-light ${isHighlighted ? 'active' : ''}`} key={item.match_displayed}>
+                            <i class="material-icons mr-1">library_books</i> {item.match_displayed}
                         </div>
                     )}
                 />

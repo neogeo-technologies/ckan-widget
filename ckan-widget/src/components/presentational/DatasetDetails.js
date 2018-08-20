@@ -38,7 +38,7 @@ class DatasetDetails extends Component {
         const collapseClass = collapsed ? 'collapse' : ''
 
         return(
-            <div className={"dataset-body " + collapseClass}>
+            <div className={"card-footer " + collapseClass}>
                 <p>{notes}</p>
                 <p>Created on: {dataset_creation_date}</p>
                 <p>Publication date: {dataset_publication_date}</p>

@@ -37,15 +37,21 @@ class DatasetInfo extends Component{
         const datetime = this.formatDate(metadata_modified)
         const formats = this.findFormats(resources)
         return(
-            <div>
-                <div className="dataset-item" onClick={this.handleDatasetClick}>
-                    <img className="dataset-icon" src="https://www.datasud.fr/wp-content/themes/crigepaca/assets/images/logo_region_paca.jpg" alt="Description" />
-                    <div className="dataset-body">
-                        <h2 onClick={this.handleDatasetClick}>{title}</h2>
-                        <span>{notes.length > 130 ? `${notes.substring(0, 130)}...` : notes}</span>
-                        <p>Modified: {datetime}</p>
-                        <p>Formats: {formats !== undefined ? formats.join(', ') : 'N/A'}</p>
-                        <p>Datatype: {datatype !== undefined ? datatype.join(', ') : 'N/A'}</p>
+            <div className="card my-3">
+                <div className="card-body" onClick={this.handleDatasetClick}>
+                    <div className="row">
+                        <div className="col-lg-3 d-flex justify-content-center align-items-center">
+                            <img className="img-thumbnail img-fluid" src="https://www.datasud.fr/wp-content/themes/crigepaca/assets/images/logo_region_paca.jpg" alt="logo" />
+                        </div>
+                        <div className="col-lg-9">
+                            <h3><a href="#" onClick={this.handleDatasetClick}>{title}</a></h3>
+                            <p className="text-muted">{notes.length > 130 ? `${notes.substring(0, 130)}...` : notes}</p>
+                            <ul className="list-inline">
+                              <li className="list-inline-item">Modified: {datetime}</li>
+                              <li className="list-inline-item">Formats: {formats !== undefined ? formats.join(', ') : 'N/A'}</li>
+                              <li className="list-inline-item">Datatype: {datatype !== undefined ? datatype.join(', ') : 'N/A'}</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <DatasetDetails collapsed={this.state.collapsed} {...this.props} />
