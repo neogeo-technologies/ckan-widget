@@ -5,12 +5,10 @@ class DatasetDetails extends Component {
         let items = []
         resources.forEach((resource, i) => {
             items.push(
-                <li key={i}>
-                    <span>{resource.format}</span>
-                    <strong>
-                        <a href={`https://trouver.datasud.fr/dataset/${datasetName}/resource/${resource.id}`}>{resource.name}</a>
-                    </strong>
-                    <span>Modification date: {this.formatDate(resource.last_modified)}</span>
+                <li className="list-group-item d-flex align-items-center" key={i}>
+                    <span className="badge badge-secondary">{resource.format}</span>
+                    <a className="px-3" href={`https://trouver.datasud.fr/dataset/${datasetName}/resource/${resource.id}`}>{resource.name}</a>
+                    <span className="ml-auto">Modification date: {this.formatDate(resource.last_modified)}</span>
                 </li>
             )
         })
@@ -39,18 +37,18 @@ class DatasetDetails extends Component {
 
         return(
             <div className={"card-footer " + collapseClass}>
-                <p>{notes}</p>
-                <p>Created on: {dataset_creation_date}</p>
-                <p>Publication date: {dataset_publication_date}</p>
-                <p>Modification date: {dataset_modification_date}</p>
-                <p>Organization: {orgName}</p>
+                <p className="lead">{notes}</p>
+                <ul className="list-inline">
+                    <li className="list-inline-item">Created on: {dataset_creation_date}</li>
+                    <li className="list-inline-item">Publication date: {dataset_publication_date}</li>
+                    <li className="list-inline-item">Modification date: {dataset_modification_date}</li>
+                    <li className="list-inline-item">Organization: {orgName}</li>
+                </ul>
                 <h3>Resources</h3>
                 <ul className="list-inline">
                     { this.renderResources(resources, name) }
                 </ul>
-                <p>
-                    <a className="btn btn-success" href={`https://trouver.datasud.fr/dataset/${name}`}>Display this dataset in Datasud.fr</a>
-                </p>
+                <a className="btn btn-success mb-1" href={`https://trouver.datasud.fr/dataset/${name}`}><i className="material-icons mr-1">open_in_new</i> View on Datasud.fr</a>
             </div>
         )
     }
