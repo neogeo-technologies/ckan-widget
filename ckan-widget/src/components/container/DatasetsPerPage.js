@@ -5,9 +5,9 @@ import * as actions from '../../actions'
 
 class DatasetsPerPage extends Component {
   handleOnChange = e => {
-    const { search, sort } = this.props
+    const { search, sort, facet_search } = this.props
 
-    this.props.packageSearch({ q: search, sort: sort, rows: e.target.value })
+    this.props.packageSearch({ q: search, sort: sort, rows: e.target.value, fq: facet_search })
   }
 
   render() {
@@ -32,7 +32,8 @@ class DatasetsPerPage extends Component {
 const mapStateToProps = state => {
   return {
     search: state.packageSearch.search,
-    sort: state.packageSearch.sort
+    sort: state.packageSearch.sort,
+    facet_search: state.packageSearch.facet_search
   }
 }
 
