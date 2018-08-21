@@ -24,8 +24,16 @@
   vertical-align: middle;
 }
 
+.dataset-wrap.collapsed{
+  border-color: #007bff;
+  border-width: 5px;
+}
+
+.dataset .title{
+  margin-right: 2rem;
+}
+
 .dataset > .material-icons{
-  display: none;
   position: absolute;
   right: 15px;
 }
@@ -33,8 +41,4 @@
 .dataset:hover{
   cursor: pointer;
   box-shadow: inset 0 0 0 2px rgba(0,0,0,.125);
-}
-
-.dataset:hover .material-icons{
-  display: inline-block;
 }
