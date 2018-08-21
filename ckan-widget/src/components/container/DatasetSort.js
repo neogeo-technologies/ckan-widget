@@ -7,7 +7,7 @@ import * as actions from '../../actions'
 
 class DatasetSort extends Component{
     handleSort = sort => {
-        const { search, rows, facet_search, facets } = this.props
+        const { search, rows, facet_search  } = this.props
         this.props.packageSearch({ q: search, sort: sort, rows: rows,
                                     fq: facet_search })
     }
