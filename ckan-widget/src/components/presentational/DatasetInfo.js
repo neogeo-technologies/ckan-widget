@@ -36,8 +36,10 @@ class DatasetInfo extends Component{
         const { title, notes, metadata_modified, datatype, resources } = this.props
         const datetime = this.formatDate(metadata_modified)
         const formats = this.findFormats(resources)
+        const collapseClass = this.state.collapsed ? '' : 'collapsed'
+
         return(
-            <div className="card my-3">
+            <div className={"card my-3 " + collapseClass}>
                 <div className="dataset card-body" onClick={this.handleDatasetClick}>
                     <i className="material-icons">expand_more</i>
                     <div className="row">
