@@ -36,7 +36,7 @@ class DatasetInfo extends Component{
         const { title, notes, metadata_modified, datatype, resources } = this.props
         const datetime = this.formatDate(metadata_modified)
         const formats = this.findFormats(resources)
-        const collapseClass = this.state.collapsed ? 'card-collapse' : ''
+        const collapseClass = this.state.collapsed ? '' : 'collapsed'
 
         return(
             <div className={"card my-3 " + collapseClass}>
@@ -57,7 +57,7 @@ class DatasetInfo extends Component{
                         </div>
                     </div>
                 </div>
-                <DatasetDetails {...this.props} />
+                <DatasetDetails collapsed={this.state.collapsed} {...this.props} />
             </div>
         )
     }
