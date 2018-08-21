@@ -22,3 +22,6 @@ yarn-error.log*
 
 # docs
 requirement
+
+# package.json
+package-lock.json

@@ -32,13 +32,11 @@ class DatasetDetails extends Component {
             dataset_modification_date,
             dataset_publication_date,
             organization,
-            collapsed
         } = this.props
         const orgName = organization !== null ? organization.name : 'N/A'
-        const collapseClass = collapsed ? 'collapse' : ''
 
         return(
-            <div className={"card-footer px-5 py-4 " + collapseClass}>
+            <div className="card-footer px-5 py-4">
                 <p className="lead">{notes}</p>
                 <ul className="text-muted list-inline">
                     <li className="list-inline-item">Created on: {dataset_creation_date}</li>
