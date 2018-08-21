@@ -11,7 +11,7 @@ class Facet extends Component {
         <li className="list-group-item d-flex justify-content-between align-items-center" key={f} onClick={() => this.props.onClick(`${this.props.facetKey}:${facets[f].name}`)}>
           {facets[f].display_name}
           {' '}
-          <span className="badge badge-dark">{facets[f].count}</span>
+          <span className="badge badge-primary">{facets[f].count}</span>
         </li>,
       );
     }

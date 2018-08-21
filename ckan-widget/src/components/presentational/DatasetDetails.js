@@ -9,8 +9,8 @@ class DatasetDetails extends Component {
                 <li className="list-group-item d-flex align-items-center" key={i}>
                     <span className="badge badge-secondary">{resource.format}</span>
                     <a className="px-3" href={`https://trouver.datasud.fr/dataset/${datasetName}/resource/${resource.id}`}>{resource.name}</a>
-                    <span className="ml-auto">Last modified at {this.formatDate(resource.last_modified)}</span>
-                    <span className="badge badge-secondary">{restricted.level}</span>
+                    <span className="ml-auto mr-3">{this.formatDate(resource.last_modified)}</span>
+                    <span className="badge badge-pill badge-dark">{restricted.level}</span>
                 </li>
             )
         })
@@ -40,11 +40,12 @@ class DatasetDetails extends Component {
         return(
             <div className={"card-footer px-5 py-4 " + collapseClass}>
                 <p className="lead">{notes}</p>
+                <hr/>
                 <ul className="text-muted list-inline">
-                    <li className="list-inline-item">Created on: {dataset_creation_date}</li>
-                    <li className="list-inline-item">Publication date: {dataset_publication_date}</li>
-                    <li className="list-inline-item">Modification date: {dataset_modification_date}</li>
-                    <li className="list-inline-item">Organization: {orgName}</li>
+                    <li className="list-inline-item"><strong>Created on:</strong> {dataset_creation_date}</li>
+                    <li className="list-inline-item"><strong>Publication date:</strong> {dataset_publication_date}</li>
+                    <li className="list-inline-item"><strong>Modification date:</strong> {dataset_modification_date}</li>
+                    <li className="list-inline-item"><strong>Organization:</strong> {orgName}</li>
                 </ul>
                 <div className="my-4">
                     <h3>Resources</h3>

@@ -10,7 +10,7 @@ class TotalDatasets extends Component {
     return (
       <div className="">
         <h2>
-          {total}
+          <strong>{total}</strong>
           {' '}
           {resultName}
         </h2>
