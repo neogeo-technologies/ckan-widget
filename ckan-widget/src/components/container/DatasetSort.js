@@ -7,8 +7,9 @@ import * as actions from '../../actions'
 
 class DatasetSort extends Component{
     handleSort = sort => {
-        const { search, rows } = this.props
-        this.props.packageSearch({ q: search, sort: sort, rows: rows })
+        const { search, rows, facet_search  } = this.props
+        this.props.packageSearch({ q: search, sort: sort, rows: rows,
+                                    fq: facet_search })
     }
 
     render(){
@@ -20,7 +21,8 @@ const mapStateToProps = state => {
     return {
         search: state.packageSearch.search,
         rows: state.packageSearch.rows,
-        sort: state.packageSearch.sort
+        sort: state.packageSearch.sort,
+        facet_search: state.packageSearch.facet_search
     }
 }
 
