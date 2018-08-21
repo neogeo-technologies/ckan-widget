@@ -12,24 +12,36 @@ import Pagination from './components/container/Pagination'
 class App extends Component {
   render() {
     return (
-      <div className="App container-fluid">
-        <div className="row">
-          <div className="col-lg-8">
-            <DatasetSearchBar />
+      <div className="App">
+          <div className="bg-secondary">
+              <div className="container-fluid">
+                  <div className="row">
+                      <div className="col-lg-10 offset-lg-1">
+                        <DatasetSearchBar />
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div className="row">
-          <div className="col-lg-8">
-                <TotalDatasets />
-                <DatasetsPerPage />
-                <DatasetInfoList />
-                <Pagination />
+          <div className="container-fluid my-5">
+              <div className="row">
+                  <div className="col-lg-10 offset-lg-1">
+                      <div className="row">
+                          <div className="col-lg-8">
+                              <div className="d-flex justify-content-between">
+                                  <TotalDatasets />
+                                  <DatasetsPerPage />
+                              </div>
+                              <DatasetInfoList />
+                              <Pagination />
+                          </div>
+                          <div className="col-lg-4">
+                              <DatasetSort />
+                              <FacetList />
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
-          <div className="col-lg-4">
-              <DatasetSort />
-              <FacetList />
-          </div>
-        </div>
       </div>
     );
   }
