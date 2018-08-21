@@ -18,10 +18,18 @@
     "redux-form": "^7.4.2",
     "redux-thunk": "^2.3.0"
   },
+  "jest": {
+  "collectCoverageFrom": [
+    "src/**/*.{js,jsx}",
+    "!<rootDir>/node_modules/",
+    "!<rootDir>/src/reducers/*",
+    "!<rootDir>/src/registerServiceWorker.js"
+    ]
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom --coverage --collectCoverageFrom=src/**/*js  --collectCoverageFrom=!src/reducers --coverageReporters=text-lcov | coveralls",
+    "test": "react-scripts test --env=jsdom --coverage --coverageReporters=text-lcov | coveralls",
     "eject": "react-scripts eject",
     "lint": "eslint"
   },
