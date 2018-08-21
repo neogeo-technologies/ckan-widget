@@ -45,7 +45,8 @@ const mapStateToProps = state => {
     search: state.packageSearch.search,
     sort: state.packageSearch.sort,
     rows: state.packageSearch.rows,
-    total: state.packageSearch.total
+    total: state.packageSearch.total,
+    page: state.packageSearch.page
   }
 }
 
