@@ -15,7 +15,7 @@ class DatasetsPerPage extends Component {
       <div className="">
         <div className="input-group">
           <div className="input-group-prepend">
-            <label for="datasets_per_page" className="input-group-text">Datasets per page: </label>
+            <label htmlFor="datasets_per_page" className="input-group-text">Datasets per page: </label>
           </div>
           <select id="datasets_per_page" className="custom-select" value={this.props.rows} onChange={this.handleOnChange}>
             <option value='10'>10</option>
