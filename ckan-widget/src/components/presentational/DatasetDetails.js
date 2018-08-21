@@ -4,7 +4,7 @@ class DatasetDetails extends Component {
     renderResources = (resources, datasetName) => {
         let items = []
         resources.forEach((resource, i) => {
-            let restricted = JSON.parse(resource.restricted)
+            let restricted = resource.restricted ? JSON.parse(resource.restricted) : 'N/A'
             items.push(
                 <li className="list-group-item d-flex align-items-center" key={i}>
                     <span className="badge badge-secondary">{resource.format}</span>
