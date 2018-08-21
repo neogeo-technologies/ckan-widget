@@ -8,7 +8,8 @@ JS integration library for CKAN data catalog
 ## Instalation
 
 ``
-cd ckan-widget && npm start
+cd ckan-widget
+npm install && npm start
 ``
 
 Then open http://localhost:3000/ to see the widget app.
