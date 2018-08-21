@@ -38,13 +38,14 @@ class DatasetInfo extends Component{
         const formats = this.findFormats(resources)
         return(
             <div className="card my-3">
-                <div className="card-body" onClick={this.handleDatasetClick}>
+                <div className="dataset card-body" onClick={this.handleDatasetClick}>
+                    <i className="material-icons">expand_more</i>
                     <div className="row">
-                        <div className="col-lg-3 d-flex justify-content-center align-items-center">
+                        <div className="col-lg-3 d-flex justify-content-lg-center align-items-center mb-lg-0 mb-md-3">
                             <img className="img-thumbnail img-fluid" src="https://www.datasud.fr/wp-content/themes/crigepaca/assets/images/logo_region_paca.jpg" alt="logo" />
                         </div>
-                        <div className="col-lg-9 dataset">
-                            <h3 className="title" onClick={this.handleDatasetClick}>{title}</h3>
+                        <div className="col-lg-9">
+                            <h3 className="title">{title}</h3>
                             <p className="text-muted">{notes && notes.length > 130 ? `${notes.substring(0, 130)}...` : notes}</p>
                             <ul className="list-inline">
                               <li className="list-inline-item">Modified: {datetime}</li>

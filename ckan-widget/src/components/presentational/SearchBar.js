@@ -45,9 +45,9 @@ class SearchBar extends Component{
                     inputProps={{
                         id: 'datasets-autocomplete',
                         placeholder: 'Search datasets',
-                        className: 'form-control form-control-lg'
+                        className: 'form-control form-control-lg border-0'
                     }}
-                    wrapperStyle={{}}
+                    wrapperStyle={{ position: 'relative'}}
                     value={this.state.value}
                     items={this.state.suggestions}
                     open={( this.state.value.length >= 1 && this.state.isOpen )}
@@ -66,7 +66,7 @@ class SearchBar extends Component{
                     )}
                     renderItem={(item, isHighlighted) => (
                         <div className={`list-group-item list-group-item-light ${isHighlighted ? 'active' : ''}`} key={item.match_displayed}>
-                            <i class="material-icons mr-1">library_books</i> {item.match_displayed}
+                            {item.match_displayed}
                         </div>
                     )}
                 />
