@@ -8,7 +8,7 @@ class DatasetDetails extends Component {
             items.push(
                 <li className="list-group-item d-flex align-items-center" key={i}>
                     <span className="badge badge-secondary">{resource.format}</span>
-                    <a className="px-3" href={`https://trouver.datasud.fr/dataset/${datasetName}/resource/${resource.id}`}>{resource.name}</a>
+                    <a className="px-3" href={resource.url}>{resource.name}</a>
                     <span className="ml-auto mr-3">{this.formatDate(resource.last_modified)}</span>
                     <span className="badge badge-pill badge-dark">{restricted.level}</span>
                 </li>
