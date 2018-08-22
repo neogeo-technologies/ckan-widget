@@ -23,7 +23,7 @@ class Pagination extends Component {
           previousLabel="Previous"
           nextLabel="Next"
           breakLabel={<a role="button" className="page-link">...</a>}
-          breakClassName="page-item"
+          breakClassName="page-item disabled"
           forcePage={page}
           pageCount={pageCount}
           marginPagesDisplayed={2}
