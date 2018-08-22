@@ -1,0 +1,996 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DatasetInfo should render correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <DatasetInfo />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="dataset card-body"
+          onClick={[Function]}
+>
+          <i
+                    className="material-icons"
+          >
+                    expand_more
+          </i>
+          <div
+                    className="row"
+          >
+                    <div
+                              className="col-lg-3 d-flex justify-content-lg-center align-items-center mb-lg-0 mb-md-3"
+                    >
+                              <img
+                                        alt="logo"
+                                        className="img-thumbnail img-fluid"
+                                        src="https://www.datasud.fr/wp-content/themes/crigepaca/assets/images/logo_region_paca.jpg"
+                              />
+                    </div>
+                    <div
+                              className="col-lg-9"
+                    >
+                              <h4
+                                        className="title text-primary"
+                              />
+                              <p
+                                        className="text-muted"
+                              />
+                              <ul
+                                        className="list-inline"
+                              >
+                                        <li
+                                                  className="list-inline-item"
+                                        >
+                                                  <strong>
+                                                            Modified:
+                                                  </strong>
+                                                   
+                                                  Invalid Date
+                                        </li>
+                                        <li
+                                                  className="list-inline-item"
+                                        >
+                                                  <strong>
+                                                            Formats:
+                                                  </strong>
+                                                   
+                                                  
+                                        </li>
+                                        <li
+                                                  className="list-inline-item"
+                                        >
+                                                  <strong>
+                                                            Datatype:
+                                                  </strong>
+                                                   
+                                                  N/A
+                                        </li>
+                              </ul>
+                    </div>
+          </div>
+</div>,
+        <DatasetDetails
+          collapsed={true}
+/>,
+      ],
+      "className": "card dataset-wrap my-3 ",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <i
+              className="material-icons"
+>
+              expand_more
+</i>,
+            <div
+              className="row"
+>
+              <div
+                            className="col-lg-3 d-flex justify-content-lg-center align-items-center mb-lg-0 mb-md-3"
+              >
+                            <img
+                                          alt="logo"
+                                          className="img-thumbnail img-fluid"
+                                          src="https://www.datasud.fr/wp-content/themes/crigepaca/assets/images/logo_region_paca.jpg"
+                            />
+              </div>
+              <div
+                            className="col-lg-9"
+              >
+                            <h4
+                                          className="title text-primary"
+                            />
+                            <p
+                                          className="text-muted"
+                            />
+                            <ul
+                                          className="list-inline"
+                            >
+                                          <li
+                                                        className="list-inline-item"
+                                          >
+                                                        <strong>
+                                                                      Modified:
+                                                        </strong>
+                                                         
+                                                        Invalid Date
+                                          </li>
+                                          <li
+                                                        className="list-inline-item"
+                                          >
+                                                        <strong>
+                                                                      Formats:
+                                                        </strong>
+                                                         
+                                                        
+                                          </li>
+                                          <li
+                                                        className="list-inline-item"
+                                          >
+                                                        <strong>
+                                                                      Datatype:
+                                                        </strong>
+                                                         
+                                                        N/A
+                                          </li>
+                            </ul>
+              </div>
+</div>,
+          ],
+          "className": "dataset card-body",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "expand_more",
+              "className": "material-icons",
+            },
+            "ref": null,
+            "rendered": "expand_more",
+            "type": "i",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="col-lg-3 d-flex justify-content-lg-center align-items-center mb-lg-0 mb-md-3"
+>
+                  <img
+                                    alt="logo"
+                                    className="img-thumbnail img-fluid"
+                                    src="https://www.datasud.fr/wp-content/themes/crigepaca/assets/images/logo_region_paca.jpg"
+                  />
+</div>,
+                <div
+                  className="col-lg-9"
+>
+                  <h4
+                                    className="title text-primary"
+                  />
+                  <p
+                                    className="text-muted"
+                  />
+                  <ul
+                                    className="list-inline"
+                  >
+                                    <li
+                                                      className="list-inline-item"
+                                    >
+                                                      <strong>
+                                                                        Modified:
+                                                      </strong>
+                                                       
+                                                      Invalid Date
+                                    </li>
+                                    <li
+                                                      className="list-inline-item"
+                                    >
+                                                      <strong>
+                                                                        Formats:
+                                                      </strong>
+                                                       
+                                                      
+                                    </li>
+                                    <li
+                                                      className="list-inline-item"
+                                    >
+                                                      <strong>
+                                                                        Datatype:
+                                                      </strong>
+                                                       
+                                                      N/A
+                                    </li>
+                  </ul>
+</div>,
+              ],
+              "className": "row",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <img
+                    alt="logo"
+                    className="img-thumbnail img-fluid"
+                    src="https://www.datasud.fr/wp-content/themes/crigepaca/assets/images/logo_region_paca.jpg"
+/>,
+                  "className": "col-lg-3 d-flex justify-content-lg-center align-items-center mb-lg-0 mb-md-3",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "logo",
+                    "className": "img-thumbnail img-fluid",
+                    "src": "https://www.datasud.fr/wp-content/themes/crigepaca/assets/images/logo_region_paca.jpg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <h4
+                      className="title text-primary"
+/>,
+                    <p
+                      className="text-muted"
+/>,
+                    <ul
+                      className="list-inline"
+>
+                      <li
+                                            className="list-inline-item"
+                      >
+                                            <strong>
+                                                                  Modified:
+                                            </strong>
+                                             
+                                            Invalid Date
+                      </li>
+                      <li
+                                            className="list-inline-item"
+                      >
+                                            <strong>
+                                                                  Formats:
+                                            </strong>
+                                             
+                                            
+                      </li>
+                      <li
+                                            className="list-inline-item"
+                      >
+                                            <strong>
+                                                                  Datatype:
+                                            </strong>
+                                             
+                                            N/A
+                      </li>
+</ul>,
+                  ],
+                  "className": "col-lg-9",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": undefined,
+                      "className": "title text-primary",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "h4",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": undefined,
+                      "className": "text-muted",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <li
+                          className="list-inline-item"
+>
+                          <strong>
+                                                    Modified:
+                          </strong>
+                           
+                          Invalid Date
+</li>,
+                        <li
+                          className="list-inline-item"
+>
+                          <strong>
+                                                    Formats:
+                          </strong>
+                           
+                          
+</li>,
+                        <li
+                          className="list-inline-item"
+>
+                          <strong>
+                                                    Datatype:
+                          </strong>
+                           
+                          N/A
+</li>,
+                      ],
+                      "className": "list-inline",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <strong>
+                              Modified:
+</strong>,
+                            " ",
+                            "Invalid Date",
+                          ],
+                          "className": "list-inline-item",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "Modified:",
+                            },
+                            "ref": null,
+                            "rendered": "Modified:",
+                            "type": "strong",
+                          },
+                          " ",
+                          "Invalid Date",
+                        ],
+                        "type": "li",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <strong>
+                              Formats:
+</strong>,
+                            " ",
+                            "",
+                          ],
+                          "className": "list-inline-item",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "Formats:",
+                            },
+                            "ref": null,
+                            "rendered": "Formats:",
+                            "type": "strong",
+                          },
+                          " ",
+                          "",
+                        ],
+                        "type": "li",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <strong>
+                              Datatype:
+</strong>,
+                            " ",
+                            "N/A",
+                          ],
+                          "className": "list-inline-item",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "Datatype:",
+                            },
+                            "ref": null,
+                            "rendered": "Datatype:",
+                            "type": "strong",
+                          },
+                          " ",
+                          "N/A",
+                        ],
+                        "type": "li",
+                      },
+                    ],
+                    "type": "ul",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "collapsed": true,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="dataset card-body"
+            onClick={[Function]}
+>
+            <i
+                        className="material-icons"
+            >
+                        expand_more
+            </i>
+            <div
+                        className="row"
+            >
+                        <div
+                                    className="col-lg-3 d-flex justify-content-lg-center align-items-center mb-lg-0 mb-md-3"
+                        >
+                                    <img
+                                                alt="logo"
+                                                className="img-thumbnail img-fluid"
+                                                src="https://www.datasud.fr/wp-content/themes/crigepaca/assets/images/logo_region_paca.jpg"
+                                    />
+                        </div>
+                        <div
+                                    className="col-lg-9"
+                        >
+                                    <h4
+                                                className="title text-primary"
+                                    />
+                                    <p
+                                                className="text-muted"
+                                    />
+                                    <ul
+                                                className="list-inline"
+                                    >
+                                                <li
+                                                            className="list-inline-item"
+                                                >
+                                                            <strong>
+                                                                        Modified:
+                                                            </strong>
+                                                             
+                                                            Invalid Date
+                                                </li>
+                                                <li
+                                                            className="list-inline-item"
+                                                >
+                                                            <strong>
+                                                                        Formats:
+                                                            </strong>
+                                                             
+                                                            
+                                                </li>
+                                                <li
+                                                            className="list-inline-item"
+                                                >
+                                                            <strong>
+                                                                        Datatype:
+                                                            </strong>
+                                                             
+                                                            N/A
+                                                </li>
+                                    </ul>
+                        </div>
+            </div>
+</div>,
+          <DatasetDetails
+            collapsed={true}
+/>,
+        ],
+        "className": "card dataset-wrap my-3 ",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <i
+                className="material-icons"
+>
+                expand_more
+</i>,
+              <div
+                className="row"
+>
+                <div
+                                className="col-lg-3 d-flex justify-content-lg-center align-items-center mb-lg-0 mb-md-3"
+                >
+                                <img
+                                                alt="logo"
+                                                className="img-thumbnail img-fluid"
+                                                src="https://www.datasud.fr/wp-content/themes/crigepaca/assets/images/logo_region_paca.jpg"
+                                />
+                </div>
+                <div
+                                className="col-lg-9"
+                >
+                                <h4
+                                                className="title text-primary"
+                                />
+                                <p
+                                                className="text-muted"
+                                />
+                                <ul
+                                                className="list-inline"
+                                >
+                                                <li
+                                                                className="list-inline-item"
+                                                >
+                                                                <strong>
+                                                                                Modified:
+                                                                </strong>
+                                                                 
+                                                                Invalid Date
+                                                </li>
+                                                <li
+                                                                className="list-inline-item"
+                                                >
+                                                                <strong>
+                                                                                Formats:
+                                                                </strong>
+                                                                 
+                                                                
+                                                </li>
+                                                <li
+                                                                className="list-inline-item"
+                                                >
+                                                                <strong>
+                                                                                Datatype:
+                                                                </strong>
+                                                                 
+                                                                N/A
+                                                </li>
+                                </ul>
+                </div>
+</div>,
+            ],
+            "className": "dataset card-body",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "expand_more",
+                "className": "material-icons",
+              },
+              "ref": null,
+              "rendered": "expand_more",
+              "type": "i",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="col-lg-3 d-flex justify-content-lg-center align-items-center mb-lg-0 mb-md-3"
+>
+                    <img
+                                        alt="logo"
+                                        className="img-thumbnail img-fluid"
+                                        src="https://www.datasud.fr/wp-content/themes/crigepaca/assets/images/logo_region_paca.jpg"
+                    />
+</div>,
+                  <div
+                    className="col-lg-9"
+>
+                    <h4
+                                        className="title text-primary"
+                    />
+                    <p
+                                        className="text-muted"
+                    />
+                    <ul
+                                        className="list-inline"
+                    >
+                                        <li
+                                                            className="list-inline-item"
+                                        >
+                                                            <strong>
+                                                                                Modified:
+                                                            </strong>
+                                                             
+                                                            Invalid Date
+                                        </li>
+                                        <li
+                                                            className="list-inline-item"
+                                        >
+                                                            <strong>
+                                                                                Formats:
+                                                            </strong>
+                                                             
+                                                            
+                                        </li>
+                                        <li
+                                                            className="list-inline-item"
+                                        >
+                                                            <strong>
+                                                                                Datatype:
+                                                            </strong>
+                                                             
+                                                            N/A
+                                        </li>
+                    </ul>
+</div>,
+                ],
+                "className": "row",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <img
+                      alt="logo"
+                      className="img-thumbnail img-fluid"
+                      src="https://www.datasud.fr/wp-content/themes/crigepaca/assets/images/logo_region_paca.jpg"
+/>,
+                    "className": "col-lg-3 d-flex justify-content-lg-center align-items-center mb-lg-0 mb-md-3",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "logo",
+                      "className": "img-thumbnail img-fluid",
+                      "src": "https://www.datasud.fr/wp-content/themes/crigepaca/assets/images/logo_region_paca.jpg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <h4
+                        className="title text-primary"
+/>,
+                      <p
+                        className="text-muted"
+/>,
+                      <ul
+                        className="list-inline"
+>
+                        <li
+                                                className="list-inline-item"
+                        >
+                                                <strong>
+                                                                        Modified:
+                                                </strong>
+                                                 
+                                                Invalid Date
+                        </li>
+                        <li
+                                                className="list-inline-item"
+                        >
+                                                <strong>
+                                                                        Formats:
+                                                </strong>
+                                                 
+                                                
+                        </li>
+                        <li
+                                                className="list-inline-item"
+                        >
+                                                <strong>
+                                                                        Datatype:
+                                                </strong>
+                                                 
+                                                N/A
+                        </li>
+</ul>,
+                    ],
+                    "className": "col-lg-9",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": undefined,
+                        "className": "title text-primary",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "h4",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": undefined,
+                        "className": "text-muted",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <li
+                            className="list-inline-item"
+>
+                            <strong>
+                                                        Modified:
+                            </strong>
+                             
+                            Invalid Date
+</li>,
+                          <li
+                            className="list-inline-item"
+>
+                            <strong>
+                                                        Formats:
+                            </strong>
+                             
+                            
+</li>,
+                          <li
+                            className="list-inline-item"
+>
+                            <strong>
+                                                        Datatype:
+                            </strong>
+                             
+                            N/A
+</li>,
+                        ],
+                        "className": "list-inline",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              <strong>
+                                Modified:
+</strong>,
+                              " ",
+                              "Invalid Date",
+                            ],
+                            "className": "list-inline-item",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": "Modified:",
+                              },
+                              "ref": null,
+                              "rendered": "Modified:",
+                              "type": "strong",
+                            },
+                            " ",
+                            "Invalid Date",
+                          ],
+                          "type": "li",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              <strong>
+                                Formats:
+</strong>,
+                              " ",
+                              "",
+                            ],
+                            "className": "list-inline-item",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": "Formats:",
+                              },
+                              "ref": null,
+                              "rendered": "Formats:",
+                              "type": "strong",
+                            },
+                            " ",
+                            "",
+                          ],
+                          "type": "li",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              <strong>
+                                Datatype:
+</strong>,
+                              " ",
+                              "N/A",
+                            ],
+                            "className": "list-inline-item",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": "Datatype:",
+                              },
+                              "ref": null,
+                              "rendered": "Datatype:",
+                              "type": "strong",
+                            },
+                            " ",
+                            "N/A",
+                          ],
+                          "type": "li",
+                        },
+                      ],
+                      "type": "ul",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "collapsed": true,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
