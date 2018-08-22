@@ -1,14 +1,14 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import SearchBar from '../components/presentational/SearchBar';
+import Sort from '../../../components/presentational/Sort';
 
-describe('SearchBar', () => {
+describe('Sort', () => {
  it('should be defined', () => {
-   expect(SearchBar).toBeDefined();
+   expect(Sort).toBeDefined();
  });
  /*it('should render correctly', () => {
    const tree = shallow(
-     <SearchBar />
+     <Sort />
    );
    expect(tree).toMatchSnapshot();
  });

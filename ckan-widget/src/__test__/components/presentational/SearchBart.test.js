@@ -1,14 +1,14 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Facet from '../components/presentational/Facet';
+import SearchBar from '../../../components/presentational/SearchBar';
 
-describe('Facet', () => {
+describe('SearchBar', () => {
  it('should be defined', () => {
-   expect(Facet).toBeDefined();
+   expect(SearchBar).toBeDefined();
  });
  /*it('should render correctly', () => {
    const tree = shallow(
-     <Facet />
+     <SearchBar />
    );
    expect(tree).toMatchSnapshot();
  });

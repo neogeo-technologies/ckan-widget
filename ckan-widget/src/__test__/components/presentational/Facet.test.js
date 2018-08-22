@@ -1,14 +1,14 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Sort from '../components/presentational/Sort';
+import Facet from '../../../components/presentational/Facet';
 
-describe('Sort', () => {
+describe('Facet', () => {
  it('should be defined', () => {
-   expect(Sort).toBeDefined();
+   expect(Facet).toBeDefined();
  });
  /*it('should render correctly', () => {
    const tree = shallow(
-     <Sort />
+     <Facet />
    );
    expect(tree).toMatchSnapshot();
  });
