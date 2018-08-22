@@ -32,7 +32,9 @@ class App extends Component {
                                   <DatasetsPerPage />
                               </div>
                               <DatasetInfoList />
-                              <Pagination />
+                              <nav className="my-5">
+                                  <Pagination />
+                              </nav>
                           </div>
                           <div className="col-lg-4">
                               <DatasetSort />

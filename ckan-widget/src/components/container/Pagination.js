@@ -20,10 +20,10 @@ class Pagination extends Component {
     if (pageCount > 1) {
       return (
         <ReactPaginate
-          previousLabel={'<<'}
-          nextLabel={'>>'}
-          breakLabel="..."
-          breakClassName="break-me"
+          previousLabel="Previous"
+          nextLabel="Next"
+          breakLabel={<a role="button" className="page-link">...</a>}
+          breakClassName="page-item disabled"
           forcePage={page}
           pageCount={pageCount}
           marginPagesDisplayed={2}
@@ -31,7 +31,14 @@ class Pagination extends Component {
           onPageChange={data => this.handlePagination(data.selected)}
           containerClassName="pagination"
           subContainerClassName="pages pagination"
+          pageClassName="page-item"
+          pageLinkClassName="page-link"
           activeClassName="active"
+          disabledClassName="disabled"
+          previousClassName="page-item"
+          nextClassName="page-item"
+          previousLinkClassName="page-link"
+          nextLinkClassName="page-link"
         />
       );
     }
