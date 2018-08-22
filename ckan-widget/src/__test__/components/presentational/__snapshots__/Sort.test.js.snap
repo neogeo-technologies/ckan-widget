@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Sort should render correctly 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Sort />,
+ReactWrapper {
+  Symbol(enzyme.__unrendered__): <Sort
+    handleSort={[Function]}
+    sort="score desc, metadata_modified desc"
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -11,283 +13,1716 @@ ShallowWrapper {
     "simulateEvent": [Function],
     "unmount": [Function],
   },
+  Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": <div
-        className="input-group"
->
-        <div
-                className="input-group-prepend"
-        >
-                <label
-                        className="input-group-text"
-                        htmlFor="order_by"
-                        title="Order by"
-                >
-                        <i
-                                className="material-icons"
-                        >
-                                sort
-                        </i>
-                </label>
-        </div>
-        <select
-                className="custom-select"
-                id="order_by"
-                onChange={[Function]}
-                value={undefined}
-        >
-                <option
-                        value="score desc, metadata_modified desc"
-                >
-                        Relevance
-                </option>
-                <option
-                        value="title_string asc"
-                >
-                        Name Ascending
-                </option>
-                <option
-                        value="title_string desc"
-                >
-                        Name Descending
-                </option>
-                <option
-                        value="metadata_modified desc"
-                >
-                        Last Modified
-                </option>
-                <option
-                        value="views_recent desc"
-                >
-                        Popular
-                </option>
-        </select>
+    "instance": Sort {
+      "_reactInternalFiber": FiberNode {
+        "_debugID": 5,
+        "_debugIsCurrentlyTiming": false,
+        "_debugOwner": FiberNode {
+          "_debugID": 4,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": null,
+          "_debugSource": null,
+          "actualDuration": 0,
+          "actualStartTime": 0,
+          "alternate": null,
+          "child": [Circular],
+          "effectTag": 1,
+          "expirationTime": 0,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "Component": [Function],
+            "context": null,
+            "props": Object {
+              "handleSort": [Function],
+              "sort": "score desc, metadata_modified desc",
+            },
+          },
+          "memoizedState": Object {
+            "context": null,
+            "mount": true,
+            "props": Object {
+              "handleSort": [Function],
+              "sort": "score desc, metadata_modified desc",
+            },
+          },
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "Component": [Function],
+            "context": null,
+            "props": Object {
+              "handleSort": [Function],
+              "sort": "score desc, metadata_modified desc",
+            },
+          },
+          "ref": null,
+          "return": FiberNode {
+            "_debugID": 1,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "actualDuration": 0,
+            "actualStartTime": 0,
+            "alternate": FiberNode {
+              "_debugID": 1,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "actualDuration": 0,
+              "actualStartTime": 0,
+              "alternate": [Circular],
+              "child": null,
+              "effectTag": 0,
+              "expirationTime": 1,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": null,
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseTime": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <div
+                                    class="mr-0"
+                  >
+                                    <div
+                                                      class="input-group"
+                                    >
+                                                      <div
+                                                                        class="input-group-prepend"
+                                                      >
+                                                                        <label
+                                                                                          for="order_by"
+                                                                                          title="Order by"
+                                                                                          class="input-group-text"
+                                                                        >
+                                                                                          <i
+                                                                                                            class="material-icons"
+                                                                                          >
+                                                                                                            sort
+                                                                                          </i>
+                                                                        </label>
+                                                      </div>
+                                                      <select
+                                                                        id="order_by"
+                                                                        class="custom-select"
+                                                      >
+                                                                        <option
+                                                                                          value="score desc, metadata_modified desc"
+                                                                        >
+                                                                                          Relevance
+                                                                        </option>
+                                                                        <option
+                                                                                          value="title_string asc"
+                                                                        >
+                                                                                          Name Ascending
+                                                                        </option>
+                                                                        <option
+                                                                                          value="title_string desc"
+                                                                        >
+                                                                                          Name Descending
+                                                                        </option>
+                                                                        <option
+                                                                                          value="metadata_modified desc"
+                                                                        >
+                                                                                          Last Modified
+                                                                        </option>
+                                                                        <option
+                                                                                          value="views_recent desc"
+                                                                        >
+                                                                                          Popular
+                                                                        </option>
+                                                      </select>
+                                    </div>
+                  </div>
 </div>,
-      "className": "mr-0",
+                "context": Object {},
+                "current": [Circular],
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "remainingExpirationTime": 0,
+              },
+              "tag": 3,
+              "treeBaseTime": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": null,
+                "expirationTime": 1,
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                                            Object {
+                                                                  "handleSort": [Function],
+                                                                  "sort": "score desc, metadata_modified desc",
+                                                                }
+                      }
+/>,
+                  },
+                  "tag": 0,
+                },
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                                            Object {
+                                                                  "handleSort": [Function],
+                                                                  "sort": "score desc, metadata_modified desc",
+                                                                }
+                      }
+/>,
+                  },
+                  "tag": 0,
+                },
+              },
+            },
+            "child": [Circular],
+            "effectTag": 32,
+            "expirationTime": 0,
+            "firstEffect": [Circular],
+            "index": 0,
+            "key": null,
+            "lastEffect": [Circular],
+            "memoizedProps": null,
+            "memoizedState": Object {
+              "element": <WrapperComponent
+                Component={[Function]}
+                context={null}
+                props={
+                                Object {
+                                                "handleSort": [Function],
+                                                "sort": "score desc, metadata_modified desc",
+                                              }
+                }
+/>,
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": null,
+            "ref": null,
+            "return": null,
+            "selfBaseTime": 0,
+            "sibling": null,
+            "stateNode": Object {
+              "containerInfo": <div>
+                <div
+                                class="mr-0"
+                >
+                                <div
+                                                class="input-group"
+                                >
+                                                <div
+                                                                class="input-group-prepend"
+                                                >
+                                                                <label
+                                                                                for="order_by"
+                                                                                title="Order by"
+                                                                                class="input-group-text"
+                                                                >
+                                                                                <i
+                                                                                                class="material-icons"
+                                                                                >
+                                                                                                sort
+                                                                                </i>
+                                                                </label>
+                                                </div>
+                                                <select
+                                                                id="order_by"
+                                                                class="custom-select"
+                                                >
+                                                                <option
+                                                                                value="score desc, metadata_modified desc"
+                                                                >
+                                                                                Relevance
+                                                                </option>
+                                                                <option
+                                                                                value="title_string asc"
+                                                                >
+                                                                                Name Ascending
+                                                                </option>
+                                                                <option
+                                                                                value="title_string desc"
+                                                                >
+                                                                                Name Descending
+                                                                </option>
+                                                                <option
+                                                                                value="metadata_modified desc"
+                                                                >
+                                                                                Last Modified
+                                                                </option>
+                                                                <option
+                                                                                value="views_recent desc"
+                                                                >
+                                                                                Popular
+                                                                </option>
+                                                </select>
+                                </div>
+                </div>
+</div>,
+              "context": Object {},
+              "current": [Circular],
+              "earliestPendingTime": 0,
+              "earliestSuspendedTime": 0,
+              "finishedWork": null,
+              "firstBatch": null,
+              "hydrate": false,
+              "latestPendingTime": 0,
+              "latestPingedTime": 0,
+              "latestSuspendedTime": 0,
+              "nextScheduledRoot": null,
+              "pendingChildren": null,
+              "pendingCommitExpirationTime": 0,
+              "pendingContext": null,
+              "remainingExpirationTime": 0,
+            },
+            "tag": 3,
+            "treeBaseTime": 0,
+            "type": null,
+            "updateQueue": Object {
+              "baseState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                                    Object {
+                                                      "handleSort": [Function],
+                                                      "sort": "score desc, metadata_modified desc",
+                                                    }
+                  }
+/>,
+              },
+              "expirationTime": 0,
+              "firstCapturedEffect": null,
+              "firstCapturedUpdate": null,
+              "firstEffect": null,
+              "firstUpdate": null,
+              "lastCapturedEffect": null,
+              "lastCapturedUpdate": null,
+              "lastEffect": null,
+              "lastUpdate": null,
+            },
+          },
+          "selfBaseTime": 0,
+          "sibling": null,
+          "stateNode": WrapperComponent {
+            "_reactInternalFiber": [Circular],
+            "_reactInternalInstance": Object {},
+            "context": Object {},
+            "props": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "handleSort": [Function],
+                "sort": "score desc, metadata_modified desc",
+              },
+            },
+            "refs": Object {},
+            "state": Object {
+              "context": null,
+              "mount": true,
+              "props": Object {
+                "handleSort": [Function],
+                "sort": "score desc, metadata_modified desc",
+              },
+            },
+            "updater": Object {
+              "enqueueForceUpdate": [Function],
+              "enqueueReplaceState": [Function],
+              "enqueueSetState": [Function],
+              "isMounted": [Function],
+            },
+          },
+          "tag": 2,
+          "treeBaseTime": 0,
+          "type": [Function],
+          "updateQueue": null,
+        },
+        "_debugSource": null,
+        "actualDuration": 0,
+        "actualStartTime": 0,
+        "alternate": null,
+        "child": FiberNode {
+          "_debugID": 6,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": [Circular],
+          "_debugSource": Object {
+            "fileName": "/home/vladimir/projects/ckan/ckan-widget/ckan-widget/src/components/presentational/Sort.js",
+            "lineNumber": 6,
+          },
+          "actualDuration": 0,
+          "actualStartTime": 0,
+          "alternate": null,
+          "child": FiberNode {
+            "_debugID": 7,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": [Circular],
+            "_debugSource": Object {
+              "fileName": "/home/vladimir/projects/ckan/ckan-widget/ckan-widget/src/components/presentational/Sort.js",
+              "lineNumber": 7,
+            },
+            "actualDuration": 0,
+            "actualStartTime": 0,
+            "alternate": null,
+            "child": FiberNode {
+              "_debugID": 8,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": [Circular],
+              "_debugSource": Object {
+                "fileName": "/home/vladimir/projects/ckan/ckan-widget/ckan-widget/src/components/presentational/Sort.js",
+                "lineNumber": 8,
+              },
+              "actualDuration": 0,
+              "actualStartTime": 0,
+              "alternate": null,
+              "child": FiberNode {
+                "_debugID": 10,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": [Circular],
+                "_debugSource": Object {
+                  "fileName": "/home/vladimir/projects/ckan/ckan-widget/ckan-widget/src/components/presentational/Sort.js",
+                  "lineNumber": 9,
+                },
+                "actualDuration": 0,
+                "actualStartTime": 0,
+                "alternate": null,
+                "child": FiberNode {
+                  "_debugID": 11,
+                  "_debugIsCurrentlyTiming": false,
+                  "_debugOwner": [Circular],
+                  "_debugSource": Object {
+                    "fileName": "/home/vladimir/projects/ckan/ckan-widget/ckan-widget/src/components/presentational/Sort.js",
+                    "lineNumber": 9,
+                  },
+                  "actualDuration": 0,
+                  "actualStartTime": 0,
+                  "alternate": null,
+                  "child": null,
+                  "effectTag": 0,
+                  "expirationTime": 0,
+                  "firstEffect": null,
+                  "index": 0,
+                  "key": null,
+                  "lastEffect": null,
+                  "memoizedProps": Object {
+                    "children": "sort",
+                    "className": "material-icons",
+                  },
+                  "memoizedState": null,
+                  "mode": 0,
+                  "nextEffect": null,
+                  "pendingProps": Object {
+                    "children": "sort",
+                    "className": "material-icons",
+                  },
+                  "ref": null,
+                  "return": [Circular],
+                  "selfBaseTime": 0,
+                  "sibling": null,
+                  "stateNode": <i
+                    class="material-icons"
+>
+                    sort
+</i>,
+                  "tag": 5,
+                  "treeBaseTime": 0,
+                  "type": "i",
+                  "updateQueue": null,
+                },
+                "effectTag": 0,
+                "expirationTime": 0,
+                "firstEffect": null,
+                "index": 0,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": Object {
+                  "children": <i
+                    className="material-icons"
+>
+                    sort
+</i>,
+                  "className": "input-group-text",
+                  "htmlFor": "order_by",
+                  "title": "Order by",
+                },
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": Object {
+                  "children": <i
+                    className="material-icons"
+>
+                    sort
+</i>,
+                  "className": "input-group-text",
+                  "htmlFor": "order_by",
+                  "title": "Order by",
+                },
+                "ref": null,
+                "return": [Circular],
+                "selfBaseTime": 0,
+                "sibling": null,
+                "stateNode": <label
+                  for="order_by"
+                  title="Order by"
+                  class="input-group-text"
+>
+                  <i
+                                    class="material-icons"
+                  >
+                                    sort
+                  </i>
+</label>,
+                "tag": 5,
+                "treeBaseTime": 0,
+                "type": "label",
+                "updateQueue": null,
+              },
+              "effectTag": 0,
+              "expirationTime": 0,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": Object {
+                "children": <label
+                  className="input-group-text"
+                  htmlFor="order_by"
+                  title="Order by"
+>
+                  <i
+                                    className="material-icons"
+                  >
+                                    sort
+                  </i>
+</label>,
+                "className": "input-group-prepend",
+              },
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": Object {
+                "children": <label
+                  className="input-group-text"
+                  htmlFor="order_by"
+                  title="Order by"
+>
+                  <i
+                                    className="material-icons"
+                  >
+                                    sort
+                  </i>
+</label>,
+                "className": "input-group-prepend",
+              },
+              "ref": null,
+              "return": [Circular],
+              "selfBaseTime": 0,
+              "sibling": FiberNode {
+                "_debugID": 9,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": [Circular],
+                "_debugSource": Object {
+                  "fileName": "/home/vladimir/projects/ckan/ckan-widget/ckan-widget/src/components/presentational/Sort.js",
+                  "lineNumber": 11,
+                },
+                "actualDuration": 0,
+                "actualStartTime": 0,
+                "alternate": null,
+                "child": FiberNode {
+                  "_debugID": 12,
+                  "_debugIsCurrentlyTiming": false,
+                  "_debugOwner": [Circular],
+                  "_debugSource": Object {
+                    "fileName": "/home/vladimir/projects/ckan/ckan-widget/ckan-widget/src/components/presentational/Sort.js",
+                    "lineNumber": 12,
+                  },
+                  "actualDuration": 0,
+                  "actualStartTime": 0,
+                  "alternate": null,
+                  "child": null,
+                  "effectTag": 0,
+                  "expirationTime": 0,
+                  "firstEffect": null,
+                  "index": 0,
+                  "key": null,
+                  "lastEffect": null,
+                  "memoizedProps": Object {
+                    "children": "Relevance",
+                    "value": "score desc, metadata_modified desc",
+                  },
+                  "memoizedState": null,
+                  "mode": 0,
+                  "nextEffect": null,
+                  "pendingProps": Object {
+                    "children": "Relevance",
+                    "value": "score desc, metadata_modified desc",
+                  },
+                  "ref": null,
+                  "return": [Circular],
+                  "selfBaseTime": 0,
+                  "sibling": FiberNode {
+                    "_debugID": 13,
+                    "_debugIsCurrentlyTiming": false,
+                    "_debugOwner": [Circular],
+                    "_debugSource": Object {
+                      "fileName": "/home/vladimir/projects/ckan/ckan-widget/ckan-widget/src/components/presentational/Sort.js",
+                      "lineNumber": 13,
+                    },
+                    "actualDuration": 0,
+                    "actualStartTime": 0,
+                    "alternate": null,
+                    "child": null,
+                    "effectTag": 0,
+                    "expirationTime": 0,
+                    "firstEffect": null,
+                    "index": 1,
+                    "key": null,
+                    "lastEffect": null,
+                    "memoizedProps": Object {
+                      "children": "Name Ascending",
+                      "value": "title_string asc",
+                    },
+                    "memoizedState": null,
+                    "mode": 0,
+                    "nextEffect": null,
+                    "pendingProps": Object {
+                      "children": "Name Ascending",
+                      "value": "title_string asc",
+                    },
+                    "ref": null,
+                    "return": [Circular],
+                    "selfBaseTime": 0,
+                    "sibling": FiberNode {
+                      "_debugID": 14,
+                      "_debugIsCurrentlyTiming": false,
+                      "_debugOwner": [Circular],
+                      "_debugSource": Object {
+                        "fileName": "/home/vladimir/projects/ckan/ckan-widget/ckan-widget/src/components/presentational/Sort.js",
+                        "lineNumber": 14,
+                      },
+                      "actualDuration": 0,
+                      "actualStartTime": 0,
+                      "alternate": null,
+                      "child": null,
+                      "effectTag": 0,
+                      "expirationTime": 0,
+                      "firstEffect": null,
+                      "index": 2,
+                      "key": null,
+                      "lastEffect": null,
+                      "memoizedProps": Object {
+                        "children": "Name Descending",
+                        "value": "title_string desc",
+                      },
+                      "memoizedState": null,
+                      "mode": 0,
+                      "nextEffect": null,
+                      "pendingProps": Object {
+                        "children": "Name Descending",
+                        "value": "title_string desc",
+                      },
+                      "ref": null,
+                      "return": [Circular],
+                      "selfBaseTime": 0,
+                      "sibling": FiberNode {
+                        "_debugID": 15,
+                        "_debugIsCurrentlyTiming": false,
+                        "_debugOwner": [Circular],
+                        "_debugSource": Object {
+                          "fileName": "/home/vladimir/projects/ckan/ckan-widget/ckan-widget/src/components/presentational/Sort.js",
+                          "lineNumber": 15,
+                        },
+                        "actualDuration": 0,
+                        "actualStartTime": 0,
+                        "alternate": null,
+                        "child": null,
+                        "effectTag": 0,
+                        "expirationTime": 0,
+                        "firstEffect": null,
+                        "index": 3,
+                        "key": null,
+                        "lastEffect": null,
+                        "memoizedProps": Object {
+                          "children": "Last Modified",
+                          "value": "metadata_modified desc",
+                        },
+                        "memoizedState": null,
+                        "mode": 0,
+                        "nextEffect": null,
+                        "pendingProps": Object {
+                          "children": "Last Modified",
+                          "value": "metadata_modified desc",
+                        },
+                        "ref": null,
+                        "return": [Circular],
+                        "selfBaseTime": 0,
+                        "sibling": FiberNode {
+                          "_debugID": 16,
+                          "_debugIsCurrentlyTiming": false,
+                          "_debugOwner": [Circular],
+                          "_debugSource": Object {
+                            "fileName": "/home/vladimir/projects/ckan/ckan-widget/ckan-widget/src/components/presentational/Sort.js",
+                            "lineNumber": 16,
+                          },
+                          "actualDuration": 0,
+                          "actualStartTime": 0,
+                          "alternate": null,
+                          "child": null,
+                          "effectTag": 0,
+                          "expirationTime": 0,
+                          "firstEffect": null,
+                          "index": 4,
+                          "key": null,
+                          "lastEffect": null,
+                          "memoizedProps": Object {
+                            "children": "Popular",
+                            "value": "views_recent desc",
+                          },
+                          "memoizedState": null,
+                          "mode": 0,
+                          "nextEffect": null,
+                          "pendingProps": Object {
+                            "children": "Popular",
+                            "value": "views_recent desc",
+                          },
+                          "ref": null,
+                          "return": [Circular],
+                          "selfBaseTime": 0,
+                          "sibling": null,
+                          "stateNode": <option
+                            value="views_recent desc"
+>
+                            Popular
+</option>,
+                          "tag": 5,
+                          "treeBaseTime": 0,
+                          "type": "option",
+                          "updateQueue": null,
+                        },
+                        "stateNode": <option
+                          value="metadata_modified desc"
+>
+                          Last Modified
+</option>,
+                        "tag": 5,
+                        "treeBaseTime": 0,
+                        "type": "option",
+                        "updateQueue": null,
+                      },
+                      "stateNode": <option
+                        value="title_string desc"
+>
+                        Name Descending
+</option>,
+                      "tag": 5,
+                      "treeBaseTime": 0,
+                      "type": "option",
+                      "updateQueue": null,
+                    },
+                    "stateNode": <option
+                      value="title_string asc"
+>
+                      Name Ascending
+</option>,
+                    "tag": 5,
+                    "treeBaseTime": 0,
+                    "type": "option",
+                    "updateQueue": null,
+                  },
+                  "stateNode": <option
+                    value="score desc, metadata_modified desc"
+>
+                    Relevance
+</option>,
+                  "tag": 5,
+                  "treeBaseTime": 0,
+                  "type": "option",
+                  "updateQueue": null,
+                },
+                "effectTag": 0,
+                "expirationTime": 0,
+                "firstEffect": null,
+                "index": 1,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": Object {
+                  "children": Array [
+                    <option
+                      value="score desc, metadata_modified desc"
+>
+                      Relevance
+</option>,
+                    <option
+                      value="title_string asc"
+>
+                      Name Ascending
+</option>,
+                    <option
+                      value="title_string desc"
+>
+                      Name Descending
+</option>,
+                    <option
+                      value="metadata_modified desc"
+>
+                      Last Modified
+</option>,
+                    <option
+                      value="views_recent desc"
+>
+                      Popular
+</option>,
+                  ],
+                  "className": "custom-select",
+                  "id": "order_by",
+                  "onChange": [Function],
+                  "value": "score desc, metadata_modified desc",
+                },
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": Object {
+                  "children": Array [
+                    <option
+                      value="score desc, metadata_modified desc"
+>
+                      Relevance
+</option>,
+                    <option
+                      value="title_string asc"
+>
+                      Name Ascending
+</option>,
+                    <option
+                      value="title_string desc"
+>
+                      Name Descending
+</option>,
+                    <option
+                      value="metadata_modified desc"
+>
+                      Last Modified
+</option>,
+                    <option
+                      value="views_recent desc"
+>
+                      Popular
+</option>,
+                  ],
+                  "className": "custom-select",
+                  "id": "order_by",
+                  "onChange": [Function],
+                  "value": "score desc, metadata_modified desc",
+                },
+                "ref": null,
+                "return": [Circular],
+                "selfBaseTime": 0,
+                "sibling": null,
+                "stateNode": <select
+                  id="order_by"
+                  class="custom-select"
+>
+                  <option
+                                    value="score desc, metadata_modified desc"
+                  >
+                                    Relevance
+                  </option>
+                  <option
+                                    value="title_string asc"
+                  >
+                                    Name Ascending
+                  </option>
+                  <option
+                                    value="title_string desc"
+                  >
+                                    Name Descending
+                  </option>
+                  <option
+                                    value="metadata_modified desc"
+                  >
+                                    Last Modified
+                  </option>
+                  <option
+                                    value="views_recent desc"
+                  >
+                                    Popular
+                  </option>
+</select>,
+                "tag": 5,
+                "treeBaseTime": 0,
+                "type": "select",
+                "updateQueue": null,
+              },
+              "stateNode": <div
+                class="input-group-prepend"
+>
+                <label
+                                for="order_by"
+                                title="Order by"
+                                class="input-group-text"
+                >
+                                <i
+                                                class="material-icons"
+                                >
+                                                sort
+                                </i>
+                </label>
+</div>,
+              "tag": 5,
+              "treeBaseTime": 0,
+              "type": "div",
+              "updateQueue": null,
+            },
+            "effectTag": 0,
+            "expirationTime": 0,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "children": Array [
+                <div
+                  className="input-group-prepend"
+>
+                  <label
+                                    className="input-group-text"
+                                    htmlFor="order_by"
+                                    title="Order by"
+                  >
+                                    <i
+                                                      className="material-icons"
+                                    >
+                                                      sort
+                                    </i>
+                  </label>
+</div>,
+                <select
+                  className="custom-select"
+                  id="order_by"
+                  onChange={[Function]}
+                  value="score desc, metadata_modified desc"
+>
+                  <option
+                                    value="score desc, metadata_modified desc"
+                  >
+                                    Relevance
+                  </option>
+                  <option
+                                    value="title_string asc"
+                  >
+                                    Name Ascending
+                  </option>
+                  <option
+                                    value="title_string desc"
+                  >
+                                    Name Descending
+                  </option>
+                  <option
+                                    value="metadata_modified desc"
+                  >
+                                    Last Modified
+                  </option>
+                  <option
+                                    value="views_recent desc"
+                  >
+                                    Popular
+                  </option>
+</select>,
+              ],
+              "className": "input-group",
+            },
+            "memoizedState": null,
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "children": Array [
+                <div
+                  className="input-group-prepend"
+>
+                  <label
+                                    className="input-group-text"
+                                    htmlFor="order_by"
+                                    title="Order by"
+                  >
+                                    <i
+                                                      className="material-icons"
+                                    >
+                                                      sort
+                                    </i>
+                  </label>
+</div>,
+                <select
+                  className="custom-select"
+                  id="order_by"
+                  onChange={[Function]}
+                  value="score desc, metadata_modified desc"
+>
+                  <option
+                                    value="score desc, metadata_modified desc"
+                  >
+                                    Relevance
+                  </option>
+                  <option
+                                    value="title_string asc"
+                  >
+                                    Name Ascending
+                  </option>
+                  <option
+                                    value="title_string desc"
+                  >
+                                    Name Descending
+                  </option>
+                  <option
+                                    value="metadata_modified desc"
+                  >
+                                    Last Modified
+                  </option>
+                  <option
+                                    value="views_recent desc"
+                  >
+                                    Popular
+                  </option>
+</select>,
+              ],
+              "className": "input-group",
+            },
+            "ref": null,
+            "return": [Circular],
+            "selfBaseTime": 0,
+            "sibling": null,
+            "stateNode": <div
+              class="input-group"
+>
+              <div
+                            class="input-group-prepend"
+              >
+                            <label
+                                          for="order_by"
+                                          title="Order by"
+                                          class="input-group-text"
+                            >
+                                          <i
+                                                        class="material-icons"
+                                          >
+                                                        sort
+                                          </i>
+                            </label>
+              </div>
+              <select
+                            id="order_by"
+                            class="custom-select"
+              >
+                            <option
+                                          value="score desc, metadata_modified desc"
+                            >
+                                          Relevance
+                            </option>
+                            <option
+                                          value="title_string asc"
+                            >
+                                          Name Ascending
+                            </option>
+                            <option
+                                          value="title_string desc"
+                            >
+                                          Name Descending
+                            </option>
+                            <option
+                                          value="metadata_modified desc"
+                            >
+                                          Last Modified
+                            </option>
+                            <option
+                                          value="views_recent desc"
+                            >
+                                          Popular
+                            </option>
+              </select>
+</div>,
+            "tag": 5,
+            "treeBaseTime": 0,
+            "type": "div",
+            "updateQueue": null,
+          },
+          "effectTag": 0,
+          "expirationTime": 0,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "children": <div
+              className="input-group"
+>
+              <div
+                            className="input-group-prepend"
+              >
+                            <label
+                                          className="input-group-text"
+                                          htmlFor="order_by"
+                                          title="Order by"
+                            >
+                                          <i
+                                                        className="material-icons"
+                                          >
+                                                        sort
+                                          </i>
+                            </label>
+              </div>
+              <select
+                            className="custom-select"
+                            id="order_by"
+                            onChange={[Function]}
+                            value="score desc, metadata_modified desc"
+              >
+                            <option
+                                          value="score desc, metadata_modified desc"
+                            >
+                                          Relevance
+                            </option>
+                            <option
+                                          value="title_string asc"
+                            >
+                                          Name Ascending
+                            </option>
+                            <option
+                                          value="title_string desc"
+                            >
+                                          Name Descending
+                            </option>
+                            <option
+                                          value="metadata_modified desc"
+                            >
+                                          Last Modified
+                            </option>
+                            <option
+                                          value="views_recent desc"
+                            >
+                                          Popular
+                            </option>
+              </select>
+</div>,
+            "className": "mr-0",
+          },
+          "memoizedState": null,
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "children": <div
+              className="input-group"
+>
+              <div
+                            className="input-group-prepend"
+              >
+                            <label
+                                          className="input-group-text"
+                                          htmlFor="order_by"
+                                          title="Order by"
+                            >
+                                          <i
+                                                        className="material-icons"
+                                          >
+                                                        sort
+                                          </i>
+                            </label>
+              </div>
+              <select
+                            className="custom-select"
+                            id="order_by"
+                            onChange={[Function]}
+                            value="score desc, metadata_modified desc"
+              >
+                            <option
+                                          value="score desc, metadata_modified desc"
+                            >
+                                          Relevance
+                            </option>
+                            <option
+                                          value="title_string asc"
+                            >
+                                          Name Ascending
+                            </option>
+                            <option
+                                          value="title_string desc"
+                            >
+                                          Name Descending
+                            </option>
+                            <option
+                                          value="metadata_modified desc"
+                            >
+                                          Last Modified
+                            </option>
+                            <option
+                                          value="views_recent desc"
+                            >
+                                          Popular
+                            </option>
+              </select>
+</div>,
+            "className": "mr-0",
+          },
+          "ref": null,
+          "return": [Circular],
+          "selfBaseTime": 0,
+          "sibling": null,
+          "stateNode": <div
+            class="mr-0"
+>
+            <div
+                        class="input-group"
+            >
+                        <div
+                                    class="input-group-prepend"
+                        >
+                                    <label
+                                                for="order_by"
+                                                title="Order by"
+                                                class="input-group-text"
+                                    >
+                                                <i
+                                                            class="material-icons"
+                                                >
+                                                            sort
+                                                </i>
+                                    </label>
+                        </div>
+                        <select
+                                    id="order_by"
+                                    class="custom-select"
+                        >
+                                    <option
+                                                value="score desc, metadata_modified desc"
+                                    >
+                                                Relevance
+                                    </option>
+                                    <option
+                                                value="title_string asc"
+                                    >
+                                                Name Ascending
+                                    </option>
+                                    <option
+                                                value="title_string desc"
+                                    >
+                                                Name Descending
+                                    </option>
+                                    <option
+                                                value="metadata_modified desc"
+                                    >
+                                                Last Modified
+                                    </option>
+                                    <option
+                                                value="views_recent desc"
+                                    >
+                                                Popular
+                                    </option>
+                        </select>
+            </div>
+</div>,
+          "tag": 5,
+          "treeBaseTime": 0,
+          "type": "div",
+          "updateQueue": null,
+        },
+        "effectTag": 1,
+        "expirationTime": 0,
+        "firstEffect": null,
+        "index": 0,
+        "key": null,
+        "lastEffect": null,
+        "memoizedProps": Object {
+          "handleSort": [Function],
+          "sort": "score desc, metadata_modified desc",
+        },
+        "memoizedState": null,
+        "mode": 0,
+        "nextEffect": null,
+        "pendingProps": Object {
+          "handleSort": [Function],
+          "sort": "score desc, metadata_modified desc",
+        },
+        "ref": null,
+        "return": FiberNode {
+          "_debugID": 4,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": null,
+          "_debugSource": null,
+          "actualDuration": 0,
+          "actualStartTime": 0,
+          "alternate": null,
+          "child": [Circular],
+          "effectTag": 1,
+          "expirationTime": 0,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "Component": [Function],
+            "context": null,
+            "props": Object {
+              "handleSort": [Function],
+              "sort": "score desc, metadata_modified desc",
+            },
+          },
+          "memoizedState": Object {
+            "context": null,
+            "mount": true,
+            "props": Object {
+              "handleSort": [Function],
+              "sort": "score desc, metadata_modified desc",
+            },
+          },
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "Component": [Function],
+            "context": null,
+            "props": Object {
+              "handleSort": [Function],
+              "sort": "score desc, metadata_modified desc",
+            },
+          },
+          "ref": null,
+          "return": FiberNode {
+            "_debugID": 1,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "actualDuration": 0,
+            "actualStartTime": 0,
+            "alternate": FiberNode {
+              "_debugID": 1,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "actualDuration": 0,
+              "actualStartTime": 0,
+              "alternate": [Circular],
+              "child": null,
+              "effectTag": 0,
+              "expirationTime": 1,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": null,
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseTime": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <div
+                                    class="mr-0"
+                  >
+                                    <div
+                                                      class="input-group"
+                                    >
+                                                      <div
+                                                                        class="input-group-prepend"
+                                                      >
+                                                                        <label
+                                                                                          for="order_by"
+                                                                                          title="Order by"
+                                                                                          class="input-group-text"
+                                                                        >
+                                                                                          <i
+                                                                                                            class="material-icons"
+                                                                                          >
+                                                                                                            sort
+                                                                                          </i>
+                                                                        </label>
+                                                      </div>
+                                                      <select
+                                                                        id="order_by"
+                                                                        class="custom-select"
+                                                      >
+                                                                        <option
+                                                                                          value="score desc, metadata_modified desc"
+                                                                        >
+                                                                                          Relevance
+                                                                        </option>
+                                                                        <option
+                                                                                          value="title_string asc"
+                                                                        >
+                                                                                          Name Ascending
+                                                                        </option>
+                                                                        <option
+                                                                                          value="title_string desc"
+                                                                        >
+                                                                                          Name Descending
+                                                                        </option>
+                                                                        <option
+                                                                                          value="metadata_modified desc"
+                                                                        >
+                                                                                          Last Modified
+                                                                        </option>
+                                                                        <option
+                                                                                          value="views_recent desc"
+                                                                        >
+                                                                                          Popular
+                                                                        </option>
+                                                      </select>
+                                    </div>
+                  </div>
+</div>,
+                "context": Object {},
+                "current": [Circular],
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "remainingExpirationTime": 0,
+              },
+              "tag": 3,
+              "treeBaseTime": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": null,
+                "expirationTime": 1,
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                                            Object {
+                                                                  "handleSort": [Function],
+                                                                  "sort": "score desc, metadata_modified desc",
+                                                                }
+                      }
+/>,
+                  },
+                  "tag": 0,
+                },
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                                            Object {
+                                                                  "handleSort": [Function],
+                                                                  "sort": "score desc, metadata_modified desc",
+                                                                }
+                      }
+/>,
+                  },
+                  "tag": 0,
+                },
+              },
+            },
+            "child": [Circular],
+            "effectTag": 32,
+            "expirationTime": 0,
+            "firstEffect": [Circular],
+            "index": 0,
+            "key": null,
+            "lastEffect": [Circular],
+            "memoizedProps": null,
+            "memoizedState": Object {
+              "element": <WrapperComponent
+                Component={[Function]}
+                context={null}
+                props={
+                                Object {
+                                                "handleSort": [Function],
+                                                "sort": "score desc, metadata_modified desc",
+                                              }
+                }
+/>,
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": null,
+            "ref": null,
+            "return": null,
+            "selfBaseTime": 0,
+            "sibling": null,
+            "stateNode": Object {
+              "containerInfo": <div>
+                <div
+                                class="mr-0"
+                >
+                                <div
+                                                class="input-group"
+                                >
+                                                <div
+                                                                class="input-group-prepend"
+                                                >
+                                                                <label
+                                                                                for="order_by"
+                                                                                title="Order by"
+                                                                                class="input-group-text"
+                                                                >
+                                                                                <i
+                                                                                                class="material-icons"
+                                                                                >
+                                                                                                sort
+                                                                                </i>
+                                                                </label>
+                                                </div>
+                                                <select
+                                                                id="order_by"
+                                                                class="custom-select"
+                                                >
+                                                                <option
+                                                                                value="score desc, metadata_modified desc"
+                                                                >
+                                                                                Relevance
+                                                                </option>
+                                                                <option
+                                                                                value="title_string asc"
+                                                                >
+                                                                                Name Ascending
+                                                                </option>
+                                                                <option
+                                                                                value="title_string desc"
+                                                                >
+                                                                                Name Descending
+                                                                </option>
+                                                                <option
+                                                                                value="metadata_modified desc"
+                                                                >
+                                                                                Last Modified
+                                                                </option>
+                                                                <option
+                                                                                value="views_recent desc"
+                                                                >
+                                                                                Popular
+                                                                </option>
+                                                </select>
+                                </div>
+                </div>
+</div>,
+              "context": Object {},
+              "current": [Circular],
+              "earliestPendingTime": 0,
+              "earliestSuspendedTime": 0,
+              "finishedWork": null,
+              "firstBatch": null,
+              "hydrate": false,
+              "latestPendingTime": 0,
+              "latestPingedTime": 0,
+              "latestSuspendedTime": 0,
+              "nextScheduledRoot": null,
+              "pendingChildren": null,
+              "pendingCommitExpirationTime": 0,
+              "pendingContext": null,
+              "remainingExpirationTime": 0,
+            },
+            "tag": 3,
+            "treeBaseTime": 0,
+            "type": null,
+            "updateQueue": Object {
+              "baseState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                                    Object {
+                                                      "handleSort": [Function],
+                                                      "sort": "score desc, metadata_modified desc",
+                                                    }
+                  }
+/>,
+              },
+              "expirationTime": 0,
+              "firstCapturedEffect": null,
+              "firstCapturedUpdate": null,
+              "firstEffect": null,
+              "firstUpdate": null,
+              "lastCapturedEffect": null,
+              "lastCapturedUpdate": null,
+              "lastEffect": null,
+              "lastUpdate": null,
+            },
+          },
+          "selfBaseTime": 0,
+          "sibling": null,
+          "stateNode": WrapperComponent {
+            "_reactInternalFiber": [Circular],
+            "_reactInternalInstance": Object {},
+            "context": Object {},
+            "props": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "handleSort": [Function],
+                "sort": "score desc, metadata_modified desc",
+              },
+            },
+            "refs": Object {},
+            "state": Object {
+              "context": null,
+              "mount": true,
+              "props": Object {
+                "handleSort": [Function],
+                "sort": "score desc, metadata_modified desc",
+              },
+            },
+            "updater": Object {
+              "enqueueForceUpdate": [Function],
+              "enqueueReplaceState": [Function],
+              "enqueueSetState": [Function],
+              "isMounted": [Function],
+            },
+          },
+          "tag": 2,
+          "treeBaseTime": 0,
+          "type": [Function],
+          "updateQueue": null,
+        },
+        "selfBaseTime": 0,
+        "sibling": null,
+        "stateNode": [Circular],
+        "tag": 2,
+        "treeBaseTime": 0,
+        "type": [Function],
+        "updateQueue": null,
+      },
+      "_reactInternalInstance": Object {},
+      "context": Object {},
+      "props": Object {
+        "handleSort": [Function],
+        "sort": "score desc, metadata_modified desc",
+      },
+      "refs": Object {},
+      "state": null,
+      "updater": Object {
+        "enqueueForceUpdate": [Function],
+        "enqueueReplaceState": [Function],
+        "enqueueSetState": [Function],
+        "isMounted": [Function],
+      },
+    },
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "handleSort": [Function],
+      "sort": "score desc, metadata_modified desc",
     },
     "ref": null,
     "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <div
-            className="input-group-prepend"
+      "instance": <div
+        class="mr-0"
 >
-            <label
-                        className="input-group-text"
-                        htmlFor="order_by"
-                        title="Order by"
-            >
-                        <i
-                                    className="material-icons"
+        <div
+                class="input-group"
+        >
+                <div
+                        class="input-group-prepend"
+                >
+                        <label
+                                for="order_by"
+                                title="Order by"
+                                class="input-group-text"
                         >
-                                    sort
-                        </i>
-            </label>
+                                <i
+                                        class="material-icons"
+                                >
+                                        sort
+                                </i>
+                        </label>
+                </div>
+                <select
+                        id="order_by"
+                        class="custom-select"
+                >
+                        <option
+                                value="score desc, metadata_modified desc"
+                        >
+                                Relevance
+                        </option>
+                        <option
+                                value="title_string asc"
+                        >
+                                Name Ascending
+                        </option>
+                        <option
+                                value="title_string desc"
+                        >
+                                Name Descending
+                        </option>
+                        <option
+                                value="metadata_modified desc"
+                        >
+                                Last Modified
+                        </option>
+                        <option
+                                value="views_recent desc"
+                        >
+                                Popular
+                        </option>
+                </select>
+        </div>
 </div>,
-          <select
-            className="custom-select"
-            id="order_by"
-            onChange={[Function]}
-            value={undefined}
->
-            <option
-                        value="score desc, metadata_modified desc"
-            >
-                        Relevance
-            </option>
-            <option
-                        value="title_string asc"
-            >
-                        Name Ascending
-            </option>
-            <option
-                        value="title_string desc"
-            >
-                        Name Descending
-            </option>
-            <option
-                        value="metadata_modified desc"
-            >
-                        Last Modified
-            </option>
-            <option
-                        value="views_recent desc"
-            >
-                        Popular
-            </option>
-</select>,
-        ],
-        "className": "input-group",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <label
-              className="input-group-text"
-              htmlFor="order_by"
-              title="Order by"
->
-              <i
-                            className="material-icons"
-              >
-                            sort
-              </i>
-</label>,
-            "className": "input-group-prepend",
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <i
-                className="material-icons"
->
-                sort
-</i>,
-              "className": "input-group-text",
-              "htmlFor": "order_by",
-              "title": "Order by",
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "sort",
-                "className": "material-icons",
-              },
-              "ref": null,
-              "rendered": "sort",
-              "type": "i",
-            },
-            "type": "label",
-          },
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <option
-                value="score desc, metadata_modified desc"
->
-                Relevance
-</option>,
-              <option
-                value="title_string asc"
->
-                Name Ascending
-</option>,
-              <option
-                value="title_string desc"
->
-                Name Descending
-</option>,
-              <option
-                value="metadata_modified desc"
->
-                Last Modified
-</option>,
-              <option
-                value="views_recent desc"
->
-                Popular
-</option>,
-            ],
-            "className": "custom-select",
-            "id": "order_by",
-            "onChange": [Function],
-            "value": undefined,
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Relevance",
-                "value": "score desc, metadata_modified desc",
-              },
-              "ref": null,
-              "rendered": "Relevance",
-              "type": "option",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Name Ascending",
-                "value": "title_string asc",
-              },
-              "ref": null,
-              "rendered": "Name Ascending",
-              "type": "option",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Name Descending",
-                "value": "title_string desc",
-              },
-              "ref": null,
-              "rendered": "Name Descending",
-              "type": "option",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Last Modified",
-                "value": "metadata_modified desc",
-              },
-              "ref": null,
-              "rendered": "Last Modified",
-              "type": "option",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Popular",
-                "value": "views_recent desc",
-              },
-              "ref": null,
-              "rendered": "Popular",
-              "type": "option",
-            },
-          ],
-          "type": "select",
-        },
-      ],
-      "type": "div",
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
       "key": undefined,
       "nodeType": "host",
       "props": Object {
@@ -313,7 +1748,7 @@ ShallowWrapper {
                     className="custom-select"
                     id="order_by"
                     onChange={[Function]}
-                    value={undefined}
+                    value="score desc, metadata_modified desc"
           >
                     <option
                               value="score desc, metadata_modified desc"
@@ -345,220 +1780,2492 @@ ShallowWrapper {
         "className": "mr-0",
       },
       "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <div
+            class="input-group"
+>
+            <div
+                        class="input-group-prepend"
+            >
+                        <label
+                                    for="order_by"
+                                    title="Order by"
+                                    class="input-group-text"
+                        >
+                                    <i
+                                                class="material-icons"
+                                    >
+                                                sort
+                                    </i>
+                        </label>
+            </div>
+            <select
+                        id="order_by"
+                        class="custom-select"
+            >
+                        <option
+                                    value="score desc, metadata_modified desc"
+                        >
+                                    Relevance
+                        </option>
+                        <option
+                                    value="title_string asc"
+                        >
+                                    Name Ascending
+                        </option>
+                        <option
+                                    value="title_string desc"
+                        >
+                                    Name Descending
+                        </option>
+                        <option
+                                    value="metadata_modified desc"
+                        >
+                                    Last Modified
+                        </option>
+                        <option
+                                    value="views_recent desc"
+                        >
+                                    Popular
+                        </option>
+            </select>
+</div>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="input-group-prepend"
+>
+                <label
+                                className="input-group-text"
+                                htmlFor="order_by"
+                                title="Order by"
+                >
+                                <i
+                                                className="material-icons"
+                                >
+                                                sort
+                                </i>
+                </label>
+</div>,
+              <select
+                className="custom-select"
+                id="order_by"
+                onChange={[Function]}
+                value="score desc, metadata_modified desc"
+>
+                <option
+                                value="score desc, metadata_modified desc"
+                >
+                                Relevance
+                </option>
+                <option
+                                value="title_string asc"
+                >
+                                Name Ascending
+                </option>
+                <option
+                                value="title_string desc"
+                >
+                                Name Descending
+                </option>
+                <option
+                                value="metadata_modified desc"
+                >
+                                Last Modified
+                </option>
+                <option
+                                value="views_recent desc"
+                >
+                                Popular
+                </option>
+</select>,
+            ],
+            "className": "input-group",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <div
+                class="input-group-prepend"
+>
+                <label
+                                for="order_by"
+                                title="Order by"
+                                class="input-group-text"
+                >
+                                <i
+                                                class="material-icons"
+                                >
+                                                sort
+                                </i>
+                </label>
+</div>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <label
+                  className="input-group-text"
+                  htmlFor="order_by"
+                  title="Order by"
+>
+                  <i
+                                    className="material-icons"
+                  >
+                                    sort
+                  </i>
+</label>,
+                "className": "input-group-prepend",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": <label
+                    for="order_by"
+                    title="Order by"
+                    class="input-group-text"
+>
+                    <i
+                                        class="material-icons"
+                    >
+                                        sort
+                    </i>
+</label>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <i
+                      className="material-icons"
+>
+                      sort
+</i>,
+                    "className": "input-group-text",
+                    "htmlFor": "order_by",
+                    "title": "Order by",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": <i
+                        class="material-icons"
+>
+                        sort
+</i>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "sort",
+                        "className": "material-icons",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "sort",
+                      ],
+                      "type": "i",
+                    },
+                  ],
+                  "type": "label",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": <select
+                id="order_by"
+                class="custom-select"
+>
+                <option
+                                value="score desc, metadata_modified desc"
+                >
+                                Relevance
+                </option>
+                <option
+                                value="title_string asc"
+                >
+                                Name Ascending
+                </option>
+                <option
+                                value="title_string desc"
+                >
+                                Name Descending
+                </option>
+                <option
+                                value="metadata_modified desc"
+                >
+                                Last Modified
+                </option>
+                <option
+                                value="views_recent desc"
+                >
+                                Popular
+                </option>
+</select>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <option
+                    value="score desc, metadata_modified desc"
+>
+                    Relevance
+</option>,
+                  <option
+                    value="title_string asc"
+>
+                    Name Ascending
+</option>,
+                  <option
+                    value="title_string desc"
+>
+                    Name Descending
+</option>,
+                  <option
+                    value="metadata_modified desc"
+>
+                    Last Modified
+</option>,
+                  <option
+                    value="views_recent desc"
+>
+                    Popular
+</option>,
+                ],
+                "className": "custom-select",
+                "id": "order_by",
+                "onChange": [Function],
+                "value": "score desc, metadata_modified desc",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": <option
+                    value="score desc, metadata_modified desc"
+>
+                    Relevance
+</option>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Relevance",
+                    "value": "score desc, metadata_modified desc",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Relevance",
+                  ],
+                  "type": "option",
+                },
+                Object {
+                  "instance": <option
+                    value="title_string asc"
+>
+                    Name Ascending
+</option>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Name Ascending",
+                    "value": "title_string asc",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Name Ascending",
+                  ],
+                  "type": "option",
+                },
+                Object {
+                  "instance": <option
+                    value="title_string desc"
+>
+                    Name Descending
+</option>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Name Descending",
+                    "value": "title_string desc",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Name Descending",
+                  ],
+                  "type": "option",
+                },
+                Object {
+                  "instance": <option
+                    value="metadata_modified desc"
+>
+                    Last Modified
+</option>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Last Modified",
+                    "value": "metadata_modified desc",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Last Modified",
+                  ],
+                  "type": "option",
+                },
+                Object {
+                  "instance": <option
+                    value="views_recent desc"
+>
+                    Popular
+</option>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Popular",
+                    "value": "views_recent desc",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Popular",
+                  ],
+                  "type": "option",
+                },
+              ],
+              "type": "select",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": Sort {
+        "_reactInternalFiber": FiberNode {
+          "_debugID": 5,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": FiberNode {
+            "_debugID": 4,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "actualDuration": 0,
+            "actualStartTime": 0,
+            "alternate": null,
+            "child": [Circular],
+            "effectTag": 1,
+            "expirationTime": 0,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "handleSort": [Function],
+                "sort": "score desc, metadata_modified desc",
+              },
+            },
+            "memoizedState": Object {
+              "context": null,
+              "mount": true,
+              "props": Object {
+                "handleSort": [Function],
+                "sort": "score desc, metadata_modified desc",
+              },
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "handleSort": [Function],
+                "sort": "score desc, metadata_modified desc",
+              },
+            },
+            "ref": null,
+            "return": FiberNode {
+              "_debugID": 1,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "actualDuration": 0,
+              "actualStartTime": 0,
+              "alternate": FiberNode {
+                "_debugID": 1,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": null,
+                "_debugSource": null,
+                "actualDuration": 0,
+                "actualStartTime": 0,
+                "alternate": [Circular],
+                "child": null,
+                "effectTag": 0,
+                "expirationTime": 1,
+                "firstEffect": null,
+                "index": 0,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": null,
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": null,
+                "ref": null,
+                "return": null,
+                "selfBaseTime": 0,
+                "sibling": null,
+                "stateNode": Object {
+                  "containerInfo": <div>
+                    <div
+                                        class="mr-0"
+                    >
+                                        <div
+                                                            class="input-group"
+                                        >
+                                                            <div
+                                                                                class="input-group-prepend"
+                                                            >
+                                                                                <label
+                                                                                                    for="order_by"
+                                                                                                    title="Order by"
+                                                                                                    class="input-group-text"
+                                                                                >
+                                                                                                    <i
+                                                                                                                        class="material-icons"
+                                                                                                    >
+                                                                                                                        sort
+                                                                                                    </i>
+                                                                                </label>
+                                                            </div>
+                                                            <select
+                                                                                id="order_by"
+                                                                                class="custom-select"
+                                                            >
+                                                                                <option
+                                                                                                    value="score desc, metadata_modified desc"
+                                                                                >
+                                                                                                    Relevance
+                                                                                </option>
+                                                                                <option
+                                                                                                    value="title_string asc"
+                                                                                >
+                                                                                                    Name Ascending
+                                                                                </option>
+                                                                                <option
+                                                                                                    value="title_string desc"
+                                                                                >
+                                                                                                    Name Descending
+                                                                                </option>
+                                                                                <option
+                                                                                                    value="metadata_modified desc"
+                                                                                >
+                                                                                                    Last Modified
+                                                                                </option>
+                                                                                <option
+                                                                                                    value="views_recent desc"
+                                                                                >
+                                                                                                    Popular
+                                                                                </option>
+                                                            </select>
+                                        </div>
+                    </div>
+</div>,
+                  "context": Object {},
+                  "current": [Circular],
+                  "earliestPendingTime": 0,
+                  "earliestSuspendedTime": 0,
+                  "finishedWork": null,
+                  "firstBatch": null,
+                  "hydrate": false,
+                  "latestPendingTime": 0,
+                  "latestPingedTime": 0,
+                  "latestSuspendedTime": 0,
+                  "nextScheduledRoot": null,
+                  "pendingChildren": null,
+                  "pendingCommitExpirationTime": 0,
+                  "pendingContext": null,
+                  "remainingExpirationTime": 0,
+                },
+                "tag": 3,
+                "treeBaseTime": 0,
+                "type": null,
+                "updateQueue": Object {
+                  "baseState": null,
+                  "expirationTime": 1,
+                  "firstCapturedEffect": null,
+                  "firstCapturedUpdate": null,
+                  "firstEffect": null,
+                  "firstUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                                                Object {
+                                                                        "handleSort": [Function],
+                                                                        "sort": "score desc, metadata_modified desc",
+                                                                      }
+                        }
+/>,
+                    },
+                    "tag": 0,
+                  },
+                  "lastCapturedEffect": null,
+                  "lastCapturedUpdate": null,
+                  "lastEffect": null,
+                  "lastUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                                                Object {
+                                                                        "handleSort": [Function],
+                                                                        "sort": "score desc, metadata_modified desc",
+                                                                      }
+                        }
+/>,
+                    },
+                    "tag": 0,
+                  },
+                },
+              },
+              "child": [Circular],
+              "effectTag": 32,
+              "expirationTime": 0,
+              "firstEffect": [Circular],
+              "index": 0,
+              "key": null,
+              "lastEffect": [Circular],
+              "memoizedProps": null,
+              "memoizedState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                                    Object {
+                                                      "handleSort": [Function],
+                                                      "sort": "score desc, metadata_modified desc",
+                                                    }
+                  }
+/>,
+              },
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseTime": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <div
+                                    class="mr-0"
+                  >
+                                    <div
+                                                      class="input-group"
+                                    >
+                                                      <div
+                                                                        class="input-group-prepend"
+                                                      >
+                                                                        <label
+                                                                                          for="order_by"
+                                                                                          title="Order by"
+                                                                                          class="input-group-text"
+                                                                        >
+                                                                                          <i
+                                                                                                            class="material-icons"
+                                                                                          >
+                                                                                                            sort
+                                                                                          </i>
+                                                                        </label>
+                                                      </div>
+                                                      <select
+                                                                        id="order_by"
+                                                                        class="custom-select"
+                                                      >
+                                                                        <option
+                                                                                          value="score desc, metadata_modified desc"
+                                                                        >
+                                                                                          Relevance
+                                                                        </option>
+                                                                        <option
+                                                                                          value="title_string asc"
+                                                                        >
+                                                                                          Name Ascending
+                                                                        </option>
+                                                                        <option
+                                                                                          value="title_string desc"
+                                                                        >
+                                                                                          Name Descending
+                                                                        </option>
+                                                                        <option
+                                                                                          value="metadata_modified desc"
+                                                                        >
+                                                                                          Last Modified
+                                                                        </option>
+                                                                        <option
+                                                                                          value="views_recent desc"
+                                                                        >
+                                                                                          Popular
+                                                                        </option>
+                                                      </select>
+                                    </div>
+                  </div>
+</div>,
+                "context": Object {},
+                "current": [Circular],
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "remainingExpirationTime": 0,
+              },
+              "tag": 3,
+              "treeBaseTime": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": Object {
+                  "element": <WrapperComponent
+                    Component={[Function]}
+                    context={null}
+                    props={
+                                        Object {
+                                                            "handleSort": [Function],
+                                                            "sort": "score desc, metadata_modified desc",
+                                                          }
+                    }
+/>,
+                },
+                "expirationTime": 0,
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": null,
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": null,
+              },
+            },
+            "selfBaseTime": 0,
+            "sibling": null,
+            "stateNode": WrapperComponent {
+              "_reactInternalFiber": [Circular],
+              "_reactInternalInstance": Object {},
+              "context": Object {},
+              "props": Object {
+                "Component": [Function],
+                "context": null,
+                "props": Object {
+                  "handleSort": [Function],
+                  "sort": "score desc, metadata_modified desc",
+                },
+              },
+              "refs": Object {},
+              "state": Object {
+                "context": null,
+                "mount": true,
+                "props": Object {
+                  "handleSort": [Function],
+                  "sort": "score desc, metadata_modified desc",
+                },
+              },
+              "updater": Object {
+                "enqueueForceUpdate": [Function],
+                "enqueueReplaceState": [Function],
+                "enqueueSetState": [Function],
+                "isMounted": [Function],
+              },
+            },
+            "tag": 2,
+            "treeBaseTime": 0,
+            "type": [Function],
+            "updateQueue": null,
+          },
+          "_debugSource": null,
+          "actualDuration": 0,
+          "actualStartTime": 0,
+          "alternate": null,
+          "child": FiberNode {
+            "_debugID": 6,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": [Circular],
+            "_debugSource": Object {
+              "fileName": "/home/vladimir/projects/ckan/ckan-widget/ckan-widget/src/components/presentational/Sort.js",
+              "lineNumber": 6,
+            },
+            "actualDuration": 0,
+            "actualStartTime": 0,
+            "alternate": null,
+            "child": FiberNode {
+              "_debugID": 7,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": [Circular],
+              "_debugSource": Object {
+                "fileName": "/home/vladimir/projects/ckan/ckan-widget/ckan-widget/src/components/presentational/Sort.js",
+                "lineNumber": 7,
+              },
+              "actualDuration": 0,
+              "actualStartTime": 0,
+              "alternate": null,
+              "child": FiberNode {
+                "_debugID": 8,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": [Circular],
+                "_debugSource": Object {
+                  "fileName": "/home/vladimir/projects/ckan/ckan-widget/ckan-widget/src/components/presentational/Sort.js",
+                  "lineNumber": 8,
+                },
+                "actualDuration": 0,
+                "actualStartTime": 0,
+                "alternate": null,
+                "child": FiberNode {
+                  "_debugID": 10,
+                  "_debugIsCurrentlyTiming": false,
+                  "_debugOwner": [Circular],
+                  "_debugSource": Object {
+                    "fileName": "/home/vladimir/projects/ckan/ckan-widget/ckan-widget/src/components/presentational/Sort.js",
+                    "lineNumber": 9,
+                  },
+                  "actualDuration": 0,
+                  "actualStartTime": 0,
+                  "alternate": null,
+                  "child": FiberNode {
+                    "_debugID": 11,
+                    "_debugIsCurrentlyTiming": false,
+                    "_debugOwner": [Circular],
+                    "_debugSource": Object {
+                      "fileName": "/home/vladimir/projects/ckan/ckan-widget/ckan-widget/src/components/presentational/Sort.js",
+                      "lineNumber": 9,
+                    },
+                    "actualDuration": 0,
+                    "actualStartTime": 0,
+                    "alternate": null,
+                    "child": null,
+                    "effectTag": 0,
+                    "expirationTime": 0,
+                    "firstEffect": null,
+                    "index": 0,
+                    "key": null,
+                    "lastEffect": null,
+                    "memoizedProps": Object {
+                      "children": "sort",
+                      "className": "material-icons",
+                    },
+                    "memoizedState": null,
+                    "mode": 0,
+                    "nextEffect": null,
+                    "pendingProps": Object {
+                      "children": "sort",
+                      "className": "material-icons",
+                    },
+                    "ref": null,
+                    "return": [Circular],
+                    "selfBaseTime": 0,
+                    "sibling": null,
+                    "stateNode": <i
+                      class="material-icons"
+>
+                      sort
+</i>,
+                    "tag": 5,
+                    "treeBaseTime": 0,
+                    "type": "i",
+                    "updateQueue": null,
+                  },
+                  "effectTag": 0,
+                  "expirationTime": 0,
+                  "firstEffect": null,
+                  "index": 0,
+                  "key": null,
+                  "lastEffect": null,
+                  "memoizedProps": Object {
+                    "children": <i
+                      className="material-icons"
+>
+                      sort
+</i>,
+                    "className": "input-group-text",
+                    "htmlFor": "order_by",
+                    "title": "Order by",
+                  },
+                  "memoizedState": null,
+                  "mode": 0,
+                  "nextEffect": null,
+                  "pendingProps": Object {
+                    "children": <i
+                      className="material-icons"
+>
+                      sort
+</i>,
+                    "className": "input-group-text",
+                    "htmlFor": "order_by",
+                    "title": "Order by",
+                  },
+                  "ref": null,
+                  "return": [Circular],
+                  "selfBaseTime": 0,
+                  "sibling": null,
+                  "stateNode": <label
+                    for="order_by"
+                    title="Order by"
+                    class="input-group-text"
+>
+                    <i
+                                        class="material-icons"
+                    >
+                                        sort
+                    </i>
+</label>,
+                  "tag": 5,
+                  "treeBaseTime": 0,
+                  "type": "label",
+                  "updateQueue": null,
+                },
+                "effectTag": 0,
+                "expirationTime": 0,
+                "firstEffect": null,
+                "index": 0,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": Object {
+                  "children": <label
+                    className="input-group-text"
+                    htmlFor="order_by"
+                    title="Order by"
+>
+                    <i
+                                        className="material-icons"
+                    >
+                                        sort
+                    </i>
+</label>,
+                  "className": "input-group-prepend",
+                },
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": Object {
+                  "children": <label
+                    className="input-group-text"
+                    htmlFor="order_by"
+                    title="Order by"
+>
+                    <i
+                                        className="material-icons"
+                    >
+                                        sort
+                    </i>
+</label>,
+                  "className": "input-group-prepend",
+                },
+                "ref": null,
+                "return": [Circular],
+                "selfBaseTime": 0,
+                "sibling": FiberNode {
+                  "_debugID": 9,
+                  "_debugIsCurrentlyTiming": false,
+                  "_debugOwner": [Circular],
+                  "_debugSource": Object {
+                    "fileName": "/home/vladimir/projects/ckan/ckan-widget/ckan-widget/src/components/presentational/Sort.js",
+                    "lineNumber": 11,
+                  },
+                  "actualDuration": 0,
+                  "actualStartTime": 0,
+                  "alternate": null,
+                  "child": FiberNode {
+                    "_debugID": 12,
+                    "_debugIsCurrentlyTiming": false,
+                    "_debugOwner": [Circular],
+                    "_debugSource": Object {
+                      "fileName": "/home/vladimir/projects/ckan/ckan-widget/ckan-widget/src/components/presentational/Sort.js",
+                      "lineNumber": 12,
+                    },
+                    "actualDuration": 0,
+                    "actualStartTime": 0,
+                    "alternate": null,
+                    "child": null,
+                    "effectTag": 0,
+                    "expirationTime": 0,
+                    "firstEffect": null,
+                    "index": 0,
+                    "key": null,
+                    "lastEffect": null,
+                    "memoizedProps": Object {
+                      "children": "Relevance",
+                      "value": "score desc, metadata_modified desc",
+                    },
+                    "memoizedState": null,
+                    "mode": 0,
+                    "nextEffect": null,
+                    "pendingProps": Object {
+                      "children": "Relevance",
+                      "value": "score desc, metadata_modified desc",
+                    },
+                    "ref": null,
+                    "return": [Circular],
+                    "selfBaseTime": 0,
+                    "sibling": FiberNode {
+                      "_debugID": 13,
+                      "_debugIsCurrentlyTiming": false,
+                      "_debugOwner": [Circular],
+                      "_debugSource": Object {
+                        "fileName": "/home/vladimir/projects/ckan/ckan-widget/ckan-widget/src/components/presentational/Sort.js",
+                        "lineNumber": 13,
+                      },
+                      "actualDuration": 0,
+                      "actualStartTime": 0,
+                      "alternate": null,
+                      "child": null,
+                      "effectTag": 0,
+                      "expirationTime": 0,
+                      "firstEffect": null,
+                      "index": 1,
+                      "key": null,
+                      "lastEffect": null,
+                      "memoizedProps": Object {
+                        "children": "Name Ascending",
+                        "value": "title_string asc",
+                      },
+                      "memoizedState": null,
+                      "mode": 0,
+                      "nextEffect": null,
+                      "pendingProps": Object {
+                        "children": "Name Ascending",
+                        "value": "title_string asc",
+                      },
+                      "ref": null,
+                      "return": [Circular],
+                      "selfBaseTime": 0,
+                      "sibling": FiberNode {
+                        "_debugID": 14,
+                        "_debugIsCurrentlyTiming": false,
+                        "_debugOwner": [Circular],
+                        "_debugSource": Object {
+                          "fileName": "/home/vladimir/projects/ckan/ckan-widget/ckan-widget/src/components/presentational/Sort.js",
+                          "lineNumber": 14,
+                        },
+                        "actualDuration": 0,
+                        "actualStartTime": 0,
+                        "alternate": null,
+                        "child": null,
+                        "effectTag": 0,
+                        "expirationTime": 0,
+                        "firstEffect": null,
+                        "index": 2,
+                        "key": null,
+                        "lastEffect": null,
+                        "memoizedProps": Object {
+                          "children": "Name Descending",
+                          "value": "title_string desc",
+                        },
+                        "memoizedState": null,
+                        "mode": 0,
+                        "nextEffect": null,
+                        "pendingProps": Object {
+                          "children": "Name Descending",
+                          "value": "title_string desc",
+                        },
+                        "ref": null,
+                        "return": [Circular],
+                        "selfBaseTime": 0,
+                        "sibling": FiberNode {
+                          "_debugID": 15,
+                          "_debugIsCurrentlyTiming": false,
+                          "_debugOwner": [Circular],
+                          "_debugSource": Object {
+                            "fileName": "/home/vladimir/projects/ckan/ckan-widget/ckan-widget/src/components/presentational/Sort.js",
+                            "lineNumber": 15,
+                          },
+                          "actualDuration": 0,
+                          "actualStartTime": 0,
+                          "alternate": null,
+                          "child": null,
+                          "effectTag": 0,
+                          "expirationTime": 0,
+                          "firstEffect": null,
+                          "index": 3,
+                          "key": null,
+                          "lastEffect": null,
+                          "memoizedProps": Object {
+                            "children": "Last Modified",
+                            "value": "metadata_modified desc",
+                          },
+                          "memoizedState": null,
+                          "mode": 0,
+                          "nextEffect": null,
+                          "pendingProps": Object {
+                            "children": "Last Modified",
+                            "value": "metadata_modified desc",
+                          },
+                          "ref": null,
+                          "return": [Circular],
+                          "selfBaseTime": 0,
+                          "sibling": FiberNode {
+                            "_debugID": 16,
+                            "_debugIsCurrentlyTiming": false,
+                            "_debugOwner": [Circular],
+                            "_debugSource": Object {
+                              "fileName": "/home/vladimir/projects/ckan/ckan-widget/ckan-widget/src/components/presentational/Sort.js",
+                              "lineNumber": 16,
+                            },
+                            "actualDuration": 0,
+                            "actualStartTime": 0,
+                            "alternate": null,
+                            "child": null,
+                            "effectTag": 0,
+                            "expirationTime": 0,
+                            "firstEffect": null,
+                            "index": 4,
+                            "key": null,
+                            "lastEffect": null,
+                            "memoizedProps": Object {
+                              "children": "Popular",
+                              "value": "views_recent desc",
+                            },
+                            "memoizedState": null,
+                            "mode": 0,
+                            "nextEffect": null,
+                            "pendingProps": Object {
+                              "children": "Popular",
+                              "value": "views_recent desc",
+                            },
+                            "ref": null,
+                            "return": [Circular],
+                            "selfBaseTime": 0,
+                            "sibling": null,
+                            "stateNode": <option
+                              value="views_recent desc"
+>
+                              Popular
+</option>,
+                            "tag": 5,
+                            "treeBaseTime": 0,
+                            "type": "option",
+                            "updateQueue": null,
+                          },
+                          "stateNode": <option
+                            value="metadata_modified desc"
+>
+                            Last Modified
+</option>,
+                          "tag": 5,
+                          "treeBaseTime": 0,
+                          "type": "option",
+                          "updateQueue": null,
+                        },
+                        "stateNode": <option
+                          value="title_string desc"
+>
+                          Name Descending
+</option>,
+                        "tag": 5,
+                        "treeBaseTime": 0,
+                        "type": "option",
+                        "updateQueue": null,
+                      },
+                      "stateNode": <option
+                        value="title_string asc"
+>
+                        Name Ascending
+</option>,
+                      "tag": 5,
+                      "treeBaseTime": 0,
+                      "type": "option",
+                      "updateQueue": null,
+                    },
+                    "stateNode": <option
+                      value="score desc, metadata_modified desc"
+>
+                      Relevance
+</option>,
+                    "tag": 5,
+                    "treeBaseTime": 0,
+                    "type": "option",
+                    "updateQueue": null,
+                  },
+                  "effectTag": 0,
+                  "expirationTime": 0,
+                  "firstEffect": null,
+                  "index": 1,
+                  "key": null,
+                  "lastEffect": null,
+                  "memoizedProps": Object {
+                    "children": Array [
+                      <option
+                        value="score desc, metadata_modified desc"
+>
+                        Relevance
+</option>,
+                      <option
+                        value="title_string asc"
+>
+                        Name Ascending
+</option>,
+                      <option
+                        value="title_string desc"
+>
+                        Name Descending
+</option>,
+                      <option
+                        value="metadata_modified desc"
+>
+                        Last Modified
+</option>,
+                      <option
+                        value="views_recent desc"
+>
+                        Popular
+</option>,
+                    ],
+                    "className": "custom-select",
+                    "id": "order_by",
+                    "onChange": [Function],
+                    "value": "score desc, metadata_modified desc",
+                  },
+                  "memoizedState": null,
+                  "mode": 0,
+                  "nextEffect": null,
+                  "pendingProps": Object {
+                    "children": Array [
+                      <option
+                        value="score desc, metadata_modified desc"
+>
+                        Relevance
+</option>,
+                      <option
+                        value="title_string asc"
+>
+                        Name Ascending
+</option>,
+                      <option
+                        value="title_string desc"
+>
+                        Name Descending
+</option>,
+                      <option
+                        value="metadata_modified desc"
+>
+                        Last Modified
+</option>,
+                      <option
+                        value="views_recent desc"
+>
+                        Popular
+</option>,
+                    ],
+                    "className": "custom-select",
+                    "id": "order_by",
+                    "onChange": [Function],
+                    "value": "score desc, metadata_modified desc",
+                  },
+                  "ref": null,
+                  "return": [Circular],
+                  "selfBaseTime": 0,
+                  "sibling": null,
+                  "stateNode": <select
+                    id="order_by"
+                    class="custom-select"
+>
+                    <option
+                                        value="score desc, metadata_modified desc"
+                    >
+                                        Relevance
+                    </option>
+                    <option
+                                        value="title_string asc"
+                    >
+                                        Name Ascending
+                    </option>
+                    <option
+                                        value="title_string desc"
+                    >
+                                        Name Descending
+                    </option>
+                    <option
+                                        value="metadata_modified desc"
+                    >
+                                        Last Modified
+                    </option>
+                    <option
+                                        value="views_recent desc"
+                    >
+                                        Popular
+                    </option>
+</select>,
+                  "tag": 5,
+                  "treeBaseTime": 0,
+                  "type": "select",
+                  "updateQueue": null,
+                },
+                "stateNode": <div
+                  class="input-group-prepend"
+>
+                  <label
+                                    for="order_by"
+                                    title="Order by"
+                                    class="input-group-text"
+                  >
+                                    <i
+                                                      class="material-icons"
+                                    >
+                                                      sort
+                                    </i>
+                  </label>
+</div>,
+                "tag": 5,
+                "treeBaseTime": 0,
+                "type": "div",
+                "updateQueue": null,
+              },
+              "effectTag": 0,
+              "expirationTime": 0,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": Object {
+                "children": Array [
+                  <div
+                    className="input-group-prepend"
+>
+                    <label
+                                        className="input-group-text"
+                                        htmlFor="order_by"
+                                        title="Order by"
+                    >
+                                        <i
+                                                            className="material-icons"
+                                        >
+                                                            sort
+                                        </i>
+                    </label>
+</div>,
+                  <select
+                    className="custom-select"
+                    id="order_by"
+                    onChange={[Function]}
+                    value="score desc, metadata_modified desc"
+>
+                    <option
+                                        value="score desc, metadata_modified desc"
+                    >
+                                        Relevance
+                    </option>
+                    <option
+                                        value="title_string asc"
+                    >
+                                        Name Ascending
+                    </option>
+                    <option
+                                        value="title_string desc"
+                    >
+                                        Name Descending
+                    </option>
+                    <option
+                                        value="metadata_modified desc"
+                    >
+                                        Last Modified
+                    </option>
+                    <option
+                                        value="views_recent desc"
+                    >
+                                        Popular
+                    </option>
+</select>,
+                ],
+                "className": "input-group",
+              },
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": Object {
+                "children": Array [
+                  <div
+                    className="input-group-prepend"
+>
+                    <label
+                                        className="input-group-text"
+                                        htmlFor="order_by"
+                                        title="Order by"
+                    >
+                                        <i
+                                                            className="material-icons"
+                                        >
+                                                            sort
+                                        </i>
+                    </label>
+</div>,
+                  <select
+                    className="custom-select"
+                    id="order_by"
+                    onChange={[Function]}
+                    value="score desc, metadata_modified desc"
+>
+                    <option
+                                        value="score desc, metadata_modified desc"
+                    >
+                                        Relevance
+                    </option>
+                    <option
+                                        value="title_string asc"
+                    >
+                                        Name Ascending
+                    </option>
+                    <option
+                                        value="title_string desc"
+                    >
+                                        Name Descending
+                    </option>
+                    <option
+                                        value="metadata_modified desc"
+                    >
+                                        Last Modified
+                    </option>
+                    <option
+                                        value="views_recent desc"
+                    >
+                                        Popular
+                    </option>
+</select>,
+                ],
+                "className": "input-group",
+              },
+              "ref": null,
+              "return": [Circular],
+              "selfBaseTime": 0,
+              "sibling": null,
+              "stateNode": <div
+                class="input-group"
+>
+                <div
+                                class="input-group-prepend"
+                >
+                                <label
+                                                for="order_by"
+                                                title="Order by"
+                                                class="input-group-text"
+                                >
+                                                <i
+                                                                class="material-icons"
+                                                >
+                                                                sort
+                                                </i>
+                                </label>
+                </div>
+                <select
+                                id="order_by"
+                                class="custom-select"
+                >
+                                <option
+                                                value="score desc, metadata_modified desc"
+                                >
+                                                Relevance
+                                </option>
+                                <option
+                                                value="title_string asc"
+                                >
+                                                Name Ascending
+                                </option>
+                                <option
+                                                value="title_string desc"
+                                >
+                                                Name Descending
+                                </option>
+                                <option
+                                                value="metadata_modified desc"
+                                >
+                                                Last Modified
+                                </option>
+                                <option
+                                                value="views_recent desc"
+                                >
+                                                Popular
+                                </option>
+                </select>
+</div>,
+              "tag": 5,
+              "treeBaseTime": 0,
+              "type": "div",
+              "updateQueue": null,
+            },
+            "effectTag": 0,
+            "expirationTime": 0,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "children": <div
+                className="input-group"
+>
+                <div
+                                className="input-group-prepend"
+                >
+                                <label
+                                                className="input-group-text"
+                                                htmlFor="order_by"
+                                                title="Order by"
+                                >
+                                                <i
+                                                                className="material-icons"
+                                                >
+                                                                sort
+                                                </i>
+                                </label>
+                </div>
+                <select
+                                className="custom-select"
+                                id="order_by"
+                                onChange={[Function]}
+                                value="score desc, metadata_modified desc"
+                >
+                                <option
+                                                value="score desc, metadata_modified desc"
+                                >
+                                                Relevance
+                                </option>
+                                <option
+                                                value="title_string asc"
+                                >
+                                                Name Ascending
+                                </option>
+                                <option
+                                                value="title_string desc"
+                                >
+                                                Name Descending
+                                </option>
+                                <option
+                                                value="metadata_modified desc"
+                                >
+                                                Last Modified
+                                </option>
+                                <option
+                                                value="views_recent desc"
+                                >
+                                                Popular
+                                </option>
+                </select>
+</div>,
+              "className": "mr-0",
+            },
+            "memoizedState": null,
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "children": <div
+                className="input-group"
+>
+                <div
+                                className="input-group-prepend"
+                >
+                                <label
+                                                className="input-group-text"
+                                                htmlFor="order_by"
+                                                title="Order by"
+                                >
+                                                <i
+                                                                className="material-icons"
+                                                >
+                                                                sort
+                                                </i>
+                                </label>
+                </div>
+                <select
+                                className="custom-select"
+                                id="order_by"
+                                onChange={[Function]}
+                                value="score desc, metadata_modified desc"
+                >
+                                <option
+                                                value="score desc, metadata_modified desc"
+                                >
+                                                Relevance
+                                </option>
+                                <option
+                                                value="title_string asc"
+                                >
+                                                Name Ascending
+                                </option>
+                                <option
+                                                value="title_string desc"
+                                >
+                                                Name Descending
+                                </option>
+                                <option
+                                                value="metadata_modified desc"
+                                >
+                                                Last Modified
+                                </option>
+                                <option
+                                                value="views_recent desc"
+                                >
+                                                Popular
+                                </option>
+                </select>
+</div>,
+              "className": "mr-0",
+            },
+            "ref": null,
+            "return": [Circular],
+            "selfBaseTime": 0,
+            "sibling": null,
+            "stateNode": <div
+              class="mr-0"
+>
+              <div
+                            class="input-group"
+              >
+                            <div
+                                          class="input-group-prepend"
+                            >
+                                          <label
+                                                        for="order_by"
+                                                        title="Order by"
+                                                        class="input-group-text"
+                                          >
+                                                        <i
+                                                                      class="material-icons"
+                                                        >
+                                                                      sort
+                                                        </i>
+                                          </label>
+                            </div>
+                            <select
+                                          id="order_by"
+                                          class="custom-select"
+                            >
+                                          <option
+                                                        value="score desc, metadata_modified desc"
+                                          >
+                                                        Relevance
+                                          </option>
+                                          <option
+                                                        value="title_string asc"
+                                          >
+                                                        Name Ascending
+                                          </option>
+                                          <option
+                                                        value="title_string desc"
+                                          >
+                                                        Name Descending
+                                          </option>
+                                          <option
+                                                        value="metadata_modified desc"
+                                          >
+                                                        Last Modified
+                                          </option>
+                                          <option
+                                                        value="views_recent desc"
+                                          >
+                                                        Popular
+                                          </option>
+                            </select>
+              </div>
+</div>,
+            "tag": 5,
+            "treeBaseTime": 0,
+            "type": "div",
+            "updateQueue": null,
+          },
+          "effectTag": 1,
+          "expirationTime": 0,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "handleSort": [Function],
+            "sort": "score desc, metadata_modified desc",
+          },
+          "memoizedState": null,
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "handleSort": [Function],
+            "sort": "score desc, metadata_modified desc",
+          },
+          "ref": null,
+          "return": FiberNode {
+            "_debugID": 4,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "actualDuration": 0,
+            "actualStartTime": 0,
+            "alternate": null,
+            "child": [Circular],
+            "effectTag": 1,
+            "expirationTime": 0,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "handleSort": [Function],
+                "sort": "score desc, metadata_modified desc",
+              },
+            },
+            "memoizedState": Object {
+              "context": null,
+              "mount": true,
+              "props": Object {
+                "handleSort": [Function],
+                "sort": "score desc, metadata_modified desc",
+              },
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "handleSort": [Function],
+                "sort": "score desc, metadata_modified desc",
+              },
+            },
+            "ref": null,
+            "return": FiberNode {
+              "_debugID": 1,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "actualDuration": 0,
+              "actualStartTime": 0,
+              "alternate": FiberNode {
+                "_debugID": 1,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": null,
+                "_debugSource": null,
+                "actualDuration": 0,
+                "actualStartTime": 0,
+                "alternate": [Circular],
+                "child": null,
+                "effectTag": 0,
+                "expirationTime": 1,
+                "firstEffect": null,
+                "index": 0,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": null,
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": null,
+                "ref": null,
+                "return": null,
+                "selfBaseTime": 0,
+                "sibling": null,
+                "stateNode": Object {
+                  "containerInfo": <div>
+                    <div
+                                        class="mr-0"
+                    >
+                                        <div
+                                                            class="input-group"
+                                        >
+                                                            <div
+                                                                                class="input-group-prepend"
+                                                            >
+                                                                                <label
+                                                                                                    for="order_by"
+                                                                                                    title="Order by"
+                                                                                                    class="input-group-text"
+                                                                                >
+                                                                                                    <i
+                                                                                                                        class="material-icons"
+                                                                                                    >
+                                                                                                                        sort
+                                                                                                    </i>
+                                                                                </label>
+                                                            </div>
+                                                            <select
+                                                                                id="order_by"
+                                                                                class="custom-select"
+                                                            >
+                                                                                <option
+                                                                                                    value="score desc, metadata_modified desc"
+                                                                                >
+                                                                                                    Relevance
+                                                                                </option>
+                                                                                <option
+                                                                                                    value="title_string asc"
+                                                                                >
+                                                                                                    Name Ascending
+                                                                                </option>
+                                                                                <option
+                                                                                                    value="title_string desc"
+                                                                                >
+                                                                                                    Name Descending
+                                                                                </option>
+                                                                                <option
+                                                                                                    value="metadata_modified desc"
+                                                                                >
+                                                                                                    Last Modified
+                                                                                </option>
+                                                                                <option
+                                                                                                    value="views_recent desc"
+                                                                                >
+                                                                                                    Popular
+                                                                                </option>
+                                                            </select>
+                                        </div>
+                    </div>
+</div>,
+                  "context": Object {},
+                  "current": [Circular],
+                  "earliestPendingTime": 0,
+                  "earliestSuspendedTime": 0,
+                  "finishedWork": null,
+                  "firstBatch": null,
+                  "hydrate": false,
+                  "latestPendingTime": 0,
+                  "latestPingedTime": 0,
+                  "latestSuspendedTime": 0,
+                  "nextScheduledRoot": null,
+                  "pendingChildren": null,
+                  "pendingCommitExpirationTime": 0,
+                  "pendingContext": null,
+                  "remainingExpirationTime": 0,
+                },
+                "tag": 3,
+                "treeBaseTime": 0,
+                "type": null,
+                "updateQueue": Object {
+                  "baseState": null,
+                  "expirationTime": 1,
+                  "firstCapturedEffect": null,
+                  "firstCapturedUpdate": null,
+                  "firstEffect": null,
+                  "firstUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                                                Object {
+                                                                        "handleSort": [Function],
+                                                                        "sort": "score desc, metadata_modified desc",
+                                                                      }
+                        }
+/>,
+                    },
+                    "tag": 0,
+                  },
+                  "lastCapturedEffect": null,
+                  "lastCapturedUpdate": null,
+                  "lastEffect": null,
+                  "lastUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                                                Object {
+                                                                        "handleSort": [Function],
+                                                                        "sort": "score desc, metadata_modified desc",
+                                                                      }
+                        }
+/>,
+                    },
+                    "tag": 0,
+                  },
+                },
+              },
+              "child": [Circular],
+              "effectTag": 32,
+              "expirationTime": 0,
+              "firstEffect": [Circular],
+              "index": 0,
+              "key": null,
+              "lastEffect": [Circular],
+              "memoizedProps": null,
+              "memoizedState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                                    Object {
+                                                      "handleSort": [Function],
+                                                      "sort": "score desc, metadata_modified desc",
+                                                    }
+                  }
+/>,
+              },
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseTime": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <div
+                                    class="mr-0"
+                  >
+                                    <div
+                                                      class="input-group"
+                                    >
+                                                      <div
+                                                                        class="input-group-prepend"
+                                                      >
+                                                                        <label
+                                                                                          for="order_by"
+                                                                                          title="Order by"
+                                                                                          class="input-group-text"
+                                                                        >
+                                                                                          <i
+                                                                                                            class="material-icons"
+                                                                                          >
+                                                                                                            sort
+                                                                                          </i>
+                                                                        </label>
+                                                      </div>
+                                                      <select
+                                                                        id="order_by"
+                                                                        class="custom-select"
+                                                      >
+                                                                        <option
+                                                                                          value="score desc, metadata_modified desc"
+                                                                        >
+                                                                                          Relevance
+                                                                        </option>
+                                                                        <option
+                                                                                          value="title_string asc"
+                                                                        >
+                                                                                          Name Ascending
+                                                                        </option>
+                                                                        <option
+                                                                                          value="title_string desc"
+                                                                        >
+                                                                                          Name Descending
+                                                                        </option>
+                                                                        <option
+                                                                                          value="metadata_modified desc"
+                                                                        >
+                                                                                          Last Modified
+                                                                        </option>
+                                                                        <option
+                                                                                          value="views_recent desc"
+                                                                        >
+                                                                                          Popular
+                                                                        </option>
+                                                      </select>
+                                    </div>
+                  </div>
+</div>,
+                "context": Object {},
+                "current": [Circular],
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "remainingExpirationTime": 0,
+              },
+              "tag": 3,
+              "treeBaseTime": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": Object {
+                  "element": <WrapperComponent
+                    Component={[Function]}
+                    context={null}
+                    props={
+                                        Object {
+                                                            "handleSort": [Function],
+                                                            "sort": "score desc, metadata_modified desc",
+                                                          }
+                    }
+/>,
+                },
+                "expirationTime": 0,
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": null,
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": null,
+              },
+            },
+            "selfBaseTime": 0,
+            "sibling": null,
+            "stateNode": WrapperComponent {
+              "_reactInternalFiber": [Circular],
+              "_reactInternalInstance": Object {},
+              "context": Object {},
+              "props": Object {
+                "Component": [Function],
+                "context": null,
+                "props": Object {
+                  "handleSort": [Function],
+                  "sort": "score desc, metadata_modified desc",
+                },
+              },
+              "refs": Object {},
+              "state": Object {
+                "context": null,
+                "mount": true,
+                "props": Object {
+                  "handleSort": [Function],
+                  "sort": "score desc, metadata_modified desc",
+                },
+              },
+              "updater": Object {
+                "enqueueForceUpdate": [Function],
+                "enqueueReplaceState": [Function],
+                "enqueueSetState": [Function],
+                "isMounted": [Function],
+              },
+            },
+            "tag": 2,
+            "treeBaseTime": 0,
+            "type": [Function],
+            "updateQueue": null,
+          },
+          "selfBaseTime": 0,
+          "sibling": null,
+          "stateNode": [Circular],
+          "tag": 2,
+          "treeBaseTime": 0,
+          "type": [Function],
+          "updateQueue": null,
+        },
+        "_reactInternalInstance": Object {},
+        "context": Object {},
+        "props": Object {
+          "handleSort": [Function],
+          "sort": "score desc, metadata_modified desc",
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+        },
+      },
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "handleSort": [Function],
+        "sort": "score desc, metadata_modified desc",
+      },
+      "ref": null,
       "rendered": Object {
-        "instance": null,
+        "instance": <div
+          class="mr-0"
+>
+          <div
+                    class="input-group"
+          >
+                    <div
+                              class="input-group-prepend"
+                    >
+                              <label
+                                        for="order_by"
+                                        title="Order by"
+                                        class="input-group-text"
+                              >
+                                        <i
+                                                  class="material-icons"
+                                        >
+                                                  sort
+                                        </i>
+                              </label>
+                    </div>
+                    <select
+                              id="order_by"
+                              class="custom-select"
+                    >
+                              <option
+                                        value="score desc, metadata_modified desc"
+                              >
+                                        Relevance
+                              </option>
+                              <option
+                                        value="title_string asc"
+                              >
+                                        Name Ascending
+                              </option>
+                              <option
+                                        value="title_string desc"
+                              >
+                                        Name Descending
+                              </option>
+                              <option
+                                        value="metadata_modified desc"
+                              >
+                                        Last Modified
+                              </option>
+                              <option
+                                        value="views_recent desc"
+                              >
+                                        Popular
+                              </option>
+                    </select>
+          </div>
+</div>,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
+          "children": <div
+            className="input-group"
+>
             <div
-              className="input-group-prepend"
->
-              <label
-                            className="input-group-text"
-                            htmlFor="order_by"
-                            title="Order by"
-              >
-                            <i
-                                          className="material-icons"
-                            >
-                                          sort
-                            </i>
-              </label>
-</div>,
+                        className="input-group-prepend"
+            >
+                        <label
+                                    className="input-group-text"
+                                    htmlFor="order_by"
+                                    title="Order by"
+                        >
+                                    <i
+                                                className="material-icons"
+                                    >
+                                                sort
+                                    </i>
+                        </label>
+            </div>
             <select
-              className="custom-select"
-              id="order_by"
-              onChange={[Function]}
-              value={undefined}
->
-              <option
-                            value="score desc, metadata_modified desc"
-              >
-                            Relevance
-              </option>
-              <option
-                            value="title_string asc"
-              >
-                            Name Ascending
-              </option>
-              <option
-                            value="title_string desc"
-              >
-                            Name Descending
-              </option>
-              <option
-                            value="metadata_modified desc"
-              >
-                            Last Modified
-              </option>
-              <option
-                            value="views_recent desc"
-              >
-                            Popular
-              </option>
-</select>,
-          ],
-          "className": "input-group",
+                        className="custom-select"
+                        id="order_by"
+                        onChange={[Function]}
+                        value="score desc, metadata_modified desc"
+            >
+                        <option
+                                    value="score desc, metadata_modified desc"
+                        >
+                                    Relevance
+                        </option>
+                        <option
+                                    value="title_string asc"
+                        >
+                                    Name Ascending
+                        </option>
+                        <option
+                                    value="title_string desc"
+                        >
+                                    Name Descending
+                        </option>
+                        <option
+                                    value="metadata_modified desc"
+                        >
+                                    Last Modified
+                        </option>
+                        <option
+                                    value="views_recent desc"
+                        >
+                                    Popular
+                        </option>
+            </select>
+</div>,
+          "className": "mr-0",
         },
         "ref": null,
         "rendered": Array [
           Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <label
-                className="input-group-text"
-                htmlFor="order_by"
-                title="Order by"
+            "instance": <div
+              class="input-group"
 >
-                <i
-                                className="material-icons"
-                >
-                                sort
-                </i>
-</label>,
-              "className": "input-group-prepend",
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": <i
-                  className="material-icons"
->
-                  sort
-</i>,
-                "className": "input-group-text",
-                "htmlFor": "order_by",
-                "title": "Order by",
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "sort",
-                  "className": "material-icons",
-                },
-                "ref": null,
-                "rendered": "sort",
-                "type": "i",
-              },
-              "type": "label",
-            },
-            "type": "div",
-          },
-          Object {
-            "instance": null,
+              <div
+                            class="input-group-prepend"
+              >
+                            <label
+                                          for="order_by"
+                                          title="Order by"
+                                          class="input-group-text"
+                            >
+                                          <i
+                                                        class="material-icons"
+                                          >
+                                                        sort
+                                          </i>
+                            </label>
+              </div>
+              <select
+                            id="order_by"
+                            class="custom-select"
+              >
+                            <option
+                                          value="score desc, metadata_modified desc"
+                            >
+                                          Relevance
+                            </option>
+                            <option
+                                          value="title_string asc"
+                            >
+                                          Name Ascending
+                            </option>
+                            <option
+                                          value="title_string desc"
+                            >
+                                          Name Descending
+                            </option>
+                            <option
+                                          value="metadata_modified desc"
+                            >
+                                          Last Modified
+                            </option>
+                            <option
+                                          value="views_recent desc"
+                            >
+                                          Popular
+                            </option>
+              </select>
+</div>,
             "key": undefined,
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <option
+                <div
+                  className="input-group-prepend"
+>
+                  <label
+                                    className="input-group-text"
+                                    htmlFor="order_by"
+                                    title="Order by"
+                  >
+                                    <i
+                                                      className="material-icons"
+                                    >
+                                                      sort
+                                    </i>
+                  </label>
+</div>,
+                <select
+                  className="custom-select"
+                  id="order_by"
+                  onChange={[Function]}
                   value="score desc, metadata_modified desc"
 >
-                  Relevance
-</option>,
-                <option
-                  value="title_string asc"
->
-                  Name Ascending
-</option>,
-                <option
-                  value="title_string desc"
->
-                  Name Descending
-</option>,
-                <option
-                  value="metadata_modified desc"
->
-                  Last Modified
-</option>,
-                <option
-                  value="views_recent desc"
->
-                  Popular
-</option>,
+                  <option
+                                    value="score desc, metadata_modified desc"
+                  >
+                                    Relevance
+                  </option>
+                  <option
+                                    value="title_string asc"
+                  >
+                                    Name Ascending
+                  </option>
+                  <option
+                                    value="title_string desc"
+                  >
+                                    Name Descending
+                  </option>
+                  <option
+                                    value="metadata_modified desc"
+                  >
+                                    Last Modified
+                  </option>
+                  <option
+                                    value="views_recent desc"
+                  >
+                                    Popular
+                  </option>
+</select>,
               ],
-              "className": "custom-select",
-              "id": "order_by",
-              "onChange": [Function],
-              "value": undefined,
+              "className": "input-group",
             },
             "ref": null,
             "rendered": Array [
               Object {
-                "instance": null,
+                "instance": <div
+                  class="input-group-prepend"
+>
+                  <label
+                                    for="order_by"
+                                    title="Order by"
+                                    class="input-group-text"
+                  >
+                                    <i
+                                                      class="material-icons"
+                                    >
+                                                      sort
+                                    </i>
+                  </label>
+</div>,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Relevance",
+                  "children": <label
+                    className="input-group-text"
+                    htmlFor="order_by"
+                    title="Order by"
+>
+                    <i
+                                        className="material-icons"
+                    >
+                                        sort
+                    </i>
+</label>,
+                  "className": "input-group-prepend",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": <label
+                      for="order_by"
+                      title="Order by"
+                      class="input-group-text"
+>
+                      <i
+                                            class="material-icons"
+                      >
+                                            sort
+                      </i>
+</label>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <i
+                        className="material-icons"
+>
+                        sort
+</i>,
+                      "className": "input-group-text",
+                      "htmlFor": "order_by",
+                      "title": "Order by",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": <i
+                          class="material-icons"
+>
+                          sort
+</i>,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "sort",
+                          "className": "material-icons",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "sort",
+                        ],
+                        "type": "i",
+                      },
+                    ],
+                    "type": "label",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": <select
+                  id="order_by"
+                  class="custom-select"
+>
+                  <option
+                                    value="score desc, metadata_modified desc"
+                  >
+                                    Relevance
+                  </option>
+                  <option
+                                    value="title_string asc"
+                  >
+                                    Name Ascending
+                  </option>
+                  <option
+                                    value="title_string desc"
+                  >
+                                    Name Descending
+                  </option>
+                  <option
+                                    value="metadata_modified desc"
+                  >
+                                    Last Modified
+                  </option>
+                  <option
+                                    value="views_recent desc"
+                  >
+                                    Popular
+                  </option>
+</select>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <option
+                      value="score desc, metadata_modified desc"
+>
+                      Relevance
+</option>,
+                    <option
+                      value="title_string asc"
+>
+                      Name Ascending
+</option>,
+                    <option
+                      value="title_string desc"
+>
+                      Name Descending
+</option>,
+                    <option
+                      value="metadata_modified desc"
+>
+                      Last Modified
+</option>,
+                    <option
+                      value="views_recent desc"
+>
+                      Popular
+</option>,
+                  ],
+                  "className": "custom-select",
+                  "id": "order_by",
+                  "onChange": [Function],
                   "value": "score desc, metadata_modified desc",
                 },
                 "ref": null,
-                "rendered": "Relevance",
-                "type": "option",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Name Ascending",
-                  "value": "title_string asc",
-                },
-                "ref": null,
-                "rendered": "Name Ascending",
-                "type": "option",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Name Descending",
-                  "value": "title_string desc",
-                },
-                "ref": null,
-                "rendered": "Name Descending",
-                "type": "option",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Last Modified",
-                  "value": "metadata_modified desc",
-                },
-                "ref": null,
-                "rendered": "Last Modified",
-                "type": "option",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Popular",
-                  "value": "views_recent desc",
-                },
-                "ref": null,
-                "rendered": "Popular",
-                "type": "option",
+                "rendered": Array [
+                  Object {
+                    "instance": <option
+                      value="score desc, metadata_modified desc"
+>
+                      Relevance
+</option>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Relevance",
+                      "value": "score desc, metadata_modified desc",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "Relevance",
+                    ],
+                    "type": "option",
+                  },
+                  Object {
+                    "instance": <option
+                      value="title_string asc"
+>
+                      Name Ascending
+</option>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Name Ascending",
+                      "value": "title_string asc",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "Name Ascending",
+                    ],
+                    "type": "option",
+                  },
+                  Object {
+                    "instance": <option
+                      value="title_string desc"
+>
+                      Name Descending
+</option>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Name Descending",
+                      "value": "title_string desc",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "Name Descending",
+                    ],
+                    "type": "option",
+                  },
+                  Object {
+                    "instance": <option
+                      value="metadata_modified desc"
+>
+                      Last Modified
+</option>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Last Modified",
+                      "value": "metadata_modified desc",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "Last Modified",
+                    ],
+                    "type": "option",
+                  },
+                  Object {
+                    "instance": <option
+                      value="views_recent desc"
+>
+                      Popular
+</option>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Popular",
+                      "value": "views_recent desc",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "Popular",
+                    ],
+                    "type": "option",
+                  },
+                ],
+                "type": "select",
               },
             ],
-            "type": "select",
+            "type": "div",
           },
         ],
         "type": "div",
       },
-      "type": "div",
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {

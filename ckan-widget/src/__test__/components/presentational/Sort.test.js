@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import Sort from '../../../components/presentational/Sort';
 
 describe('Sort', () => {
@@ -8,9 +8,16 @@ describe('Sort', () => {
   });
 
   it('should render correctly', () => {
-    const tree = shallow(
-      <Sort />
+    const mockOnChange = jest.fn();
+    const component = mount(
+      <Sort handleSort={mockOnChange} sort={'score desc, metadata_modified desc'} />
     );
-    expect(tree).toMatchSnapshot();
+
+    expect(component.instance().props.sort).toBe('score desc, metadata_modified desc')
+    expect(component).toMatchSnapshot();
+
+    const selectElement = component.find('select')
+    selectElement.simulate('change')
+    expect(mockOnChange.mock.calls.length).toEqual(1);
   });
 });
