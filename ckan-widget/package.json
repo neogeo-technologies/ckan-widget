@@ -39,7 +39,7 @@
   "jest": {
     "collectCoverageFrom": [
       "src/components/**/*.{js,jsx}",
-      "src/reducers/package_search.js",
+      "src/reducers/**/*.{js,jsx}",
       "!/node_modules/",
       "!/public/",
       "!src/actions/",
