@@ -38,6 +38,7 @@
   },
   "jest": {
     "collectCoverageFrom": [
+      "src/components/**/*.{js,jsx}",
       "src/reducers/**/*.{js,jsx}",
       "!/node_modules/",
       "!src/index.js",
