@@ -6,6 +6,7 @@ class Facet extends Component {
     const facets = this.props.facetsInfo;
     const title = this.props.title;
     const infoList = [];
+
     for (const f in facets) {
       infoList.push(
         <li className="list-group-item d-flex justify-content-between align-items-center" key={f} onClick={() => this.props.onClick(`${this.props.facetKey}:${facets[f].name}`)}>
