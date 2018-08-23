@@ -1,12 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import  configureStore from 'redux-mock-store';
+import  configureMockStore from 'redux-mock-store';
 import DatasetInfoList from '../../../components/container/DatasetInfoList';
 
 
 let component;
 let store;
-const mockStore = configureStore();
+const mockStore = configureMockStore();
 const initialState = {
   packageSearch: {
     datasets: [],
@@ -25,7 +25,7 @@ describe('DatasetInfoList', () => {
   beforeEach(() => {
     store = mockStore(initialState);
     component = shallow(
-        <DatasetInfoList store={store} />
+      <DatasetInfoList store={store} />
     );
   })
 
