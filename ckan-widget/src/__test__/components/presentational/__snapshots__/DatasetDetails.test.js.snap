@@ -4,6 +4,11 @@ exports[`DatasetDetails should render correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DatasetDetails
+    dataset_creation_date="2018-03-30"
+    dataset_modification_date="2018-05-30"
+    dataset_publication_date="2018-04-30"
+    name="Dataset1"
+    notes="Describe dataset1"
     organization={
         Object {
             "name": "org1",
@@ -35,7 +40,9 @@ ShallowWrapper {
       "children": Array [
         <p
           className="lead"
-/>,
+>
+          Describe dataset1
+</p>,
         <hr />,
         <ul
           className="text-muted list-inline"
@@ -47,6 +54,7 @@ ShallowWrapper {
                               Created on:
                     </strong>
                      
+                    2018-03-30
           </li>
           <li
                     className="list-inline-item"
@@ -55,6 +63,7 @@ ShallowWrapper {
                               Publication date:
                     </strong>
                      
+                    2018-04-30
           </li>
           <li
                     className="list-inline-item"
@@ -63,6 +72,7 @@ ShallowWrapper {
                               Modification date:
                     </strong>
                      
+                    2018-05-30
           </li>
           <li
                     className="list-inline-item"
@@ -112,7 +122,7 @@ ShallowWrapper {
 </div>,
         <a
           className="btn btn-success mb-1"
-          href="https://trouver.datasud.fr/dataset/undefined"
+          href="https://trouver.datasud.fr/dataset/Dataset1"
 >
           <i
                     className="material-icons mr-1"
@@ -131,11 +141,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": undefined,
+          "children": "Describe dataset1",
           "className": "lead",
         },
         "ref": null,
-        "rendered": null,
+        "rendered": "Describe dataset1",
         "type": "p",
       },
       Object {
@@ -160,6 +170,7 @@ ShallowWrapper {
                             Created on:
               </strong>
                
+              2018-03-30
 </li>,
             <li
               className="list-inline-item"
@@ -168,6 +179,7 @@ ShallowWrapper {
                             Publication date:
               </strong>
                
+              2018-04-30
 </li>,
             <li
               className="list-inline-item"
@@ -176,6 +188,7 @@ ShallowWrapper {
                             Modification date:
               </strong>
                
+              2018-05-30
 </li>,
             <li
               className="list-inline-item"
@@ -201,7 +214,7 @@ ShallowWrapper {
                   Created on:
 </strong>,
                 " ",
-                undefined,
+                "2018-03-30",
               ],
               "className": "list-inline-item",
             },
@@ -219,7 +232,7 @@ ShallowWrapper {
                 "type": "strong",
               },
               " ",
-              undefined,
+              "2018-03-30",
             ],
             "type": "li",
           },
@@ -233,7 +246,7 @@ ShallowWrapper {
                   Publication date:
 </strong>,
                 " ",
-                undefined,
+                "2018-04-30",
               ],
               "className": "list-inline-item",
             },
@@ -251,7 +264,7 @@ ShallowWrapper {
                 "type": "strong",
               },
               " ",
-              undefined,
+              "2018-04-30",
             ],
             "type": "li",
           },
@@ -265,7 +278,7 @@ ShallowWrapper {
                   Modification date:
 </strong>,
                 " ",
-                undefined,
+                "2018-05-30",
               ],
               "className": "list-inline-item",
             },
@@ -283,7 +296,7 @@ ShallowWrapper {
                 "type": "strong",
               },
               " ",
-              undefined,
+              "2018-05-30",
             ],
             "type": "li",
           },
@@ -516,7 +529,7 @@ ShallowWrapper {
             " View on Datasud.fr",
           ],
           "className": "btn btn-success mb-1",
-          "href": "https://trouver.datasud.fr/dataset/undefined",
+          "href": "https://trouver.datasud.fr/dataset/Dataset1",
         },
         "ref": null,
         "rendered": Array [
@@ -548,7 +561,9 @@ ShallowWrapper {
         "children": Array [
           <p
             className="lead"
-/>,
+>
+            Describe dataset1
+</p>,
           <hr />,
           <ul
             className="text-muted list-inline"
@@ -560,6 +575,7 @@ ShallowWrapper {
                                     Created on:
                         </strong>
                          
+                        2018-03-30
             </li>
             <li
                         className="list-inline-item"
@@ -568,6 +584,7 @@ ShallowWrapper {
                                     Publication date:
                         </strong>
                          
+                        2018-04-30
             </li>
             <li
                         className="list-inline-item"
@@ -576,6 +593,7 @@ ShallowWrapper {
                                     Modification date:
                         </strong>
                          
+                        2018-05-30
             </li>
             <li
                         className="list-inline-item"
@@ -625,7 +643,7 @@ ShallowWrapper {
 </div>,
           <a
             className="btn btn-success mb-1"
-            href="https://trouver.datasud.fr/dataset/undefined"
+            href="https://trouver.datasud.fr/dataset/Dataset1"
 >
             <i
                         className="material-icons mr-1"
@@ -644,11 +662,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
+            "children": "Describe dataset1",
             "className": "lead",
           },
           "ref": null,
-          "rendered": null,
+          "rendered": "Describe dataset1",
           "type": "p",
         },
         Object {
@@ -673,6 +691,7 @@ ShallowWrapper {
                                 Created on:
                 </strong>
                  
+                2018-03-30
 </li>,
               <li
                 className="list-inline-item"
@@ -681,6 +700,7 @@ ShallowWrapper {
                                 Publication date:
                 </strong>
                  
+                2018-04-30
 </li>,
               <li
                 className="list-inline-item"
@@ -689,6 +709,7 @@ ShallowWrapper {
                                 Modification date:
                 </strong>
                  
+                2018-05-30
 </li>,
               <li
                 className="list-inline-item"
@@ -714,7 +735,7 @@ ShallowWrapper {
                     Created on:
 </strong>,
                   " ",
-                  undefined,
+                  "2018-03-30",
                 ],
                 "className": "list-inline-item",
               },
@@ -732,7 +753,7 @@ ShallowWrapper {
                   "type": "strong",
                 },
                 " ",
-                undefined,
+                "2018-03-30",
               ],
               "type": "li",
             },
@@ -746,7 +767,7 @@ ShallowWrapper {
                     Publication date:
 </strong>,
                   " ",
-                  undefined,
+                  "2018-04-30",
                 ],
                 "className": "list-inline-item",
               },
@@ -764,7 +785,7 @@ ShallowWrapper {
                   "type": "strong",
                 },
                 " ",
-                undefined,
+                "2018-04-30",
               ],
               "type": "li",
             },
@@ -778,7 +799,7 @@ ShallowWrapper {
                     Modification date:
 </strong>,
                   " ",
-                  undefined,
+                  "2018-05-30",
                 ],
                 "className": "list-inline-item",
               },
@@ -796,7 +817,7 @@ ShallowWrapper {
                   "type": "strong",
                 },
                 " ",
-                undefined,
+                "2018-05-30",
               ],
               "type": "li",
             },
@@ -1029,7 +1050,7 @@ ShallowWrapper {
               " View on Datasud.fr",
             ],
             "className": "btn btn-success mb-1",
-            "href": "https://trouver.datasud.fr/dataset/undefined",
+            "href": "https://trouver.datasud.fr/dataset/Dataset1",
           },
           "ref": null,
           "rendered": Array [
