@@ -3,7 +3,20 @@
 exports[`Facet should render correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Facet />,
+  Symbol(enzyme.__unrendered__): <Facet
+    facetKey="key"
+    facetsInfo={
+        Array [
+            Object {
+              "count": 1,
+              "display_name": "Licence Ouverte Version 2.0",
+              "name": "license-3",
+            },
+          ]
+    }
+    onClick={[Function]}
+    title="Facet title"
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -22,12 +35,25 @@ ShallowWrapper {
 >
           <h5
                     className="card-title mb-auto"
-          />
+          >
+                    Facet title
+          </h5>
 </div>,
         <ul
           className="list-group list-group-flush"
 >
-          
+          <li
+                    className="list-group-item d-flex justify-content-between align-items-center"
+                    onClick={[Function]}
+          >
+                    Licence Ouverte Version 2.0
+                     
+                    <span
+                              className="badge badge-primary"
+                    >
+                              1
+                    </span>
+          </li>
 </ul>,
       ],
       "className": "card my-3",
@@ -41,7 +67,9 @@ ShallowWrapper {
         "props": Object {
           "children": <h5
             className="card-title mb-auto"
-/>,
+>
+            Facet title
+</h5>,
           "className": "card-header bg-secondary text-white",
         },
         "ref": null,
@@ -50,11 +78,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
+            "children": "Facet title",
             "className": "card-title mb-auto",
           },
           "ref": null,
-          "rendered": null,
+          "rendered": "Facet title",
           "type": "h5",
         },
         "type": "div",
@@ -64,11 +92,61 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [],
+          "children": Array [
+            <li
+              className="list-group-item d-flex justify-content-between align-items-center"
+              onClick={[Function]}
+>
+              Licence Ouverte Version 2.0
+               
+              <span
+                            className="badge badge-primary"
+              >
+                            1
+              </span>
+</li>,
+          ],
           "className": "list-group list-group-flush",
         },
         "ref": null,
-        "rendered": Array [],
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "0",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Licence Ouverte Version 2.0",
+                " ",
+                <span
+                  className="badge badge-primary"
+>
+                  1
+</span>,
+              ],
+              "className": "list-group-item d-flex justify-content-between align-items-center",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Licence Ouverte Version 2.0",
+              " ",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": 1,
+                  "className": "badge badge-primary",
+                },
+                "ref": null,
+                "rendered": 1,
+                "type": "span",
+              },
+            ],
+            "type": "li",
+          },
+        ],
         "type": "ul",
       },
     ],
@@ -86,12 +164,25 @@ ShallowWrapper {
 >
             <h5
                         className="card-title mb-auto"
-            />
+            >
+                        Facet title
+            </h5>
 </div>,
           <ul
             className="list-group list-group-flush"
 >
-            
+            <li
+                        className="list-group-item d-flex justify-content-between align-items-center"
+                        onClick={[Function]}
+            >
+                        Licence Ouverte Version 2.0
+                         
+                        <span
+                                    className="badge badge-primary"
+                        >
+                                    1
+                        </span>
+            </li>
 </ul>,
         ],
         "className": "card my-3",
@@ -105,7 +196,9 @@ ShallowWrapper {
           "props": Object {
             "children": <h5
               className="card-title mb-auto"
-/>,
+>
+              Facet title
+</h5>,
             "className": "card-header bg-secondary text-white",
           },
           "ref": null,
@@ -114,11 +207,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": undefined,
+              "children": "Facet title",
               "className": "card-title mb-auto",
             },
             "ref": null,
-            "rendered": null,
+            "rendered": "Facet title",
             "type": "h5",
           },
           "type": "div",
@@ -128,11 +221,61 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [],
+            "children": Array [
+              <li
+                className="list-group-item d-flex justify-content-between align-items-center"
+                onClick={[Function]}
+>
+                Licence Ouverte Version 2.0
+                 
+                <span
+                                className="badge badge-primary"
+                >
+                                1
+                </span>
+</li>,
+            ],
             "className": "list-group list-group-flush",
           },
           "ref": null,
-          "rendered": Array [],
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "0",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Licence Ouverte Version 2.0",
+                  " ",
+                  <span
+                    className="badge badge-primary"
+>
+                    1
+</span>,
+                ],
+                "className": "list-group-item d-flex justify-content-between align-items-center",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Licence Ouverte Version 2.0",
+                " ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 1,
+                    "className": "badge badge-primary",
+                  },
+                  "ref": null,
+                  "rendered": 1,
+                  "type": "span",
+                },
+              ],
+              "type": "li",
+            },
+          ],
           "type": "ul",
         },
       ],

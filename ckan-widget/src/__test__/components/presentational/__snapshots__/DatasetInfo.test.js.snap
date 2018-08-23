@@ -3,7 +3,21 @@
 exports[`DatasetInfo should render correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <DatasetInfo />,
+  Symbol(enzyme.__unrendered__): <DatasetInfo
+    metadata_modified="2018-08-23T07:26:42.122834"
+    notes="Describe dataset"
+    resources={
+        Array [
+            Object {
+              "format": "CSV",
+              "last_modified": "21 June 2018",
+              "name": "rsc1",
+              "restricted": "{\\"level\\": \\"public\\"}",
+            },
+          ]
+    }
+    title="Dataset title"
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -43,10 +57,14 @@ ShallowWrapper {
                     >
                               <h4
                                         className="title text-primary"
-                              />
+                              >
+                                        Dataset title
+                              </h4>
                               <p
                                         className="text-muted"
-                              />
+                              >
+                                        Describe dataset
+                              </p>
                               <ul
                                         className="list-inline"
                               >
@@ -57,7 +75,7 @@ ShallowWrapper {
                                                             Modified:
                                                   </strong>
                                                    
-                                                  Invalid Date
+                                                  Thu, 23 Aug 2018 05:26:42 GMT
                                         </li>
                                         <li
                                                   className="list-inline-item"
@@ -66,7 +84,7 @@ ShallowWrapper {
                                                             Formats:
                                                   </strong>
                                                    
-                                                  
+                                                  CSV
                                         </li>
                                         <li
                                                   className="list-inline-item"
@@ -83,6 +101,19 @@ ShallowWrapper {
 </div>,
         <DatasetDetails
           collapsed={true}
+          metadata_modified="2018-08-23T07:26:42.122834"
+          notes="Describe dataset"
+          resources={
+                    Array [
+                              Object {
+                                "format": "CSV",
+                                "last_modified": "21 June 2018",
+                                "name": "rsc1",
+                                "restricted": "{\\"level\\": \\"public\\"}",
+                              },
+                            ]
+          }
+          title="Dataset title"
 />,
       ],
       "className": "card dataset-wrap my-3 ",
@@ -117,10 +148,14 @@ ShallowWrapper {
               >
                             <h4
                                           className="title text-primary"
-                            />
+                            >
+                                          Dataset title
+                            </h4>
                             <p
                                           className="text-muted"
-                            />
+                            >
+                                          Describe dataset
+                            </p>
                             <ul
                                           className="list-inline"
                             >
@@ -131,7 +166,7 @@ ShallowWrapper {
                                                                       Modified:
                                                         </strong>
                                                          
-                                                        Invalid Date
+                                                        Thu, 23 Aug 2018 05:26:42 GMT
                                           </li>
                                           <li
                                                         className="list-inline-item"
@@ -140,7 +175,7 @@ ShallowWrapper {
                                                                       Formats:
                                                         </strong>
                                                          
-                                                        
+                                                        CSV
                                           </li>
                                           <li
                                                         className="list-inline-item"
@@ -192,10 +227,14 @@ ShallowWrapper {
 >
                   <h4
                                     className="title text-primary"
-                  />
+                  >
+                                    Dataset title
+                  </h4>
                   <p
                                     className="text-muted"
-                  />
+                  >
+                                    Describe dataset
+                  </p>
                   <ul
                                     className="list-inline"
                   >
@@ -206,7 +245,7 @@ ShallowWrapper {
                                                                         Modified:
                                                       </strong>
                                                        
-                                                      Invalid Date
+                                                      Thu, 23 Aug 2018 05:26:42 GMT
                                     </li>
                                     <li
                                                       className="list-inline-item"
@@ -215,7 +254,7 @@ ShallowWrapper {
                                                                         Formats:
                                                       </strong>
                                                        
-                                                      
+                                                      CSV
                                     </li>
                                     <li
                                                       className="list-inline-item"
@@ -269,10 +308,14 @@ ShallowWrapper {
                   "children": Array [
                     <h4
                       className="title text-primary"
-/>,
+>
+                      Dataset title
+</h4>,
                     <p
                       className="text-muted"
-/>,
+>
+                      Describe dataset
+</p>,
                     <ul
                       className="list-inline"
 >
@@ -283,7 +326,7 @@ ShallowWrapper {
                                                                   Modified:
                                             </strong>
                                              
-                                            Invalid Date
+                                            Thu, 23 Aug 2018 05:26:42 GMT
                       </li>
                       <li
                                             className="list-inline-item"
@@ -292,7 +335,7 @@ ShallowWrapper {
                                                                   Formats:
                                             </strong>
                                              
-                                            
+                                            CSV
                       </li>
                       <li
                                             className="list-inline-item"
@@ -314,11 +357,11 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": undefined,
+                      "children": "Dataset title",
                       "className": "title text-primary",
                     },
                     "ref": null,
-                    "rendered": null,
+                    "rendered": "Dataset title",
                     "type": "h4",
                   },
                   Object {
@@ -326,11 +369,11 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": undefined,
+                      "children": "Describe dataset",
                       "className": "text-muted",
                     },
                     "ref": null,
-                    "rendered": null,
+                    "rendered": "Describe dataset",
                     "type": "p",
                   },
                   Object {
@@ -346,7 +389,7 @@ ShallowWrapper {
                                                     Modified:
                           </strong>
                            
-                          Invalid Date
+                          Thu, 23 Aug 2018 05:26:42 GMT
 </li>,
                         <li
                           className="list-inline-item"
@@ -355,7 +398,7 @@ ShallowWrapper {
                                                     Formats:
                           </strong>
                            
-                          
+                          CSV
 </li>,
                         <li
                           className="list-inline-item"
@@ -381,7 +424,7 @@ ShallowWrapper {
                               Modified:
 </strong>,
                             " ",
-                            "Invalid Date",
+                            "Thu, 23 Aug 2018 05:26:42 GMT",
                           ],
                           "className": "list-inline-item",
                         },
@@ -399,7 +442,7 @@ ShallowWrapper {
                             "type": "strong",
                           },
                           " ",
-                          "Invalid Date",
+                          "Thu, 23 Aug 2018 05:26:42 GMT",
                         ],
                         "type": "li",
                       },
@@ -413,7 +456,7 @@ ShallowWrapper {
                               Formats:
 </strong>,
                             " ",
-                            "",
+                            "CSV",
                           ],
                           "className": "list-inline-item",
                         },
@@ -431,7 +474,7 @@ ShallowWrapper {
                             "type": "strong",
                           },
                           " ",
-                          "",
+                          "CSV",
                         ],
                         "type": "li",
                       },
@@ -485,6 +528,17 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "collapsed": true,
+          "metadata_modified": "2018-08-23T07:26:42.122834",
+          "notes": "Describe dataset",
+          "resources": Array [
+            Object {
+              "format": "CSV",
+              "last_modified": "21 June 2018",
+              "name": "rsc1",
+              "restricted": "{\\"level\\": \\"public\\"}",
+            },
+          ],
+          "title": "Dataset title",
         },
         "ref": null,
         "rendered": null,
@@ -526,10 +580,14 @@ ShallowWrapper {
                         >
                                     <h4
                                                 className="title text-primary"
-                                    />
+                                    >
+                                                Dataset title
+                                    </h4>
                                     <p
                                                 className="text-muted"
-                                    />
+                                    >
+                                                Describe dataset
+                                    </p>
                                     <ul
                                                 className="list-inline"
                                     >
@@ -540,7 +598,7 @@ ShallowWrapper {
                                                                         Modified:
                                                             </strong>
                                                              
-                                                            Invalid Date
+                                                            Thu, 23 Aug 2018 05:26:42 GMT
                                                 </li>
                                                 <li
                                                             className="list-inline-item"
@@ -549,7 +607,7 @@ ShallowWrapper {
                                                                         Formats:
                                                             </strong>
                                                              
-                                                            
+                                                            CSV
                                                 </li>
                                                 <li
                                                             className="list-inline-item"
@@ -566,6 +624,19 @@ ShallowWrapper {
 </div>,
           <DatasetDetails
             collapsed={true}
+            metadata_modified="2018-08-23T07:26:42.122834"
+            notes="Describe dataset"
+            resources={
+                        Array [
+                                    Object {
+                                      "format": "CSV",
+                                      "last_modified": "21 June 2018",
+                                      "name": "rsc1",
+                                      "restricted": "{\\"level\\": \\"public\\"}",
+                                    },
+                                  ]
+            }
+            title="Dataset title"
 />,
         ],
         "className": "card dataset-wrap my-3 ",
@@ -600,10 +671,14 @@ ShallowWrapper {
                 >
                                 <h4
                                                 className="title text-primary"
-                                />
+                                >
+                                                Dataset title
+                                </h4>
                                 <p
                                                 className="text-muted"
-                                />
+                                >
+                                                Describe dataset
+                                </p>
                                 <ul
                                                 className="list-inline"
                                 >
@@ -614,7 +689,7 @@ ShallowWrapper {
                                                                                 Modified:
                                                                 </strong>
                                                                  
-                                                                Invalid Date
+                                                                Thu, 23 Aug 2018 05:26:42 GMT
                                                 </li>
                                                 <li
                                                                 className="list-inline-item"
@@ -623,7 +698,7 @@ ShallowWrapper {
                                                                                 Formats:
                                                                 </strong>
                                                                  
-                                                                
+                                                                CSV
                                                 </li>
                                                 <li
                                                                 className="list-inline-item"
@@ -675,10 +750,14 @@ ShallowWrapper {
 >
                     <h4
                                         className="title text-primary"
-                    />
+                    >
+                                        Dataset title
+                    </h4>
                     <p
                                         className="text-muted"
-                    />
+                    >
+                                        Describe dataset
+                    </p>
                     <ul
                                         className="list-inline"
                     >
@@ -689,7 +768,7 @@ ShallowWrapper {
                                                                                 Modified:
                                                             </strong>
                                                              
-                                                            Invalid Date
+                                                            Thu, 23 Aug 2018 05:26:42 GMT
                                         </li>
                                         <li
                                                             className="list-inline-item"
@@ -698,7 +777,7 @@ ShallowWrapper {
                                                                                 Formats:
                                                             </strong>
                                                              
-                                                            
+                                                            CSV
                                         </li>
                                         <li
                                                             className="list-inline-item"
@@ -752,10 +831,14 @@ ShallowWrapper {
                     "children": Array [
                       <h4
                         className="title text-primary"
-/>,
+>
+                        Dataset title
+</h4>,
                       <p
                         className="text-muted"
-/>,
+>
+                        Describe dataset
+</p>,
                       <ul
                         className="list-inline"
 >
@@ -766,7 +849,7 @@ ShallowWrapper {
                                                                         Modified:
                                                 </strong>
                                                  
-                                                Invalid Date
+                                                Thu, 23 Aug 2018 05:26:42 GMT
                         </li>
                         <li
                                                 className="list-inline-item"
@@ -775,7 +858,7 @@ ShallowWrapper {
                                                                         Formats:
                                                 </strong>
                                                  
-                                                
+                                                CSV
                         </li>
                         <li
                                                 className="list-inline-item"
@@ -797,11 +880,11 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": undefined,
+                        "children": "Dataset title",
                         "className": "title text-primary",
                       },
                       "ref": null,
-                      "rendered": null,
+                      "rendered": "Dataset title",
                       "type": "h4",
                     },
                     Object {
@@ -809,11 +892,11 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": undefined,
+                        "children": "Describe dataset",
                         "className": "text-muted",
                       },
                       "ref": null,
-                      "rendered": null,
+                      "rendered": "Describe dataset",
                       "type": "p",
                     },
                     Object {
@@ -829,7 +912,7 @@ ShallowWrapper {
                                                         Modified:
                             </strong>
                              
-                            Invalid Date
+                            Thu, 23 Aug 2018 05:26:42 GMT
 </li>,
                           <li
                             className="list-inline-item"
@@ -838,7 +921,7 @@ ShallowWrapper {
                                                         Formats:
                             </strong>
                              
-                            
+                            CSV
 </li>,
                           <li
                             className="list-inline-item"
@@ -864,7 +947,7 @@ ShallowWrapper {
                                 Modified:
 </strong>,
                               " ",
-                              "Invalid Date",
+                              "Thu, 23 Aug 2018 05:26:42 GMT",
                             ],
                             "className": "list-inline-item",
                           },
@@ -882,7 +965,7 @@ ShallowWrapper {
                               "type": "strong",
                             },
                             " ",
-                            "Invalid Date",
+                            "Thu, 23 Aug 2018 05:26:42 GMT",
                           ],
                           "type": "li",
                         },
@@ -896,7 +979,7 @@ ShallowWrapper {
                                 Formats:
 </strong>,
                               " ",
-                              "",
+                              "CSV",
                             ],
                             "className": "list-inline-item",
                           },
@@ -914,7 +997,7 @@ ShallowWrapper {
                               "type": "strong",
                             },
                             " ",
-                            "",
+                            "CSV",
                           ],
                           "type": "li",
                         },
@@ -968,6 +1051,17 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "collapsed": true,
+            "metadata_modified": "2018-08-23T07:26:42.122834",
+            "notes": "Describe dataset",
+            "resources": Array [
+              Object {
+                "format": "CSV",
+                "last_modified": "21 June 2018",
+                "name": "rsc1",
+                "restricted": "{\\"level\\": \\"public\\"}",
+              },
+            ],
+            "title": "Dataset title",
           },
           "ref": null,
           "rendered": null,
