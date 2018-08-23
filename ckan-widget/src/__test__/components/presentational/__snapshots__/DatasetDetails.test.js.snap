@@ -1,0 +1,1093 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DatasetDetails should render correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <DatasetDetails
+    dataset_creation_date="2018-03-30"
+    dataset_modification_date="2018-05-30"
+    dataset_publication_date="2018-04-30"
+    name="Dataset1"
+    notes="Describe dataset1"
+    organization={
+        Object {
+            "name": "org1",
+          }
+    }
+    resources={
+        Array [
+            Object {
+              "format": "CSV",
+              "last_modified": "21 June 2018",
+              "name": "rsc1",
+              "restricted": "{\\"level\\": \\"public\\"}",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <p
+          className="lead"
+>
+          Describe dataset1
+</p>,
+        <hr />,
+        <ul
+          className="text-muted list-inline"
+>
+          <li
+                    className="list-inline-item"
+          >
+                    <strong>
+                              Created on:
+                    </strong>
+                     
+                    2018-03-30
+          </li>
+          <li
+                    className="list-inline-item"
+          >
+                    <strong>
+                              Publication date:
+                    </strong>
+                     
+                    2018-04-30
+          </li>
+          <li
+                    className="list-inline-item"
+          >
+                    <strong>
+                              Modification date:
+                    </strong>
+                     
+                    2018-05-30
+          </li>
+          <li
+                    className="list-inline-item"
+          >
+                    <strong>
+                              Organization:
+                    </strong>
+                     
+                    org1
+          </li>
+</ul>,
+        <div
+          className="my-4"
+>
+          <h3>
+                    Resources
+          </h3>
+          <ul
+                    className="list-inline"
+          >
+                    <li
+                              className="list-group-item d-flex align-items-center"
+                    >
+                              <span
+                                        className="badge badge-secondary"
+                              >
+                                        CSV
+                              </span>
+                              <a
+                                        className="px-3"
+                                        href={undefined}
+                              >
+                                        rsc1
+                              </a>
+                              <span
+                                        className="ml-auto mr-3"
+                              >
+                                        Wed, 20 Jun 2018 22:00:00 GMT
+                              </span>
+                              <span
+                                        className="badge badge-pill badge-dark"
+                              >
+                                        public
+                              </span>
+                    </li>
+          </ul>
+</div>,
+        <a
+          className="btn btn-success mb-1"
+          href="https://trouver.datasud.fr/dataset/Dataset1"
+>
+          <i
+                    className="material-icons mr-1"
+          >
+                    open_in_new
+          </i>
+           View on Datasud.fr
+</a>,
+      ],
+      "className": "card-footer px-5 py-4 ",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Describe dataset1",
+          "className": "lead",
+        },
+        "ref": null,
+        "rendered": "Describe dataset1",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "hr",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li
+              className="list-inline-item"
+>
+              <strong>
+                            Created on:
+              </strong>
+               
+              2018-03-30
+</li>,
+            <li
+              className="list-inline-item"
+>
+              <strong>
+                            Publication date:
+              </strong>
+               
+              2018-04-30
+</li>,
+            <li
+              className="list-inline-item"
+>
+              <strong>
+                            Modification date:
+              </strong>
+               
+              2018-05-30
+</li>,
+            <li
+              className="list-inline-item"
+>
+              <strong>
+                            Organization:
+              </strong>
+               
+              org1
+</li>,
+          ],
+          "className": "text-muted list-inline",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <strong>
+                  Created on:
+</strong>,
+                " ",
+                "2018-03-30",
+              ],
+              "className": "list-inline-item",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Created on:",
+                },
+                "ref": null,
+                "rendered": "Created on:",
+                "type": "strong",
+              },
+              " ",
+              "2018-03-30",
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <strong>
+                  Publication date:
+</strong>,
+                " ",
+                "2018-04-30",
+              ],
+              "className": "list-inline-item",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Publication date:",
+                },
+                "ref": null,
+                "rendered": "Publication date:",
+                "type": "strong",
+              },
+              " ",
+              "2018-04-30",
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <strong>
+                  Modification date:
+</strong>,
+                " ",
+                "2018-05-30",
+              ],
+              "className": "list-inline-item",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Modification date:",
+                },
+                "ref": null,
+                "rendered": "Modification date:",
+                "type": "strong",
+              },
+              " ",
+              "2018-05-30",
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <strong>
+                  Organization:
+</strong>,
+                " ",
+                "org1",
+              ],
+              "className": "list-inline-item",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Organization:",
+                },
+                "ref": null,
+                "rendered": "Organization:",
+                "type": "strong",
+              },
+              " ",
+              "org1",
+            ],
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h3>
+              Resources
+</h3>,
+            <ul
+              className="list-inline"
+>
+              <li
+                            className="list-group-item d-flex align-items-center"
+              >
+                            <span
+                                          className="badge badge-secondary"
+                            >
+                                          CSV
+                            </span>
+                            <a
+                                          className="px-3"
+                                          href={undefined}
+                            >
+                                          rsc1
+                            </a>
+                            <span
+                                          className="ml-auto mr-3"
+                            >
+                                          Wed, 20 Jun 2018 22:00:00 GMT
+                            </span>
+                            <span
+                                          className="badge badge-pill badge-dark"
+                            >
+                                          public
+                            </span>
+              </li>
+</ul>,
+          ],
+          "className": "my-4",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Resources",
+            },
+            "ref": null,
+            "rendered": "Resources",
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <li
+                  className="list-group-item d-flex align-items-center"
+>
+                  <span
+                                    className="badge badge-secondary"
+                  >
+                                    CSV
+                  </span>
+                  <a
+                                    className="px-3"
+                                    href={undefined}
+                  >
+                                    rsc1
+                  </a>
+                  <span
+                                    className="ml-auto mr-3"
+                  >
+                                    Wed, 20 Jun 2018 22:00:00 GMT
+                  </span>
+                  <span
+                                    className="badge badge-pill badge-dark"
+                  >
+                                    public
+                  </span>
+</li>,
+              ],
+              "className": "list-inline",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "0",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <span
+                      className="badge badge-secondary"
+>
+                      CSV
+</span>,
+                    <a
+                      className="px-3"
+                      href={undefined}
+>
+                      rsc1
+</a>,
+                    <span
+                      className="ml-auto mr-3"
+>
+                      Wed, 20 Jun 2018 22:00:00 GMT
+</span>,
+                    <span
+                      className="badge badge-pill badge-dark"
+>
+                      public
+</span>,
+                  ],
+                  "className": "list-group-item d-flex align-items-center",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "CSV",
+                      "className": "badge badge-secondary",
+                    },
+                    "ref": null,
+                    "rendered": "CSV",
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "rsc1",
+                      "className": "px-3",
+                      "href": undefined,
+                    },
+                    "ref": null,
+                    "rendered": "rsc1",
+                    "type": "a",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Wed, 20 Jun 2018 22:00:00 GMT",
+                      "className": "ml-auto mr-3",
+                    },
+                    "ref": null,
+                    "rendered": "Wed, 20 Jun 2018 22:00:00 GMT",
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "public",
+                      "className": "badge badge-pill badge-dark",
+                    },
+                    "ref": null,
+                    "rendered": "public",
+                    "type": "span",
+                  },
+                ],
+                "type": "li",
+              },
+            ],
+            "type": "ul",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <i
+              className="material-icons mr-1"
+>
+              open_in_new
+</i>,
+            " View on Datasud.fr",
+          ],
+          "className": "btn btn-success mb-1",
+          "href": "https://trouver.datasud.fr/dataset/Dataset1",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "open_in_new",
+              "className": "material-icons mr-1",
+            },
+            "ref": null,
+            "rendered": "open_in_new",
+            "type": "i",
+          },
+          " View on Datasud.fr",
+        ],
+        "type": "a",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <p
+            className="lead"
+>
+            Describe dataset1
+</p>,
+          <hr />,
+          <ul
+            className="text-muted list-inline"
+>
+            <li
+                        className="list-inline-item"
+            >
+                        <strong>
+                                    Created on:
+                        </strong>
+                         
+                        2018-03-30
+            </li>
+            <li
+                        className="list-inline-item"
+            >
+                        <strong>
+                                    Publication date:
+                        </strong>
+                         
+                        2018-04-30
+            </li>
+            <li
+                        className="list-inline-item"
+            >
+                        <strong>
+                                    Modification date:
+                        </strong>
+                         
+                        2018-05-30
+            </li>
+            <li
+                        className="list-inline-item"
+            >
+                        <strong>
+                                    Organization:
+                        </strong>
+                         
+                        org1
+            </li>
+</ul>,
+          <div
+            className="my-4"
+>
+            <h3>
+                        Resources
+            </h3>
+            <ul
+                        className="list-inline"
+            >
+                        <li
+                                    className="list-group-item d-flex align-items-center"
+                        >
+                                    <span
+                                                className="badge badge-secondary"
+                                    >
+                                                CSV
+                                    </span>
+                                    <a
+                                                className="px-3"
+                                                href={undefined}
+                                    >
+                                                rsc1
+                                    </a>
+                                    <span
+                                                className="ml-auto mr-3"
+                                    >
+                                                Wed, 20 Jun 2018 22:00:00 GMT
+                                    </span>
+                                    <span
+                                                className="badge badge-pill badge-dark"
+                                    >
+                                                public
+                                    </span>
+                        </li>
+            </ul>
+</div>,
+          <a
+            className="btn btn-success mb-1"
+            href="https://trouver.datasud.fr/dataset/Dataset1"
+>
+            <i
+                        className="material-icons mr-1"
+            >
+                        open_in_new
+            </i>
+             View on Datasud.fr
+</a>,
+        ],
+        "className": "card-footer px-5 py-4 ",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Describe dataset1",
+            "className": "lead",
+          },
+          "ref": null,
+          "rendered": "Describe dataset1",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "hr",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li
+                className="list-inline-item"
+>
+                <strong>
+                                Created on:
+                </strong>
+                 
+                2018-03-30
+</li>,
+              <li
+                className="list-inline-item"
+>
+                <strong>
+                                Publication date:
+                </strong>
+                 
+                2018-04-30
+</li>,
+              <li
+                className="list-inline-item"
+>
+                <strong>
+                                Modification date:
+                </strong>
+                 
+                2018-05-30
+</li>,
+              <li
+                className="list-inline-item"
+>
+                <strong>
+                                Organization:
+                </strong>
+                 
+                org1
+</li>,
+            ],
+            "className": "text-muted list-inline",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <strong>
+                    Created on:
+</strong>,
+                  " ",
+                  "2018-03-30",
+                ],
+                "className": "list-inline-item",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Created on:",
+                  },
+                  "ref": null,
+                  "rendered": "Created on:",
+                  "type": "strong",
+                },
+                " ",
+                "2018-03-30",
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <strong>
+                    Publication date:
+</strong>,
+                  " ",
+                  "2018-04-30",
+                ],
+                "className": "list-inline-item",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Publication date:",
+                  },
+                  "ref": null,
+                  "rendered": "Publication date:",
+                  "type": "strong",
+                },
+                " ",
+                "2018-04-30",
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <strong>
+                    Modification date:
+</strong>,
+                  " ",
+                  "2018-05-30",
+                ],
+                "className": "list-inline-item",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Modification date:",
+                  },
+                  "ref": null,
+                  "rendered": "Modification date:",
+                  "type": "strong",
+                },
+                " ",
+                "2018-05-30",
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <strong>
+                    Organization:
+</strong>,
+                  " ",
+                  "org1",
+                ],
+                "className": "list-inline-item",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Organization:",
+                  },
+                  "ref": null,
+                  "rendered": "Organization:",
+                  "type": "strong",
+                },
+                " ",
+                "org1",
+              ],
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3>
+                Resources
+</h3>,
+              <ul
+                className="list-inline"
+>
+                <li
+                                className="list-group-item d-flex align-items-center"
+                >
+                                <span
+                                                className="badge badge-secondary"
+                                >
+                                                CSV
+                                </span>
+                                <a
+                                                className="px-3"
+                                                href={undefined}
+                                >
+                                                rsc1
+                                </a>
+                                <span
+                                                className="ml-auto mr-3"
+                                >
+                                                Wed, 20 Jun 2018 22:00:00 GMT
+                                </span>
+                                <span
+                                                className="badge badge-pill badge-dark"
+                                >
+                                                public
+                                </span>
+                </li>
+</ul>,
+            ],
+            "className": "my-4",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Resources",
+              },
+              "ref": null,
+              "rendered": "Resources",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <li
+                    className="list-group-item d-flex align-items-center"
+>
+                    <span
+                                        className="badge badge-secondary"
+                    >
+                                        CSV
+                    </span>
+                    <a
+                                        className="px-3"
+                                        href={undefined}
+                    >
+                                        rsc1
+                    </a>
+                    <span
+                                        className="ml-auto mr-3"
+                    >
+                                        Wed, 20 Jun 2018 22:00:00 GMT
+                    </span>
+                    <span
+                                        className="badge badge-pill badge-dark"
+                    >
+                                        public
+                    </span>
+</li>,
+                ],
+                "className": "list-inline",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": "0",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <span
+                        className="badge badge-secondary"
+>
+                        CSV
+</span>,
+                      <a
+                        className="px-3"
+                        href={undefined}
+>
+                        rsc1
+</a>,
+                      <span
+                        className="ml-auto mr-3"
+>
+                        Wed, 20 Jun 2018 22:00:00 GMT
+</span>,
+                      <span
+                        className="badge badge-pill badge-dark"
+>
+                        public
+</span>,
+                    ],
+                    "className": "list-group-item d-flex align-items-center",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "CSV",
+                        "className": "badge badge-secondary",
+                      },
+                      "ref": null,
+                      "rendered": "CSV",
+                      "type": "span",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "rsc1",
+                        "className": "px-3",
+                        "href": undefined,
+                      },
+                      "ref": null,
+                      "rendered": "rsc1",
+                      "type": "a",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Wed, 20 Jun 2018 22:00:00 GMT",
+                        "className": "ml-auto mr-3",
+                      },
+                      "ref": null,
+                      "rendered": "Wed, 20 Jun 2018 22:00:00 GMT",
+                      "type": "span",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "public",
+                        "className": "badge badge-pill badge-dark",
+                      },
+                      "ref": null,
+                      "rendered": "public",
+                      "type": "span",
+                    },
+                  ],
+                  "type": "li",
+                },
+              ],
+              "type": "ul",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <i
+                className="material-icons mr-1"
+>
+                open_in_new
+</i>,
+              " View on Datasud.fr",
+            ],
+            "className": "btn btn-success mb-1",
+            "href": "https://trouver.datasud.fr/dataset/Dataset1",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "open_in_new",
+                "className": "material-icons mr-1",
+              },
+              "ref": null,
+              "rendered": "open_in_new",
+              "type": "i",
+            },
+            " View on Datasud.fr",
+          ],
+          "type": "a",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
