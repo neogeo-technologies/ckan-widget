@@ -1,14 +1,14 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import DatasetDetails from '../components/presentational/DatasetDetails';
+import DatasetInfo from '../../../components/presentational/DatasetInfo';
 
-describe('DatasetDetails', () => {
+describe('DatasetInfo', () => {
  it('should be defined', () => {
-   expect(DatasetDetails).toBeDefined();
+   expect(DatasetInfo).toBeDefined();
  });
  /*it('should render correctly', () => {
    const tree = shallow(
-     <DatasetDetails />
+     <DatasetInfo />
    );
    expect(tree).toMatchSnapshot();
  });
