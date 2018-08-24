@@ -19,17 +19,18 @@ export class FacetList extends Component {
     this.props.packageSearch();
   }
 
-  onClick = (data) => {
+  onClick = ( selectedFacet, facetName) => {
     const { rows, sort, search, facet_search } = this.props;
+
     let fparams = '';
     if(facet_search){
-        if(facet_search.includes(data)){
+        if(facet_search.includes(selectedFacet)){
             fparams = facet_search;
         }else{
-            fparams = facet_search + '+' + data;
+            fparams = facet_search + '+' + selectedFacet;
         }
     }else{
-        fparams = data;
+        fparams = selectedFacet;
     }
 
     this.props.packageSearch({fq: fparams, rows: rows, sort: sort, q: search})

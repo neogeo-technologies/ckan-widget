@@ -29,6 +29,11 @@ ShallowWrapper {
                               <div
                                         className="col-lg-10 offset-lg-1"
                               >
+                                        <i
+                                                  className="material-icons text-light header-icon"
+                                        >
+                                                  search
+                                        </i>
                                         <Connect(DatasetSearchBar) />
                               </div>
                     </div>
@@ -91,6 +96,11 @@ ShallowWrapper {
                         <div
                                     className="col-lg-10 offset-lg-1"
                         >
+                                    <i
+                                                className="material-icons text-light header-icon"
+                                    >
+                                                search
+                                    </i>
                                     <Connect(DatasetSearchBar) />
                         </div>
             </div>
@@ -109,6 +119,11 @@ ShallowWrapper {
               <div
                             className="col-lg-10 offset-lg-1"
               >
+                            <i
+                                          className="material-icons text-light header-icon"
+                            >
+                                          search
+                            </i>
                             <Connect(DatasetSearchBar) />
               </div>
 </div>,
@@ -123,6 +138,11 @@ ShallowWrapper {
               "children": <div
                 className="col-lg-10 offset-lg-1"
 >
+                <i
+                                className="material-icons text-light header-icon"
+                >
+                                search
+                </i>
                 <Connect(DatasetSearchBar) />
 </div>,
               "className": "row",
@@ -133,19 +153,40 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <Connect(DatasetSearchBar) />,
+                "children": Array [
+                  <i
+                    className="material-icons text-light header-icon"
+>
+                    search
+</i>,
+                  <Connect(DatasetSearchBar) />,
+                ],
                 "className": "col-lg-10 offset-lg-1",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {},
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "search",
+                    "className": "material-icons text-light header-icon",
+                  },
+                  "ref": null,
+                  "rendered": "search",
+                  "type": "i",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
               "type": "div",
             },
             "type": "div",
@@ -455,6 +496,11 @@ ShallowWrapper {
                                     <div
                                                 className="col-lg-10 offset-lg-1"
                                     >
+                                                <i
+                                                            className="material-icons text-light header-icon"
+                                                >
+                                                            search
+                                                </i>
                                                 <Connect(DatasetSearchBar) />
                                     </div>
                         </div>
@@ -517,6 +563,11 @@ ShallowWrapper {
                             <div
                                           className="col-lg-10 offset-lg-1"
                             >
+                                          <i
+                                                        className="material-icons text-light header-icon"
+                                          >
+                                                        search
+                                          </i>
                                           <Connect(DatasetSearchBar) />
                             </div>
               </div>
@@ -535,6 +586,11 @@ ShallowWrapper {
                 <div
                                 className="col-lg-10 offset-lg-1"
                 >
+                                <i
+                                                className="material-icons text-light header-icon"
+                                >
+                                                search
+                                </i>
                                 <Connect(DatasetSearchBar) />
                 </div>
 </div>,
@@ -549,6 +605,11 @@ ShallowWrapper {
                 "children": <div
                   className="col-lg-10 offset-lg-1"
 >
+                  <i
+                                    className="material-icons text-light header-icon"
+                  >
+                                    search
+                  </i>
                   <Connect(DatasetSearchBar) />
 </div>,
                 "className": "row",
@@ -559,19 +620,40 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <Connect(DatasetSearchBar) />,
+                  "children": Array [
+                    <i
+                      className="material-icons text-light header-icon"
+>
+                      search
+</i>,
+                    <Connect(DatasetSearchBar) />,
+                  ],
                   "className": "col-lg-10 offset-lg-1",
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {},
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "search",
+                      "className": "material-icons text-light header-icon",
+                    },
+                    "ref": null,
+                    "rendered": "search",
+                    "type": "i",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {},
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                ],
                 "type": "div",
               },
               "type": "div",

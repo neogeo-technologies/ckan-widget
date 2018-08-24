@@ -2,28 +2,68 @@ import React, { Component } from 'react';
 
 
 class Facet extends Component {
+  constructor(props) {
+    super(props)
+    this.state = { collapsed: true }
+  }
+
+  expandFacetList = () => {
+    this.setState({ collapsed: !this.state.collapsed })
+  }
+
   render() {
     const facets = this.props.facetsInfo;
     const title = this.props.title;
-    const infoList = [];
+    const collapseClass = this.state.collapsed ? 'collapse' : ''
+    let expandArrow = this.state.collapsed ? 'expand_more' : 'expand_less'
 
-    for (const f in facets) {
-      infoList.push(
-        <li className="list-group-item d-flex justify-content-between align-items-center" key={f} onClick={() => this.props.onClick(`${this.props.facetKey}:${facets[f].name}`)}>
-          {facets[f].display_name}
-          {' '}
-          <span className="badge badge-primary">{facets[f].count}</span>
-        </li>,
-      );
+    let fixedList = []
+    let expandableList = []
+
+    if(facets.length < 9) {
+      expandArrow = ''
     }
+
+    for (const facetId in facets) {
+      if (facetId < 8) {
+        fixedList.push(
+          <li className="list-group-item d-flex justify-content-between align-items-center" key={facetId} onClick={() => this.props.onClick(`${this.props.facetKey}:${facets[facetId].name}`)}>
+            {facets[facetId].display_name}
+            {' '}
+            <span className="badge badge-primary">{facets[facetId].count}</span>
+          </li>,
+        );
+      }
+    }
+
+    for (const facetId in facets) {
+      if (facetId > 7) {
+        expandableList.push(
+          <li className="list-group-item d-flex justify-content-between align-items-center" key={facetId} onClick={() => this.props.onClick(`${this.props.facetKey}:${facets[facetId].name}`)}>
+            {facets[facetId].display_name}
+            {' '}
+            <span className="badge badge-primary">{facets[facetId].count}</span>
+          </li>,
+        );
+      }
+    }
+
     return (
       <div className="card my-3">
         <div className="card-header bg-secondary text-white">
-            <h5 className="card-title mb-auto">{title}</h5>
+          <h5 className="card-title mb-auto" onClick={this.expandFacetList}>
+            {title}
+            <i className="material-icons">{expandArrow}</i>
+          </h5>
         </div>
+        <ul className="list-group list-group-flush">
+          {fixedList}
+        </ul>
+        <div className={collapseClass}>
           <ul className="list-group list-group-flush">
-            {infoList}
+            {expandableList}
           </ul>
+        </div>
       </div>
     );
   }
