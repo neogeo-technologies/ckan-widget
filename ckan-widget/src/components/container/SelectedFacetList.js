@@ -1,31 +1,32 @@
 import React, { Component } from "react";
+import { connect } from 'react-redux'
 
 import SelectedFacet from '../presentational/SelectedFacet'
+import * as actions from '../../actions'
 
+export class SelectedFacetList extends Component {
 
-class SelectedFacetList extends Component {
+  onClick = facet => {
+    const { search, sort, rows, selected_facets } = this.props
 
-  onClick = (facetName) => {
-    //const { sort, rows, facet_search } = this.props
-    //this.props.packageSearch({ rows: rows, sort: sort })
+    let newFacetQuery = selected_facets.replace(`${facet}+`, '')
+    newFacetQuery = newFacetQuery.replace(`+${facet}`, '')
+    newFacetQuery = newFacetQuery.replace(facet, '')
 
+    this.props.packageSearch({ q: search, rows: rows, sort: sort, fq: newFacetQuery })
   };
-
-  parseFacets() {
-
-
-  }
 
   render() {
     let { selected_facets }  = this.props;
     let list = selected_facets.split('+');
-    console.log(list)
-    let map = []
-    for(let i in list){
-       map.push(<SelectedFacet name={list[i]} onClick={this.onClick} />);
-    };
-    return map;
+    let facetSearch = []
+
+    list.forEach((facet, i) => {
+      facetSearch.push(<SelectedFacet facet={facet} onClick={this.onClick} key={i} />);
+    });
+
+    return facetSearch;
   }
 }
 
-export default SelectedFacetList;
+export default connect(null, actions)(SelectedFacetList);

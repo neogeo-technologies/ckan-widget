@@ -20,7 +20,6 @@ export class FacetList extends Component {
   }
 
   onClick = ( selectedFacet, facetName) => {
-    console.log(this.props)
     const { rows, sort, search, facet_search } = this.props;
 
     let fparams = '';

@@ -43,7 +43,7 @@ describe('Pagination', () => {
     expect(component).toMatchSnapshot();
   });
 
-  it('should handle input change', () => {
+  it('should handle click', () => {
     component.instance().handlePagination(1)
     expect(mockPackageSearch.mock.calls.length).toEqual(1);
   })

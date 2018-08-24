@@ -1,13 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
-import FacetListConnected, { FacetList } from '../../../components/container/FacetList';
+import SelectedFacetListConnected, { SelectedFacetList } from '../../../components/container/SelectedFacetList';
 
 
 let component;
-let store;
-let mockPackageSearch;
 const mockStore = configureMockStore();
+let mockPackageSearch;
 const initialState = {
   packageSearch: {
     datasets: [],
@@ -22,21 +21,23 @@ const initialState = {
   }
 };
 
-describe('FacetList', () => {
+describe('TotalDatasets', () => {
   beforeEach(() => {
-    store = mockStore(initialState);
+    const store = mockStore(initialState);
     mockPackageSearch = jest.fn()
     component = shallow(
-      <FacetList packageSearch={mockPackageSearch} />
+      <SelectedFacetList
+        packageSearch={mockPackageSearch}
+        selected_facets={'organization:org1+tags:economy'} />
     );
 
     shallow(
-      <FacetListConnected store={store} />
+      <SelectedFacetListConnected store={store} />
     );
   })
 
   it('should be defined', () => {
-    expect(FacetList).toBeDefined();
+    expect(SelectedFacetList).toBeDefined();
   });
 
   it('should render correctly', () => {
@@ -44,7 +45,7 @@ describe('FacetList', () => {
   });
 
   it('should handle onClick event', () => {
-    component.instance().onClick('data')
-    expect(mockPackageSearch.mock.calls.length).toEqual(2);
+    component.instance().onClick('organization:org1')
+    expect(mockPackageSearch.mock.calls.length).toEqual(1);
   })
 })

@@ -15,12 +15,18 @@ export class DatasetSearchBar extends Component{
     }
 
     render(){
-        return(
-            <div>
-                <SearchBar handleInputChange={this.handleInputChange}/>
-                <SelectedFacetList sort={this.props.sort} rows={this.props.rows} selected_facets={this.props.facet_search}/>
-            </div>
-        )
+      const { search, sort, rows, facet_search } = this.props
+
+      return(
+          <div>
+              <SearchBar handleInputChange={this.handleInputChange}/>
+              <SelectedFacetList
+                search={search}
+                sort={sort}
+                rows={rows}
+                selected_facets={facet_search} />
+          </div>
+      )
     }
 }
 
