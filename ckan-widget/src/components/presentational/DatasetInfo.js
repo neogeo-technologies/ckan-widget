@@ -12,10 +12,14 @@ class DatasetInfo extends Component{
         let formats = []
 
         if (Array.isArray(resources) && resources.length){
-            resources.forEach( resource => {
+            resources.forEach( (resource, i) => {
                 const format = resource.format
                 if (!formats.includes(format)) {
-                    formats.push(format)
+                    formats.push(
+                      <span className="badge badge-secondary mx-1" key={i}>
+                      {format}
+                      </span>
+                    )
                 }
             })
         }
@@ -50,10 +54,10 @@ class DatasetInfo extends Component{
                         <div className="col-lg-9">
                             <h4 className="title text-primary">{title}</h4>
                             <p className="text-muted">{notes && notes.length > 130 ? `${notes.substring(0, 130)}...` : notes}</p>
-                            <ul className="list-inline">
-                              <li className="list-inline-item"><strong>Modified:</strong> {datetime}</li>
-                              <li className="list-inline-item"><strong>Formats:</strong> {formats !== undefined ? formats.join(', ') : 'N/A'}</li>
-                              <li className="list-inline-item"><strong>Datatype:</strong> {datatype !== undefined ? datatype.join(', ') : 'N/A'}</li>
+                            <ul className="list-unstyled">
+                              <li><strong>Modified:</strong> {datetime}</li>
+                              <li className="d-flex m-auto align-items-center"><strong>Formats:</strong> {formats !== undefined ? formats : 'N/A'}</li>
+                              <li><strong>Datatype:</strong> {datatype !== undefined ? datatype.join(', ') : 'N/A'}</li>
                             </ul>
                         </div>
                     </div>
