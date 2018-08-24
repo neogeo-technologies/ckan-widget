@@ -4,7 +4,11 @@ import { connect } from 'react-redux'
 import SearchBar from '../presentational/SearchBar'
 import * as actions from '../../actions'
 
-class DatasetSearchBar extends Component{
+export class DatasetSearchBar extends Component{
+  constructor(props) {
+    super(props)
+  }
+
    handleInputChange = (event, value) => {
       if (event) {
         event.preventDefault()

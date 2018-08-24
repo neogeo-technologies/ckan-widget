@@ -1,15 +1,16 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import  configureMockStore from 'redux-mock-store';
-import DatasetInfoList from '../../../components/container/DatasetInfoList';
+import { DatasetInfoList } from '../../../components/container/DatasetInfoList';
 
 
 let component;
 let store;
+let mockPackageSearch;
 const mockStore = configureMockStore();
 const initialState = {
   packageSearch: {
-    datasets: [],
+    datasets: [{name: 'dataset1'}],
     search: '',
     rows: 10,
     facets: [],
@@ -24,8 +25,9 @@ const initialState = {
 describe('DatasetInfoList', () => {
   beforeEach(() => {
     store = mockStore(initialState);
+    mockPackageSearch = jest.fn()
     component = shallow(
-      <DatasetInfoList store={store} />
+      <DatasetInfoList datasets={[{ name: 'dataset1' }]} packageSearch={mockPackageSearch} store={store} />
     );
   })
 
@@ -36,4 +38,8 @@ describe('DatasetInfoList', () => {
   it('should render correctly', () => {
     expect(component).toMatchSnapshot();
   });
+
+  it('should call packageSearch', () => {
+    expect(mockPackageSearch.mock.calls.length).toEqual(1);
+  })
 })

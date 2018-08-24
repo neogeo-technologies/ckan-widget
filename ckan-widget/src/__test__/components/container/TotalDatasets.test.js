@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
-import TotalDatasets from '../../../components/container/TotalDatasets';
+import { TotalDatasets } from '../../../components/container/TotalDatasets';
 
 
 let component;
@@ -24,7 +24,7 @@ describe('TotalDatasets', () => {
   beforeEach(() => {
     const store = mockStore(initialState);
     component = shallow(
-      <TotalDatasets store={store} />
+      <TotalDatasets total={5} store={store} />
     );
   })
 

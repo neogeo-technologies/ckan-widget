@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import * as actions from '../../actions'
 
-class DatasetsPerPage extends Component {
+export class DatasetsPerPage extends Component {
   handleOnChange = e => {
     const { search, sort, facet_search } = this.props
 

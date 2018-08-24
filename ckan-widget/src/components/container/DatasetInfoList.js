@@ -6,7 +6,7 @@ import Error from '../presentational/Error'
 import * as actions from '../../actions'
 
 
-class DatasetInfoList extends Component{
+export class DatasetInfoList extends Component{
     componentDidMount() {
         this.props.packageSearch()
     }

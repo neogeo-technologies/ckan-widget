@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
 
-class TotalDatasets extends Component {
+export class TotalDatasets extends Component {
   render() {
     const { total } = this.props;
     const resultName = (total === 1) ? 'result' : 'results';
