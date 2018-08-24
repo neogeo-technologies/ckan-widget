@@ -5,7 +5,7 @@ import SearchBar from '../presentational/SearchBar'
 import * as actions from '../../actions'
 import SelectedFacetList from '../container/SelectedFacetList'
 
-class DatasetSearchBar extends Component{
+export class DatasetSearchBar extends Component{
    handleInputChange = (event, value) => {
       if (event) {
         event.preventDefault()

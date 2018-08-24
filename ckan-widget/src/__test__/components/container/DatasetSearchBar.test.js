@@ -1,32 +1,36 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
-import { Provider } from 'react-redux'
-import DatasetSearchBar from '../../../components/container/DatasetSearchBar';
+import DatasetSearchBarConnected, { DatasetSearchBar } from '../../../components/container/DatasetSearchBar';
 
 
 let component;
 let store;
+let mockPackageSearch;
 const mockStore = configureMockStore();
 const initialState = {
-  datasets: [],
-  search: '',
-  rows: 10,
-  facets: [],
-  total: 20,
-  page: 1,
-  sort: 'score desc, metadata_modified desc',
-  error: '',
-  facet_search: ''
+  packageSearch: {
+    datasets: [],
+    search: '',
+    rows: 10,
+    facets: [],
+    total: 20,
+    page: 1,
+    sort: 'score desc, metadata_modified desc',
+    error: '',
+    facet_search: ''
+  }
 };
 
 describe('DatasetSearchBar', () => {
   beforeEach(() => {
     store = mockStore(initialState);
+    mockPackageSearch = jest.fn()
     component = shallow(
-      <Provider store={store}>
-        <DatasetSearchBar />
-      </Provider>
+      <DatasetSearchBar packageSearch={mockPackageSearch} />
+    );
+    shallow(
+      <DatasetSearchBarConnected store={store} />
     );
   })
 
@@ -37,4 +41,9 @@ describe('DatasetSearchBar', () => {
   it('should render correctly', () => {
     expect(component).toMatchSnapshot();
   });
+
+  it('should handle input change', () => {
+    component.instance().handleInputChange(null, 'S')
+    expect(mockPackageSearch.mock.calls.length).toEqual(1);
+  })
 })

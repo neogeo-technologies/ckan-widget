@@ -1,32 +1,37 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
-import { Provider } from 'react-redux'
-import DatasetSort from '../../../components/container/DatasetSort';
+import DatasetSortConnected, { DatasetSort } from '../../../components/container/DatasetSort';
 
 
 let component;
 let store;
+let mockPackageSearch;
 const mockStore = configureMockStore();
 const initialState = {
-  datasets: [],
-  search: '',
-  rows: 10,
-  facets: [],
-  total: 20,
-  page: 1,
-  sort: 'score desc, metadata_modified desc',
-  error: '',
-  facet_search: ''
+  packageSearch: {
+    datasets: [],
+    search: '',
+    rows: 10,
+    facets: [],
+    total: 20,
+    page: 1,
+    sort: 'score desc, metadata_modified desc',
+    error: '',
+    facet_search: ''
+  }
 };
 
 describe('DatasetSort', () => {
   beforeEach(() => {
     store = mockStore(initialState);
+    mockPackageSearch = jest.fn()
     component = shallow(
-      <Provider store={store}>
-        <DatasetSort />
-      </Provider>
+      <DatasetSort packageSearch={mockPackageSearch} />
+    );
+
+    shallow(
+      <DatasetSortConnected store={store} />
     );
   })
 
@@ -37,4 +42,9 @@ describe('DatasetSort', () => {
   it('should render correctly', () => {
     expect(component).toMatchSnapshot();
   });
+
+  it('should handle input change', () => {
+    component.instance().handleSort('score desc, metadata_modified desc')
+    expect(mockPackageSearch.mock.calls.length).toEqual(1);
+  })
 })
