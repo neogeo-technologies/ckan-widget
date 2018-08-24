@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
-import { FacetList } from '../../../components/container/FacetList';
+import FacetListConnected, { FacetList } from '../../../components/container/FacetList';
 
 
 let component;
@@ -27,7 +27,11 @@ describe('FacetList', () => {
     store = mockStore(initialState);
     mockPackageSearch = jest.fn()
     component = shallow(
-      <FacetList packageSearch={mockPackageSearch} store={store} />
+      <FacetList packageSearch={mockPackageSearch} />
+    );
+
+    shallow(
+      <FacetListConnected store={store} />
     );
   })
 

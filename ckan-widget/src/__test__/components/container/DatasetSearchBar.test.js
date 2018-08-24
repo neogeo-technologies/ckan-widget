@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
-import { DatasetSearchBar} from '../../../components/container/DatasetSearchBar';
+import DatasetSearchBarConnected, { DatasetSearchBar } from '../../../components/container/DatasetSearchBar';
 
 
 let component;
@@ -27,7 +27,10 @@ describe('DatasetSearchBar', () => {
     store = mockStore(initialState);
     mockPackageSearch = jest.fn()
     component = shallow(
-      <DatasetSearchBar packageSearch={mockPackageSearch} store={store} />
+      <DatasetSearchBar packageSearch={mockPackageSearch} />
+    );
+    shallow(
+      <DatasetSearchBarConnected store={store} />
     );
   })
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
-import { DatasetsPerPage } from '../../../components/container/DatasetsPerPage';
+import DatasetsPerPageConnected, { DatasetsPerPage } from '../../../components/container/DatasetsPerPage';
 
 
 let component;
@@ -27,7 +27,11 @@ describe('DatasetsPerPage', () => {
     store = mockStore(initialState);
     mockPackageSearch = jest.fn()
     component = shallow(
-      <DatasetsPerPage packageSearch={mockPackageSearch} store={store} />
+      <DatasetsPerPage packageSearch={mockPackageSearch} />
+    );
+
+    shallow(
+      <DatasetsPerPageConnected store={store} />
     );
   })
 

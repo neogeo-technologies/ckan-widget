@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
-import { Pagination } from '../../../components/container/Pagination';
+import PaginationConnected, { Pagination } from '../../../components/container/Pagination';
 
 
 let component;
@@ -27,7 +27,11 @@ describe('Pagination', () => {
     store = mockStore(initialState);
     mockPackageSearch = jest.fn()
     component = shallow(
-      <Pagination packageSearch={mockPackageSearch} store={store} />
+      <Pagination packageSearch={mockPackageSearch} />
+    );
+
+    shallow(
+      <PaginationConnected store={store} />
     );
   })
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
-import { DatasetSort } from '../../../components/container/DatasetSort';
+import DatasetSortConnected, { DatasetSort } from '../../../components/container/DatasetSort';
 
 
 let component;
@@ -27,7 +27,11 @@ describe('DatasetSort', () => {
     store = mockStore(initialState);
     mockPackageSearch = jest.fn()
     component = shallow(
-      <DatasetSort packageSearch={mockPackageSearch} store={store} />
+      <DatasetSort packageSearch={mockPackageSearch} />
+    );
+
+    shallow(
+      <DatasetSortConnected store={store} />
     );
   })
 
