@@ -17,6 +17,7 @@ class App extends Component {
               <div className="container-fluid">
                   <div className="row">
                       <div className="col-lg-10 offset-lg-1">
+                        <i className="material-icons text-light header-icon">search</i>
                         <DatasetSearchBar />
                       </div>
                   </div>
