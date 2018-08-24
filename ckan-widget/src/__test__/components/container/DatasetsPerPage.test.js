@@ -1,11 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
-import DatasetsPerPage from '../../../components/container/DatasetsPerPage';
+import DatasetsPerPageConnected, { DatasetsPerPage } from '../../../components/container/DatasetsPerPage';
 
 
 let component;
 let store;
+let mockPackageSearch;
 const mockStore = configureMockStore();
 const initialState = {
   packageSearch: {
@@ -24,8 +25,13 @@ const initialState = {
 describe('DatasetsPerPage', () => {
   beforeEach(() => {
     store = mockStore(initialState);
+    mockPackageSearch = jest.fn()
     component = shallow(
-      <DatasetsPerPage store={store} />
+      <DatasetsPerPage packageSearch={mockPackageSearch} />
+    );
+
+    shallow(
+      <DatasetsPerPageConnected store={store} />
     );
   })
 
@@ -36,4 +42,9 @@ describe('DatasetsPerPage', () => {
   it('should render correctly', () => {
     expect(component).toMatchSnapshot();
   });
+
+  it('should handle input change', () => {
+    component.instance().handleOnChange({ target: {value: 25} })
+    expect(mockPackageSearch.mock.calls.length).toEqual(1);
+  })
 })

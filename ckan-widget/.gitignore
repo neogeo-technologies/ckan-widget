@@ -25,3 +25,8 @@ requirement
 
 # package.json
 package-lock.json
+
+# tests, ignore shanshots because there is a bug in jest currently
+/src/__test__/__snapshots__
+/src/__test__/components/container/__snapshots__
+/src/__test__/components/presentational/__snapshots__

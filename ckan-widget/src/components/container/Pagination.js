@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import * as actions from '../../actions'
 
 
-class Pagination extends Component {
+export class Pagination extends Component {
   handlePagination = page => {
     const { search, rows, sort } = this.props
     const start = page * rows

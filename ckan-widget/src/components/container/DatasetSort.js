@@ -5,7 +5,7 @@ import Sort from '../presentational/Sort'
 import * as actions from '../../actions'
 
 
-class DatasetSort extends Component{
+export class DatasetSort extends Component{
     handleSort = sort => {
         const { search, rows, facet_search  } = this.props
         this.props.packageSearch({ q: search, sort: sort, rows: rows,

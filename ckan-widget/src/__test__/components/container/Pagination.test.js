@@ -1,11 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
-import Pagination from '../../../components/container/Pagination';
+import PaginationConnected, { Pagination } from '../../../components/container/Pagination';
 
 
 let component;
 let store;
+let mockPackageSearch;
 const mockStore = configureMockStore();
 const initialState = {
   packageSearch: {
@@ -24,8 +25,13 @@ const initialState = {
 describe('Pagination', () => {
   beforeEach(() => {
     store = mockStore(initialState);
+    mockPackageSearch = jest.fn()
     component = shallow(
-      <Pagination store={store} />
+      <Pagination packageSearch={mockPackageSearch} />
+    );
+
+    shallow(
+      <PaginationConnected store={store} />
     );
   })
 
@@ -36,4 +42,9 @@ describe('Pagination', () => {
   it('should render correctly', () => {
     expect(component).toMatchSnapshot();
   });
+
+  it('should handle input change', () => {
+    component.instance().handlePagination(1)
+    expect(mockPackageSearch.mock.calls.length).toEqual(1);
+  })
 })

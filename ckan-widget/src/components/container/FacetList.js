@@ -13,7 +13,7 @@ const FACETS_TITLE = {
   license_id: "Licenses"
 };
 
-class FacetList extends Component {
+export class FacetList extends Component {
 
   componentDidMount() {
     this.props.packageSearch();
