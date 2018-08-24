@@ -16,6 +16,7 @@ class Facet extends Component {
     const title = this.props.title;
     const collapseClass = this.state.collapsed ? 'collapse' : ''
     let expandArrow = this.state.collapsed ? 'expand_more' : 'expand_less'
+    let expandLabel = this.state.collapsed ? 'Expand' : 'Contract'
 
     let fixedList = []
     let expandableList = []
@@ -51,9 +52,8 @@ class Facet extends Component {
     return (
       <div className="card my-3">
         <div className="card-header bg-secondary text-white">
-          <h5 className="card-title mb-auto" onClick={this.expandFacetList}>
+          <h5 className="card-title mb-auto">
             {title}
-            <i className="material-icons">{expandArrow}</i>
           </h5>
         </div>
         <ul className="list-group list-group-flush">
@@ -63,6 +63,9 @@ class Facet extends Component {
           <ul className="list-group list-group-flush">
             {expandableList}
           </ul>
+        </div>
+        <div className="card-footer px-0 py-1">
+            <a className="btn btn-link" onClick={this.expandFacetList}><i className="material-icons mr-1">{expandArrow}</i>{expandLabel}</a>
         </div>
       </div>
     );
