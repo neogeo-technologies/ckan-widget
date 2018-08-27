@@ -40,7 +40,7 @@ class SearchBar extends Component{
 
     render(){
         return(
-            <form className="my-5" onSubmit={this.handleOnSubmit}>
+            <form onSubmit={this.handleOnSubmit}>
                 <Autocomplete
                     inputProps={{
                         id: 'datasets-autocomplete',

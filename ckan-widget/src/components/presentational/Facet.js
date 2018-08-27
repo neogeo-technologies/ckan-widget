@@ -20,6 +20,15 @@ class Facet extends Component {
 
     let fixedList = []
     let expandableList = []
+    let expandControls = []
+
+    if (facets.length > 1){
+      expandControls.push(
+          <div className="card-footer px-0 py-1">
+              <a className="btn btn-link" onClick={this.expandFacetList}><i className="material-icons mr-1">{expandArrow}</i>{expandLabel}</a>
+          </div>
+      )
+    }
 
     if(facets.length < 9) {
       expandArrow = ''
@@ -56,17 +65,15 @@ class Facet extends Component {
             {title}
           </h5>
         </div>
-        <ul className="list-group list-group-flush">
+        <ul className="list-group list-group-facet list-group-flush">
           {fixedList}
         </ul>
         <div className={collapseClass}>
-          <ul className="list-group list-group-flush">
+          <ul className="list-group list-group-facet list-group-flush">
             {expandableList}
           </ul>
         </div>
-        <div className="card-footer px-0 py-1">
-            <a className="btn btn-link" onClick={this.expandFacetList}><i className="material-icons mr-1">{expandArrow}</i>{expandLabel}</a>
-        </div>
+        {expandControls}
       </div>
     );
   }
