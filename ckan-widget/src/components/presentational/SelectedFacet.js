@@ -8,12 +8,10 @@ class SelectedFacet extends Component {
 
     if (facet !== ''){
       return (
-        <div className="badge badge-primary">
-          <span className="label label-info">{name}</span>
-          <button type="button" className="close" aria-label="Close" onClick={e => this.props.onClick(facet)}>
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
+        <li className="list-inline-item btn btn-primary" onClick={e => this.props.onClick(facet)}>
+          <span className="mx-2">{name}</span>
+          <i className="material-icons">close</i>
+        </li>
       );
     }
 

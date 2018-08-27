@@ -18,13 +18,17 @@ export class DatasetSearchBar extends Component{
       const { search, sort, rows, facet_search } = this.props
 
       return(
-          <div>
+          <div className="my-5">
               <SearchBar handleInputChange={this.handleInputChange}/>
-              <SelectedFacetList
-                search={search}
-                sort={sort}
-                rows={rows}
-                selected_facets={facet_search} />
+              <div className="mt-3">
+                  <ul className="list-inline list-search-facets">
+                      <SelectedFacetList
+                        search={search}
+                        sort={sort}
+                        rows={rows}
+                        selected_facets={facet_search} />
+                  </ul>
+              </div>
           </div>
       )
     }

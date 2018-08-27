@@ -50,4 +50,19 @@
   left: -4%;
   opacity: 0.2;
   line-height: 0.5;
+  z-index: 0;
+}
+
+.list-group-facet .list-group-item:hover{
+  cursor: pointer;
+  background: rgba(0,0,0,.03);
+}
+
+.list-search-facets{
+  position: relative;
+  z-index: 1;
+}
+
+.btn-close{
+  padding: 0;
 }
