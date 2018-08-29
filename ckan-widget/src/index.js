@@ -13,26 +13,36 @@ import 'material-icons/iconfont/material-icons.css';
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 const store = createStoreWithMiddleware(reducers);
 
-// const config = {
-//   ckan_api: 'https://trouver.datasud.fr',
-//   ckan_organizations: 'org1, org2',
-//   ckan_groups: 'group1. group2',
-//   ckan_facet: {
-//     'res_format': 'XLSX'
-//   },
-//   ckan_tags: 'vote, vendor',
-//   facet_display: 'organizations, tags, groups, formats, licenses',
-//   data_sort: 'title_string asc',
-//   result_page_size: 25,
-//   thumbnails_display: false
-// }
 
 class CKANWidget {
   constructor() {
     window.ckanWidget = this;
   }
 
-  init = config => {
+  init = ({
+    ckan_api = 'https =//trouver.datasud.fr',
+    ckan_organizations = 'all',
+    ckan_groups = 'all',
+    ckan_tags = 'all',
+    ckan_facets = undefined,
+    facet_display = 'all',
+    data_sort = 'score desc, metadata_modified desc',
+    result_page_size = 10,
+    thumbnails_display = false
+  } = {}) => {
+
+    const config = {
+      ckan_api: ckan_api,
+      ckan_organizations: ckan_organizations,
+      ckan_groups: ckan_groups,
+      ckan_tags: ckan_tags,
+      ckan_facets: ckan_facets,
+      facet_display: facet_display,
+      data_sort: data_sort,
+      result_page_size:result_page_size,
+      thumbnails_display: thumbnails_display
+    }
+
     render(
       <Provider store={store}>
         <App config={config} />
@@ -43,6 +53,8 @@ class CKANWidget {
 }
 
 const instance = new CKANWidget();
+instance.init()
+
 export { instance as ckanWidget };
 
 registerServiceWorker();

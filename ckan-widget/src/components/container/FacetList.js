@@ -33,16 +33,24 @@ export class FacetList extends Component {
 
   render() {
     let { facets, facetDisplay } = this.props
-    facetDisplay = facetDisplay.replace(/\s+/g, '')
-    const facetsToBeDisplayed = facetDisplay.split(',')
+    let facetsToBeDisplayed = []
+
+    if (facetDisplay !== 'all') {
+      facetDisplay = facetDisplay.replace(/\s+/g, '')
+      facetsToBeDisplayed = facetDisplay.split(',')
+    }
 
     const facetsList = [];
     for(let i in facets) {
       let title = FACETS_TITLE[i];
       let facetsInfo = facets[i];
 
-      if (facetsToBeDisplayed.includes(title.toLowerCase())){
-        facetsList.push(<Facet title={title} key={i} facetsInfo={facetsInfo.items} facetKey={i} onClick={this.onClick} />);
+      if (facetsToBeDisplayed.length > 0) {
+        if (facetsToBeDisplayed.includes(title.toLowerCase())){
+          facetsList.push(<Facet title={title} key={i} facetsInfo={facetsInfo.items} facetKey={i} onClick={this.onClick} />)
+        }
+      } else {
+        facetsList.push(<Facet title={title} key={i} facetsInfo={facetsInfo.items} facetKey={i} onClick={this.onClick} />)
       }
     }
     return facetsList;
