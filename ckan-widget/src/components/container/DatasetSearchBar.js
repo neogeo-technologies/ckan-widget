@@ -10,12 +10,12 @@ export class DatasetSearchBar extends Component{
       if (event) {
         event.preventDefault()
       }
-      const { sort, rows, facet_search } = this.props
-      this.props.packageSearch({ q: value, rows: rows, sort: sort, fq: facet_search })
+     const { sort, rows, facet_search, ckanAPI } = this.props
+     this.props.packageSearch({ ckanAPI: ckanAPI, q: value, rows: rows, sort: sort, fq: facet_search })
     }
 
     render(){
-      const { search, sort, rows, facet_search } = this.props
+      const { search, sort, rows, facet_search, ckanAPI } = this.props
 
       return(
           <div className="my-5">
@@ -23,6 +23,7 @@ export class DatasetSearchBar extends Component{
               <div className="mt-3">
                   <ul className="list-inline list-search-facets">
                       <SelectedFacetList
+                        ckanAPI={ckanAPI}
                         search={search}
                         sort={sort}
                         rows={rows}
@@ -39,7 +40,8 @@ const mapStateToProps = state => {
     search: state.packageSearch.search,
     rows: state.packageSearch.rows,
     sort: state.packageSearch.sort,
-    facet_search: state.packageSearch.facet_search
+    facet_search: state.packageSearch.facet_search,
+    ckanAPI: state.packageSearch.ckanAPI
   }
 }
 

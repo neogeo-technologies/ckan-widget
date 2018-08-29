@@ -11,6 +11,8 @@ import Pagination from './components/container/Pagination'
 
 class App extends Component {
   render() {
+    const { config } = this.props
+
     return (
       <div className="App">
           <div className="bg-secondary">
@@ -29,17 +31,22 @@ class App extends Component {
                       <div className="row">
                           <div className="col-lg-8">
                               <div className="d-flex justify-content-between">
-                                  <TotalDatasets />
-                                  <DatasetsPerPage />
+                                <TotalDatasets />
+                                <DatasetsPerPage />
                               </div>
-                              <DatasetInfoList />
+                                <DatasetInfoList
+                                    thumbnailsDisplay={config.thumbnails_display}
+                                    resultPageSize={config.result_page_size}
+                                    dataSort={config.data_sort}
+                                    ckanFacet={config.ckan_facet}
+                                    ckanAPI={config.ckan_api} />
                               <nav className="my-5">
                                   <Pagination />
                               </nav>
                           </div>
                           <div className="col-lg-4">
                               <DatasetSort />
-                              <FacetList />
+                              <FacetList facetDisplay={config.facet_display} />
                           </div>
                       </div>
                   </div>
@@ -51,3 +58,4 @@ class App extends Component {
 }
 
 export default App;
+

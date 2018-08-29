@@ -24,7 +24,7 @@ class Facet extends Component {
 
     if (facets.length > 1){
       expandControls.push(
-          <div className="card-footer px-0 py-1">
+          <div className="card-footer px-0 py-1" key={9999}>
               <a className="btn btn-link" onClick={this.expandFacetList}><i className="material-icons mr-1">{expandArrow}</i>{expandLabel}</a>
           </div>
       )

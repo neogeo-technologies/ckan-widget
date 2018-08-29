@@ -13,11 +13,36 @@ import 'material-icons/iconfont/material-icons.css';
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 const store = createStoreWithMiddleware(reducers);
 
-render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('root'),
-);
+// const config = {
+//   ckan_api: 'https://trouver.datasud.fr',
+//   ckan_organizations: 'org1, org2',
+//   ckan_groups: 'group1. group2',
+//   ckan_facet: {
+//     'res_format': 'XLSX'
+//   },
+//   ckan_tags: 'vote, vendor',
+//   facet_display: 'organizations, tags, groups, formats, licenses',
+//   data_sort: 'title_string asc',
+//   result_page_size: 25,
+//   thumbnails_display: false
+// }
+
+class CKANWidget {
+  constructor() {
+    window.ckanWidget = this;
+  }
+
+  init = config => {
+    render(
+      <Provider store={store}>
+        <App config={config} />
+      </Provider>,
+      document.getElementById('root'),
+    );
+  }
+}
+
+const instance = new CKANWidget();
+export { instance as ckanWidget };
 
 registerServiceWorker();

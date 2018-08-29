@@ -4,6 +4,7 @@ import {
 } from '../actions/types';
 
 const INITIAL_STATE = {
+  ckanAPI: 'https://trouver.datasud.fr',
   datasets: [],
   search: '',
   rows: 10,
@@ -27,7 +28,8 @@ export default function (state = INITIAL_STATE, action) {
         rows: action.rows,
         facets: action.payload.result.search_facets,
         sort: action.sort,
-        facet_search: action.facet_search
+        facet_search: action.facet_search,
+        ckanAPI: action.ckanAPI
       };
     case ERROR:
       return { ...state, error: action.payload };
