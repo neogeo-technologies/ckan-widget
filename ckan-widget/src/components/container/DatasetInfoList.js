@@ -8,7 +8,8 @@ import * as actions from '../../actions'
 
 export class DatasetInfoList extends Component{
     componentDidMount() {
-        const { ckanAPI, resultPageSize, dataSort, ckanFacet } = this.props
+        const { resultPageSize, dataSort, ckanFacet } = this.props
+        let { ckanAPI } = this.props
         let fq = ''
 
         if (ckanFacet !== undefined) {
@@ -28,6 +29,8 @@ export class DatasetInfoList extends Component{
             }
         }
 
+        // Remove trailing slash
+        ckanAPI = ckanAPI.replace(/\/$/, '')
         this.props.packageSearch({ ckanAPI: ckanAPI, rows: resultPageSize, sort: dataSort, fq: fq })
     }
 
