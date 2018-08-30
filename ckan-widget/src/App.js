@@ -35,6 +35,9 @@ class App extends Component {
                                 <DatasetsPerPage />
                               </div>
                                 <DatasetInfoList
+                                    organizations={config.ckan_organizations}
+                                    groups={config.ckan_groups}
+                                    tags={config.ckan_tags}
                                     thumbnailsDisplay={config.thumbnails_display}
                                     resultPageSize={config.result_page_size}
                                     dataSort={config.data_sort}

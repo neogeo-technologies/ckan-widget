@@ -8,9 +8,46 @@ import * as actions from '../../actions'
 
 export class DatasetInfoList extends Component{
     componentDidMount() {
-        const { resultPageSize, dataSort, ckanFacets } = this.props
-        let { ckanAPI } = this.props
+        let {
+            organizations,
+            groups,
+            tags,
+            resultPageSize,
+            dataSort,
+            ckanFacets,
+            ckanAPI
+        } = this.props
         let fq = ''
+
+        if (organizations !== undefined) {
+            for (let i in organizations) {
+                if (fq === '') {
+                    fq = `organization:${organizations[i]}`
+                } else {
+                    fq = `${fq}+organization:${organizations[i]}`
+                }
+            }
+        }
+
+        if (groups !== undefined) {
+            for (let i in groups) {
+                if (fq === '') {
+                    fq = `groups:${groups[i]}`
+                } else {
+                    fq = `${fq}+groups:${groups[i]}`
+                }
+            }
+        }
+
+        if (tags !== undefined) {
+            for (let i in tags) {
+                if (fq === '') {
+                    fq = `tags:${tags[i]}`
+                } else {
+                    fq = `${fq}+tags:${tags[i]}`
+                }
+            }
+        }
 
         if (ckanFacets !== undefined) {
             for (const facet in ckanFacets) {
