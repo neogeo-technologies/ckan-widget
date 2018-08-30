@@ -52,8 +52,7 @@ export class DatasetInfoList extends Component{
 const mapStateToProps = state => {
     return {
         datasets: state.packageSearch.datasets,
-        error: state.packageSearch.error,
-        ckanAPI: state.packageSearch.ckanAPI
+        error: state.packageSearch.error
     }
 }
 
