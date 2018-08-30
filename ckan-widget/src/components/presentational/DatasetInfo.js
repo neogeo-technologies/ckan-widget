@@ -10,12 +10,14 @@ class DatasetInfo extends Component{
 
     findFormats = resources => {
         let formats = []
+        let badges = []
 
         if (Array.isArray(resources) && resources.length){
             resources.forEach( (resource, i) => {
                 const format = resource.format
                 if (!formats.includes(format)) {
-                    formats.push(
+                    formats.push(format)
+                    badges.push(
                       <span className="badge badge-secondary mx-1" key={i}>
                       {format}
                       </span>
@@ -24,7 +26,7 @@ class DatasetInfo extends Component{
             })
         }
 
-        return formats
+        return badges
     }
 
     formatDate = date => {
