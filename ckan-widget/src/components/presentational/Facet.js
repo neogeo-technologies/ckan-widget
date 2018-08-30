@@ -22,16 +22,12 @@ class Facet extends Component {
     let expandableList = []
     let expandControls = []
 
-    if (facets.length > 1){
+    if (facets.length > 8){
       expandControls.push(
           <div className="card-footer px-0 py-1" key={9999}>
               <a className="btn btn-link" onClick={this.expandFacetList}><i className="material-icons mr-1">{expandArrow}</i>{expandLabel}</a>
           </div>
       )
-    }
-
-    if(facets.length < 9) {
-      expandArrow = ''
     }
 
     for (const facetId in facets) {
