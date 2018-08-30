@@ -35,7 +35,7 @@ export class FacetList extends Component {
     let { facets, facetDisplay } = this.props
     let facetsToBeDisplayed = []
 
-    if (facetDisplay !== 'all') {
+    if (facetDisplay !== undefined) {
       facetDisplay = facetDisplay.replace(/\s+/g, '')
       facetsToBeDisplayed = facetDisplay.split(',')
     }

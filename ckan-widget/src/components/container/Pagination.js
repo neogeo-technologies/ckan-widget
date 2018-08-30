@@ -10,8 +10,6 @@ export class Pagination extends Component {
     const { search, rows, sort, ckanAPI, facet_search } = this.props
     const start = page * rows
 
-    console.log(facet_search)
-
     this.props.packageSearch({ ckanAPI: ckanAPI, q: search, start: start, rows: rows, page: page, sort: sort, fq: facet_search })
   }
 

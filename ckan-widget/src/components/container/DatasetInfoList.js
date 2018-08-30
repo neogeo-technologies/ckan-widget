@@ -8,13 +8,13 @@ import * as actions from '../../actions'
 
 export class DatasetInfoList extends Component{
     componentDidMount() {
-        const { resultPageSize, dataSort, ckanFacet } = this.props
+        const { resultPageSize, dataSort, ckanFacets } = this.props
         let { ckanAPI } = this.props
         let fq = ''
 
-        if (ckanFacet !== undefined) {
-            for (const facet in ckanFacet) {
-                let values = ckanFacet[facet]
+        if (ckanFacets !== undefined) {
+            for (const facet in ckanFacets) {
+                let values = ckanFacets[facet]
                 values = values.replace(/\s+/g, '')
 
                 const fqValues = values.split(',')

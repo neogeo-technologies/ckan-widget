@@ -38,7 +38,7 @@ class App extends Component {
                                     thumbnailsDisplay={config.thumbnails_display}
                                     resultPageSize={config.result_page_size}
                                     dataSort={config.data_sort}
-                                    ckanFacet={config.ckan_facet}
+                                    ckanFacets={config.ckan_facets}
                                     ckanAPI={config.ckan_api} />
                               <nav className="my-5">
                                   <Pagination />
