@@ -13,18 +13,11 @@ class SearchBar extends Component{
         }
     }
 
-    componentDidMount() {
-        packageAutocomplete().then(data => {
-            const suggestions = data.result
-            if (Array.isArray(suggestions) && suggestions.length) {
-                this.setState({ suggestions })
-            }
-        })
-    }
-
     handleOnChange = (event, value) => {
+        const { ckanAPI } = this.props
         this.setState({ value })
-        packageAutocomplete({ q: value }).then(data => {
+
+        packageAutocomplete({ ckanAPI, q: value }).then(data => {
             const suggestions = data.result
             if (Array.isArray(suggestions) && suggestions.length) {
                 this.setState({ suggestions })

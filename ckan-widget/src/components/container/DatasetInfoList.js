@@ -9,44 +9,33 @@ import * as actions from '../../actions'
 export class DatasetInfoList extends Component{
     componentDidMount() {
         let {
-            organizations,
-            groups,
-            tags,
+            organization_ids,
+            group_ids,
+            tag_ids,
             resultPageSize,
             dataSort,
             ckanFacets,
             ckanAPI
         } = this.props
+        let q = ''
         let fq = ''
 
-        if (organizations !== undefined) {
-            for (let i in organizations) {
-                if (fq === '') {
-                    fq = `organization:${organizations[i]}`
-                } else {
-                    fq = `${fq}+organization:${organizations[i]}`
-                }
-            }
+        if (organization_ids !== undefined) {
+            organization_ids.forEach(id => {
+                this.props.organizationShow({ ckanAPI, id })
+            });
         }
 
-        if (groups !== undefined) {
-            for (let i in groups) {
-                if (fq === '') {
-                    fq = `groups:${groups[i]}`
-                } else {
-                    fq = `${fq}+groups:${groups[i]}`
-                }
-            }
+        if (group_ids !== undefined) {
+            group_ids.forEach(id => {
+                this.props.groupShow({ ckanAPI, id })
+            });
         }
 
-        if (tags !== undefined) {
-            for (let i in tags) {
-                if (fq === '') {
-                    fq = `tags:${tags[i]}`
-                } else {
-                    fq = `${fq}+tags:${tags[i]}`
-                }
-            }
+        if (tag_ids !== undefined) {
+            tag_ids.forEach(id => {
+                this.props.tagShow({ ckanAPI, id })
+            });
         }
 
         if (ckanFacets !== undefined) {
@@ -68,7 +57,55 @@ export class DatasetInfoList extends Component{
 
         // Remove trailing slash
         ckanAPI = ckanAPI.replace(/\/$/, '')
-        this.props.packageSearch({ ckanAPI: ckanAPI, rows: resultPageSize, sort: dataSort, fq: fq })
+        this.props.packageSearch({ ckanAPI: ckanAPI, rows: resultPageSize, sort: dataSort, fq: fq, q: q, firstCall: true })
+    }
+
+    componentWillReceiveProps(nextProps) {
+        const { ckanAPI, rows, sort, facet_search } = this.props
+        const fq = facet_search
+        let q = ''
+
+        if (nextProps.organizations !== undefined) {
+            nextProps.organizations.forEach((name, i) => {
+                if (i === 0) {
+                    q = `organization:${name}`
+                } else {
+                    q = `${q} OR ${name}`
+                }
+            })
+        }
+
+        if (nextProps.groups !== undefined) {
+            nextProps.groups.forEach((name, i) => {
+                if (q === '') {
+                    q = `groups:${name}`
+                } else {
+                    if (i === 0) {
+                        q = `${q} AND groups:${name}`
+                    } else {
+                        q = `${q} OR ${name}`
+                    }
+                }
+            })
+        }
+
+        if (nextProps.tags !== undefined) {
+            nextProps.tags.forEach((name, i) => {
+                if (q === '') {
+                    q = `tags:${name}`
+                } else {
+                    if (i === 0) {
+                        q = `${q} AND tags:${name}`
+                    } else {
+                        q = `${q} OR ${name}`
+                    }
+                }
+            })
+        }
+
+        if (nextProps.firstCall) {
+            this.props.packageSearch({ ckanAPI, rows, sort, fq, q })
+        }
     }
 
     render(){
@@ -92,7 +129,13 @@ export class DatasetInfoList extends Component{
 const mapStateToProps = state => {
     return {
         datasets: state.packageSearch.datasets,
-        error: state.packageSearch.error
+        error: state.packageSearch.error,
+        organizations: state.packageSearch.organizations,
+        groups: state.packageSearch.groups,
+        tags: state.packageSearch.tags,
+        rows: state.packageSearch.rows,
+        sort: state.packageSearch.sort,
+        firstCall: state.packageSearch.firstCall
     }
 }
 
