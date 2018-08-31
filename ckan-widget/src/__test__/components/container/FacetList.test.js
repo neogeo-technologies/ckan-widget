@@ -46,7 +46,11 @@ describe('FacetList', () => {
       update_frequency: undefined
     }
     component = shallow(
-      <FacetList facets={facets} packageSearch={mockPackageSearch} />
+      <FacetList facets={facets} facet_search={'organization:org1'} packageSearch={mockPackageSearch} />
+    );
+
+    shallow(
+      <FacetList facets={facets} facetDisplay={['datatype']} packageSearch={mockPackageSearch} />
     );
 
     shallow(
