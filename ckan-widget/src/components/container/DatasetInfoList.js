@@ -61,12 +61,23 @@ export class DatasetInfoList extends Component{
     }
 
     componentWillReceiveProps(nextProps) {
-        const { ckanAPI, rows, sort, facet_search } = this.props
+        const {
+            ckanAPI,
+            rows,
+            sort,
+            facet_search,
+            organizations,
+            groups,
+            tags,
+            firstCall
+        } = nextProps
         const fq = facet_search
         let q = ''
+        let reRender = false
 
-        if (nextProps.organizations !== undefined) {
-            nextProps.organizations.forEach((name, i) => {
+        if (organizations.length > 0) {
+            reRender = true
+            organizations.forEach((name, i) => {
                 if (i === 0) {
                     q = `organization:${name}`
                 } else {
@@ -75,8 +86,9 @@ export class DatasetInfoList extends Component{
             })
         }
 
-        if (nextProps.groups !== undefined) {
-            nextProps.groups.forEach((name, i) => {
+        if (groups.length > 0) {
+            reRender = true
+            groups.forEach((name, i) => {
                 if (q === '') {
                     q = `groups:${name}`
                 } else {
@@ -89,8 +101,9 @@ export class DatasetInfoList extends Component{
             })
         }
 
-        if (nextProps.tags !== undefined) {
-            nextProps.tags.forEach((name, i) => {
+        if (tags.length > 0) {
+            reRender = true
+            tags.forEach((name, i) => {
                 if (q === '') {
                     q = `tags:${name}`
                 } else {
@@ -103,7 +116,7 @@ export class DatasetInfoList extends Component{
             })
         }
 
-        if (nextProps.firstCall) {
+        if (firstCall && reRender) {
             this.props.packageSearch({ ckanAPI, rows, sort, fq, q })
         }
     }
@@ -135,6 +148,7 @@ const mapStateToProps = state => {
         tags: state.packageSearch.tags,
         rows: state.packageSearch.rows,
         sort: state.packageSearch.sort,
+        facet_search: state.packageSearch.facet_search,
         firstCall: state.packageSearch.firstCall
     }
 }
