@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
-
 import './App.css';
 import DatasetSearchBar from './components/container/DatasetSearchBar';
 import DatasetInfoList from './components/container/DatasetInfoList';
@@ -9,7 +7,6 @@ import DatasetSort from './components/container/DatasetSort';
 import TotalDatasets from './components/container/TotalDatasets'
 import DatasetsPerPage from './components/container/DatasetsPerPage'
 import Pagination from './components/container/Pagination'
-import * as actions from './actions'
 
 
 class App extends Component {
@@ -63,5 +60,5 @@ class App extends Component {
     }
 }
 
-export default connect(null, actions)(App);
+export default App;
 

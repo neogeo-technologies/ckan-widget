@@ -67,18 +67,18 @@ export function organizationShow({ ckanAPI = 'https://trouver.datasud.fr', id = 
       });
     })
     .catch((error) => {
-        let errorMsg = '';
-        if (error.response !== undefined) {
-          errorMsg = error.response.data;
-        } else {
-          errorMsg = error.message;
-        }
+      let errorMsg = '';
+      if (error.response !== undefined) {
+        errorMsg = error.response.data.error.message;
+      } else {
+        errorMsg = error.message;
+      }
 
-        dispatch({
-          type: ERROR,
-          payload: errorMsg,
-        });
+      dispatch({
+        type: ERROR,
+        payload: errorMsg,
       });
+    });
   };
 }
 
@@ -94,7 +94,7 @@ export function groupShow({ ckanAPI = 'https://trouver.datasud.fr', id = '' } = 
       .catch((error) => {
         let errorMsg = '';
         if (error.response !== undefined) {
-          errorMsg = error.response.data;
+          errorMsg = error.response.data.error.message;
         } else {
           errorMsg = error.message;
         }
@@ -119,7 +119,7 @@ export function tagShow({ ckanAPI = 'https://trouver.datasud.fr', id = '' } = {}
       .catch((error) => {
         let errorMsg = '';
         if (error.response !== undefined) {
-          errorMsg = error.response.data;
+          errorMsg = error.response.data.error.message;
         } else {
           errorMsg = error.message;
         }
