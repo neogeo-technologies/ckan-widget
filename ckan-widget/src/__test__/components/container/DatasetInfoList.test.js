@@ -27,7 +27,7 @@ describe('DatasetInfoList', () => {
     store = mockStore(initialState);
     mockPackageSearch = jest.fn()
     component = shallow(
-      <DatasetInfoList datasets={[{ name: 'dataset1' }]} packageSearch={mockPackageSearch} />
+      <DatasetInfoList ckanAPI={'https://demo.org/'} datasets={[{ name: 'dataset1' }]} packageSearch={mockPackageSearch} />
     );
 
     shallow(

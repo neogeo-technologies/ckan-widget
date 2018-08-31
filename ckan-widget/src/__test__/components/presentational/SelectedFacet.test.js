@@ -23,7 +23,7 @@ describe('Sort', () => {
   });
 
   it('should handle button click', () => {
-    const buttonElement = component.find('button')
+    const buttonElement = component.find('li')
     buttonElement.simulate('click', { target: { value: 'event' }})
     expect(onClick.mock.calls.length).toEqual(1);
   })

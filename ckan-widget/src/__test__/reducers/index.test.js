@@ -4,6 +4,7 @@ import { reducer as formReducer } from 'redux-form';
 const initialState = {
   form: {},
   packageSearch: {
+    ckanAPI: 'https://trouver.datasud.fr',
     datasets: [],
     error: "",
     facet_search: "",
@@ -12,7 +13,11 @@ const initialState = {
     rows: 10,
     search: "",
     sort: "score desc, metadata_modified desc",
-    total: 0
+    total: 0,
+    organizations: [],
+    groups: [],
+    tags: [],
+    firstCall: false
   }
 };
 

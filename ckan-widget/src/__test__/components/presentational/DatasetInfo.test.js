@@ -42,7 +42,6 @@ describe('DatasetInfo', () => {
 
     const formats = component.instance().findFormats(resources)
     expect(formats.length).toEqual(2)
-    expect(formats).toEqual(['CSV', 'XML'])
   })
 
   it('should expand on click', () => {

@@ -5,6 +5,7 @@ describe('Test package search redicer', () => {
   it('test initial state', () => {
     const action = { type: 'dummy_action' }
     const initialState = {
+      ckanAPI: 'https://trouver.datasud.fr',
       datasets: [],
       search: '',
       rows: 10,
@@ -13,7 +14,11 @@ describe('Test package search redicer', () => {
       page: 0,
       sort: 'score desc, metadata_modified desc',
       error: '',
-      facet_search: ''
+      facet_search: '',
+      organizations: [],
+      groups: [],
+      tags: [],
+      firstCall: false
     }
 
     expect(packageSearch(undefined, action)).toEqual(initialState);
@@ -26,6 +31,7 @@ describe('Test package search redicer', () => {
     }
 
     const newState = {
+      ckanAPI: 'https://trouver.datasud.fr',
       datasets: [],
       search: '',
       rows: 10,
@@ -34,7 +40,11 @@ describe('Test package search redicer', () => {
       page: 0,
       sort: 'score desc, metadata_modified desc',
       error: 'Network error!',
-      facet_search: ''
+      facet_search: '',
+      organizations: [],
+      groups: [],
+      tags: [],
+      firstCall: false
     }
 
     expect(packageSearch(undefined, action)).toEqual(newState);
@@ -43,11 +53,13 @@ describe('Test package search redicer', () => {
   it('test package search', () => {
     const action = {
       type: PACKAGE_SEARCH,
+      ckanAPI: 'https://trouver.datasud.fr',
       search: '',
       page: 1,
       rows: 25,
       sort: 'score desc, metadata_modified desc',
       facet_search: 'organization:org1',
+      firstCall: true,
       payload: {
         result: {
           count: 46,
@@ -60,6 +72,7 @@ describe('Test package search redicer', () => {
     }
 
     const newState = {
+      ckanAPI: 'https://trouver.datasud.fr',
       datasets: ['dataset1', 'dataset2'],
       search: '',
       rows: 25,
@@ -70,7 +83,11 @@ describe('Test package search redicer', () => {
       page: 1,
       sort: 'score desc, metadata_modified desc',
       error: '',
-      facet_search: 'organization:org1'
+      facet_search: 'organization:org1',
+      organizations: [],
+      groups: [],
+      tags: [],
+      firstCall: true
     }
 
     expect(packageSearch(undefined, action)).toEqual(newState);
