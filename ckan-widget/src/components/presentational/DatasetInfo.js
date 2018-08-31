@@ -43,7 +43,7 @@ class DatasetInfo extends Component{
         if (thumbnailsDisplay && thumbnail !== undefined) {
             return(
                 <div className="col-lg-3 d-flex justify-content-lg-center align-items-center mb-lg-0 mb-md-3">
-                    <img className="img-thumbnail img-fluid" src="https://www.datasud.fr/wp-content/themes/crigepaca/assets/images/logo_region_paca.jpg" alt="logo" />
+                    <img className="img-thumbnail img-fluid" src={thumbnail} alt="logo" />
                 </div>
             )
         }

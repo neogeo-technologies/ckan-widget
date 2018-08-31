@@ -11,6 +11,10 @@ describe('Sort', () => {
     component = shallow(
       <SelectedFacet onClick={onClick} facet={'organization:org1'} />
     );
+
+    shallow(
+      <SelectedFacet onClick={onClick} facet={''} />
+    );
   })
 
   it('should be defined', () => {

@@ -11,6 +11,8 @@ describe('DatasetInfo', () => {
         title={'Dataset title'}
         notes={'Describe dataset'}
         metadata_modified={'2018-08-23T07:26:42.122834'}
+        thumbnailsDisplay={true}
+        thumbnail={'https://demo.log.org'}
         resources={[{ restricted: "{\"level\": \"public\"}", format: 'CSV', name: 'rsc1', last_modified: '21 June 2018' }]} />
     )
   })
