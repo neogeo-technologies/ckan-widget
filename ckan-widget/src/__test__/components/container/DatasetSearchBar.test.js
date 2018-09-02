@@ -27,7 +27,11 @@ describe('DatasetSearchBar', () => {
     store = mockStore(initialState);
     mockPackageSearch = jest.fn()
     component = shallow(
-      <DatasetSearchBar packageSearch={mockPackageSearch} />
+      <DatasetSearchBar
+        organizations={['org1', 'org12']}
+        groups={['group1', 'group2']}
+        tags={['tag1', 'tag2']}
+        packageSearch={mockPackageSearch} />
     );
     shallow(
       <DatasetSearchBarConnected store={store} />

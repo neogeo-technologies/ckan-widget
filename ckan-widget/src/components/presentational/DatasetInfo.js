@@ -10,12 +10,14 @@ class DatasetInfo extends Component{
 
     findFormats = resources => {
         let formats = []
+        let badges = []
 
         if (Array.isArray(resources) && resources.length){
             resources.forEach( (resource, i) => {
                 const format = resource.format
                 if (!formats.includes(format)) {
-                    formats.push(
+                    formats.push(format)
+                    badges.push(
                       <span className="badge badge-secondary mx-1" key={i}>
                       {format}
                       </span>
@@ -24,7 +26,7 @@ class DatasetInfo extends Component{
             })
         }
 
-        return formats
+        return badges
     }
 
     formatDate = date => {
@@ -36,8 +38,21 @@ class DatasetInfo extends Component{
         this.setState({ collapsed: !this.state.collapsed })
     }
 
+    renderThumbnail = thumbnail => {
+        const { thumbnailsDisplay } = this.props
+        if (thumbnailsDisplay && thumbnail !== undefined) {
+            return(
+                <div className="col-lg-3 d-flex justify-content-lg-center align-items-center mb-lg-0 mb-md-3">
+                    <img className="img-thumbnail img-fluid" src={thumbnail} alt="logo" />
+                </div>
+            )
+        }
+
+        return null
+    }
+
     render(){
-        const { title, notes, metadata_modified, datatype, resources } = this.props
+        const { title, notes, metadata_modified, datatype, resources, thumbnail } = this.props
         const datetime = this.formatDate(metadata_modified)
         const formats = this.findFormats(resources)
         const collapseClass = this.state.collapsed ? '' : 'collapsed'
@@ -48,16 +63,18 @@ class DatasetInfo extends Component{
                 <div className="dataset card-body" onClick={this.handleDatasetClick}>
                     <i className="material-icons">{expandArrow}</i>
                     <div className="row">
-                        <div className="col-lg-3 d-flex justify-content-lg-center align-items-center mb-lg-0 mb-md-3">
-                            <img className="img-thumbnail img-fluid" src="https://www.datasud.fr/wp-content/themes/crigepaca/assets/images/logo_region_paca.jpg" alt="logo" />
-                        </div>
+                        { this.renderThumbnail(thumbnail) }
                         <div className="col-lg-9">
                             <h4 className="title text-primary">{title}</h4>
                             <p className="text-muted">{notes && notes.length > 130 ? `${notes.substring(0, 130)}...` : notes}</p>
                             <ul className="list-unstyled">
-                              <li><strong>Modified:</strong> {datetime}</li>
-                              <li className="d-flex m-auto align-items-center"><strong>Formats:</strong> {formats !== undefined ? formats : 'N/A'}</li>
-                              <li><strong>Datatype:</strong> {datatype !== undefined ? datatype.join(', ') : 'N/A'}</li>
+                                <li><strong>Modified:</strong> {datetime}</li>
+                                <li>
+                                    <strong>Formats:</strong> {formats.length > 0 ? formats : 'N/A'}
+                                </li>
+                                <li>
+                                    <strong>Datatype:</strong> {datatype !== undefined && datatype.length > 0 ? datatype.join(', ') : 'N/A'}
+                                </li>
                             </ul>
                         </div>
                     </div>

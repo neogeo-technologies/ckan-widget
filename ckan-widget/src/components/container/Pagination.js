@@ -7,10 +7,10 @@ import * as actions from '../../actions'
 
 export class Pagination extends Component {
   handlePagination = page => {
-    const { search, rows, sort } = this.props
+    const { search, rows, sort, ckanAPI, facet_search } = this.props
     const start = page * rows
 
-    this.props.packageSearch({ q: search, start: start, rows: rows, page: page, sort: sort })
+    this.props.packageSearch({ ckanAPI: ckanAPI, q: search, start: start, rows: rows, page: page, sort: sort, fq: facet_search })
   }
 
   render() {
@@ -53,7 +53,9 @@ const mapStateToProps = state => {
     sort: state.packageSearch.sort,
     rows: state.packageSearch.rows,
     total: state.packageSearch.total,
-    page: state.packageSearch.page
+    page: state.packageSearch.page,
+    ckanAPI: state.packageSearch.ckanAPI,
+    facet_search: state.packageSearch.facet_search
   }
 }
 

@@ -11,6 +11,10 @@ describe('Sort', () => {
     component = shallow(
       <SelectedFacet onClick={onClick} facet={'organization:org1'} />
     );
+
+    shallow(
+      <SelectedFacet onClick={onClick} facet={''} />
+    );
   })
 
   it('should be defined', () => {
@@ -23,7 +27,7 @@ describe('Sort', () => {
   });
 
   it('should handle button click', () => {
-    const buttonElement = component.find('button')
+    const buttonElement = component.find('li')
     buttonElement.simulate('click', { target: { value: 'event' }})
     expect(onClick.mock.calls.length).toEqual(1);
   })

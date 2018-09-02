@@ -13,7 +13,16 @@ const initialState = {
     datasets: [],
     search: '',
     rows: 10,
-    facets: [],
+    facets: {
+      datatype: { items: [{ count: 392, display_name: "name", name: "name" }], title: "datatype" },
+      groups: undefined,
+      license_id: undefined,
+      organization: undefined,
+      res_format: undefined,
+      support: undefined,
+      tags: undefined,
+      update_frequency: undefined
+    },
     total: 20,
     page: 1,
     sort: 'score desc, metadata_modified desc',
@@ -26,8 +35,22 @@ describe('FacetList', () => {
   beforeEach(() => {
     store = mockStore(initialState);
     mockPackageSearch = jest.fn()
+    const facets = {
+      datatype: { items: [{ count: 392, display_name: "name", name: "name" }], title: "datatype" },
+      groups: undefined,
+      license_id: undefined,
+      organization: undefined,
+      res_format: undefined,
+      support: undefined,
+      tags: undefined,
+      update_frequency: undefined
+    }
     component = shallow(
-      <FacetList packageSearch={mockPackageSearch} />
+      <FacetList facets={facets} facet_search={'organization:org1'} packageSearch={mockPackageSearch} />
+    );
+
+    shallow(
+      <FacetList facets={facets} facetDisplay={['datatype']} packageSearch={mockPackageSearch} />
     );
 
     shallow(
@@ -45,6 +68,6 @@ describe('FacetList', () => {
 
   it('should handle onClick event', () => {
     component.instance().onClick('data')
-    expect(mockPackageSearch.mock.calls.length).toEqual(2);
+    expect(mockPackageSearch.mock.calls.length).toEqual(1);
   })
 })

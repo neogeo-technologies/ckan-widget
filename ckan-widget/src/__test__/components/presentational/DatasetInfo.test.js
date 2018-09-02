@@ -11,6 +11,8 @@ describe('DatasetInfo', () => {
         title={'Dataset title'}
         notes={'Describe dataset'}
         metadata_modified={'2018-08-23T07:26:42.122834'}
+        thumbnailsDisplay={true}
+        thumbnail={'https://demo.log.org'}
         resources={[{ restricted: "{\"level\": \"public\"}", format: 'CSV', name: 'rsc1', last_modified: '21 June 2018' }]} />
     )
   })
@@ -42,7 +44,6 @@ describe('DatasetInfo', () => {
 
     const formats = component.instance().findFormats(resources)
     expect(formats.length).toEqual(2)
-    expect(formats).toEqual(['CSV', 'XML'])
   })
 
   it('should expand on click', () => {

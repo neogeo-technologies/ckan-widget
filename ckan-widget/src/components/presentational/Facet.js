@@ -22,20 +22,16 @@ class Facet extends Component {
     let expandableList = []
     let expandControls = []
 
-    if (facets.length > 1){
+    if (facets.length > 7){
       expandControls.push(
-          <div className="card-footer px-0 py-1">
+          <div className="card-footer px-0 py-1" key={9999}>
               <a className="btn btn-link" onClick={this.expandFacetList}><i className="material-icons mr-1">{expandArrow}</i>{expandLabel}</a>
           </div>
       )
     }
 
-    if(facets.length < 9) {
-      expandArrow = ''
-    }
-
     for (const facetId in facets) {
-      if (facetId < 8) {
+      if (facetId < 7) {
         fixedList.push(
           <li className="list-group-item d-flex justify-content-between align-items-center" key={facetId} onClick={() => this.props.onClick(`${this.props.facetKey}:${facets[facetId].name}`)}>
             {facets[facetId].display_name}
@@ -47,7 +43,7 @@ class Facet extends Component {
     }
 
     for (const facetId in facets) {
-      if (facetId > 7) {
+      if (facetId > 6) {
         expandableList.push(
           <li className="list-group-item d-flex justify-content-between align-items-center" key={facetId} onClick={() => this.props.onClick(`${this.props.facetKey}:${facets[facetId].name}`)}>
             {facets[facetId].display_name}
