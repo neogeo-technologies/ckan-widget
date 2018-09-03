@@ -151,11 +151,16 @@ Configuration properties:
 
 ### Set API Key
 
-It is a little hard and tricky how to set the API Key securely. Likely [create-react-app](https://github.com/facebook/create-react-app) allows us to define environment variables while we are building the Widget by creating the `.env` file in the root of the project at the same level where `package.json` is. Afterward when we will integrate the Widget **there is no need** to define `.env` file or set the enviroment variable manually, it is only needed for building the Widget.
+It is a little hard and tricky how to set the API Key securely. Fortunately [create-react-app](https://github.com/facebook/create-react-app) allows us to define environment variables while we are building the Widget by creating the `.env` file in the root of the project at the same level where `package.json` is. Afterward when we will integrate the Widget **there is no need** to define `.env` file or set the enviroment variable manually, it is only needed for building the Widget.
 
 To define environment variable, create a file called .env in the root of the project:
 ```
 REACT_APP_API_KEY="API-KEY"
+```
+
+Then build the Widget:
+```
+npm run build
 ```
 
 The value of the API key is accessible in the Widget as `process.env.REACT_APP_API_KEY`.
