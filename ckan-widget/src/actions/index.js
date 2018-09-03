@@ -8,6 +8,12 @@ import {
   ADD_TAG
 } from './types';
 
+let axiosConfig = {
+  headers: {}
+}
+if (process.env.REACT_APP_API_KEY !== undefined) {
+  axiosConfig.headers = { 'Authorization': process.env.REACT_APP_API_KEY}
+}
 
 export function packageSearch({
   ckanAPI = 'https://trouver.datasud.fr', q = '*:*', rows = 10, start = 0, page = 0, sort = 'score desc, metadata_modified desc', fq='',
@@ -22,7 +28,7 @@ export function packageSearch({
                                                       'update_frequency'])}`;
 
   return (dispatch) => {
-    axios.get(`${ckanAPI}/api/action/package_search?q=${q}&rows=${rows}&start=${start}&${facetsParams}&sort=${sort}&fq=${fq}`)
+    axios.get(`${ckanAPI}/api/action/package_search?q=${q}&rows=${rows}&start=${start}&${facetsParams}&sort=${sort}&fq=${fq}`, axiosConfig)
       .then((response) => {
         dispatch({
           type: PACKAGE_SEARCH,
@@ -53,13 +59,13 @@ export function packageSearch({
 }
 
 export function packageAutocomplete({ ckanAPI = 'https://trouver.datasud.fr', q = '', limit = 10 } = {}) {
-  return axios.get(`${ckanAPI}/api/action/package_autocomplete?q=${q}&limit=${limit}`)
+  return axios.get(`${ckanAPI}/api/action/package_autocomplete?q=${q}&limit=${limit}`, axiosConfig)
     .then(response => response.data);
 }
 
 export function organizationShow({ ckanAPI = 'https://trouver.datasud.fr', id = '' } = {}) {
   return (dispatch) => {
-    axios.get(`${ckanAPI}/api/action/organization_show?id=${id}&include_dataset_count=false&include_extras=false&include_users=false&include_groups=false`)
+    axios.get(`${ckanAPI}/api/action/organization_show?id=${id}&include_dataset_count=false&include_extras=false&include_users=false&include_groups=false`, axiosConfig)
     .then((response) => {
       dispatch({
         type: ADD_ORG,
@@ -84,7 +90,7 @@ export function organizationShow({ ckanAPI = 'https://trouver.datasud.fr', id = 
 
 export function groupShow({ ckanAPI = 'https://trouver.datasud.fr', id = '' } = {}) {
   return (dispatch) => {
-    axios.get(`${ckanAPI}/api/action/group_show?id=${id}&include_dataset_count=false&include_extras=false&include_users=false&include_groups=false`)
+    axios.get(`${ckanAPI}/api/action/group_show?id=${id}&include_dataset_count=false&include_extras=false&include_users=false&include_groups=false`, axiosConfig)
       .then((response) => {
         dispatch({
           type: ADD_GROUP,
@@ -109,7 +115,7 @@ export function groupShow({ ckanAPI = 'https://trouver.datasud.fr', id = '' } = 
 
 export function tagShow({ ckanAPI = 'https://trouver.datasud.fr', id = '' } = {}) {
   return (dispatch) => {
-    axios.get(`${ckanAPI}/api/action/tag_show?id=${id}&include_dataset_count=false&include_extras=false&include_users=false&include_groups=false`)
+    axios.get(`${ckanAPI}/api/action/tag_show?id=${id}&include_dataset_count=false&include_extras=false&include_users=false&include_groups=false`, axiosConfig)
       .then((response) => {
         dispatch({
           type: ADD_TAG,
