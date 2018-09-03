@@ -69,7 +69,7 @@ Full code of build/index.html file:
 ```
 
 
-If you want to ingerate the Widget in your custom HTML page then copy the `build/static` folder in the same folder where HTML page is. HTML page example:
+To integrate the Widget in custom HTML page, take the JS and CSS files located at `build/static/js` and `build/static/css` and put wherever is suitable for the App/Page. Then import the files in the Page. The format of the files is `main.id.js` and `main.id.css`. Also, you can rename the files if necessary. HTML page example:
 ```
 <!DOCTYPE html>
 <html>
@@ -108,7 +108,7 @@ There must be `<div id="ckan-widget"></div>` because the Widget looking for `div
 This example shows how you can pass configurations parameters.
 
 ### Widget configuration
-The Widget loads the configuration that is pass to the `init` function at start up. If configuration is not passed to the `init` function then, it starts with the default. Here's an example of configuration object:
+The Widget loads the configuration that is passed to the `init` function at start up. If configuration is not passed to the `init` function then, it starts with the default one. Here's an example of configuration object:
 ```
 var config = {
       ckan_api: 'https://ckan-api.com',
@@ -136,6 +136,7 @@ var config = {
 ```
 
 Configuration properties:
+
 * **ckan-api**: Ckan API URL. Default to the `trouver.datasud.fr` one.
 * **ckan-organizations**: CKAN Organizations IDs to be retrieved. Default to All. Else, comma separated list of Organizations IDs.
 * **ckan-groups**: CKAN Groups IDs to be retrieved. Default to All. Else, comma separated list of Groups IDs.
@@ -145,6 +146,20 @@ Configuration properties:
 * **data-sort**: sorting mode to be used. Same than the CKAN ones (popularity, relevance, last_modified, alpha…). Default to `score desc, metadata_modified desc`.
 * **result-page-size**: number of results per page(10, 25, 50, 100). Default to `10`. Max to `100`.
 * **thumbnails-display**: boolean. Whether to display dataset's thumbnail or not. Default to `true`.
+
+
+### Setting API Key for the Widget
+
+It is a little hard and tricky how to set the API Key securely. Likely [create-react-app](https://github.com/facebook/create-react-app) allows us to define environment variables while we are building the Widget by creating the `.env` file in the root of the project at the same level where `package.json` is. Afterward when we will integrate the Widget **there is no need** to define `.env` file or set the enviroment variable manually, it is only needed for building the Widget.
+
+To define environment variable, create a file called .env in the root of the project:
+```
+REACT_APP_API_KEY="API_KEY"
+```
+
+The value of the API key is accessible in the Widget as `process.env.REACT_APP_API_KEY`.
+
+**Note:** The environment variables define in `.env` file must begin with REACT_APP_.
 
 ## Test run
 ```
