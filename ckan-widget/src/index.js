@@ -15,10 +15,10 @@ const store = createStoreWithMiddleware(reducers);
 
 // Configuration for running Widget locally for testing purposes
 // var localConfig = {
-//   ckan_api: 'https://ckan.dev.idgo.neogeo.fr',
-//   ckan_organizations: ['2e37a4af-6001-4697-98d5-1e21f935b3b2', '161c9b4b-47db-496d-bd87-105b9d3e494c'],
-//   ckan_groups: ['3f7039a9-9f5b-4289-b8b3-1c45d1b43cc0', 'd719f9db-4e4a-4da3-b0ae-7c326d738ea8'],
-//   ckan_tags: ['ab3f34f2-c8dd-4ae1-8939-5d52234b7fa2', 'eddca7e7-d304-4c84-9188-c0adc2224bb5'],
+//   ckan_api: 'https://ckan-api.com',
+//   ckan_organizations: ['id'],
+//   ckan_groups: ['id'],
+//   ckan_tags: ['id'],
 //   ckan_facets: {
 //     res_format: 'HTML'
 //   },
