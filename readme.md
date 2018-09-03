@@ -68,8 +68,9 @@ Full code of build/index.html file:
 </html>
 ```
 
+### Integrate in HTML Page/Web App
 
-To integrate the Widget in custom HTML page, take the JS and CSS files located at `build/static/js` and `build/static/css` and put wherever is suitable for the App/Page. Then import the files in the Page. The format of the files is `main.id.js` and `main.id.css`. Also, you can rename the files if necessary. HTML page example:
+To integrate the Widget in HTML page/Web App, take the JS and CSS files located at `build/static/js` and `build/static/css` and put wherever is suitable for the App/Page. Then import the files in the Page. The format of the file names is `main.id.js` and `main.id.css`. Also, you can rename the files if necessary. HTML page example:
 ```
 <!DOCTYPE html>
 <html>
@@ -148,13 +149,13 @@ Configuration properties:
 * **thumbnails-display**: boolean. Whether to display dataset's thumbnail or not. Default to `true`.
 
 
-### Setting API Key for the Widget
+### Set API Key
 
 It is a little hard and tricky how to set the API Key securely. Likely [create-react-app](https://github.com/facebook/create-react-app) allows us to define environment variables while we are building the Widget by creating the `.env` file in the root of the project at the same level where `package.json` is. Afterward when we will integrate the Widget **there is no need** to define `.env` file or set the enviroment variable manually, it is only needed for building the Widget.
 
 To define environment variable, create a file called .env in the root of the project:
 ```
-REACT_APP_API_KEY="API_KEY"
+REACT_APP_API_KEY="API-KEY"
 ```
 
 The value of the API key is accessible in the Widget as `process.env.REACT_APP_API_KEY`.
