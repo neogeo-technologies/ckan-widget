@@ -53,7 +53,7 @@ class DatasetDetails extends Component {
                         { this.renderResources(resources, name) }
                     </ul>
                 </div>
-                <a className="btn btn-success mb-1" href={`https://trouver.datasud.fr/dataset/${name}`}><i className="material-icons mr-1">open_in_new</i> View on Datasud.fr</a>
+                <a className="btn btn-success mb-1" href={`https://trouver.datasud.fr/dataset/${name}`}>View on Datasud.fr</a>
             </div>
         )
     }

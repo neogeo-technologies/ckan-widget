@@ -10,7 +10,7 @@ class SelectedFacet extends Component {
       return (
         <li className="list-inline-item btn btn-primary" onClick={e => this.props.onClick(facet)}>
           <span className="mx-2">{name}</span>
-          <i className="material-icons">close</i>
+          <p className="material-icons">&#9932;</p>
         </li>
       );
     }
