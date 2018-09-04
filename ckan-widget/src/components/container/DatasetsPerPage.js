@@ -15,7 +15,7 @@ export class DatasetsPerPage extends Component {
       <div className="ml-0">
         <div className="input-group">
           <div className="input-group-prepend">
-            <label htmlFor="datasets_per_page" title="Results per page" className="input-group-text"><i className="material-icons">list</i></label>
+            <label htmlFor="datasets_per_page" title="Results per page" className="input-group-text">&#8801;</label>
           </div>
           <select id="datasets_per_page" className="custom-select" value={this.props.rows} onChange={this.handleOnChange}>
             <option value='10'>10</option>

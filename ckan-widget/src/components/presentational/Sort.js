@@ -6,7 +6,7 @@ class Sort extends Component {
       <div className="mr-0">
       <div className="input-group">
         <div className="input-group-prepend">
-            <label htmlFor="order_by" title="Order by" className="input-group-text"><i className="material-icons">sort</i></label>
+            <label htmlFor="order_by" title="Order by" className="input-group-text">&#8645;</label>
         </div>
         <select id="order_by" className="custom-select" value={this.props.sort} onChange={e => this.props.handleSort(e.target.value)}>
           <option value="score desc, metadata_modified desc">Relevance</option>
