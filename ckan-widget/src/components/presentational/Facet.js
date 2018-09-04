@@ -13,9 +13,9 @@ class Facet extends Component {
 
   renderArrow = collapsed => {
     if (collapsed) {
-      return (<p className="material-icons mr-1">&#9662;</p>)
+      return (<p className="material-icons mt-2 mr-1">&#9662;</p>)
     } else {
-      return (<p className="material-icons mr-1">&#9652;</p>)
+      return (<p className="material-icons mt-2 mr-1">&#9652;</p>)
     }
   }
 
@@ -31,8 +31,8 @@ class Facet extends Component {
 
     if (facets.length > 7){
       expandControls.push(
-          <div className="card-footer px-0 py-1" key={9999}>
-              <a className="btn btn-link" onClick={this.expandFacetList}>{ this.renderArrow(this.state.collapsed) }{expandLabel}</a>
+          <div className="card-footer px-0 py-0" key={9999}>
+          <a className="btn btn-link" onClick={this.expandFacetList}>{this.renderArrow(this.state.collapsed)}{expandLabel}</a>
           </div>
       )
     }
