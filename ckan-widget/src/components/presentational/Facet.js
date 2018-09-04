@@ -32,7 +32,7 @@ class Facet extends Component {
     if (facets.length > 7){
       expandControls.push(
           <div className="card-footer px-0 py-0" key={9999}>
-              <a className="btn btn-link" onClick={this.expandFacetList}>{ this.renderArrow(this.state.collapsed) }{expandLabel}</a>
+          <a className="btn btn-link" onClick={this.expandFacetList}>{this.renderArrow(this.state.collapsed)}{expandLabel}</a>
           </div>
       )
     }
