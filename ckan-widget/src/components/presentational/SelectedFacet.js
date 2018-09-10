@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import MaterialIcon from 'material-icons-react';
 
 class SelectedFacet extends Component {
 
@@ -10,7 +11,7 @@ class SelectedFacet extends Component {
       return (
         <li className="list-inline-item btn btn-primary" onClick={e => this.props.onClick(facet)}>
           <span className="mx-2">{name}</span>
-          <p className="material-icons">&#9932;</p>
+          <MaterialIcon icon="close" size="tiny" />
         </li>
       );
     }

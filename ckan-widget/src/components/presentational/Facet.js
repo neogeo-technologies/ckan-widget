@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import MaterialIcon from 'material-icons-react'
 
 class Facet extends Component {
   constructor(props) {
@@ -11,18 +11,11 @@ class Facet extends Component {
     this.setState({ collapsed: !this.state.collapsed })
   }
 
-  renderArrow = collapsed => {
-    if (collapsed) {
-      return (<p className="material-icons mr-1">&#8615;</p>)
-    } else {
-      return (<p className="material-icons mr-1">&#8613;</p>)
-    }
-  }
-
   render() {
     const facets = this.props.facetsInfo;
     const title = this.props.title;
     const collapseClass = this.state.collapsed ? 'collapse' : ''
+    let expandArrow = this.state.collapsed ? 'expand_more' : 'expand_less'
     let expandLabel = this.state.collapsed ? 'Expand' : 'Contract'
 
     let fixedList = []
@@ -32,7 +25,10 @@ class Facet extends Component {
     if (facets.length > 7){
       expandControls.push(
           <div className="card-footer px-0 py-0" key={9999}>
-          <a className="btn btn-link" onClick={this.expandFacetList}>{this.renderArrow(this.state.collapsed)}{expandLabel}</a>
+          <a className="btn btn-link" onClick={this.expandFacetList}>
+              <MaterialIcon icon={expandArrow} color="inherit" size="tiny" />
+              <span className="ml-1">{expandLabel}</span>
+          </a>
           </div>
       )
     }

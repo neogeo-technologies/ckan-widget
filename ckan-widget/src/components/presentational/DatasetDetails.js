@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import MaterialIcon from 'material-icons-react'
 
 class DatasetDetails extends Component {
     renderResources = (resources, datasetName) => {
@@ -53,7 +54,10 @@ class DatasetDetails extends Component {
                         { this.renderResources(resources, name) }
                     </ul>
                 </div>
-                <a className="btn btn-success mb-1" href={`https://trouver.datasud.fr/dataset/${name}`}>View on Datasud.fr</a>
+                <a className="btn btn-success mb-1" href={`https://trouver.datasud.fr/dataset/${name}`}>
+                    <MaterialIcon icon="open_in_new" size="tiny" color="#fff" />
+                    <span className="ml-1">View on Datasud.fr</span>
+                </a>
             </div>
         )
     }

@@ -40,7 +40,7 @@ class SearchBar extends Component{
                         placeholder: 'Search datasets',
                         className: 'form-control form-control-lg border-0'
                     }}
-                    wrapperStyle={{ position: 'relative'}}
+                    wrapperStyle={{ position: 'relative', zIndex: 1 }}
                     value={this.state.value}
                     items={this.state.suggestions}
                     open={( this.state.value.length >= 1 && this.state.isOpen )}

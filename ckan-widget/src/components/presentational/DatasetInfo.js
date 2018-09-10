@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import DatasetDetails from '../presentational/DatasetDetails'
+import MaterialIcon from 'material-icons-react'
 
 
 class DatasetInfo extends Component{
@@ -51,24 +52,17 @@ class DatasetInfo extends Component{
         return null
     }
 
-    renderArrow = collapsed => {
-        if (collapsed) {
-            return (<p className="material-icons">&#8675;</p>)
-        } else {
-            return (<p className="material-icons">&#8673;</p>)
-        }
-    }
-
     render(){
         const { title, notes, metadata_modified, datatype, resources, thumbnail } = this.props
         const datetime = this.formatDate(metadata_modified)
         const formats = this.findFormats(resources)
         const collapseClass = this.state.collapsed ? '' : 'collapsed'
+        const expandArrow = this.state.collapsed ? 'expand_more' : 'expand_less'
 
         return(
             <div className={"card dataset-wrap my-3 " + collapseClass}>
                 <div className="dataset card-body" onClick={this.handleDatasetClick}>
-                    { this.renderArrow(this.state.collapsed) }
+                    <MaterialIcon icon={expandArrow} />
                     <div className="row">
                         { this.renderThumbnail(thumbnail) }
                         <div className="col-lg-9">

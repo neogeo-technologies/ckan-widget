@@ -10,7 +10,7 @@
 .datasets-total {
   float: left;
 }
-.menu { 
+.menu {
   position: absolute;
   width: 100%;
   z-index: 1000;
@@ -20,7 +20,20 @@
 }
 
 .material-icons {
-  display: inline;
+  vertical-align: middle;
+}
+
+.header-icon > .material-icons{
+  position: absolute;
+  top: 26%;
+  left: -4%;
+  opacity: 0.2;
+  line-height: 0.5;
+  z-index: 0;
+}
+
+.header-icon > .material-icons.md-24{
+  font-size: 15rem;
 }
 
 .dataset-wrap.collapsed {
