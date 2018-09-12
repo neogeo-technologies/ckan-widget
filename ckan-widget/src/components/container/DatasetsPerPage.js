@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-
+import MaterialIcon from 'material-icons-react'
 import * as actions from '../../actions'
 
 export class DatasetsPerPage extends Component {
@@ -15,7 +15,9 @@ export class DatasetsPerPage extends Component {
       <div className="ml-0">
         <div className="input-group">
           <div className="input-group-prepend">
-            <label htmlFor="datasets_per_page" title="Results per page" className="input-group-text">&#8801;</label>
+            <label htmlFor="datasets_per_page" title="Results per page" className="input-group-text">
+                <MaterialIcon icon="list" />
+            </label>
           </div>
           <select id="datasets_per_page" className="custom-select" value={this.props.rows} onChange={this.handleOnChange}>
             <option value='10'>10</option>

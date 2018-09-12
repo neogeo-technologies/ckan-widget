@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import './App.css';
-import DatasetSearchBar from './components/container/DatasetSearchBar';
-import DatasetInfoList from './components/container/DatasetInfoList';
-import FacetList from './components/container/FacetList';
-import DatasetSort from './components/container/DatasetSort';
+import React, { Component } from 'react'
+import './App.css'
+import DatasetSearchBar from './components/container/DatasetSearchBar'
+import DatasetInfoList from './components/container/DatasetInfoList'
+import FacetList from './components/container/FacetList'
+import DatasetSort from './components/container/DatasetSort'
 import TotalDatasets from './components/container/TotalDatasets'
 import DatasetsPerPage from './components/container/DatasetsPerPage'
 import Pagination from './components/container/Pagination'
-
+import MaterialIcon from 'material-icons-react'
 
 class App extends Component {
     render() {
@@ -15,11 +15,14 @@ class App extends Component {
 
         return (
         <div className="App">
-            <div className="bg-secondary">
+            <div className="bg-secondary header">
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-lg-10 offset-lg-1">
                             <DatasetSearchBar />
+                            <span className="header-icon">
+                                <MaterialIcon icon="search" color="#fff" />
+                            </span>
                         </div>
                     </div>
                 </div>

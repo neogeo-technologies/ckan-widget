@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import MaterialIcon from 'material-icons-react'
 
 class Error extends Component {
     constructor() {
@@ -16,7 +17,7 @@ class Error extends Component {
                 <div className="my-3 alert alert-warning alert-dismissible" role="alert">
                     <strong>Upps, error!</strong> {this.props.error};
                     <button type="button" className="close" data-dismiss="alert" aria-label="Close" onClick={this.handleClose}>
-                        <span aria-hidden="true">&times;</span>
+                    <MaterialIcon icon="close" size="tiny" color="inherit" />
                     </button>
                 </div>
             )

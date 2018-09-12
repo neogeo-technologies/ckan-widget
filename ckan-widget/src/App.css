@@ -24,7 +24,7 @@
   vertical-align: middle;
 }
 
-.header-icon>.material-icons {
+.header-icon > .material-icons{
   position: absolute;
   top: 26%;
   left: -4%;
@@ -33,7 +33,7 @@
   z-index: 0;
 }
 
-.header-icon>.material-icons.md-24 {
+.header-icon > .material-icons.md-24{
   font-size: 15rem;
 }
 
