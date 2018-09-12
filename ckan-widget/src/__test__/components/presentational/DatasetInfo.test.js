@@ -29,7 +29,7 @@ describe('DatasetInfo', () => {
   });
 
   it('should format data properly', () => {
-    expect(component.instance().formatDate('2018-08-23T07:26:42.122834')).toBe('Thu, 23 Aug 2018 05:26:42 GMT')
+    expect(component.instance().formatDate('2018-08-23T07:26:42.122834')).toBe('Thu, 23 Aug 2018 07:26:42 GMT')
   })
 
   it('should find formats of the resources', () => {
