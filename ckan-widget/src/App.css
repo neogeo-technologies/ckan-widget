@@ -10,7 +10,8 @@
 .datasets-total {
   float: left;
 }
-.menu { 
+
+.menu {
   position: absolute;
   width: 100%;
   z-index: 1000;
@@ -20,18 +21,32 @@
 }
 
 .material-icons {
-  display: inline;
+  vertical-align: middle;
+}
+
+.header-icon>.material-icons {
+  position: absolute;
+  top: 26%;
+  left: -4%;
+  opacity: 0.2;
+  line-height: 0.5;
+  z-index: 0;
+}
+
+.header-icon>.material-icons.md-24 {
+  font-size: 15rem;
 }
 
 .dataset-wrap.collapsed {
   border-color: #007bff;
   border-width: 5px;
 }
+
 .dataset .title {
   margin-right: 2rem;
 }
 
-.dataset > .material-icons {
+.dataset>.material-icons {
   position: absolute;
   right: 15px;
 }
@@ -39,6 +54,51 @@
 .dataset:hover {
   cursor: pointer;
   box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.125);
+}
+
+.list-group-item .type,
+.list-group-item .visibility {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0.5;
+}
+
+@media (max-width: 768px) {
+  .card-footer .list-group-item {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .card-footer .list-group-item .title{
+    padding: 0 !important;
+  }
+  .card-footer .list-group-item .title,
+  .card-footer .list-group-item .date {
+    flex-basis: 100%;
+  }
+
+  .card-footer .list-group-item .date{
+    margin: .5rem 0;
+  }
+
+  .list-group-item .type,
+  .list-group-item .visibility {
+    order: 5;
+    flex: 0;
+    margin-right: .5rem;
+    justify-content: space-between;
+  }
+}
+
+.list-group-item .title {
+  flex: 3;
+}
+
+.list-group-item .date {
+  flex: 1;
 }
 
 .list-group-facet .list-group-item:hover {
