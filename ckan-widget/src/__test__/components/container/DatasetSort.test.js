@@ -39,10 +39,6 @@ describe('DatasetSort', () => {
     expect(DatasetSort).toBeDefined();
   });
 
-  it('should render correctly', () => {
-    expect(component).toMatchSnapshot();
-  });
-
   it('should handle input change', () => {
     component.instance().handleSort('score desc, metadata_modified desc')
     expect(mockPackageSearch.mock.calls.length).toEqual(1);

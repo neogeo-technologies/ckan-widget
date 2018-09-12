@@ -11,7 +11,7 @@ class DatasetDetails extends Component {
                     <span className="type">
                         <span className="badge badge-secondary">{resource.format}</span>
                     </span>
-                    <a className="px-3 title" href={resource.url}>{resource.name}</a>
+                    <a className="px-3 title" href={resource.url} target="_blank">{resource.name}</a>
                     <span className="ml-auto mr-3 date">{this.formatDate(resource.last_modified)}</span>
                     <span className="visibility">
                         <span className="badge badge-pill badge-dark">{restricted.level}</span>
@@ -30,6 +30,7 @@ class DatasetDetails extends Component {
 
     render() {
         const {
+            ckanAPI,
             name,
             notes,
             resources,
@@ -58,7 +59,7 @@ class DatasetDetails extends Component {
                         { this.renderResources(resources, name) }
                     </ul>
                 </div>
-                <a className="btn btn-success mb-1" href={`https://trouver.datasud.fr/dataset/${name}`}>
+                <a className="btn btn-success mb-1" href={`${ckanAPI}/dataset/${name}`} target="_blank">
                     <MaterialIcon icon="open_in_new" size="tiny" color="#fff" />
                     <span className="ml-1">View on Datasud.fr</span>
                 </a>

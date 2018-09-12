@@ -62,10 +62,6 @@ describe('FacetList', () => {
     expect(FacetList).toBeDefined();
   });
 
-  it('should render correctly', () => {
-    expect(component).toMatchSnapshot();
-  });
-
   it('should handle onClick event', () => {
     component.instance().onClick('data')
     expect(mockPackageSearch.mock.calls.length).toEqual(1);

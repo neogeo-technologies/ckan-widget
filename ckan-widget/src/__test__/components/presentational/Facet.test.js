@@ -33,10 +33,6 @@ describe('Facet', () => {
     expect(Facet).toBeDefined();
   });
 
-  it('should render correctly', () => {
-    expect(component).toMatchSnapshot();
-  });
-
   it('should receive props', () => {
     expect(component.instance().props.facetKey).toBe('key')
     expect(component.instance().props.title).toBe('Facet title')

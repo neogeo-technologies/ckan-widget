@@ -42,10 +42,6 @@ describe('DatasetSearchBar', () => {
     expect(DatasetSearchBar).toBeDefined();
   });
 
-  it('should render correctly', () => {
-    expect(component).toMatchSnapshot();
-  });
-
   it('should handle input change', () => {
     component.instance().handleInputChange(null, 'S')
     expect(mockPackageSearch.mock.calls.length).toEqual(1);

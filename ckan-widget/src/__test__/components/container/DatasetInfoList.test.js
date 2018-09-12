@@ -57,10 +57,6 @@ describe('DatasetInfoList', () => {
     expect(DatasetInfoList).toBeDefined();
   });
 
-  it('should render correctly', () => {
-    expect(component).toMatchSnapshot();
-  });
-
   it('should call packageSearch', () => {
     expect(mockPackageSearch.mock.calls.length).toEqual(1);
   })

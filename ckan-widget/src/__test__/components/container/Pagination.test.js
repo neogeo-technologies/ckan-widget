@@ -39,10 +39,6 @@ describe('Pagination', () => {
     expect(Pagination).toBeDefined();
   });
 
-  it('should render correctly', () => {
-    expect(component).toMatchSnapshot();
-  });
-
   it('should handle click', () => {
     component.instance().handlePagination(1)
     expect(mockPackageSearch.mock.calls.length).toEqual(1);

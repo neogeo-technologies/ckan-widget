@@ -103,17 +103,20 @@ export class DatasetInfoList extends Component{
 
         if (tags.length > 0) {
             reRender = true
+            let tags_query = ''
             tags.forEach((name, i) => {
-                if (q === '') {
-                    q = `tags:${name}`
+                if (tags_query === '') {
+                    tags_query = `"${name}"`
                 } else {
-                    if (i === 0) {
-                        q = `${q} AND tags:${name}`
-                    } else {
-                        q = `${q} OR ${name}`
-                    }
+                    tags_query = `${tags_query} AND "${name}"`
                 }
             })
+
+            if (q === '') {
+                q = `tags:${tags_query}`
+            } else {
+                q = `${q} AND tags:${tags_query}`
+            }
         }
 
         if (firstCall && reRender) {
@@ -122,7 +125,7 @@ export class DatasetInfoList extends Component{
     }
 
     render(){
-        const { datasets, error, thumbnailsDisplay } = this.props
+        const { ckanAPI, datasets, error, thumbnailsDisplay } = this.props
 
         if (error) {
             return(
@@ -131,7 +134,7 @@ export class DatasetInfoList extends Component{
         }
 
         let components = datasets.map((dataset, i) => {
-            return <DatasetInfo thumbnailsDisplay={thumbnailsDisplay} {...dataset} key={i} />
+            return <DatasetInfo ckanAPI={ckanAPI} thumbnailsDisplay={thumbnailsDisplay} {...dataset} key={i} />
         });
 
         return components
