@@ -15,10 +15,6 @@ describe('Error', () => {
     expect(Error).toBeDefined();
   });
 
-  it('should render correctly', () => {
-    expect(component).toMatchSnapshot();
-  });
-
   it('should be shown at the begging', () => {
     expect(component.find('div.alert').length).toEqual(1);
   })

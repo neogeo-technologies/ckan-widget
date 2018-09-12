@@ -21,10 +21,6 @@ describe('DatasetInfo', () => {
     expect(DatasetInfo).toBeDefined();
   });
 
-  it('should render correctly', () => {
-    expect(component).toMatchSnapshot();
-  });
-
   it('should receive props', () => {
     expect(component.instance().props.title).toBe('Dataset title')
     expect(component.instance().props.notes).toBe('Describe dataset')

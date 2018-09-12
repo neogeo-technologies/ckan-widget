@@ -31,10 +31,6 @@ describe('SearchBar', () => {
     expect(SearchBar).toBeDefined();
   });
 
-  it('should render correctly', () => {
-    expect(component).toMatchSnapshot();
-  });
-
   it('should submit form', () => {
     const form = component.find('form')
     form.simulate('submit')

@@ -39,10 +39,6 @@ describe('DatasetsPerPage', () => {
     expect(DatasetsPerPage).toBeDefined();
   });
 
-  it('should render correctly', () => {
-    expect(component).toMatchSnapshot();
-  });
-
   it('should handle input change', () => {
     component.instance().handleOnChange({ target: {value: 25} })
     expect(mockPackageSearch.mock.calls.length).toEqual(1);

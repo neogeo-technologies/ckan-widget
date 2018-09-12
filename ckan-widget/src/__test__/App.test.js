@@ -23,7 +23,5 @@ describe('App', () => {
     const component = shallow(
       <App config={config} />
     );
-
-    expect(component).toMatchSnapshot();
   });
 });

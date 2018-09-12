@@ -21,11 +21,6 @@ describe('Sort', () => {
     expect(SelectedFacet).toBeDefined();
   });
 
-  it('should render correctly', () => {
-    expect(component.instance().props.facet).toBe('organization:org1')
-    expect(component).toMatchSnapshot();
-  });
-
   it('should handle button click', () => {
     const buttonElement = component.find('li')
     buttonElement.simulate('click', { target: { value: 'event' }})

@@ -17,11 +17,6 @@ describe('Sort', () => {
     expect(Sort).toBeDefined();
   });
 
-  it('should render correctly', () => {
-    expect(component.instance().props.sort).toBe('score desc, metadata_modified desc')
-    expect(component).toMatchSnapshot();
-  });
-
   it('should handle change correctly', () => {
     const selectElement = component.find('select')
     selectElement.simulate('change', {target: {value: 25}})

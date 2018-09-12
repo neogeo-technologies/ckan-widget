@@ -35,8 +35,4 @@ describe('TotalDatasets', () => {
   it('should be defined', () => {
     expect(TotalDatasets).toBeDefined();
   });
-
-  it('should render correctly', () => {
-    expect(component).toMatchSnapshot();
-  });
 })
