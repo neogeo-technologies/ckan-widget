@@ -72,15 +72,16 @@
     align-items: flex-start;
   }
 
-  .card-footer .list-group-item .title{
+  .card-footer .list-group-item .title {
     padding: 0 !important;
   }
+
   .card-footer .list-group-item .title,
   .card-footer .list-group-item .date {
     flex-basis: 100%;
   }
 
-  .card-footer .list-group-item .date{
+  .card-footer .list-group-item .date {
     margin: .5rem 0;
   }
 
