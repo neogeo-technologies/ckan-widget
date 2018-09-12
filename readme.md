@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/keitaroinc/ckan-widget.svg?branch=master)](https://travis-ci.org/keitaroinc/ckan-widget)
-[![Coverage Status](https://coveralls.io/repos/github/keitaroinc/ckan-widget/badge.svg?branch=master)](https://coveralls.io/github/keitaroinc/ckan-widget?branch=master)
+[![Build Status](https://travis-ci.org/neogeo-technologies/ckan-widget.svg?branch=master)](https://travis-ci.org/neogeo-technologies/ckan-widget)
+[![Coverage Status](https://coveralls.io/repos/github/neogeo-technologies/ckan-widget/badge.svg?branch=master)](https://coveralls.io/github/neogeo-technologies/ckan-widget?branch=master)
 
 # Ckan Widget
 
