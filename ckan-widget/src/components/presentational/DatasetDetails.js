@@ -7,11 +7,15 @@ class DatasetDetails extends Component {
         resources.forEach((resource, i) => {
             let restricted = resource.restricted ? JSON.parse(resource.restricted) : 'N/A'
             items.push(
-                <li className="list-group-item d-flex align-items-center" key={i}>
-                    <span className="badge badge-secondary">{resource.format}</span>
-                    <a className="px-3" href={resource.url}>{resource.name}</a>
-                    <span className="ml-auto mr-3">{this.formatDate(resource.last_modified)}</span>
-                    <span className="badge badge-pill badge-dark">{restricted.level}</span>
+                <li className="list-group-item d-flex flex-wrap align-items-center" key={i}>
+                    <span className="type">
+                        <span className="badge badge-secondary">{resource.format}</span>
+                    </span>
+                    <a className="px-3 title" href={resource.url}>{resource.name}</a>
+                    <span className="ml-auto mr-3 date">{this.formatDate(resource.last_modified)}</span>
+                    <span className="visibility">
+                        <span className="badge badge-pill badge-dark">{restricted.level}</span>
+                    </span>
                 </li>
             )
         })
