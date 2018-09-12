@@ -5,7 +5,11 @@ class SelectedFacet extends Component {
 
   render() {
     const { facet } = this.props
-    const name = facet.split(':')[1]
+    let name = facet.split(':')[1]
+
+    if (name !== undefined) {
+      name = name.replace(/\"/g, "")
+    }
 
     if (facet !== ''){
       return (
