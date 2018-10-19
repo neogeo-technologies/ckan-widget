@@ -1,9 +1,6 @@
 import {
   PACKAGE_SEARCH,
-  ERROR,
-  ADD_ORG,
-  ADD_GROUP,
-  ADD_TAG
+  ERROR
 } from '../actions/types';
 
 const INITIAL_STATE = {

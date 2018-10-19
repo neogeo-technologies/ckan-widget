@@ -44,10 +44,12 @@ export class FacetList extends Component {
         const title = FACETS_TITLE[key]
         let facetsInfo = facets[key]
 
-        if (facetDisplay === undefined) {
-          facetsList.push(<Facet title={title} key={key} facetsInfo={facetsInfo.items} facetKey={key} onClick={this.onClick} />)
-        } else if (facetDisplay.includes(key)) {
-          facetsList.push(<Facet title={title} key={key} facetsInfo={facetsInfo.items} facetKey={key} onClick={this.onClick} />)
+        if (facetsInfo.items.length > 0) {
+          if (facetDisplay === undefined) {
+            facetsList.push(<Facet title={title} key={key} facetsInfo={facetsInfo.items} facetKey={key} onClick={this.onClick} />)
+          } else if (facetDisplay.includes(key)) {
+            facetsList.push(<Facet title={title} key={key} facetsInfo={facetsInfo.items} facetKey={key} onClick={this.onClick} />)
+          }
         }
       }
     }
