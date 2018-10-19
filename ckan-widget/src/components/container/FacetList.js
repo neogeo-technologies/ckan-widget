@@ -21,14 +21,15 @@ export class FacetList extends Component {
     const { rows, sort, search, facet_search, ckanAPI } = this.props;
 
     let fparams = '';
+    const fqValues = selectedFacet.split(':')
     if(facet_search){
         if(facet_search.includes(selectedFacet)){
             fparams = facet_search;
         }else{
-            fparams = facet_search + '+' + selectedFacet;
+          fparams = `${facet_search}+${fqValues[0]}:"${fqValues[1]}"`
         }
     }else{
-        fparams = selectedFacet;
+      fparams = `${fqValues[0]}:"${fqValues[1]}"`;
     }
 
     this.props.packageSearch({ ckanAPI: ckanAPI, fq: fparams, rows: rows, sort: sort, q: search })
