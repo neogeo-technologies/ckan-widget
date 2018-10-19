@@ -8,7 +8,7 @@ class SelectedFacet extends Component {
     let name = facet.split(':')[1]
 
     if (name !== undefined) {
-      name = name.replace(/\"/g, "")
+      name = name.replace(/"/g, "")
     }
 
     if (facet !== ''){
