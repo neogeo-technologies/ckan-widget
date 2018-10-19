@@ -17,9 +17,6 @@ const INITIAL_STATE = {
   sort: 'score desc, metadata_modified desc',
   error: '',
   facet_search: '',
-  organizations: [],
-  groups: [],
-  tags: [],
   firstCall: false
 };
 
@@ -39,21 +36,6 @@ export default function (state = INITIAL_STATE, action) {
         ckanAPI: action.ckanAPI,
         firstCall: action.firstCall
       };
-    case ADD_ORG:
-      return {
-        ...state,
-        organizations: [...state.organizations, action.payload.result.name]
-      };
-    case ADD_GROUP:
-      return {
-        ...state,
-        groups: [...state.groups, action.payload.result.name]
-      };
-     case ADD_TAG:
-      return {
-        ...state,
-        tags: [...state.tags, action.payload.result.name]
-      }
     case ERROR:
       return { ...state, error: action.payload };
     default:
