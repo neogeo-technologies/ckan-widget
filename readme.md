@@ -139,10 +139,10 @@ var config = {
 Configuration properties:
 
 * **ckan-api**: Ckan API URL. Default to the `trouver.datasud.fr` one.
-* **ckan-organizations**: CKAN Organizations IDs to be retrieved. Default to All. Else, comma separated list of Organizations IDs.
-* **ckan-groups**: CKAN Groups IDs to be retrieved. Default to All. Else, comma separated list of Groups IDs.
+* **ckan-organizations**: CKAN Organizations names to be retrieved. Default to All. Else, comma separated list of Organizations IDs.
+* **ckan-groups**: CKAN Groups names to be retrieved. Default to All. Else, comma separated list of Groups IDs.
 * **ckan-facets**: key-values pair to be used to filter on the facets.
-* **ckan-tags**: CKAN Tags IDs to be retrieved. Default to All. Else, comma separated list of Tags IDs.
+* **ckan-tags**: CKAN Tags names to be retrieved. Default to All. Else, comma separated list of Tags IDs.
 * **facet-display**: list of the facets to be displayed in the widget. Default to all. Else, comma separated list of facets names.
 * **data-sort**: sorting mode to be used. Same than the CKAN ones (popularity, relevance, last_modified, alpha…). Default to `score desc, metadata_modified desc`.
 * **result-page-size**: number of results per page(10, 25, 50, 100). Default to `10`. Max to `100`.

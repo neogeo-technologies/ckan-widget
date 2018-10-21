@@ -13,18 +13,18 @@ const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 const store = createStoreWithMiddleware(reducers);
 
 // Configuration for running Widget locally for testing purposes
-var localConfig = {
+// var localConfig = {
 //   ckan_api: 'https://ckan-api.com',
-  ckan_organizations: ['ville-de-martigues'],
-//   ckan_groups: ['id'],
-//   ckan_tags: ['id'],
+//   ckan_organizations: ['name'],
+//   ckan_groups: ['name'],
+//   ckan_tags: ['name'],
 //   ckan_facets: {
 //     res_format: 'HTML'
 //   },
 //   data_sort: 'title_string asc',
 //   result_page_size: 25,
 //   thumbnails_display: false
-}
+// }
 
 class CKANWidget {
   constructor() {
@@ -70,7 +70,7 @@ const instance = new CKANWidget();
 export { instance as ckanWidget };
 
 // Run the Widget locally for testing purposes
-instance.init(localConfig)
+// instance.init(localConfig)
 // instance.init()
 
 registerServiceWorker();
