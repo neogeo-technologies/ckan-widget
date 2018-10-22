@@ -15,9 +15,9 @@ const store = createStoreWithMiddleware(reducers);
 // Configuration for running Widget locally for testing purposes
 // var localConfig = {
 //   ckan_api: 'https://ckan-api.com',
-//   ckan_organizations: ['id'],
-//   ckan_groups: ['id'],
-//   ckan_tags: ['id'],
+//   ckan_organizations: ['name'],
+//   ckan_groups: ['name'],
+//   ckan_tags: ['name'],
 //   ckan_facets: {
 //     res_format: 'HTML'
 //   },
@@ -35,9 +35,9 @@ class CKANWidget {
 
   init = ({
     ckan_api = 'https://trouver.datasud.fr',
-    ckan_organizations = undefined,
-    ckan_groups = undefined,
-    ckan_tags = undefined,
+    ckan_organizations = ['ville-de-marseille'],
+    ckan_groups = [],
+    ckan_tags = [],
     ckan_facets = undefined,
     facet_display = undefined,
     data_sort = 'score desc, metadata_modified desc',
@@ -71,6 +71,6 @@ export { instance as ckanWidget };
 
 // Run the Widget locally for testing purposes
 // instance.init(localConfig)
-// instance.init()
+instance.init()
 
 registerServiceWorker();

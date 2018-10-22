@@ -6,14 +6,14 @@ import * as actions from "../../actions";
 
 //Default ckan facets
 const FACETS_TITLE = {
-  organization: 'Organizations',
-  groups: 'Groups',
+  organization: 'Organisations',
+  groups: 'Groupes',
   datatype: 'Types',
   support: 'Support',
   res_format: 'Formats',
-  license_id: 'Licenses',
+  license_id: 'Licences',
   tags: 'Tags',
-  update_frequency: 'Update frequency'
+  update_frequency: 'Fréquence de mise-à-jour'
 };
 
 export class FacetList extends Component {
@@ -44,10 +44,12 @@ export class FacetList extends Component {
         const title = FACETS_TITLE[key]
         let facetsInfo = facets[key]
 
-        if (facetDisplay === undefined) {
-          facetsList.push(<Facet title={title} key={key} facetsInfo={facetsInfo.items} facetKey={key} onClick={this.onClick} />)
-        } else if (facetDisplay.includes(key)) {
-          facetsList.push(<Facet title={title} key={key} facetsInfo={facetsInfo.items} facetKey={key} onClick={this.onClick} />)
+        if (facetsInfo.items.length > 0) {
+          if (facetDisplay === undefined) {
+            facetsList.push(<Facet title={title} key={key} facetsInfo={facetsInfo.items} facetKey={key} onClick={this.onClick} />)
+          } else if (facetDisplay.includes(key)) {
+            facetsList.push(<Facet title={title} key={key} facetsInfo={facetsInfo.items} facetKey={key} onClick={this.onClick} />)
+          }
         }
       }
     }

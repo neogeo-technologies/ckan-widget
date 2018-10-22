@@ -14,9 +14,6 @@ const initialState = {
     search: "",
     sort: "score desc, metadata_modified desc",
     total: 0,
-    organizations: [],
-    groups: [],
-    tags: [],
     firstCall: false
   }
 };

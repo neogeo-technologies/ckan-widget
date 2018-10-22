@@ -16,7 +16,7 @@ class Facet extends Component {
     const title = this.props.title;
     const collapseClass = this.state.collapsed ? 'collapse' : ''
     let expandArrow = this.state.collapsed ? 'expand_more' : 'expand_less'
-    let expandLabel = this.state.collapsed ? 'Expand' : 'Contract'
+    let expandLabel = this.state.collapsed ? 'Voir plus' : 'Voir moins'
 
     let fixedList = []
     let expandableList = []

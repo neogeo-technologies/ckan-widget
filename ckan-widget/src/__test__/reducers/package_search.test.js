@@ -15,9 +15,6 @@ describe('Test package search redicer', () => {
       sort: 'score desc, metadata_modified desc',
       error: '',
       facet_search: '',
-      organizations: [],
-      groups: [],
-      tags: [],
       firstCall: false
     }
 
@@ -41,9 +38,6 @@ describe('Test package search redicer', () => {
       sort: 'score desc, metadata_modified desc',
       error: 'Network error!',
       facet_search: '',
-      organizations: [],
-      groups: [],
-      tags: [],
       firstCall: false
     }
 
@@ -84,103 +78,10 @@ describe('Test package search redicer', () => {
       sort: 'score desc, metadata_modified desc',
       error: '',
       facet_search: 'organization:org1',
-      organizations: [],
-      groups: [],
-      tags: [],
       firstCall: true
     }
 
     expect(packageSearch(undefined, action)).toEqual(newState);
-  })
-
-  it('test add organization', () => {
-    const action = {
-      type: ADD_ORG,
-      payload: {
-        result: {
-          name: 'OrgName'
-        }
-      }
-    }
-
-    const newState = {
-      ckanAPI: 'https://trouver.datasud.fr',
-      datasets: [],
-      search: '',
-      rows: 10,
-      facets: [],
-      total: 0,
-      page: 0,
-      sort: 'score desc, metadata_modified desc',
-      error: '',
-      facet_search: '',
-      organizations: ['OrgName'],
-      groups: [],
-      tags: [],
-      firstCall: false
-    }
-
-    expect(packageSearch(undefined, action)).toEqual(newState)
-  })
-
-  it('test add group', () => {
-    const action = {
-      type: ADD_GROUP,
-      payload: {
-        result: {
-          name: 'GroupName'
-        }
-      }
-    }
-
-    const newState = {
-      ckanAPI: 'https://trouver.datasud.fr',
-      datasets: [],
-      search: '',
-      rows: 10,
-      facets: [],
-      total: 0,
-      page: 0,
-      sort: 'score desc, metadata_modified desc',
-      error: '',
-      facet_search: '',
-      organizations: [],
-      groups: ['GroupName'],
-      tags: [],
-      firstCall: false
-    }
-
-    expect(packageSearch(undefined, action)).toEqual(newState)
-  })
-
-  it('test add tag', () => {
-    const action = {
-      type: ADD_TAG,
-      payload: {
-        result: {
-          name: 'TagName'
-        }
-      }
-    }
-
-    const newState = {
-      ckanAPI: 'https://trouver.datasud.fr',
-      datasets: [],
-      search: '',
-      rows: 10,
-      facets: [],
-      total: 0,
-      page: 0,
-      sort: 'score desc, metadata_modified desc',
-      error: '',
-      facet_search: '',
-      organizations: [],
-      groups: [],
-      tags: ['TagName'],
-      firstCall: false
-    }
-
-    expect(packageSearch(undefined, action)).toEqual(newState)
   })
 });
 

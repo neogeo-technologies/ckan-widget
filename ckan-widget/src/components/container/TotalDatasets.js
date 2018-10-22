@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 export class TotalDatasets extends Component {
   render() {
     const { total } = this.props;
-    const resultName = (total === 1) ? 'result' : 'results';
+    const resultName = (total <= 1) ? 'résultat' : 'résultats';
 
     return (
       <div className="">

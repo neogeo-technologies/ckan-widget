@@ -37,9 +37,9 @@ describe('DatasetInfoList', () => {
         ckanAPI={'https://demo.org/'}
         datasets={[{ name: 'dataset1' }]}
         packageSearch={mockPackageSearch}
-        organization_ids={['id1']}
-        group_ids={['id1']}
-        tag_ids={['id1']}
+        organizations={['org1']}
+        groups={['group1']}
+        tags={['tag1']}
         ckanFacets={{
           res_format: 'HTML'
         }}
@@ -59,14 +59,5 @@ describe('DatasetInfoList', () => {
 
   it('should call packageSearch', () => {
     expect(mockPackageSearch.mock.calls.length).toEqual(1);
-  })
-
-  it('should call componentWillReceiveProps', () => {
-    const organizations = ['org1']
-    const groups = ['group1']
-    const tags = ['tag1']
-    const firstCall = true
-    component.setProps({ organizations, groups, tags, firstCall })
-    expect(mockPackageSearch.mock.calls.length).toEqual(2);
   })
 })

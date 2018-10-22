@@ -20,8 +20,8 @@ export class Pagination extends Component {
     if (pageCount > 1) {
       return (
         <ReactPaginate
-          previousLabel="Previous"
-          nextLabel="Next"
+          previousLabel="Précédent"
+          nextLabel="Suivant"
           breakLabel={<a role="button" className="page-link">...</a>}
           breakClassName="page-item disabled"
           forcePage={page}
