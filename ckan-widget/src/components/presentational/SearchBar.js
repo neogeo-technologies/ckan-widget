@@ -37,7 +37,7 @@ class SearchBar extends Component{
                 <Autocomplete
                     inputProps={{
                         id: 'datasets-autocomplete',
-                        placeholder: 'Search datasets',
+                        placeholder: 'Rechercher...',
                         className: 'form-control form-control-lg border-0'
                     }}
                     wrapperStyle={{ position: 'relative', zIndex: 1 }}
