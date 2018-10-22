@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './App.css'
 import DatasetSearchBar from './components/container/DatasetSearchBar'
 import DatasetInfoList from './components/container/DatasetInfoList'
 import FacetList from './components/container/FacetList'
