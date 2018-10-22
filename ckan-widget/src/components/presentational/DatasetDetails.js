@@ -48,10 +48,10 @@ class DatasetDetails extends Component {
                 <p className="lead">{notes}</p>
                 <hr/>
                 <ul className="text-muted list-inline">
-                    <li className="list-inline-item"><strong>Created on:</strong> {dataset_creation_date}</li>
-                    <li className="list-inline-item"><strong>Publication date:</strong> {dataset_publication_date}</li>
-                    <li className="list-inline-item"><strong>Modification date:</strong> {dataset_modification_date}</li>
-                    <li className="list-inline-item"><strong>Organization:</strong> {orgName}</li>
+                    <li className="list-inline-item"><strong>Créé le :</strong> {dataset_creation_date}</li>
+                    <li className="list-inline-item"><strong>Publié le :</strong> {dataset_publication_date}</li>
+                    <li className="list-inline-item"><strong>Modifié le :</strong> {dataset_modification_date}</li>
+                    <li className="list-inline-item"><strong>Organisation:</strong> {orgName}</li>
                 </ul>
                 <div className="my-4">
                     <h3>Resources</h3>
@@ -61,7 +61,7 @@ class DatasetDetails extends Component {
                 </div>
                 <a className="btn btn-success mb-1" href={`${ckanAPI}/dataset/${name}`} target="_blank">
                     <MaterialIcon icon="open_in_new" size="tiny" color="#fff" />
-                    <span className="ml-1">View on Datasud.fr</span>
+                    <span className="ml-1">Voir sur Datasud.fr</span>
                 </a>
             </div>
         )

@@ -69,12 +69,12 @@ class DatasetInfo extends Component{
                             <h4 className="title text-primary">{title}</h4>
                             <p className="text-muted">{notes && notes.length > 130 ? `${notes.substring(0, 130)}...` : notes}</p>
                             <ul className="list-unstyled">
-                                <li><strong>Modified:</strong> {datetime}</li>
+                                <li><strong>Modifié le :</strong> {datetime}</li>
                                 <li>
                                     <strong>Formats:</strong> {formats.length > 0 ? formats : 'N/A'}
                                 </li>
                                 <li>
-                                    <strong>Datatype:</strong> {datatype !== undefined && datatype.length > 0 ? datatype.join(', ') : 'N/A'}
+                                    <strong>Type :</strong> {datatype !== undefined && datatype.length > 0 ? datatype.join(', ') : 'N/A'}
                                 </li>
                             </ul>
                         </div>
