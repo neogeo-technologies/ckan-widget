@@ -47,6 +47,7 @@ Full code of build/index.html file:
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
+    <link href="./app.css" rel="stylesheet">
     <link rel="manifest" href="./manifest.json">
     <link rel="shortcut icon" href="./favicon.ico">
 
@@ -70,12 +71,13 @@ Full code of build/index.html file:
 
 ### Integrate in HTML Page/Web App
 
-To integrate the Widget in HTML page/Web App, take the JS and CSS files located at `build/static/js` and `build/static/css` and put wherever is suitable for the App/Page. Then import the files in the Page. The format of the file names is `main.id.js` and `main.id.css`. Also, you can rename the files if necessary. HTML page example:
+To integrate the Widget in HTML page/Web App, take the JS and CSS files located at `build/static/js`, `build/static/css` and `public/app.css` and put wherever is suitable for the App/Page. Then import the files in the Page. The format of the minified file names is `main.id.js` and `main.id.css`. Also, you can rename the files if necessary. Using the `public/app.css` you can change the style of the Widget. HTML page example:
 ```
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
+    <link href="./app.css" rel="stylesheet">
     <link href="./static/css/main.e0c20ecf.css" rel="stylesheet">
     <title>Page Title</title>
   </head>
@@ -107,6 +109,16 @@ To integrate the Widget in HTML page/Web App, take the JS and CSS files located 
 ```
 There must be `<div id="ckan-widget"></div>` because the Widget looking for `div` element with id `ckan-widget`.
 This example shows how you can pass configurations parameters.
+
+### Change the default style
+The `public/app.css` file contains the default style of the Widget. You can change/override the predefined style by changing this file.
+In order to change the color of the Dataset's title put the following style in the `public/app.css` along with the rest css:
+
+```css
+h4.title {
+  color: rgb(194, 24, 185) !important
+}
+```
 
 ### Widget configuration
 The Widget loads the configuration that is passed to the `init` function at start up. If configuration is not passed to the `init` function then, it starts with the default one. Here's an example of configuration object:

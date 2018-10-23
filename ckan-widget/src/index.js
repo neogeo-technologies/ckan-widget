@@ -35,7 +35,7 @@ class CKANWidget {
 
   init = ({
     ckan_api = 'https://trouver.datasud.fr',
-    ckan_organizations = ['ville-de-marseille'],
+    ckan_organizations = [],
     ckan_groups = [],
     ckan_tags = [],
     ckan_facets = undefined,
@@ -71,6 +71,6 @@ export { instance as ckanWidget };
 
 // Run the Widget locally for testing purposes
 // instance.init(localConfig)
-instance.init()
+// instance.init()
 
 registerServiceWorker();
