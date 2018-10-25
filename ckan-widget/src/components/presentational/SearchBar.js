@@ -58,8 +58,8 @@ class SearchBar extends Component{
                         </div>
                     )}
                     renderItem={(item, isHighlighted) => (
-                        <div className={`list-group-item list-group-item-light ${isHighlighted ? 'active' : ''}`} key={item.match_displayed}>
-                            {item.match_displayed}
+                        <div className={`list-group-item list-group-item-light ${isHighlighted ? 'active' : ''}`} key={item.title}>
+                            {item.title}
                         </div>
                     )}
                 />
