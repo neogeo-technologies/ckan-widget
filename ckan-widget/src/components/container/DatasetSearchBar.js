@@ -24,7 +24,7 @@ export class DatasetSearchBar extends Component{
     const fq = facet_search
     let q = ''
 
-    if (organizations !== undefined) {
+    if (organizations.length > 0) {
       organizations.forEach((name, i) => {
         if (q === '') {
           q = `organization:${name}`
@@ -38,7 +38,7 @@ export class DatasetSearchBar extends Component{
       })
     }
 
-    if (groups !== undefined) {
+    if (groups.length > 0) {
       groups.forEach((name, i) => {
         if (q === '') {
           q = `groups:${name}`
@@ -52,29 +52,32 @@ export class DatasetSearchBar extends Component{
       })
     }
 
-    if (tags !== undefined) {
+    if (tags.length > 0) {
+      let tags_query = ''
       tags.forEach((name, i) => {
-        if (q === '') {
-          q = `tags:${name}`
+        if (tags_query === '') {
+          tags_query = `"${name}"`
         } else {
-          if (i === 0) {
-            q = `${q} AND tags:${name}`
-          } else {
-            q = `${q} OR ${name}`
-          }
+          tags_query = `${tags_query} AND "${name}"`
         }
       })
+
+      if (q === '') {
+        q = `tags:${tags_query}`
+      } else {
+        q = `${q} AND tags:${tags_query}`
+      }
     }
 
     if (value !== '') {
       if (q === '') {
         q = value
       } else {
-        q = `${q} AND ${value}`
+        q = `${value} AND ${q}`
       }
     }
 
-    this.props.packageSearch({ ckanAPI, q, rows, sort, fq })
+    this.props.packageSearch({ ckanAPI, q, rows, sort, fq, organizations, groups, tags })
   }
 
   render(){
@@ -83,7 +86,10 @@ export class DatasetSearchBar extends Component{
       sort,
       rows,
       facet_search,
-      ckanAPI
+      ckanAPI,
+      organizations,
+      groups,
+      tags
     } = this.props
 
     return(
@@ -96,6 +102,9 @@ export class DatasetSearchBar extends Component{
                       search={search}
                       sort={sort}
                       rows={rows}
+                      organizations={organizations}
+                      groups={groups}
+                      tags={tags}
                       selected_facets={facet_search} />
                 </ul>
             </div>

@@ -7,13 +7,31 @@ import * as actions from '../../actions'
 export class SelectedFacetList extends Component {
 
   onClick = facet => {
-    const { search, sort, rows, selected_facets, ckanAPI } = this.props
+    const {
+      search,
+      sort,
+      rows,
+      selected_facets,
+      ckanAPI,
+      organizations,
+      groups,
+      tags
+    } = this.props
 
     let newFacetQuery = selected_facets.replace(`${facet}+`, '')
     newFacetQuery = newFacetQuery.replace(`+${facet}`, '')
     newFacetQuery = newFacetQuery.replace(facet, '')
 
-    this.props.packageSearch({ ckanAPI: ckanAPI, q: search, rows: rows, sort: sort, fq: newFacetQuery })
+    this.props.packageSearch({
+      ckanAPI: ckanAPI,
+      q: search,
+      rows: rows,
+      sort: sort,
+      fq: newFacetQuery,
+      organizations: organizations,
+      groups: groups,
+      tags: tags
+    })
   };
 
   render() {

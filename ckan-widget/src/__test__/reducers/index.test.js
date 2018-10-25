@@ -6,6 +6,9 @@ const initialState = {
   packageSearch: {
     ckanAPI: 'https://trouver.datasud.fr',
     datasets: [],
+    organizations: [],
+    groups: [],
+    tags: [],
     error: "",
     facet_search: "",
     facets: [],

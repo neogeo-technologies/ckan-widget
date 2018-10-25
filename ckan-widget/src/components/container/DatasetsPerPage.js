@@ -5,9 +5,25 @@ import * as actions from '../../actions'
 
 export class DatasetsPerPage extends Component {
   handleOnChange = e => {
-    const { search, sort, facet_search, ckanAPI } = this.props
+    const {
+      search,
+      sort,
+      facet_search,
+      ckanAPI,
+      organizations,
+      groups,
+      tags
+    } = this.props
 
-    this.props.packageSearch({ ckanAPI: ckanAPI, q: search, sort: sort, rows: e.target.value, fq: facet_search })
+    this.props.packageSearch({ ckanAPI: ckanAPI,
+      q: search,
+      sort: sort,
+      rows: e.target.value,
+      fq: facet_search,
+      organizations: organizations,
+      groups: groups,
+      tags: tags
+     })
   }
 
   render() {
@@ -37,7 +53,10 @@ const mapStateToProps = state => {
     sort: state.packageSearch.sort,
     facet_search: state.packageSearch.facet_search,
     rows: state.packageSearch.rows,
-    ckanAPI: state.packageSearch.ckanAPI
+    ckanAPI: state.packageSearch.ckanAPI,
+    organizations: state.packageSearch.organizations,
+    groups: state.packageSearch.groups,
+    tags: state.packageSearch.tags
   }
 }
 

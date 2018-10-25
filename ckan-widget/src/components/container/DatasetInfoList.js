@@ -80,7 +80,17 @@ export class DatasetInfoList extends Component{
 
         // Remove trailing slash
         ckanAPI = ckanAPI.replace(/\/$/, '')
-        this.props.packageSearch({ ckanAPI: ckanAPI, rows: resultPageSize, sort: dataSort, fq: fq, q: q, firstCall: true })
+        this.props.packageSearch({
+            ckanAPI: ckanAPI,
+            rows: resultPageSize,
+            sort: dataSort,
+            fq: fq,
+            q: q,
+            firstCall: true,
+            organizations: organizations,
+            groups: groups,
+            tags: tags
+        })
     }
 
     render(){

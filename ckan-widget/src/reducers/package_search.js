@@ -6,6 +6,9 @@ import {
 const INITIAL_STATE = {
   ckanAPI: 'https://trouver.datasud.fr',
   datasets: [],
+  organizations: [],
+  groups: [],
+  tags: [],
   search: '',
   rows: 10,
   facets: [],
@@ -31,7 +34,10 @@ export default function (state = INITIAL_STATE, action) {
         sort: action.sort,
         facet_search: action.facet_search,
         ckanAPI: action.ckanAPI,
-        firstCall: action.firstCall
+        firstCall: action.firstCall,
+        organizations: action.organizations,
+        groups: action.groups,
+        tags: action.tags
       };
     case ERROR:
       return { ...state, error: action.payload };
