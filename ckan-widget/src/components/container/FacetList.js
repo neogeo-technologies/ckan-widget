@@ -18,7 +18,16 @@ const FACETS_TITLE = {
 
 export class FacetList extends Component {
   onClick = ( selectedFacet, facetName) => {
-    const { rows, sort, search, facet_search, ckanAPI } = this.props;
+    const {
+      rows,
+      sort,
+      search,
+      facet_search,
+      ckanAPI,
+      organizations,
+      groups,
+      tags
+    } = this.props;
 
     let fparams = '';
     const fqValues = selectedFacet.split(':')
@@ -32,7 +41,16 @@ export class FacetList extends Component {
       fparams = `${fqValues[0]}:"${fqValues[1]}"`;
     }
 
-    this.props.packageSearch({ ckanAPI: ckanAPI, fq: fparams, rows: rows, sort: sort, q: search })
+    this.props.packageSearch({
+      ckanAPI: ckanAPI,
+      fq: fparams,
+      rows: rows,
+      sort: sort,
+      q: search,
+      organizations: organizations,
+      groups: groups,
+      tags: tags
+    })
   }
 
   render() {
@@ -64,7 +82,10 @@ const mapStateToProps = state => {
     sort: state.packageSearch.sort,
     search: state.packageSearch.search,
     facet_search: state.packageSearch.facet_search,
-    ckanAPI: state.packageSearch.ckanAPI
+    ckanAPI: state.packageSearch.ckanAPI,
+    organizations: state.packageSearch.organizations,
+    groups: state.packageSearch.groups,
+    tags: state.packageSearch.tags
   };
 };
 
