@@ -7,13 +7,14 @@ import * as actions from "../../actions";
 //Default ckan facets
 const FACETS_TITLE = {
   organization: 'Organisations',
-  groups: 'Groupes',
+  groups: 'Thématiques',
   datatype: 'Types',
   support: 'Support',
   res_format: 'Formats',
   license_id: 'Licences',
   tags: 'Tags',
-  update_frequency: 'Fréquence de mise-à-jour'
+  update_frequency: 'Fréquence de mise-à-jour',
+  granularity: 'Granularité de la couverture territoriale'
 };
 
 export class FacetList extends Component {

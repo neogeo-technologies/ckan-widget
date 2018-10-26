@@ -25,7 +25,8 @@ export function packageSearch({
                                                       'license_id',
                                                       'datatype',
                                                       'support',
-                                                      'update_frequency'])}`;
+                                                      'update_frequency',
+                                                      'granularity'])}`;
 
   return (dispatch) => {
     axios.get(`${ckanAPI}/api/action/package_search?q=${q}&rows=${rows}&start=${start}&${facetsParams}&sort=${sort}&fq=${fq}`, axiosConfig)
