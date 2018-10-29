@@ -35,12 +35,12 @@ export class SelectedFacetList extends Component {
   };
 
   render() {
-    let { selected_facets }  = this.props;
+    let { selected_facets, search_facets }  = this.props;
     let list = selected_facets.split('+');
     let facetSearch = []
 
     list.forEach((facet, i) => {
-      facetSearch.push(<SelectedFacet facet={facet} onClick={this.onClick} key={i} />);
+      facetSearch.push(<SelectedFacet facet={facet} search_facets={search_facets} onClick={this.onClick} key={i} />);
     });
 
     return facetSearch;

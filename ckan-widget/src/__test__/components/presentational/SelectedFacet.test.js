@@ -9,11 +9,12 @@ describe('Sort', () => {
   beforeEach(() => {
     onClick = jest.fn();
     component = shallow(
-      <SelectedFacet onClick={onClick} facet={'organization:org1'} />
+      <SelectedFacet onClick={onClick} search_facets={{
+        organization: {"items": [{ "count": 150, "display_name": "Org1", "name": "org1" }]}}} facet={'organization:org1'} />
     );
 
     shallow(
-      <SelectedFacet onClick={onClick} facet={''} />
+      <SelectedFacet onClick={onClick} search_facets={{}} facet={''} />
     );
   })
 

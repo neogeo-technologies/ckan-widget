@@ -40,7 +40,8 @@ class DatasetDetails extends Component {
             organization,
             collapsed
         } = this.props
-        const orgName = organization !== null ? organization.name : 'N/A'
+
+        const orgName = organization !== null ? organization.title : 'N/A'
         const collapseClass = collapsed ? 'collapse' : ''
 
         return(

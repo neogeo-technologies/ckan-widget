@@ -46,7 +46,7 @@ class SearchBar extends Component{
                     open={( this.state.value.length >= 1 && this.state.isOpen )}
                     onMenuVisibilityChange={isOpen => this.setState({ isOpen })}
                     autoHighlight={false}
-                    getItemValue={(item) => item.name}
+                    getItemValue={(item) => item.title}
                     onSelect={(value, item) => {
                         this.setState({ value, suggestions: [item] })
                         this.props.handleInputChange(null, value)

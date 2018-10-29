@@ -7,6 +7,7 @@ describe('Test package search redicer', () => {
     const initialState = {
       ckanAPI: 'https://trouver.datasud.fr',
       datasets: [],
+      search_facets: {},
       organizations: [],
       groups: [],
       tags: [],
@@ -33,6 +34,7 @@ describe('Test package search redicer', () => {
     const newState = {
       ckanAPI: 'https://trouver.datasud.fr',
       datasets: [],
+      search_facets: {},
       organizations: [],
       groups: [],
       tags: [],
@@ -77,6 +79,9 @@ describe('Test package search redicer', () => {
     const newState = {
       ckanAPI: 'https://trouver.datasud.fr',
       datasets: ['dataset1', 'dataset2'],
+      search_facets: {
+        organizations: ['org1']
+      },
       organizations: [],
       groups: [],
       tags: [],

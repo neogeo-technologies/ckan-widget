@@ -6,6 +6,7 @@ import {
 const INITIAL_STATE = {
   ckanAPI: 'https://trouver.datasud.fr',
   datasets: [],
+  search_facets: {},
   organizations: [],
   groups: [],
   tags: [],
@@ -25,6 +26,7 @@ export default function (state = INITIAL_STATE, action) {
     case PACKAGE_SEARCH:
       return {
         ...state,
+        search_facets: action.payload.result.search_facets,
         datasets: action.payload.result.results,
         total: action.payload.result.count,
         search: action.search,

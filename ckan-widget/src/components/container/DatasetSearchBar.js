@@ -89,7 +89,8 @@ export class DatasetSearchBar extends Component{
       ckanAPI,
       organizations,
       groups,
-      tags
+      tags,
+      search_facets
     } = this.props
 
     return(
@@ -100,6 +101,7 @@ export class DatasetSearchBar extends Component{
                     <SelectedFacetList
                       ckanAPI={ckanAPI}
                       search={search}
+                      search_facets={search_facets}
                       sort={sort}
                       rows={rows}
                       organizations={organizations}
@@ -116,6 +118,7 @@ export class DatasetSearchBar extends Component{
 const mapStateToProps = state => {
   return {
     search: state.packageSearch.search,
+    search_facets: state.packageSearch.search_facets,
     organizations: state.packageSearch.organizations,
     groups: state.packageSearch.groups,
     tags: state.packageSearch.tags,

@@ -52,8 +52,24 @@ class DatasetInfo extends Component{
         return null
     }
 
+    renderTypes = (datatype, search_facets) => {
+        let types = []
+        if (datatype !== undefined && datatype.length > 0) {
+            const datatypeItems = search_facets.datatype.items
+            datatypeItems.forEach((type, i) => {
+                if (datatype.includes(type.name)) {
+                    types.push(type.display_name)
+                }
+            })
+        }
+
+        return(
+            <span><strong>Type :</strong> {types.length > 0 ? types.join(', ') : 'N/A'}</span>
+        )
+    }
+
     render(){
-        const { ckanAPI, title, notes, metadata_modified, datatype, resources, thumbnail } = this.props
+        const { ckanAPI, title, notes, metadata_modified, datatype, resources, thumbnail, search_facets } = this.props
         const datetime = this.formatDate(metadata_modified)
         const formats = this.findFormats(resources)
         const collapseClass = this.state.collapsed ? '' : 'collapsed'
@@ -74,7 +90,7 @@ class DatasetInfo extends Component{
                                     <strong>Formats:</strong> {formats.length > 0 ? formats : 'N/A'}
                                 </li>
                                 <li>
-                                    <strong>Type :</strong> {datatype !== undefined && datatype.length > 0 ? datatype.join(', ') : 'N/A'}
+                                    {this.renderTypes(datatype, search_facets)}
                                 </li>
                             </ul>
                         </div>
