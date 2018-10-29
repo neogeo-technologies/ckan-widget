@@ -43,7 +43,7 @@ class SearchBar extends Component{
                         placeholder: 'Rechercher...',
                         className: 'form-control form-control-lg border-0'
                     }}
-                    wrapperStyle={{ position: 'relative', zIndex: 1 }}
+                    wrapperStyle={{ position: 'relative', zIndex: 1000 }}
                     value={this.state.value}
                     items={this.state.suggestions}
                     open={( this.state.value.length >= 1 && this.state.isOpen )}
