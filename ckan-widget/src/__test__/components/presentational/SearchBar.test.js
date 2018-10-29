@@ -39,7 +39,7 @@ describe('SearchBar', () => {
 
   it('should handle changes properly', () => {
     const input = component.find('input')
-    input.simulate('change')
+    input.simulate('submit')
     expect(handleInputChange.mock.calls.length).toEqual(1);
   })
 });

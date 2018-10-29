@@ -95,7 +95,7 @@ export class DatasetSearchBar extends Component{
 
     return(
         <div className="my-5">
-            <SearchBar ckanAPI={ckanAPI} handleInputChange={this.handleInputChange} />
+            <SearchBar ckanAPI={ckanAPI} organizations={organizations} handleInputChange={this.handleInputChange} />
             <div className="mt-3">
                 <ul className="list-inline list-search-facets">
                     <SelectedFacetList

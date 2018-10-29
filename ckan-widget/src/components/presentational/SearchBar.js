@@ -14,16 +14,19 @@ class SearchBar extends Component{
     }
 
     handleOnChange = (event, value) => {
-        const { ckanAPI } = this.props
+        const { ckanAPI, organizations } = this.props
         this.setState({ value })
 
-        packageAutocomplete({ ckanAPI, q: value }).then(data => {
-            const suggestions = data.result
-            if (Array.isArray(suggestions) && suggestions.length) {
-                this.setState({ suggestions })
-            }
-        })
-        this.props.handleInputChange(event, value)
+        if (value.length > 3) {
+            packageAutocomplete({ ckanAPI, q: value, organization: organizations }).then(data => {
+                const suggestions = data.result
+                if (Array.isArray(suggestions) && suggestions.length) {
+                    this.setState({ suggestions })
+                }
+            })
+        } else {
+            this.setState({ suggestions: [] })
+        }
     }
 
     handleOnSubmit = event => {

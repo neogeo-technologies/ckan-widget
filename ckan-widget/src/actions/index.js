@@ -62,8 +62,8 @@ export function packageSearch({
   };
 }
 
-export function packageAutocomplete({ ckanAPI = 'https://trouver.datasud.fr', q = '', limit = 10 } = {}) {
-  return axios.get(`${ckanAPI}/api/action/package_autocomplete?q=${q}&limit=${limit}`, axiosConfig)
+export function packageAutocomplete({ ckanAPI = 'https://trouver.datasud.fr', q = '', limit = 10, organization = [] } = {}) {
+  return axios.get(`${ckanAPI}/api/action/package_autocomplete?q=${q}&limit=${limit}&organization=${organization}`, axiosConfig)
     .then(response => response.data);
 }
 
