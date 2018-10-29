@@ -55,7 +55,7 @@ class DatasetDetails extends Component {
                     <li className="list-inline-item"><strong>Organisation:</strong> {orgName}</li>
                 </ul>
                 <div className="my-4">
-                    <h3>Resources</h3>
+                    <h3>Ressources</h3>
                     <ul className="list-inline">
                         { this.renderResources(resources, name) }
                     </ul>
