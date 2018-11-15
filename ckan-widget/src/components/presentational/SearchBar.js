@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Autocomplete from 'react-autocomplete'
 import { packageAutocomplete } from '../../actions'
+import MaterialIcon from 'material-icons-react'
 
 
 class SearchBar extends Component{
@@ -41,9 +42,9 @@ class SearchBar extends Component{
                     inputProps={{
                         id: 'datasets-autocomplete',
                         placeholder: 'Rechercher...',
-                        className: 'form-control form-control-lg border-0'
+                        className: 'form-control form-control-lg border-0 autocomplete'
                     }}
-                    wrapperStyle={{ position: 'relative', zIndex: 1000 }}
+                    wrapperStyle={{ position: 'relative', zIndex: 1000, width: '90%', display: 'inline-block' }}
                     value={this.state.value}
                     items={this.state.suggestions}
                     open={( this.state.value.length >= 1 && this.state.isOpen )}
@@ -66,6 +67,10 @@ class SearchBar extends Component{
                         </div>
                     )}
                 />
+
+                <button type="button" className="btn btn-search" onClick={this.handleOnSubmit}>
+                    <MaterialIcon icon="search" size="medium" />
+                </button>
             </form>
         )
     }

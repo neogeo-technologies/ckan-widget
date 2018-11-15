@@ -115,3 +115,29 @@
 .btn-close {
   padding: 0;
 }
+
+.btn-search {
+  position: relative;
+  margin-left: -.5rem;
+  margin-bottom: .25rem;
+  background-color: #fff;
+}
+
+.btn-search  > .material-icons.md-36 {
+  font-size: 2.1rem;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.btn-search  > .material-icons.md-36:hover {
+  color: #000;
+}
+
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: none!important;
+}
+
+.autocomplete.focus, .autocomplete:focus {
+    outline: 0;
+    box-shadow: none!important;
+}

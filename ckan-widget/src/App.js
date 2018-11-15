@@ -19,9 +19,6 @@ class App extends Component {
                     <div className="row">
                         <div className="col-lg-10 offset-lg-1">
                             <DatasetSearchBar />
-                            <span className="header-icon">
-                                <MaterialIcon icon="search" color="#fff" />
-                            </span>
                         </div>
                     </div>
                 </div>
