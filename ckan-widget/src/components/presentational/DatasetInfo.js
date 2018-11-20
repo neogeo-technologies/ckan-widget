@@ -68,6 +68,14 @@ class DatasetInfo extends Component{
         )
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        if (((nextState.collapsed === this.state.collapsed) && this.state.collapsed === false)) {
+            this.setState({ collapsed: true })
+        }
+
+        return true;
+    }
+
     render(){
         const { ckanAPI, title, notes, metadata_modified, datatype, resources, thumbnail, search_facets } = this.props
         const datetime = this.formatDate(metadata_modified)
