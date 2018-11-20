@@ -17,7 +17,8 @@ const initialState = {
     page: 1,
     sort: 'score desc, metadata_modified desc',
     error: '',
-    facet_search: ''
+    facet_search: '',
+    tags: []
   }
 };
 
@@ -27,6 +28,7 @@ describe('TotalDatasets', () => {
     mockPackageSearch = jest.fn()
     component = shallow(
       <SelectedFacetList
+        tags={[]}
         packageSearch={mockPackageSearch}
         selected_facets={'organization:org1+tags:economy'} />
     );

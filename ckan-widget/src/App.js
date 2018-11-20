@@ -6,7 +6,6 @@ import DatasetSort from './components/container/DatasetSort'
 import TotalDatasets from './components/container/TotalDatasets'
 import DatasetsPerPage from './components/container/DatasetsPerPage'
 import Pagination from './components/container/Pagination'
-import MaterialIcon from 'material-icons-react'
 
 class App extends Component {
     render() {

@@ -5,6 +5,7 @@ class SelectedFacet extends Component {
 
   render() {
     const { facet, search_facets } = this.props
+
     const facetType = facet.split(':')[0]
     let name = facet.split(':')[1]
     if (name !== undefined) {
@@ -23,7 +24,6 @@ class SelectedFacet extends Component {
         }
       })
     }
-
 
     if (facetTitle !== ''){
       return (

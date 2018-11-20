@@ -44,7 +44,7 @@ class SearchBar extends Component{
                         placeholder: 'Rechercher...',
                         className: 'form-control form-control-lg border-0 autocomplete'
                     }}
-                    wrapperStyle={{ position: 'relative', zIndex: 1000, width: '90%', display: 'inline-block' }}
+                    wrapperStyle={{ zIndex: 1000 }}
                     value={this.state.value}
                     items={this.state.suggestions}
                     open={( this.state.value.length >= 1 && this.state.isOpen )}
@@ -56,6 +56,17 @@ class SearchBar extends Component{
                         this.props.handleInputChange(null, value)
                     }}
                     onChange={this.handleOnChange}
+                    renderInput={inputProps => {
+                        return (
+                            <div className="autocomplete-wrapper">
+                                <input {...inputProps} />
+
+                                <button type="button" className="btn btn-search" onClick={this.handleOnSubmit}>
+                                    <MaterialIcon icon="search" size="medium" />
+                                </button>
+                            </div>
+                        )
+                    }}
                     renderMenu={children => (
                         <div className="menu list-group">
                             {children}
@@ -67,10 +78,6 @@ class SearchBar extends Component{
                         </div>
                     )}
                 />
-
-                <button type="button" className="btn btn-search" onClick={this.handleOnSubmit}>
-                    <MaterialIcon icon="search" size="medium" />
-                </button>
             </form>
         )
     }
