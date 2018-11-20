@@ -22,9 +22,14 @@ export class SelectedFacetList extends Component {
     let facet_item = facet.split(':')[1]
     if (facet_type === 'tags' && tags.includes(facet_item)) {
       tags = tags.filter( tag => tag !== facet_item)
-      search = search.replace(`"${facet_item}" AND`, '').replace(`AND "${facet_item}"`, '').replace(` AND tags:"${facet_item}"`, '')
+      search = search.replace(`"${facet_item}" AND`, '')
+                    .replace(`AND "${facet_item}"`, '')
+                    .replace(` AND tags:"${facet_item}"`, '')
+                    .replace(`tags:"${facet_item}" `, '')
     } else {
-      selected_facets = selected_facets.replace(`${facet}+`, '').replace(`+${facet}`, '').replace(facet, '')
+      selected_facets = selected_facets.replace(`${facet}+`, '')
+                                      .replace(`+${facet}`, '')
+                                      .replace(facet, '')
     }
 
     this.props.packageSearch({

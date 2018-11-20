@@ -33,28 +33,26 @@ export class FacetList extends Component {
     let facet_type = selectedFacet.split(':')[0]
     let facet_item = selectedFacet.split(':')[1]
     if ( !(facet_type === 'tags' && tags.includes(facet_item)) ) {
-      let fparams = ''
+      if (!facet_search.includes(facet_item)){
+        let fparams = ''
 
-      if(facet_search){
-          if(facet_search.includes(selectedFacet)){
-              fparams = facet_search;
-          }else{
+        if(facet_search){
             fparams = `${facet_search}+${facet_type}:"${facet_item}"`
-          }
-      }else{
-        fparams = `${facet_type}:"${facet_item}"`;
-      }
+        }else{
+          fparams = `${facet_type}:"${facet_item}"`;
+        }
 
-      this.props.packageSearch({
-        ckanAPI: ckanAPI,
-        fq: fparams,
-        rows: rows,
-        sort: sort,
-        q: search,
-        organizations: organizations,
-        groups: groups,
-        tags: tags
-      })
+        this.props.packageSearch({
+          ckanAPI: ckanAPI,
+          fq: fparams,
+          rows: rows,
+          sort: sort,
+          q: search,
+          organizations: organizations,
+          groups: groups,
+          tags: tags
+        })
+      }
     }
   }
 
