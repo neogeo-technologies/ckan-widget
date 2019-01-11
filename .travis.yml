@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+  - ./ckan-widget/node_modules
+script:
+  - cd ckan-widget
+  - npm install
+  - npm test
+  - npm run build
