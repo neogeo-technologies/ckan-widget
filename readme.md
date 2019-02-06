@@ -5,6 +5,13 @@
 
 JS integration library for CKAN data catalog
 
+
+## Quickstarter
+
+You have a fully functional widget in the "build" folder. It is made of an index.html file and some css and js files. Look inside the index.html to see the parameters you can set, and the filters you can play with. Make the "ckan_api" parameter point towards the CKAN instance you want to integrate. Copy this part into your own web page if you wish so. See the app.css file to change the styles and colors of the widget, and make it fit your own environment. 
+
+See below for full developpers instructions. 
+
 ## Installation
 
 ``
