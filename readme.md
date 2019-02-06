@@ -5,7 +5,7 @@
 
 JS integration library for CKAN data catalog
 
-## Instalation
+## Installation
 
 ``
 cd ckan-widget
