@@ -13,7 +13,7 @@ class App extends Component {
 
         return (
         <div className="App">
-            <div className="bg-secondary header">
+            { config.header_display && <div className="bg-secondary header">
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-lg-10 offset-lg-1">
@@ -21,12 +21,12 @@ class App extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> }
             <div className="container-fluid my-5">
                 <div className="row">
                     <div className="col-lg-10 offset-lg-1">
                         <div className="row">
-                            <div className="col-lg-8">
+                            <div className={ config.sidebar_display ? 'col-lg-8' : 'col-lg-12'}>
                                 <div className="d-flex justify-content-between">
                                     <TotalDatasets />
                                     <DatasetsPerPage />
@@ -44,10 +44,10 @@ class App extends Component {
                                     <Pagination />
                                 </nav>
                             </div>
-                            <div className="col-lg-4">
+                            { config.sidebar_display && <div className="col-lg-4">
                                 <DatasetSort />
                                 <FacetList facetDisplay={config.facet_display} />
-                            </div>
+                            </div> }
                         </div>
                     </div>
                 </div>
@@ -58,4 +58,3 @@ class App extends Component {
 }
 
 export default App;
-
