@@ -69,7 +69,7 @@ Full code of build/index.html file:
     <div id="ckan-widget"></div>
     <script type="text/javascript" src="./static/js/main.52113898.js"></script>
     <script type="text/javascript">
-      // Will run the widget with default cnfiguration
+      // Will run the widget with default configuration
       ckanWidget.init()
     </script>
   </body>
@@ -142,7 +142,9 @@ var config = {
       facet_display: ['organization'],
       data_sort: 'title_string asc',
       result_page_size: 25,
-      thumbnails_display: true
+      thumbnails_display: true,
+      display_header: true,
+      display_sidebar: true
     }
 ```
 
@@ -166,6 +168,8 @@ Configuration properties:
 * **data-sort**: sorting mode to be used. Same than the CKAN ones (popularity, relevance, last_modified, alpha…). Default to `score desc, metadata_modified desc`.
 * **result-page-size**: number of results per page(10, 25, 50, 100). Default to `10`. Max to `100`.
 * **thumbnails-display**: boolean. Whether to display dataset's thumbnail or not. Default to `true`.
+* **header-display**: boolean. Whether to display widget header and search bar
+* **sidebar-display**: boolean. Whether to display the sidebar
 
 
 ### Set API Key

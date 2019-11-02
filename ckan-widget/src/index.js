@@ -41,7 +41,9 @@ class CKANWidget {
     facet_display = undefined,
     data_sort = 'score desc, metadata_modified desc',
     result_page_size = 10,
-    thumbnails_display = true
+    thumbnails_display = true,
+    header_display = true,
+    sidebar_display = true,
   } = {}) => {
 
     const config = {
@@ -52,8 +54,10 @@ class CKANWidget {
       ckan_facets: ckan_facets,
       facet_display: facet_display,
       data_sort: data_sort,
-      result_page_size:result_page_size,
-      thumbnails_display: thumbnails_display
+      result_page_size: result_page_size,
+      thumbnails_display: thumbnails_display,
+      header_display: header_display,
+      sidebar_display: sidebar_display
     }
 
     render(
