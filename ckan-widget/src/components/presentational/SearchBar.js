@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import Autocomplete from 'react-autocomplete'
 import { packageAutocomplete } from '../../actions'
 import MaterialIcon from 'material-icons-react'
+import cx from 'classnames'
 
+import styles from '../../assets/bootstrap.module.css'
 
 class SearchBar extends Component{
     constructor() {
@@ -42,7 +44,7 @@ class SearchBar extends Component{
                     inputProps={{
                         id: 'datasets-autocomplete',
                         placeholder: 'Rechercher...',
-                        className: 'form-control form-control-lg border-0 autocomplete'
+                        className: cx(styles['form-control'], styles['form-control-lg'], styles['border-0'], styles['autocomplete'])
                     }}
                     wrapperStyle={{ zIndex: 1000 }}
                     value={this.state.value}
@@ -58,22 +60,22 @@ class SearchBar extends Component{
                     onChange={this.handleOnChange}
                     renderInput={inputProps => {
                         return (
-                            <div className="autocomplete-wrapper">
+                            <div className={styles['autocomplete-wrapper']}>
                                 <input {...inputProps} />
 
-                                <button type="button" className="btn btn-search" onClick={this.handleOnSubmit}>
+                                <button type="button" className={cx(styles['btn'], styles['btn-search'])} onClick={this.handleOnSubmit}>
                                     <MaterialIcon icon="search" size="medium" />
                                 </button>
                             </div>
                         )
                     }}
                     renderMenu={children => (
-                        <div className="menu list-group">
+                        <div className={cx(styles['menu'], styles['list-group'])}>
                             {children}
                         </div>
                     )}
                     renderItem={(item, isHighlighted) => (
-                        <div className={`list-group-item list-group-item-light ${isHighlighted ? 'active' : ''}`} key={item.title}>
+                        <div className={cx(styles['list-group-item'], styles['list-group-item-light'], styles[`${isHighlighted ? 'active' : ''}`])} key={item.title}>
                             {item.title}
                         </div>
                     )}

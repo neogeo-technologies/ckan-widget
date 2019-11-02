@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import MaterialIcon from 'material-icons-react'
+import cx from 'classnames'
+
+import styles from '../../assets/bootstrap.module.css'
 
 class Error extends Component {
     constructor() {
@@ -14,9 +17,9 @@ class Error extends Component {
 	render() {
         if (this.state.show) {
             return(
-                <div className="my-3 alert alert-warning alert-dismissible" role="alert">
+                <div className={cx(styles['my-3'], styles['alert'], styles['alert-warning'], styles['alert-dismissible'])} role="alert">
                     <strong>Upps, error!</strong> {this.props.error};
-                    <button type="button" className="close" data-dismiss="alert" aria-label="Close" onClick={this.handleClose}>
+                    <button type="button" className={styles['close']} data-dismiss="alert" aria-label="Close" onClick={this.handleClose}>
                     <MaterialIcon icon="close" size="tiny" color="inherit" />
                     </button>
                 </div>

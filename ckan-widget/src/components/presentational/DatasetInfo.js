@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import DatasetDetails from '../presentational/DatasetDetails'
 import MaterialIcon from 'material-icons-react'
+import cx from 'classnames'
+
+import styles from '../../assets/bootstrap.module.css'
 
 
 class DatasetInfo extends Component{
@@ -19,7 +22,7 @@ class DatasetInfo extends Component{
                 if (!formats.includes(format)) {
                     formats.push(format)
                     badges.push(
-                      <span className="badge badge-secondary mx-1" key={i}>
+                      <span className={cx(styles['badge'], styles['badge-secondary'], styles['mx-1'])} key={i}>
                       {format}
                       </span>
                     )
@@ -43,8 +46,8 @@ class DatasetInfo extends Component{
         const { thumbnailsDisplay } = this.props
         if (thumbnailsDisplay && thumbnail !== undefined) {
             return(
-                <div className="col-lg-3 d-flex justify-content-lg-center align-items-center mb-lg-0 mb-md-3">
-                    <img className="img-thumbnail img-fluid" src={thumbnail} alt="logo" />
+                <div className={cx(styles['col-lg-3'], styles['d-flex'], styles['justify-content-lg-center'], styles['align-items-center'], styles['mb-lg-0'], styles['mb-md-3'])}>
+                    <img className={cx(styles['img-thumbnail'], styles['img-fluid'])} src={thumbnail} alt="logo" />
                 </div>
             )
         }
@@ -84,15 +87,15 @@ class DatasetInfo extends Component{
         const expandArrow = this.state.collapsed ? 'expand_more' : 'expand_less'
 
         return(
-            <div className={"card dataset-wrap my-3 " + collapseClass}>
-                <div className="dataset card-body" onClick={this.handleDatasetClick}>
+            <div className={cx(styles['card'], styles['dataset-wrap'], styles['my-3'], styles[collapseClass])}>
+                <div className={cx(styles['dataset'], styles['card-body'])} onClick={this.handleDatasetClick}>
                     <MaterialIcon icon={expandArrow} />
-                    <div className="row">
+                    <div className={styles['row']}>
                         { this.renderThumbnail(thumbnail) }
-                        <div className="col-lg-9">
-                            <h4 className="title text-primary">{title}</h4>
-                            <p className="text-muted">{notes && notes.length > 130 ? `${notes.substring(0, 130)}...` : notes}</p>
-                            <ul className="list-unstyled">
+                        <div className={styles['col-lg-9']}>
+                            <h4 className={cx(styles['title'], styles['text-primary'])}>{title}</h4>
+                            <p className={styles['text-muted']}>{notes && notes.length > 130 ? `${notes.substring(0, 130)}...` : notes}</p>
+                            <ul className={styles['list-unstyled']}>
                                 <li><strong>Modifié le :</strong> {datetime}</li>
                                 <li>
                                     <strong>Formats:</strong> {formats.length > 0 ? formats : 'N/A'}

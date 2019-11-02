@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import MaterialIcon from 'material-icons-react'
+import cx from 'classnames'
+
+import styles from '../../assets/bootstrap.module.css'
 
 class Facet extends Component {
   constructor(props) {
@@ -7,7 +10,8 @@ class Facet extends Component {
     this.state = { collapsed: true }
   }
 
-  expandFacetList = () => {
+  expandFacetList = (e) => {
+    e.preventDefault()
     this.setState({ collapsed: !this.state.collapsed })
   }
 
@@ -24,10 +28,10 @@ class Facet extends Component {
 
     if (facets.length > 7){
       expandControls.push(
-          <div className="card-footer px-0 py-0" key={9999}>
-          <a className="btn btn-link" onClick={this.expandFacetList}>
+          <div className={cx(styles['card-footer'], styles['px-0'], styles['py-0'])} key={9999}>
+          <a href="!#" className={cx(styles['btn'], styles['btn-link'])} onClick={this.expandFacetList}>
               <MaterialIcon icon={expandArrow} color="inherit" size="tiny" />
-              <span className="ml-1">{expandLabel}</span>
+              <span className={styles['ml-1']}>{expandLabel}</span>
           </a>
           </div>
       )
@@ -36,10 +40,10 @@ class Facet extends Component {
     for (const facetId in facets) {
       if (facetId < 7) {
         fixedList.push(
-          <li className="list-group-item d-flex justify-content-between align-items-center" key={facetId} onClick={() => this.props.onClick(`${this.props.facetKey}:${facets[facetId].name}`)}>
+          <li className={cx(styles['list-group-item'], styles['d-flex'], styles['justify-content-between'], styles['align-items-center'])} key={facetId} onClick={() => this.props.onClick(`${this.props.facetKey}:${facets[facetId].name}`)}>
             {facets[facetId].display_name}
             {' '}
-            <span className="badge badge-primary">{facets[facetId].count}</span>
+            <span className={cx(styles['badge'], styles['badge-primary'])}>{facets[facetId].count}</span>
           </li>,
         );
       }
@@ -48,27 +52,27 @@ class Facet extends Component {
     for (const facetId in facets) {
       if (facetId > 6) {
         expandableList.push(
-          <li className="list-group-item d-flex justify-content-between align-items-center" key={facetId} onClick={() => this.props.onClick(`${this.props.facetKey}:${facets[facetId].name}`)}>
+          <li className={cx(styles['list-group-item'], styles['d-flex'], styles['justify-content-between'], styles['align-items-center'])} key={facetId} onClick={() => this.props.onClick(`${this.props.facetKey}:${facets[facetId].name}`)}>
             {facets[facetId].display_name}
             {' '}
-            <span className="badge badge-primary">{facets[facetId].count}</span>
+            <span className={cx(styles['badge'], styles['badge-primary'])}>{facets[facetId].count}</span>
           </li>,
         );
       }
     }
 
     return (
-      <div className="card my-3">
-        <div className="card-header bg-secondary text-white">
-          <h5 className="card-title mb-auto">
+      <div className={cx(styles['card'], styles['my-3'])}>
+        <div className={cx(styles['card-header'], styles['bg-secondary'], styles['text-white'])}>
+          <h5 className={cx(styles['card-title'], styles['mb-auto'])}>
             {title}
           </h5>
         </div>
-        <ul className="list-group list-group-facet list-group-flush">
+        <ul className={cx(styles['list-group'], styles['list-group-facet'], styles['list-group-flush'])}>
           {fixedList}
         </ul>
-        <div className={collapseClass}>
-          <ul className="list-group list-group-facet list-group-flush">
+        <div className={styles[collapseClass]}>
+          <ul className={cx(styles['list-group'], styles['list-group-facet'], styles['list-group-flush'])}>
             {expandableList}
           </ul>
         </div>
