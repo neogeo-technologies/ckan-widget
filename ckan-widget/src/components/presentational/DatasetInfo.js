@@ -3,7 +3,8 @@ import DatasetDetails from '../presentational/DatasetDetails'
 import MaterialIcon from 'material-icons-react'
 import cx from 'classnames'
 
-import styles from '../../assets/bootstrap.module.css'
+import styles from '../../css/bootstrap.module.css'
+import overrideStyles from '../../css/app.module.css'
 
 
 class DatasetInfo extends Component{
@@ -87,13 +88,13 @@ class DatasetInfo extends Component{
         const expandArrow = this.state.collapsed ? 'expand_more' : 'expand_less'
 
         return(
-            <div className={cx(styles['card'], styles['dataset-wrap'], styles['my-3'], styles[collapseClass])}>
-                <div className={cx(styles['dataset'], styles['card-body'])} onClick={this.handleDatasetClick}>
+            <div className={cx(styles['card'], styles['dataset-wrap'], overrideStyles['dataset-wrap'], styles['my-3'], styles[collapseClass])}>
+                <div className={`${cx(styles['dataset'], overrideStyles['dataset'], styles['card-body'])} dataset`} onClick={this.handleDatasetClick}>
                     <MaterialIcon icon={expandArrow} />
                     <div className={styles['row']}>
                         { this.renderThumbnail(thumbnail) }
                         <div className={styles['col-lg-9']}>
-                            <h4 className={cx(styles['title'], styles['text-primary'])}>{title}</h4>
+                            <h4 className={cx(styles['title'], overrideStyles['title'], styles['text-primary'])}>{title}</h4>
                             <p className={styles['text-muted']}>{notes && notes.length > 130 ? `${notes.substring(0, 130)}...` : notes}</p>
                             <ul className={styles['list-unstyled']}>
                                 <li><strong>Modifié le :</strong> {datetime}</li>

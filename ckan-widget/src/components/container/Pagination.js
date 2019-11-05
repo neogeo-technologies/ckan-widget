@@ -5,7 +5,7 @@ import cx from 'classnames'
 
 import * as actions from '../../actions'
 
-import styles from '../../assets/bootstrap.module.css'
+import styles from '../../css/bootstrap.module.css'
 
 export class Pagination extends Component {
   handlePagination = page => {

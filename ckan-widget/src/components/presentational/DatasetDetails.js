@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import MaterialIcon from 'material-icons-react'
 import cx from 'classnames';
 
-import styles from '../../assets/bootstrap.module.css'
+import styles from '../../css/bootstrap.module.css'
+import overrideStyles from '../../css/app.module.css'
 
 class DatasetDetails extends Component {
     renderResources = (resources, datasetName) => {
@@ -10,13 +11,13 @@ class DatasetDetails extends Component {
         resources.forEach((resource, i) => {
             let restricted = resource.restricted ? JSON.parse(resource.restricted) : 'N/A'
             items.push(
-                <li className={cx(styles['list-group-item'], styles['d-flex'], styles['flex-wrap'], styles['align-items-center'])} key={i}>
-                    <span className='type'>
+                <li className={cx(styles['list-group-item'], overrideStyles['list-group-item'], styles['d-flex'], styles['flex-wrap'], styles['align-items-center'])} key={i}>
+                    <span className={overrideStyles['type']}>
                         <span className={cx(styles['badge'], styles['badge-secondary'])}>{resource.format}</span>
                     </span>
-                    <a className={cx(styles['px-3'], styles['title'])} href={resource.url} target="_blank" rel="noopener noreferrer">{resource.name}</a>
-                    <span className={cx(styles['ml-auto'], styles['mr-3'], styles['date'])}>{this.formatDate(resource.last_modified)}</span>
-                    <span className={styles['visibility']}>
+                    <a className={cx(styles['px-3'], styles['title'], overrideStyles['title'])} href={resource.url} target="_blank" rel="noopener noreferrer">{resource.name}</a>
+                    <span className={cx(styles['ml-auto'], styles['mr-3'], styles['date'], overrideStyles['date'])}>{this.formatDate(resource.last_modified)}</span>
+                    <span className={cx(styles['visibility'], overrideStyles['visibility'])}>
                         <span className={cx(styles['badge'], styles['badge-pill'], styles['badge-dark'])}>{restricted.level}</span>
                     </span>
                 </li>

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import MaterialIcon from 'material-icons-react'
 import cx from 'classnames'
 
-import styles from '../../assets/bootstrap.module.css'
+import styles from '../../css/bootstrap.module.css'
 
 class Error extends Component {
     constructor() {

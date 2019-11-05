@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MaterialIcon from 'material-icons-react';
 
-import styles from '../../assets/bootstrap.module.css'
+import styles from '../../css/bootstrap.module.css'
 
 class Sort extends Component {
   render() {

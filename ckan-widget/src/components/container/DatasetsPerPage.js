@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import MaterialIcon from 'material-icons-react'
 import * as actions from '../../actions'
 
-import styles from '../../assets/bootstrap.module.css'
+import styles from '../../css/bootstrap.module.css'
 
 export class DatasetsPerPage extends Component {
   handleOnChange = e => {

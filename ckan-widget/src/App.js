@@ -9,7 +9,7 @@ import TotalDatasets from './components/container/TotalDatasets'
 import DatasetsPerPage from './components/container/DatasetsPerPage'
 import Pagination from './components/container/Pagination'
 
-import styles from './assets/bootstrap.module.css'
+import styles from './css/bootstrap.module.css'
 
 class App extends Component {
     render() {

@@ -6,7 +6,8 @@ import * as actions from '../../actions'
 import SelectedFacetList from '../container/SelectedFacetList'
 import cx from 'classnames'
 
-import styles from '../../assets/bootstrap.module.css'
+import styles from '../../css/bootstrap.module.css'
+import overrideStyles from '../../css/app.module.css'
 
 export class DatasetSearchBar extends Component{
   handleInputChange = (event, value) => {
@@ -100,7 +101,7 @@ export class DatasetSearchBar extends Component{
         <div className={styles['my-5']}>
             <SearchBar ckanAPI={ckanAPI} organizations={organizations} handleInputChange={this.handleInputChange} />
             <div className={styles['mt-3']}>
-                <ul className={cx(styles['list-inline'], styles['list-search-facets'])}>
+                <ul className={cx(styles['list-inline'], styles['list-search-facets'], overrideStyles['list-search-facets'])}>
                     <SelectedFacetList
                       ckanAPI={ckanAPI}
                       search={search}
