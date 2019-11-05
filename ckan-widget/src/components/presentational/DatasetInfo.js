@@ -88,9 +88,9 @@ class DatasetInfo extends Component{
         const expandArrow = this.state.collapsed ? 'expand_more' : 'expand_less'
 
         return(
-            <div className={cx(styles['card'], styles['dataset-wrap'], overrideStyles['dataset-wrap'], styles['my-3'], styles[collapseClass])}>
+            <div className={cx(styles['card'], styles['dataset-wrap'], overrideStyles['dataset-wrap'], styles['my-3'], styles[collapseClass], overrideStyles[collapseClass])}>
                 <div className={`${cx(styles['dataset'], overrideStyles['dataset'], styles['card-body'])} dataset`} onClick={this.handleDatasetClick}>
-                    <MaterialIcon icon={expandArrow} />
+                    <i className={`${cx(styles['md-24'], styles['md-dark'])} material-icons`} style={{position: 'absolute', right: '15px'}}>expand_more</i>
                     <div className={styles['row']}>
                         { this.renderThumbnail(thumbnail) }
                         <div className={styles['col-lg-9']}>
