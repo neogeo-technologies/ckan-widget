@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 import MaterialIcon from 'material-icons-react'
+import cx from 'classnames';
+
+import styles from '../../css/bootstrap.module.css'
+import overrideStyles from '../../css/app.module.css'
 
 class DatasetDetails extends Component {
     renderResources = (resources, datasetName) => {
@@ -7,14 +11,14 @@ class DatasetDetails extends Component {
         resources.forEach((resource, i) => {
             let restricted = resource.restricted ? JSON.parse(resource.restricted) : 'N/A'
             items.push(
-                <li className="list-group-item d-flex flex-wrap align-items-center" key={i}>
-                    <span className="type">
-                        <span className="badge badge-secondary">{resource.format}</span>
+                <li className={cx(styles['list-group-item'], overrideStyles['list-group-item'], styles['d-flex'], styles['flex-wrap'], styles['align-items-center'])} key={i}>
+                    <span className={overrideStyles['type']}>
+                        <span className={cx(styles['badge'], styles['badge-secondary'])}>{resource.format}</span>
                     </span>
-                    <a className="px-3 title" href={resource.url} target="_blank">{resource.name}</a>
-                    <span className="ml-auto mr-3 date">{this.formatDate(resource.last_modified)}</span>
-                    <span className="visibility">
-                        <span className="badge badge-pill badge-dark">{restricted.level}</span>
+                    <a className={cx(styles['px-3'], styles['title'], overrideStyles['title'])} href={resource.url} target="_blank" rel="noopener noreferrer">{resource.name}</a>
+                    <span className={cx(styles['ml-auto'], styles['mr-3'], styles['date'], overrideStyles['date'])}>{this.formatDate(resource.last_modified)}</span>
+                    <span className={cx(styles['visibility'], overrideStyles['visibility'])}>
+                        <span className={cx(styles['badge'], styles['badge-pill'], styles['badge-dark'])}>{restricted.level}</span>
                     </span>
                 </li>
             )
@@ -45,24 +49,24 @@ class DatasetDetails extends Component {
         const collapseClass = collapsed ? 'collapse' : ''
 
         return(
-            <div className={"card-footer px-5 py-4 " + collapseClass}>
-                <p className="lead">{notes}</p>
+            <div className={cx(styles['card-footer'], styles['px-5'], styles['py-4'], styles[collapseClass])}>
+                <p className={styles['lead']}>{notes}</p>
                 <hr/>
-                <ul className="text-muted list-inline">
-                    <li className="list-inline-item"><strong>Créé le :</strong> {dataset_creation_date}</li>
-                    <li className="list-inline-item"><strong>Publié le :</strong> {dataset_publication_date}</li>
-                    <li className="list-inline-item"><strong>Modifié le :</strong> {dataset_modification_date}</li>
-                    <li className="list-inline-item"><strong>Organisation:</strong> {orgName}</li>
+                <ul className={cx(styles['text-muted'], styles['list-inline'])}>
+                    <li className={styles['list-inline-item']}><strong>Créé le :</strong> {dataset_creation_date}</li>
+                    <li className={styles['list-inline-item']}><strong>Publié le :</strong> {dataset_publication_date}</li>
+                    <li className={styles['list-inline-item']}><strong>Modifié le :</strong> {dataset_modification_date}</li>
+                    <li className={styles['list-inline-item']}><strong>Organisation:</strong> {orgName}</li>
                 </ul>
-                <div className="my-4">
+                <div className={styles['my-4']}>
                     <h3>Ressources</h3>
-                    <ul className="list-inline">
+                    <ul className={styles['list-inline']}>
                         { this.renderResources(resources, name) }
                     </ul>
                 </div>
-                <a className="btn btn-success mb-1" href={`${ckanAPI}/dataset/${name}`} target="_blank">
+                <a className={cx(styles['btn'], styles['btn'], styles['btn-success'], styles['mb-1'] )} href={`${ckanAPI}/dataset/${name}`} target="_blank" rel="noopener noreferrer">
                     <MaterialIcon icon="open_in_new" size="tiny" color="#fff" />
-                    <span className="ml-1">Voir sur Datasud.fr</span>
+                    <span className={styles['ml-1']}>Voir sur Datasud.fr</span>
                 </a>
             </div>
         )

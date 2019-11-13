@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import MaterialIcon from 'material-icons-react'
 import * as actions from '../../actions'
 
+import styles from '../../css/bootstrap.module.css'
+
 export class DatasetsPerPage extends Component {
   handleOnChange = e => {
     const {
@@ -28,14 +30,14 @@ export class DatasetsPerPage extends Component {
 
   render() {
     return (
-      <div className="ml-0">
-        <div className="input-group">
-          <div className="input-group-prepend">
-            <label htmlFor="datasets_per_page" title="Results per page" className="input-group-text">
+      <div className={styles['ml-0']}>
+        <div className={styles['input-group']}>
+          <div className={styles['input-group-prepend']}>
+            <label htmlFor="datasets_per_page" title="Results per page" className={styles['input-group-text']}>
                 <MaterialIcon icon="list" />
             </label>
           </div>
-          <select id="datasets_per_page" className="custom-select" value={this.props.rows} onChange={this.handleOnChange}>
+          <select id="datasets_per_page" className={styles['custom-select']} value={this.props.rows} onChange={this.handleOnChange}>
             <option value='10'>10</option>
             <option value='25'>25</option>
             <option value='50'>50</option>
