@@ -21,8 +21,22 @@
   <script src="./static/js/2.f1561a27.chunk.js"></script>
   <script src="./static/js/main.56e4879e.chunk.js"></script>
   <script type="text/javascript">
+      var config = {
+          // ckan_api: 'https://ckan-api.com',
+          // ckan_organizations: ['org1', 'org2'],
+          // ckan_groups: ['group1'],
+          // ckan_tags: ['tag1'],
+          // ckan_facets: {
+          //    res_format: 'HTML',
+          //    datatype: 'type'
+          // },
+          // data_sort: 'title_string asc',
+          // result_page_size: 25,
+          // thumbnails_display: true
+      }
+
       // Will run the Widget with custom configuration
-      ckanWidget.init()
+      ckanWidget.init(config)
   </script>
 </body>
 </html>
