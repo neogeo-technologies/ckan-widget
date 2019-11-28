@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import ReactPaginate from 'react-paginate';
 import { connect } from 'react-redux';
+import cx from 'classnames'
 
 import * as actions from '../../actions'
 
+import styles from '../../css/bootstrap.module.css'
 
 export class Pagination extends Component {
   handlePagination = page => {
@@ -42,23 +44,23 @@ export class Pagination extends Component {
         <ReactPaginate
           previousLabel="Précédent"
           nextLabel="Suivant"
-          breakLabel={<a role="button" className="page-link">...</a>}
-          breakClassName="page-item disabled"
+          breakLabel={<a href="!#" role="button" className={styles['page-link']}>...</a>}
+          breakClassName={cx(styles['page-item'], styles['disabled'])}
           forcePage={page}
           pageCount={pageCount}
           marginPagesDisplayed={2}
           pageRangeDisplayed={5}
           onPageChange={data => this.handlePagination(data.selected)}
-          containerClassName="pagination"
-          subContainerClassName="pages pagination"
-          pageClassName="page-item"
-          pageLinkClassName="page-link"
-          activeClassName="active"
-          disabledClassName="disabled"
-          previousClassName="page-item"
-          nextClassName="page-item"
-          previousLinkClassName="page-link"
-          nextLinkClassName="page-link"
+          containerClassName={styles['pagination']}
+          subContainerClassName={cx(styles['pages'], styles['pagination'])}
+          pageClassName={styles['page-item']}
+          pageLinkClassName={styles['page-link']}
+          activeClassName={styles['active']}
+          disabledClassName={styles['disabled']}
+          previousClassName={styles['page-item']}
+          nextClassName={styles['page-item']}
+          previousLinkClassName={styles['page-link']}
+          nextLinkClassName={styles['page-link']}
         />
       );
     }

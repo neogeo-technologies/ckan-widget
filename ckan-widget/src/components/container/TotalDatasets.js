@@ -8,7 +8,7 @@ export class TotalDatasets extends Component {
     const resultName = (total <= 1) ? 'résultat' : 'résultats';
 
     return (
-      <div className="">
+      <div>
         <h2>
           <strong>{total}</strong>
           {' '}

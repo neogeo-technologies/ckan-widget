@@ -27,3 +27,5 @@ package-lock.json
 /src/__test__/__snapshots__
 /src/__test__/components/container/__snapshots__
 /src/__test__/components/presentational/__snapshots__
+
+.idea

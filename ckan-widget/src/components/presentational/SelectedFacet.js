@@ -1,5 +1,8 @@
-import React, { Component } from "react";
-import MaterialIcon from 'material-icons-react';
+import React, { Component } from 'react'
+import MaterialIcon from 'material-icons-react'
+import cx from 'classnames'
+
+import styles from '../../css/bootstrap.module.css'
 
 class SelectedFacet extends Component {
 
@@ -27,8 +30,8 @@ class SelectedFacet extends Component {
 
     if (facetTitle !== ''){
       return (
-        <li className="list-inline-item btn btn-primary" onClick={e => this.props.onClick(facet)}>
-          <span className="mx-2">{facetTitle}</span>
+        <li className={cx(styles['list-inline-item'], styles['btn'], styles['btn-primary'])} onClick={e => this.props.onClick(facet)}>
+          <span className={styles['mx-2']}>{facetTitle}</span>
           <MaterialIcon icon="close" size="tiny" />
         </li>
       );
@@ -38,4 +41,4 @@ class SelectedFacet extends Component {
   }
 }
 
-export default SelectedFacet;
+export default SelectedFacet
