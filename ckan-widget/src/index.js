@@ -74,6 +74,6 @@ export { instance as ckanWidget };
 
 // Run the Widget locally for testing purposes
 // instance.init(localConfig)
-instance.init()
+// instance.init()
 
 registerServiceWorker();
