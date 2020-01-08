@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import cx from 'classnames'
+import { connect } from "react-redux";
 
 import DatasetSearchBar from './components/container/DatasetSearchBar'
 import DatasetInfoList from './components/container/DatasetInfoList'
@@ -8,12 +9,26 @@ import DatasetSort from './components/container/DatasetSort'
 import TotalDatasets from './components/container/TotalDatasets'
 import DatasetsPerPage from './components/container/DatasetsPerPage'
 import Pagination from './components/container/Pagination'
+import SelectedFacetList from "./components/container/SelectedFacetList";
 
 import styles from './css/bootstrap.module.css'
+import overrideStyles from './css/app.module.css'
+import './index.css'
 
 class App extends Component {
     render() {
-        const { config } = this.props
+        const {
+            config,
+            search,
+            sort,
+            rows,
+            facet_search,
+            ckanAPI,
+            organizations,
+            groups,
+            tags,
+            search_facets
+        } = this.props
 
         return (
         <div className="App">
@@ -26,6 +41,26 @@ class App extends Component {
                     </div>
                 </div>
             </div> }
+            <div className={styles['container-fluid']}>
+                <div className={styles['row']}>
+                    <div className={cx(styles['col-lg-10'], styles['offset-lg-1'])}>
+                        <div className={styles['mt-3']}>
+                            <ul className={cx(styles['list-inline'], styles['list-search-facets'], overrideStyles['list-search-facets'])}>
+                                <SelectedFacetList
+                                    ckanAPI={ckanAPI}
+                                    search={search}
+                                    search_facets={search_facets}
+                                    sort={sort}
+                                    rows={rows}
+                                    organizations={organizations}
+                                    groups={groups}
+                                    tags={tags}
+                                    selected_facets={facet_search} />
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div className={cx(styles['container-fluid'], styles['my-5'])}>
                 <div className={styles['row']}>
                     <div className={cx(styles['col-lg-10'], styles['offset-lg-1'])}>
@@ -61,5 +96,19 @@ class App extends Component {
     }
 }
 
-export default App;
+const mapStateToProps = state => {
+    return {
+        search: state.packageSearch.search,
+        search_facets: state.packageSearch.search_facets,
+        organizations: state.packageSearch.organizations,
+        groups: state.packageSearch.groups,
+        tags: state.packageSearch.tags,
+        rows: state.packageSearch.rows,
+        sort: state.packageSearch.sort,
+        facet_search: state.packageSearch.facet_search,
+        ckanAPI: state.packageSearch.ckanAPI
+    }
+}
+
+export default connect(mapStateToProps)(App);
 

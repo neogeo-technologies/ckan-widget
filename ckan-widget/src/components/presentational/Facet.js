@@ -40,7 +40,7 @@ class Facet extends Component {
     for (const facetId in facets) {
       if (facetId < 7) {
         fixedList.push(
-          <li className={cx(styles['list-group-item'], styles['d-flex'], styles['justify-content-between'], styles['align-items-center'])} key={facetId} onClick={() => this.props.onClick(`${this.props.facetKey}:${facets[facetId].name}`)}>
+          <li className={cx('hover-style--with-bg', styles['list-group-item'], styles['d-flex'], styles['justify-content-between'], styles['align-items-center'])} key={facetId} onClick={() => this.props.onClick(`${this.props.facetKey}:${facets[facetId].name}`)}>
             {facets[facetId].display_name}
             {' '}
             <span className={cx(styles['badge'], styles['badge-primary'])}>{facets[facetId].count}</span>
@@ -52,7 +52,7 @@ class Facet extends Component {
     for (const facetId in facets) {
       if (facetId > 6) {
         expandableList.push(
-          <li className={cx(styles['list-group-item'], styles['d-flex'], styles['justify-content-between'], styles['align-items-center'])} key={facetId} onClick={() => this.props.onClick(`${this.props.facetKey}:${facets[facetId].name}`)}>
+          <li className={cx('hover-style--with-bg', styles['list-group-item'], styles['d-flex'], styles['justify-content-between'], styles['align-items-center'])} key={facetId} onClick={() => this.props.onClick(`${this.props.facetKey}:${facets[facetId].name}`)}>
             {facets[facetId].display_name}
             {' '}
             <span className={cx(styles['badge'], styles['badge-primary'])}>{facets[facetId].count}</span>

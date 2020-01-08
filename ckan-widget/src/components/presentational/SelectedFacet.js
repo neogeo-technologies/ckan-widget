@@ -32,7 +32,7 @@ class SelectedFacet extends Component {
       return (
         <li className={cx(styles['list-inline-item'], styles['btn'], styles['btn-primary'])} onClick={e => this.props.onClick(facet)}>
           <span className={styles['mx-2']}>{facetTitle}</span>
-          <MaterialIcon icon="close" size="tiny" />
+          <span className={'hover-style'}><MaterialIcon icon="close" size="tiny" /></span>
         </li>
       );
     }

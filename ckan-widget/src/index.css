@@ -2,3 +2,12 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.hover-style:hover {
+  cursor: pointer;
+}
+
+.hover-style--with-bg:hover {
+  cursor: pointer;
+  background-color: #eeeeee;
+}
