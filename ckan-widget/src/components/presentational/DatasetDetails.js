@@ -10,13 +10,15 @@ class DatasetDetails extends Component {
         let items = []
         resources.forEach((resource, i) => {
             let restricted = resource.restricted ? JSON.parse(resource.restricted) : 'N/A'
+            let datetime = resource.last_modified || resource.created
+            console.log(datetime)
             items.push(
                 <li className={cx(styles['list-group-item'], overrideStyles['list-group-item'], styles['d-flex'], styles['flex-wrap'], styles['align-items-center'])} key={i}>
                     <span className={overrideStyles['type']}>
                         <span className={cx(styles['badge'], styles['badge-secondary'])}>{resource.format}</span>
                     </span>
                     <a className={cx(styles['px-3'], styles['title'], overrideStyles['title'])} href={resource.url} target="_blank" rel="noopener noreferrer">{resource.name}</a>
-                    <span className={cx(styles['ml-auto'], styles['mr-3'], styles['date'], overrideStyles['date'])}>{this.formatDate(resource.last_modified)}</span>
+                    {datetime && <span className={cx(styles['ml-auto'], styles['mr-3'], styles['date'], overrideStyles['date'])}>{this.formatDate(datetime)}</span>}
                     <span className={cx(styles['visibility'], overrideStyles['visibility'])}>
                         <span className={cx(styles['badge'], styles['badge-pill'], styles['badge-dark'])}>{restricted.level}</span>
                     </span>
@@ -29,7 +31,7 @@ class DatasetDetails extends Component {
 
     formatDate = date => {
         const d = new Date(date)
-        return d.toUTCString()
+        return d.toLocaleDateString()
     }
 
     render() {
