@@ -82,7 +82,7 @@ class DatasetInfo extends Component{
     }
 
     render(){
-        const { ckanAPI, title, notes, metadata_modified, datatype, resources, thumbnail, search_facets } = this.props
+        const { ckanAPI, linkToCKANLabel, title, notes, metadata_modified, datatype, resources, thumbnail, search_facets } = this.props
         const datetime = this.formatDate(metadata_modified)
         const formats = this.findFormats(resources)
         const collapseClass = this.state.collapsed ? '' : 'collapsed'
@@ -109,7 +109,7 @@ class DatasetInfo extends Component{
                         </div>
                     </div>
                 </div>
-                <DatasetDetails ckanAPI={ckanAPI} collapsed={this.state.collapsed} {...this.props} />
+                <DatasetDetails ckanAPI={ckanAPI} linkToCKANLabel={linkToCKANLabel} collapsed={this.state.collapsed} {...this.props} />
             </div>
         )
     }
