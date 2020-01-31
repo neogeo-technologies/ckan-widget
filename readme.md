@@ -16,6 +16,7 @@ See below for full developpers instructions.
 
 ``
 cd ckan-widget
+
 npm install && npm start
 ``
 
