@@ -14,11 +14,11 @@ See below for full developpers instructions.
 
 ## Installation
 
-``
+```
 cd ckan-widget
 
 npm install && npm start
-``
+```
 
 Then open http://localhost:3000/ to see the widget app.
 
