@@ -13,17 +13,18 @@ const store = createStoreWithMiddleware(reducers);
 
 // Configuration for running Widget locally for testing purposes
 // var localConfig = {
-//   ckan_api: 'https://ckan-api.com',
-//   link_to_ckan_label: 'Voir sur Datasud.fr',
-//   ckan_organizations: ['name'],
-//   ckan_groups: ['name'],
-//   ckan_tags: ['name'],
-//   ckan_facets: {
-//     res_format: 'HTML'
-//   },
-//   data_sort: 'title_string asc',
-//   result_page_size: 25,
-//   thumbnails_display: false
+//      ckan_api: 'https://trouver.datasud.fr',
+//      link_to_ckan_label: 'Voir sur Datasud.fr',
+//      ckan_organizations: [],
+//      ckan_groups: [],
+//      ckan_tags: [],
+//      ckan_facets: undefined,
+//      facet_display: undefined,
+//      data_sort: 'score desc, metadata_modified desc',
+//      result_page_size: 10,
+//      thumbnails_display: true,
+//      header_display: true,
+//      sidebar_display: true,
 // }
 
 class CKANWidget {
