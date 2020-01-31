@@ -14,6 +14,7 @@ const store = createStoreWithMiddleware(reducers);
 // Configuration for running Widget locally for testing purposes
 // var localConfig = {
 //   ckan_api: 'https://ckan-api.com',
+//   link_to_ckan_label = 'Voir sur Datasud.fr',
 //   ckan_organizations: ['name'],
 //   ckan_groups: ['name'],
 //   ckan_tags: ['name'],
@@ -34,6 +35,7 @@ class CKANWidget {
 
   init = ({
     ckan_api = 'https://trouver.datasud.fr',
+    link_to_ckan_label = 'Voir sur Datasud.fr',
     ckan_organizations = [],
     ckan_groups = [],
     ckan_tags = [],
@@ -48,6 +50,7 @@ class CKANWidget {
 
     const config = {
       ckan_api: ckan_api,
+      link_to_ckan_label: link_to_ckan_label,
       ckan_organizations: ckan_organizations,
       ckan_groups: ckan_groups,
       ckan_tags: ckan_tags,

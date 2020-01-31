@@ -35,6 +35,7 @@ class DatasetDetails extends Component {
     render() {
         const {
             ckanAPI,
+            linkToCKANLabel,
             name,
             notes,
             resources,
@@ -66,7 +67,7 @@ class DatasetDetails extends Component {
                 </div>
                 <a className={cx(styles['btn'], styles['btn'], styles['btn-success'], styles['mb-1'] )} href={`${ckanAPI}/dataset/${name}`} target="_blank" rel="noopener noreferrer">
                     <MaterialIcon icon="open_in_new" size="tiny" color="#fff" />
-                    <span className={styles['ml-1']}>Voir sur Datasud.fr</span>
+                    <span className={styles['ml-1']}>{linkToCKANLabel}</span>
                 </a>
             </div>
         )
