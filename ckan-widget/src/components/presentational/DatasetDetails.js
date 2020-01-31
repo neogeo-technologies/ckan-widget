@@ -54,9 +54,9 @@ class DatasetDetails extends Component {
                 <p className={styles['lead']}>{notes}</p>
                 <hr/>
                 <ul className={cx(styles['text-muted'], styles['list-inline'])}>
-                    <li className={styles['list-inline-item']}><strong>Créé le :</strong> {dataset_creation_date}</li>
-                    <li className={styles['list-inline-item']}><strong>Publié le :</strong> {dataset_publication_date}</li>
-                    <li className={styles['list-inline-item']}><strong>Modifié le :</strong> {dataset_modification_date}</li>
+                    {dataset_creation_date && <li className={styles['list-inline-item']}><strong>Créé le :</strong> {dataset_creation_date}</li>}
+                    {dataset_publication_date && <li className={styles['list-inline-item']}><strong>Publié le :</strong> {dataset_publication_date}</li>}
+                    {dataset_modification_date && <li className={styles['list-inline-item']}><strong>Modifié le :</strong> {dataset_modification_date}</li>}
                     <li className={styles['list-inline-item']}><strong>Organisation:</strong> {orgName}</li>
                 </ul>
                 <div className={styles['my-4']}>
