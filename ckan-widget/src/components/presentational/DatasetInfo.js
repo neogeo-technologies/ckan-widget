@@ -45,10 +45,11 @@ class DatasetInfo extends Component{
 
     renderThumbnail = thumbnail => {
         const { thumbnailsDisplay } = this.props
-        if (thumbnailsDisplay && thumbnail !== undefined) {
+        if (thumbnailsDisplay) {
             return(
                 <div className={cx(styles['col-lg-3'], styles['d-flex'], styles['justify-content-lg-center'], styles['align-items-center'], styles['mb-lg-0'], styles['mb-md-3'])}>
-                    <img className={cx(styles['img-thumbnail'], styles['img-fluid'])} src={thumbnail} alt="logo" />
+                        { thumbnail !== undefined && thumbnail !== "" &&
+                            <img className={cx(styles['img-thumbnail'], styles['img-fluid'])} src={thumbnail} alt='logo' /> }
                 </div>
             )
         }
