@@ -69,7 +69,7 @@ class DatasetInfo extends Component{
         }
 
         return(
-            <span><strong>Type :</strong> {types.length > 0 ? types.join(', ') : 'N/A'}</span>
+            <span><strong>Type&nbsp;:</strong> {types.length > 0 ? types.join(', ') : 'N/A'}</span>
         )
     }
 
@@ -98,9 +98,9 @@ class DatasetInfo extends Component{
                             <h4 className={cx(styles['title'], overrideStyles['title'], styles['text-primary'])}>{title}</h4>
                             <p className={styles['text-muted']}>{notes && notes.length > 130 ? `${notes.substring(0, 130)}...` : notes}</p>
                             <ul className={styles['list-unstyled']}>
-                                <li><strong>Modifié le :</strong> {datetime}</li>
+                                <li><strong>Modifié le&nbsp;:</strong> {datetime}</li>
                                 <li>
-                                    <strong>Formats:</strong> {formats.length > 0 ? formats : 'N/A'}
+                                    <strong>Formats&nbsp;:</strong> {formats.length > 0 ? formats : 'N/A'}
                                 </li>
                                 <li>
                                     {this.renderTypes(datatype, search_facets)}
