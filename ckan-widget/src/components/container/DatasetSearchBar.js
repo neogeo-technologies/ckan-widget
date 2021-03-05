@@ -22,18 +22,18 @@ export class DatasetSearchBar extends Component{
       event.preventDefault()
     }
 
-    const fq = facet_search
+    let fq = facet_search
     let q = ''
 
     if (organizations.length > 0) {
       organizations.forEach((name, i) => {
-        if (q === '') {
-          q = `organization:${name}`
+        if (fq === '') {
+          fq = `organization:"${name}"`
         } else {
           if (i === 0) {
-            q = `${q} AND organization:${name}`
+            fq = `${fq}+organization:"${name}"`
           } else {
-            q = `${q} OR ${name}`
+            fq = `${fq}+organization:"${name}"`
           }
         }
       })
@@ -78,7 +78,7 @@ export class DatasetSearchBar extends Component{
       }
     }
 
-    this.props.packageSearch({ ckanAPI, q, rows, sort, fq, organizations, groups, tags })
+    this.props.packageSearch({ ckanAPI, q, rows, sort, fq, groups, tags })
   }
 
   render(){
