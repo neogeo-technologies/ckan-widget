@@ -69,16 +69,16 @@ export class DatasetSearchBar extends Component{
         q = `${q} AND tags:${tags_query}`
       }
     }
-
+    
     if (value !== '') {
-      if (q === '') {
+      //if (q === '') {
         q = value
-      } else {
-        q = `${value} AND ${q}`
-      }
+      //} else {
+        //q = `${value} AND ${q}`
+      //}
     }
 
-    this.props.packageSearch({ ckanAPI, q, rows, sort, fq, groups, tags })
+    this.props.packageSearch({ ckanAPI, q, rows, sort, fq, organizations, groups, tags })
   }
 
   render(){
