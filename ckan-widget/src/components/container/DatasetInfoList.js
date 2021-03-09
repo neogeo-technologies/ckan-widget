@@ -17,48 +17,32 @@ export class DatasetInfoList extends Component{
             groups,
             tags
         } = this.props
+
         let q = ''
         let fq = ''
+        let fq_list = []
 
+        let fq_organizations = []
         if (organizations.length > 0) {
-            organizations.forEach((name, i) => {
-                if (i === 0) {
-                    q = `organization:${name}`
-                } else {
-                    q = `${q} OR ${name}`
-                }
+            organizations.forEach(name => {
+                const val = `organization:"${name}"`
+                fq_organizations.push(val)
             })
+            fq_list.push(`(${fq_organizations.join(' OR ')})`)
         }
 
         if (groups.length > 0) {
-            groups.forEach((name, i) => {
-                if (q === '') {
-                    q = `groups:${name}`
-                } else {
-                    if (i === 0) {
-                        q = `${q} AND groups:${name}`
-                    } else {
-                        q = `${q} OR ${name}`
-                    }
-                }
+            groups.forEach(name => {
+                const val = `groups:"${name}"`
+                fq_list.push(val)
             })
         }
 
         if (tags.length > 0) {
-            let tags_query = ''
-            tags.forEach((name, i) => {
-                if (tags_query === '') {
-                    tags_query = `"${name}"`
-                } else {
-                    tags_query = `${tags_query} AND "${name}"`
-                }
+            tags.forEach(name => {
+                const val = `tags:"${name}"`
+                fq_list.push(val)
             })
-
-            if (q === '') {
-                q = `tags:${tags_query}`
-            } else {
-                q = `${q} AND tags:${tags_query}`
-            }
         }
 
         if (ckanFacets !== undefined) {
@@ -67,16 +51,13 @@ export class DatasetInfoList extends Component{
                 values = values.replace(/\s+/g, '')
 
                 const fqValues = values.split(',')
-
                 for (let i in fqValues) {
-                    if (fq === '') {
-                        fq = `${facet}:${fqValues[i]}`
-                    } else {
-                        fq = `${fq}+${facet}:${fqValues[i]}`
-                    }
+                    fq_list.push(`${facet}:${fqValues[i]}`)
                 }
             }
         }
+
+        fq = fq_list.join('+')
 
         // Remove trailing slash
         ckanAPI = ckanAPI.replace(/\/$/, '')
