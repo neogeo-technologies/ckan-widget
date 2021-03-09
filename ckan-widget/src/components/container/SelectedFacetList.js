@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from "react"
 import { connect } from 'react-redux'
 
 import SelectedFacet from '../presentational/SelectedFacet'
@@ -21,7 +21,9 @@ export class SelectedFacetList extends Component {
     let facet_type = facet.split(':')[0]
     let facet_item = facet.split(':')[1]
     if (facet_type === 'tags' && tags.includes(facet_item)) {
+
       tags = tags.filter( tag => tag !== facet_item)
+
       search = search.replace(`"${facet_item}" AND`, '')
                     .replace(`AND "${facet_item}"`, '')
                     .replace(` AND tags:"${facet_item}"`, '')
@@ -45,7 +47,7 @@ export class SelectedFacetList extends Component {
   };
 
   render() {
-    let { selected_facets, search_facets, tags }  = this.props;
+    let { selected_facets, search_facets, tags }  = this.props
     let list = selected_facets.split('+');
     let facetSearch = []
 
@@ -62,12 +64,12 @@ export class SelectedFacetList extends Component {
 
     if (tags.length > 0) {
       tags.forEach((tag, i) => {
-        facetSearch.push(<SelectedFacet facet={`tags:${tag}`} search_facets={search_facets} onClick={this.onClick} key={`tags:${i}`} />);
+        facetSearch.push(<SelectedFacet facet={`tags:${tag}`} search_facets={search_facets} onClick={this.onClick} key={`tags:${i}`} />)
       })
     }
 
-    return facetSearch;
+    return facetSearch
   }
 }
 
-export default connect(null, actions)(SelectedFacetList);
+export default connect(null, actions)(SelectedFacetList)

@@ -78,7 +78,8 @@ class App extends Component {
                                         resultPageSize={config.result_page_size}
                                         dataSort={config.data_sort}
                                         ckanFacets={config.ckan_facets}
-                                        ckanAPI={config.ckan_api} />
+                                        ckanAPI={config.ckan_api}
+                                        linkToCKANLabel={config.link_to_ckan_label} />
                                 <nav className={styles['my-5']}>
                                     <Pagination />
                                 </nav>

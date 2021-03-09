@@ -22,60 +22,39 @@ export class DatasetSearchBar extends Component{
       event.preventDefault()
     }
 
-    const fq = facet_search
-    let q = ''
-
+    let fq = facet_search
+    let fq_list = []
     if (organizations.length > 0) {
-      organizations.forEach((name, i) => {
-        if (q === '') {
-          q = `organization:${name}`
-        } else {
-          if (i === 0) {
-            q = `${q} AND organization:${name}`
-          } else {
-            q = `${q} OR ${name}`
-          }
-        }
-      })
+        organizations.forEach(name => {
+            const val = `organization:"${name}"`
+            if (facet_search.indexOf(val) == -1) {
+                fq_list.push(val)
+            }
+        })
     }
-
     if (groups.length > 0) {
-      groups.forEach((name, i) => {
-        if (q === '') {
-          q = `groups:${name}`
-        } else {
-          if (i === 0) {
-            q = `${q} AND groups:${name}`
-          } else {
-            q = `${q} OR ${name}`
-          }
-        }
-      })
+        groups.forEach(name => {
+            const val = `groups:"${name}"`
+            if (facet_search.indexOf(val) == -1) {
+                fq_list.push(val)
+            }
+        })
     }
-
     if (tags.length > 0) {
-      let tags_query = ''
-      tags.forEach((name, i) => {
-        if (tags_query === '') {
-          tags_query = `"${name}"`
-        } else {
-          tags_query = `${tags_query} AND "${name}"`
-        }
-      })
-
-      if (q === '') {
-        q = `tags:${tags_query}`
-      } else {
-        q = `${q} AND tags:${tags_query}`
-      }
+        tags.forEach(name => {
+          const val = `tags:"${name}"`
+          if (facet_search.indexOf(val) == -1) {
+              fq_list.push(val)
+          }
+        })
     }
+    fq += fq_list.join('+')
 
+    let q
     if (value !== '') {
-      if (q === '') {
         q = value
-      } else {
-        q = `${value} AND ${q}`
-      }
+    } else {
+        q = ''
     }
 
     this.props.packageSearch({ ckanAPI, q, rows, sort, fq, organizations, groups, tags })
