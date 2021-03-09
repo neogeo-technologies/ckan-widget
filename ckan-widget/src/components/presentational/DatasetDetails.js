@@ -11,7 +11,6 @@ class DatasetDetails extends Component {
         resources.forEach((resource, i) => {
             let restricted = resource.restricted ? JSON.parse(resource.restricted) : 'N/A'
             let datetime = resource.last_modified || resource.created
-            console.log(datetime)
             items.push(
                 <li className={cx(styles['list-group-item'], overrideStyles['list-group-item'], styles['d-flex'], styles['flex-wrap'], styles['align-items-center'])} key={i}>
                     <span className={overrideStyles['type']}>
