@@ -11,7 +11,6 @@ class DatasetDetails extends Component {
         resources.forEach((resource, i) => {
             let restricted = resource.restricted ? JSON.parse(resource.restricted) : 'N/A'
             let datetime = resource.last_modified || resource.created
-            console.log(datetime)
             items.push(
                 <li className={cx(styles['list-group-item'], overrideStyles['list-group-item'], styles['d-flex'], styles['flex-wrap'], styles['align-items-center'])} key={i}>
                     <span className={overrideStyles['type']}>
@@ -31,7 +30,7 @@ class DatasetDetails extends Component {
 
     formatDate = date => {
         const d = new Date(date)
-        return d.toLocaleDateString()
+        return d.toLocaleDateString(navigator.language || 'fr-FR')
     }
 
     render() {
@@ -56,9 +55,9 @@ class DatasetDetails extends Component {
                 <p className={styles['lead']}>{notes}</p>
                 <hr/>
                 <ul className={cx(styles['text-muted'], styles['list-inline'])}>
-                    {dataset_creation_date && <li className={styles['list-inline-item']}><strong>Créé le&nbsp;:</strong> {dataset_creation_date}</li>}
-                    {dataset_publication_date && <li className={styles['list-inline-item']}><strong>Publié le&nbsp;:</strong> {dataset_publication_date}</li>}
-                    {dataset_modification_date && <li className={styles['list-inline-item']}><strong>Modifié le&nbsp;:</strong> {dataset_modification_date}</li>}
+                    {dataset_creation_date && <li className={styles['list-inline-item']}><strong>Créé le&nbsp;:</strong> {this.formatDate(dataset_creation_date)}</li>}
+                    {dataset_publication_date && <li className={styles['list-inline-item']}><strong>Publié le&nbsp;:</strong> {this.formatDate(dataset_publication_date)}</li>}
+                    {dataset_modification_date && <li className={styles['list-inline-item']}><strong>Modifié le&nbsp;:</strong> {this.formatDate(dataset_modification_date)}</li>}
                     <li className={styles['list-inline-item']}><strong>Organisation&nbsp;:</strong> {orgName}</li>
                 </ul>
                 <div className={styles['my-4']}>

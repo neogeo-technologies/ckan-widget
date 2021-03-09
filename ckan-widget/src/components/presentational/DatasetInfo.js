@@ -35,8 +35,8 @@ class DatasetInfo extends Component{
     }
 
     formatDate = date => {
-        const d = new Date(date )
-        return d.toLocaleDateString()
+        const d = new Date(date)
+        return d.toLocaleDateString(navigator.language || 'fr-FR')
     }
 
     handleDatasetClick = () => {
