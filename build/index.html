@@ -14,24 +14,19 @@
   <script src="./static/js/main.js" type="text/javascript"></script>
   <script type="text/javascript">
     var config = {
-       // URL du catalogue CKAN cible
-       ckan_api: 'https://trouver.datasud.fr',
-      // Filtres complémentaires optionnels :
-
-      ckan_organizations: ['ville-de-marseille'],
-      //ckan_groups: ['group1'],
-      //ckan_tags: ['tag1'],
-      //ckan_facets: {
-        //res_format: 'HTML',
-    //    datatype: 'type'
-    //  },
-
-    // paramétrages de l'affichage :
-      data_sort: 'title_string asc',
-      result_page_size: 25,
-      thumbnails_display: true
-    }
-
+      ckan_api: 'https://trouver.datasud.fr',
+      link_to_ckan_label: 'Voir sur Datasud.fr',
+      ckan_organizations: [],
+      ckan_groups: [],
+      ckan_tags: [],
+      ckan_facets: undefined,
+      facet_display: undefined,
+      data_sort: 'score desc, metadata_modified desc',
+      result_page_size: 10,
+      thumbnails_display: true,
+      header_display: true,
+      sidebar_display: true,
+    };
 
     ckanWidget.init(config)
   </script>

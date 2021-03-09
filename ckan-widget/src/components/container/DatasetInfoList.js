@@ -75,7 +75,7 @@ export class DatasetInfoList extends Component{
     }
 
     render(){
-        const { ckanAPI, datasets, error, thumbnailsDisplay, search_facets } = this.props
+        const { ckanAPI, linkToCKANLabel, datasets, error, thumbnailsDisplay, search_facets } = this.props
 
         if (error) {
             return(
@@ -84,7 +84,7 @@ export class DatasetInfoList extends Component{
         }
 
         let components = datasets.map((dataset, i) => {
-            return <DatasetInfo ckanAPI={ckanAPI} thumbnailsDisplay={thumbnailsDisplay} search_facets={search_facets} {...dataset} key={i} />
+            return <DatasetInfo ckanAPI={ckanAPI} linkToCKANLabel={linkToCKANLabel} thumbnailsDisplay={thumbnailsDisplay} search_facets={search_facets} {...dataset} key={i} />
         });
 
         return components
