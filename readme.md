@@ -119,6 +119,7 @@ There must be `<div id="ckan-widget"></div>` because the Widget looking for `div
 This example shows how you can pass configurations parameters.
 
 ### Change the default style
+
 The `public/app.css` file contains the default style of the Widget. You can change/override the predefined style by changing this file.
 In order to change the color of the Dataset's title put the following style in the `public/app.css` along with the rest css:
 
