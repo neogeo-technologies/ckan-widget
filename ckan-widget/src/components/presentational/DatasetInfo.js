@@ -97,7 +97,7 @@ class DatasetInfo extends Component{
                         { this.renderThumbnail(thumbnail) }
                         <div className={styles['col-lg-9']}>
                             <h4 className={cx(styles['title'], overrideStyles['title'], styles['text-primary'])}>{title}</h4>
-                            <ReactMarkdown className={styles['text-muted']} children={notes} rehypePlugins={rehypeTruncate} />
+                            <ReactMarkdown className={styles['text-muted'], overrideStyles['untitle']} children={notes} rehypePlugins={rehypeTruncate} />
                             <ul className={styles['list-unstyled']}>
                                 <li><strong>Modifié le&nbsp;:</strong> {datetime}</li>
                                 <li>
