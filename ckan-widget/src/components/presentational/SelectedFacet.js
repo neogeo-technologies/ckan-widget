@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import MaterialIcon from 'material-icons-react'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
@@ -36,7 +35,7 @@ class SelectedFacet extends Component {
       return (
         <li className={cx(styles['list-inline-item'], styles['btn'], styles['btn-primary'])} onClick={e => this.props.onClick(facet)}>
           <span className={styles['mx-2']}>{facetTitle}</span>
-          <span className={'hover-style'}><MaterialIcon icon="close" size="tiny" /></span>
+          <span className={'hover-style'}>{/* <MaterialIcon icon="close" size="tiny" /> */}</span>
         </li>
       );
     }
