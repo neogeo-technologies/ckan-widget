@@ -12,12 +12,14 @@
     "react-autocomplete": "^1.8.1",
     "react-bootstrap": "^0.33.0",
     "react-dom": "^16.11.0",
+    "react-markdown": "^7.1.0",
     "react-paginate": "^6.3.0",
     "react-redux": "^7.1.1",
     "react-scripts": "3.2.0",
     "redux": "^4.0.4",
     "redux-form": "^8.2.6",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "rehype-truncate": "^1.2.2"
   },
   "scripts": {
     "start": "react-scripts start",

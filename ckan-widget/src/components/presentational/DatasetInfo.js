@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import DatasetDetails from '../presentational/DatasetDetails'
-import MaterialIcon from 'material-icons-react'
 import cx from 'classnames'
+import ReactMarkdown from 'react-markdown'
+import rehypeTruncate from "rehype-truncate";
 
 import styles from '../../css/bootstrap.module.css'
 import overrideStyles from '../../css/app.module.css'
@@ -96,7 +97,7 @@ class DatasetInfo extends Component{
                         { this.renderThumbnail(thumbnail) }
                         <div className={styles['col-lg-9']}>
                             <h4 className={cx(styles['title'], overrideStyles['title'], styles['text-primary'])}>{title}</h4>
-                            <p className={styles['text-muted']}>{notes && notes.length > 130 ? `${notes.substring(0, 130)}...` : notes}</p>
+                            <ReactMarkdown className={styles['text-muted']} children={notes} rehypePlugins={rehypeTruncate} />
                             <ul className={styles['list-unstyled']}>
                                 <li><strong>Modifié le&nbsp;:</strong> {datetime}</li>
                                 <li>

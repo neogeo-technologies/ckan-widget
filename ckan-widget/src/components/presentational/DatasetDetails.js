@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import MaterialIcon from 'material-icons-react'
 import cx from 'classnames';
+import ReactMarkdown from 'react-markdown'
 
 import styles from '../../css/bootstrap.module.css'
 import overrideStyles from '../../css/app.module.css'
@@ -52,7 +53,7 @@ class DatasetDetails extends Component {
 
         return(
             <div className={cx(styles['card-footer'], styles['px-5'], styles['py-4'], styles[collapseClass])}>
-                <p className={styles['lead']}>{notes}</p>
+                <ReactMarkdown className={styles['lead']} children={notes} />
                 <hr/>
                 <ul className={cx(styles['text-muted'], styles['list-inline'])}>
                     {dataset_creation_date && <li className={styles['list-inline-item']}><strong>Créé le&nbsp;:</strong> {this.formatDate(dataset_creation_date)}</li>}
