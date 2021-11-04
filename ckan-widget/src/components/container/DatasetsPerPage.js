@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import MaterialIcon from 'material-icons-react'
 import * as actions from '../../actions'
 
 import styles from '../../css/bootstrap.module.css'
@@ -34,7 +33,7 @@ export class DatasetsPerPage extends Component {
         <div className={styles['input-group']}>
           <div className={styles['input-group-prepend']}>
             <label htmlFor="datasets_per_page" title="Results per page" className={styles['input-group-text']}>
-                <MaterialIcon icon="list" />
+               <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z" fill="rgba(0, 0, 0, 0.54)" /></svg>
             </label>
           </div>
           <select id="datasets_per_page" className={styles['custom-select']} value={this.props.rows} onChange={this.handleOnChange}>

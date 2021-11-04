@@ -27,7 +27,7 @@ export class DatasetSearchBar extends Component{
     if (organizations.length > 0) {
         organizations.forEach(name => {
             const val = `organization:"${name}"`
-            if (facet_search.indexOf(val) == -1) {
+            if (facet_search.indexOf(val) === -1) {
                 fq_list.push(val)
             }
         })
@@ -35,7 +35,7 @@ export class DatasetSearchBar extends Component{
     if (groups.length > 0) {
         groups.forEach(name => {
             const val = `groups:"${name}"`
-            if (facet_search.indexOf(val) == -1) {
+            if (facet_search.indexOf(val) === -1) {
                 fq_list.push(val)
             }
         })
@@ -43,7 +43,7 @@ export class DatasetSearchBar extends Component{
     if (tags.length > 0) {
         tags.forEach(name => {
           const val = `tags:"${name}"`
-          if (facet_search.indexOf(val) == -1) {
+          if (facet_search.indexOf(val) === -1) {
               fq_list.push(val)
           }
         })

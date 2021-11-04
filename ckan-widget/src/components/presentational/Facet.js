@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import MaterialIcon from 'material-icons-react'
 import cx from 'classnames'
 
 import styles from '../../css/bootstrap.module.css'
@@ -15,11 +14,19 @@ class Facet extends Component {
     this.setState({ collapsed: !this.state.collapsed })
   }
 
+  renderArrow() {
+    if (this.state.collapsed) {
+        return (<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="20" style={{position: 'absolute', right: '15px'}}><path d="M0 0h24v24H0z" fill="none"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" /></svg>
+        )
+    } else {
+        return(<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="20" style={{position: 'absolute', right: '15px'}}><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"/></svg>)
+    }
+}
+
   render() {
     const facets = this.props.facetsInfo;
     const title = this.props.title;
     const collapseClass = this.state.collapsed ? 'collapse' : ''
-    let expandArrow = this.state.collapsed ? 'expand_more' : 'expand_less'
     let expandLabel = this.state.collapsed ? 'Voir plus' : 'Voir moins'
 
     let fixedList = []
@@ -30,7 +37,7 @@ class Facet extends Component {
       expandControls.push(
           <div className={cx(styles['card-footer'], styles['px-0'], styles['py-0'])} key={9999}>
           <a href="!#" className={cx(styles['btn'], styles['btn-link'])} onClick={this.expandFacetList}>
-              <MaterialIcon icon={expandArrow} color="inherit" size="tiny" />
+              {this.renderArrow()}
               <span className={styles['ml-1']}>{expandLabel}</span>
           </a>
           </div>

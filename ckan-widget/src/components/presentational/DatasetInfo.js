@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import DatasetDetails from '../presentational/DatasetDetails'
-import MaterialIcon from 'material-icons-react'
 import cx from 'classnames'
+import ReactMarkdown from 'react-markdown'
+import rehypeTruncate from "rehype-truncate";
 
 import styles from '../../css/bootstrap.module.css'
 import overrideStyles from '../../css/app.module.css'
@@ -73,6 +74,15 @@ class DatasetInfo extends Component{
         )
     }
 
+    renderArrow() {
+        if (this.state.collapsed) {
+            return (<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" style={{position: 'absolute', right: '15px'}}><path d="M0 0h24v24H0z" fill="none"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" /></svg>
+            )
+        } else {
+            return(<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" style={{position: 'absolute', right: '15px'}}><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"/></svg>)
+        }
+    }
+
     shouldComponentUpdate(nextProps, nextState) {
         if (((nextState.collapsed === this.state.collapsed) && this.state.collapsed === false)) {
             this.setState({ collapsed: true })
@@ -86,17 +96,16 @@ class DatasetInfo extends Component{
         const datetime = this.formatDate(metadata_modified)
         const formats = this.findFormats(resources)
         const collapseClass = this.state.collapsed ? '' : 'collapsed'
-        const expandArrow = this.state.collapsed ? 'expand_more' : 'expand_less'
 
         return(
             <div className={cx(styles['card'], styles['dataset-wrap'], overrideStyles['dataset-wrap'], styles['my-3'], styles[collapseClass], overrideStyles[collapseClass])}>
                 <div className={`${cx(styles['dataset'], overrideStyles['dataset'], styles['card-body'])} dataset`} onClick={this.handleDatasetClick}>
-                    <i className={`${cx(styles['md-24'], styles['md-dark'])} material-icons`} style={{position: 'absolute', right: '15px'}}>expand_more</i>
+                    {this.renderArrow()}
                     <div className={styles['row']}>
                         { this.renderThumbnail(thumbnail) }
                         <div className={styles['col-lg-9']}>
                             <h4 className={cx(styles['title'], overrideStyles['title'], styles['text-primary'])}>{title}</h4>
-                            <p className={styles['text-muted']}>{notes && notes.length > 130 ? `${notes.substring(0, 130)}...` : notes}</p>
+                            <ReactMarkdown className={cx(styles['text-muted'], overrideStyles['markdown-preview'])} children={notes} rehypePlugins={[rehypeTruncate]} />
                             <ul className={styles['list-unstyled']}>
                                 <li><strong>Modifié le&nbsp;:</strong> {datetime}</li>
                                 <li>

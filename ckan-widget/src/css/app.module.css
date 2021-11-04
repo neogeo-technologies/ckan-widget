@@ -20,23 +20,6 @@
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.125);
 }
 
-.material-icons {
-  vertical-align: middle;
-}
-
-.header-icon > .material-icons{
-  position: absolute;
-  top: 26%;
-  left: -4%;
-  opacity: 0.2;
-  line-height: 0.5;
-  z-index: 0;
-}
-
-.header-icon > .material-icons.md-24{
-  font-size: 15rem;
-}
-
 .dataset-wrap.collapsed {
   border-color: #007bff;
   border-width: 5px;
@@ -44,11 +27,6 @@
 
 .dataset .title {
   margin-right: 2rem;
-}
-
-.dataset>.material-icons {
-  position: absolute;
-  right: 15px;
 }
 
 .dataset:hover {
@@ -124,8 +102,12 @@
   font-size:  1.25rem;
 }
 
-.btn-search:hover .material-icons  {
-  color: #007bff;
+.btn-search > svg {
+  fill:rgba(0, 0, 0, 0.54);
+}
+
+.btn-search > svg:hover{
+  fill: #007bff;
 }
 
 .autocomplete-wrapper .btn-search:focus {
@@ -134,4 +116,12 @@
 
 .autocomplete-wrapper {
   position: relative;
+}
+
+.markdown-preview * {
+  font-size: 1em;
+}
+
+.page-link:hover {
+  cursor: pointer;
 }
