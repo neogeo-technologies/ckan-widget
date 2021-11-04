@@ -6,6 +6,7 @@ import cx from 'classnames'
 import * as actions from '../../actions'
 
 import styles from '../../css/bootstrap.module.css'
+import overrideStyles from '../../css/app.module.css'
 
 export class Pagination extends Component {
   handlePagination = page => {
@@ -44,8 +45,8 @@ export class Pagination extends Component {
         <ReactPaginate
           previousLabel="Précédent"
           nextLabel="Suivant"
-          breakLabel={<a href="!#" role="button" className={styles['page-link']}>...</a>}
-          breakClassName={cx(styles['page-item'], styles['disabled'])}
+          breakLabel={<div className={cx(styles['page-link'], overrideStyles['page-link'])}>...</div>}
+          breakClassName={styles['page-item']}
           forcePage={page}
           pageCount={pageCount}
           marginPagesDisplayed={2}
@@ -54,13 +55,13 @@ export class Pagination extends Component {
           containerClassName={styles['pagination']}
           subContainerClassName={cx(styles['pages'], styles['pagination'])}
           pageClassName={styles['page-item']}
-          pageLinkClassName={styles['page-link']}
+          pageLinkClassName={cx(styles['page-link'], overrideStyles['page-link'])}
           activeClassName={styles['active']}
           disabledClassName={styles['disabled']}
           previousClassName={styles['page-item']}
           nextClassName={styles['page-item']}
-          previousLinkClassName={styles['page-link']}
-          nextLinkClassName={styles['page-link']}
+          previousLinkClassName={cx(styles['page-link'], overrideStyles['page-link'])}
+          nextLinkClassName={cx(styles['page-link'], overrideStyles['page-link'])}
         />
       );
     }

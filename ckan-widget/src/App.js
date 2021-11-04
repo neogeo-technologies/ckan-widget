@@ -70,16 +70,17 @@ class App extends Component {
                                     <TotalDatasets />
                                     <DatasetsPerPage />
                                 </div>
-                                    <DatasetInfoList
-                                        organizations={config.ckan_organizations}
-                                        groups={config.ckan_groups}
-                                        tags={config.ckan_tags}
-                                        thumbnailsDisplay={config.thumbnails_display}
-                                        resultPageSize={config.result_page_size}
-                                        dataSort={config.data_sort}
-                                        ckanFacets={config.ckan_facets}
-                                        ckanAPI={config.ckan_api}
-                                        linkToCKANLabel={config.link_to_ckan_label} />
+                                <DatasetInfoList
+                                    organizations={config.ckan_organizations}
+                                    groups={config.ckan_groups}
+                                    tags={config.ckan_tags}
+                                    thumbnailsDisplay={config.thumbnails_display}
+                                    resultPageSize={config.result_page_size}
+                                    dataSort={config.data_sort}
+                                    ckanFacets={config.ckan_facets}
+                                    ckanAPI={config.ckan_api}
+                                    linkToCKANLabel={config.link_to_ckan_label}
+                                />
                                 <nav className={styles['my-5']}>
                                     <Pagination />
                                 </nav>

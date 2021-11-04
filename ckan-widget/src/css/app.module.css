@@ -121,3 +121,7 @@
 .markdown-preview * {
   font-size: 1em;
 }
+
+.page-link:hover {
+  cursor: pointer;
+}
