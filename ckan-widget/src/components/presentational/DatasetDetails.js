@@ -36,7 +36,8 @@ class DatasetDetails extends Component {
     render() {
         const {
             ckanAPI,
-            linkToCKANLabel,
+            linkToCkanLabel,
+            linkToCkanHref,
             name,
             notes,
             resources,
@@ -46,6 +47,13 @@ class DatasetDetails extends Component {
             organization,
             collapsed
         } = this.props
+
+        let href
+        if (!linkToCkanHref) {
+          href = `${ckanAPI}/${name}`
+        } else {
+          href = linkToCkanHref.replace('{name}', name)
+        }
 
         const orgName = organization !== null ? organization.title : 'N/A'
         const collapseClass = collapsed ? 'collapse' : ''
@@ -66,9 +74,9 @@ class DatasetDetails extends Component {
                         { this.renderResources(resources, name) }
                     </ul>
                 </div>
-                <a className={cx(styles['btn'], styles['btn'], styles['btn-success'], styles['mb-1'] )} href={`${ckanAPI}/dataset/${name}`} target="_blank" rel="noopener noreferrer">
+                <a className={cx(styles['btn'], styles['btn'], styles['btn-success'], styles['mb-1'] )} href={`${href}`} target="_blank" rel="noopener noreferrer">
                   <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"  fill="#ffffff" /></svg>
-                    <span className={styles['ml-1']}>{linkToCKANLabel}</span>
+                    <span className={styles['ml-1']}>{linkToCkanLabel}</span>
                 </a>
             </div>
         )

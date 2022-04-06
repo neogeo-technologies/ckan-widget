@@ -79,7 +79,8 @@ class App extends Component {
                                     dataSort={config.data_sort}
                                     ckanFacets={config.ckan_facets}
                                     ckanAPI={config.ckan_api}
-                                    linkToCKANLabel={config.link_to_ckan_label}
+                                    linkToCkanHref={config.link_to_ckan_href}
+                                    linkToCkanLabel={config.link_to_ckan_label}
                                 />
                                 <nav className={styles['my-5']}>
                                     <Pagination />
@@ -108,7 +109,9 @@ const mapStateToProps = state => {
         rows: state.packageSearch.rows,
         sort: state.packageSearch.sort,
         facet_search: state.packageSearch.facet_search,
-        ckanAPI: state.packageSearch.ckanAPI
+        ckanAPI: state.packageSearch.ckanAPI,
+        linkToCkanHref: state.packageSearch.linkToCkanHref,
+        linkToCkanLabel: state.packageSearch.linkToCkanLabel
     }
 }
 

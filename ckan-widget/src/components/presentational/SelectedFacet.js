@@ -54,8 +54,7 @@ const mapStateToProps = state => {
     tags: state.packageSearch.tags,
     rows: state.packageSearch.rows,
     sort: state.packageSearch.sort,
-    facet_search: state.packageSearch.facet_search,
-    ckanAPI: state.packageSearch.ckanAPI
+    facet_search: state.packageSearch.facet_search
   }
 }
 export default connect(mapStateToProps)(SelectedFacet)

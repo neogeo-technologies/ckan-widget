@@ -13,6 +13,8 @@ export class DatasetInfoList extends Component{
             dataSort,
             ckanFacets,
             ckanAPI,
+            linkToCkanLabel,
+            linkToCkanHref,
             organizations,
             groups,
             tags
@@ -75,7 +77,7 @@ export class DatasetInfoList extends Component{
     }
 
     render(){
-        const { ckanAPI, linkToCKANLabel, datasets, error, thumbnailsDisplay, search_facets } = this.props
+        const { ckanAPI, linkToCkanHref, linkToCkanLabel, datasets, error, thumbnailsDisplay, search_facets } = this.props
 
         if (error) {
             return(
@@ -84,7 +86,7 @@ export class DatasetInfoList extends Component{
         }
 
         let components = datasets.map((dataset, i) => {
-            return <DatasetInfo ckanAPI={ckanAPI} linkToCKANLabel={linkToCKANLabel} thumbnailsDisplay={thumbnailsDisplay} search_facets={search_facets} {...dataset} key={i} />
+            return <DatasetInfo ckanAPI={ckanAPI} linkToCkanHref={linkToCkanHref} linkToCkanLabel={linkToCkanLabel} thumbnailsDisplay={thumbnailsDisplay} search_facets={search_facets} {...dataset} key={i} />
         });
 
         return components

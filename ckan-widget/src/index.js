@@ -36,6 +36,7 @@ class CKANWidget {
 
   init = ({
     ckan_api = 'https://trouver.datasud.fr',
+    link_to_ckan_href = undefined,
     link_to_ckan_label = 'Voir sur Datasud.fr',
     ckan_organizations = [],
     ckan_groups = [],
@@ -51,6 +52,7 @@ class CKANWidget {
 
     const config = {
       ckan_api: ckan_api,
+      link_to_ckan_href: link_to_ckan_href,
       link_to_ckan_label: link_to_ckan_label,
       ckan_organizations: ckan_organizations,
       ckan_groups: ckan_groups,
