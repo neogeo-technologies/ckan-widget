@@ -118,8 +118,8 @@
   position: relative;
 }
 
-.markdown-preview * {
-  font-size: 1em;
+.markdown-preview * { /* overide title font-size in preview */
+  font-size: 1em !important;
 }
 
 .page-link:hover {
