@@ -47,7 +47,7 @@ export class SelectedFacetList extends Component {
   };
 
   render() {
-    let { selected_facets, search_facets, tags }  = this.props
+    let { selected_facets, search_facets, tags } = this.props
     let list = selected_facets.split('+');
     let facetSearch = []
 
@@ -57,7 +57,7 @@ export class SelectedFacetList extends Component {
         facet_item = facet_item.replace(/"/g, '')
       }
 
-      if (! tags.includes(facet_item)) {
+      if (!tags.includes(facet_item)) {
         facetSearch.push(<SelectedFacet facet={facet} search_facets={search_facets} onClick={this.onClick} key={i} />);
       }
     });

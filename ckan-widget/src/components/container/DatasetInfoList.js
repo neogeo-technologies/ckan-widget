@@ -13,8 +13,6 @@ export class DatasetInfoList extends Component{
             dataSort,
             ckanFacets,
             ckanAPI,
-            linkToCkanLabel,
-            linkToCkanHref,
             organizations,
             groups,
             tags
