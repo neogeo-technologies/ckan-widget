@@ -31,7 +31,7 @@ class App extends Component {
         } = this.props
 
         return (
-        <div className="App">
+        <div className={cx('App', styles['ckan'])}>
             { config.header_display && <div className={cx(styles['bg-secondary'], styles['header'])}>
                 <div className={styles['container-fluid']}>
                     <div className={styles['row']}>
