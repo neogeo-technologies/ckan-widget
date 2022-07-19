@@ -20,7 +20,7 @@ export class SelectedFacetList extends Component {
 
     let facet_type = facet.split(':')[0]
     let facet_item = facet.split(':')[1]
-    const regex = /\((organization:[^\)]+)\)/g;
+    const regex = /\((organization:[^)]+)\)/g;
     // store the multiple organization array to add it back after tags replacements
     const multipleOrganizations = selected_facets.match(regex)
     // remove the multiple organizations to avoid it from being modified
