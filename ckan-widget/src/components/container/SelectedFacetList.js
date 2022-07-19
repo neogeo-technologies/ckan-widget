@@ -20,8 +20,13 @@ export class SelectedFacetList extends Component {
 
     let facet_type = facet.split(':')[0]
     let facet_item = facet.split(':')[1]
-    if (facet_type === 'tags' && tags.includes(facet_item)) {
+    const regex = /\((organization:[^\)]+)\)/g;
+    // store the multiple organization array to add it back after tags replacements
+    const multipleOrganizations = selected_facets.match(regex)
+    // remove the multiple organizations to avoid it from being modified
+    selected_facets = selected_facets.replace(regex, '');
 
+    if (facet_type === 'tags' && tags.includes(facet_item)) {
       tags = tags.filter( tag => tag !== facet_item)
 
       search = search.replace(`"${facet_item}" AND`, '')
@@ -33,6 +38,8 @@ export class SelectedFacetList extends Component {
                                       .replace(`+${facet}`, '')
                                       .replace(facet, '')
     }
+    // after having modified filtering query strings, add back the multiple organizations to ensure it will still be there in order to restrict results only to the specified organizations list by default
+    if (multipleOrganizations) selected_facets = multipleOrganizations + selected_facets;
 
     this.props.packageSearch({
       ckanAPI: ckanAPI,

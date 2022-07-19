@@ -36,9 +36,9 @@ export class FacetList extends Component {
       let fparams = ''
 
       if (facet_search) {
-          fparams = `${facet_search}+${facet_type}:"${facet_item}"`
+        fparams = `${facet_search}+${facet_type}:"${facet_item}"`
       } else {
-          fparams = `${facet_type}:"${facet_item}"`
+        fparams = `${facet_type}:"${facet_item}"`
       }
 
       this.props.packageSearch({
