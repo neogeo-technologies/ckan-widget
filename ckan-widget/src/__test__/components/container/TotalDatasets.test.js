@@ -14,6 +14,7 @@ const initialState = {
     facets: [],
     total: 20,
     page: 1,
+    queries: {},
     sort: 'score desc, metadata_modified desc',
     error: '',
     facet_search: ''

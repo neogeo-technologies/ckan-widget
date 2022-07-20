@@ -9,11 +9,7 @@ class SelectedFacet extends Component {
   render() {
     const { facet, search_facets } = this.props
 
-    const facetType = facet.split(':')[0]
-    let name = facet.split(':')[1]
-    if (name !== undefined) {
-      name = name.replace(/"/g, "")
-    }
+    const [facetType, name] = facet
 
     let facetTitle = ''
     const selectedFacetType = search_facets[facetType]

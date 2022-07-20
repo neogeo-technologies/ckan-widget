@@ -11,6 +11,7 @@ const INITIAL_STATE = {
   groups: [],
   tags: [],
   search: '',
+  queries: {},
   rows: 10,
   facets: [],
   total: 0,
@@ -39,7 +40,8 @@ export default function (state = INITIAL_STATE, action) {
         firstCall: action.firstCall,
         organizations: action.organizations,
         groups: action.groups,
-        tags: action.tags
+        tags: action.tags,
+        queries: action.queries,
       };
     case ERROR:
       return { ...state, error: action.payload };

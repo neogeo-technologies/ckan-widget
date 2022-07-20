@@ -11,60 +11,50 @@ export class SelectedFacetList extends Component {
       search,
       sort,
       rows,
-      selected_facets,
       ckanAPI,
       organizations,
       groups,
-      tags
+      tags,
+      queries,
     } = this.props
 
-    let facet_type = facet.split(':')[0]
-    let facet_item = facet.split(':')[1]
-    const regex = /\((organization:[^)]+)\)/g;
-    // store the multiple organization array to add it back after tags replacements
-    const multipleOrganizations = selected_facets.match(regex)
-    // remove the multiple organizations to avoid it from being modified
-    selected_facets = selected_facets.replace(regex, '');
-
+    const [facet_type, facet_item] = facet
+    delete queries[facet_type];
+    
+    let newQueryString = organizations && organizations.length > 0 ? 
+                          `(${organizations.map((org) => `organization:${org}`).join(' OR ')})` : '';
     if (facet_type === 'tags' && tags.includes(facet_item)) {
       tags = tags.filter( tag => tag !== facet_item)
-
+      
       search = search.replace(`"${facet_item}" AND`, '')
-                    .replace(`AND "${facet_item}"`, '')
-                    .replace(` AND tags:"${facet_item}"`, '')
-                    .replace(`tags:"${facet_item}" `, '')
+      .replace(`AND "${facet_item}"`, '')
+      .replace(` AND tags:"${facet_item}"`, '')
+      .replace(`tags:"${facet_item}" `, '')
     } else {
-      selected_facets = selected_facets.replace(`${facet}+`, '')
-                                      .replace(`+${facet}`, '')
-                                      .replace(facet, '')
+      for (const [key, value] of Object.entries(queries)) {
+        newQueryString += `+${key}:"${value}"`;
+      }
     }
-    // after having modified filtering query strings, add back the multiple organizations to ensure it will still be there in order to restrict results only to the specified organizations list by default
-    if (multipleOrganizations) selected_facets = multipleOrganizations + selected_facets;
 
     this.props.packageSearch({
       ckanAPI: ckanAPI,
       q: search,
       rows: rows,
       sort: sort,
-      fq: selected_facets,
+      fq: newQueryString,
       organizations: organizations,
       groups: groups,
-      tags: tags
+      tags: tags,
+      queries: queries,
     })
   };
 
   render() {
-    let { selected_facets, search_facets, tags } = this.props
-    let list = selected_facets.split('+');
+    let { queries, search_facets, tags } = this.props
+
     let facetSearch = []
-
-    list.forEach((facet, i) => {
-      let facet_item = facet.split(':')[1]
-      if (facet_item !== undefined) {
-        facet_item = facet_item.replace(/"/g, '')
-      }
-
-      if (!tags.includes(facet_item)) {
+    Object.entries(queries).forEach((facet, i) => {
+      if (!tags.includes(facet)) {
         facetSearch.push(<SelectedFacet facet={facet} search_facets={search_facets} onClick={this.onClick} key={i} />);
       }
     });

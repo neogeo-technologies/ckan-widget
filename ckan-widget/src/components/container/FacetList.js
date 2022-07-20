@@ -27,7 +27,8 @@ export class FacetList extends Component {
       ckanAPI,
       organizations,
       groups,
-      tags
+      tags,
+      queries,
     } = this.props;
 
     let facet_type = selectedFacet.split(':')[0]
@@ -40,6 +41,7 @@ export class FacetList extends Component {
       } else {
         fparams = `${facet_type}:"${facet_item}"`
       }
+      if (queries) queries[facet_type] = facet_item
 
       this.props.packageSearch({
         ckanAPI: ckanAPI,
@@ -49,7 +51,8 @@ export class FacetList extends Component {
         q: search,
         organizations: organizations,
         groups: groups,
-        tags: tags
+        tags: tags,
+        queries: queries,
       })
     }
   }
@@ -86,7 +89,8 @@ const mapStateToProps = state => {
     ckanAPI: state.packageSearch.ckanAPI,
     organizations: state.packageSearch.organizations,
     groups: state.packageSearch.groups,
-    tags: state.packageSearch.tags
+    tags: state.packageSearch.tags,
+    queries: state.packageSearch.queries
   };
 };
 
