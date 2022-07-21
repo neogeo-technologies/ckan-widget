@@ -17,7 +17,7 @@ if (process.env.REACT_APP_API_KEY !== undefined) {
 
 export function packageSearch({
   ckanAPI = 'https://trouver.datasud.fr', q = '*:*', rows = 10, start = 0, page = 0, sort = 'score desc, metadata_modified desc', fq='',
-  firstCall = false, organizations = [], groups = [], tags = []} = {}) {
+  firstCall = false, organizations = [], groups = [], tags = [], queries = {}} = {}) {
   const facetsParams = `facet.field=${JSON.stringify(['organization',
                                                       'groups',
                                                       'tags',
@@ -43,7 +43,8 @@ export function packageSearch({
           firstCall,
           organizations,
           groups,
-          tags
+          tags,
+          queries
         });
       })
       .catch((error) => {

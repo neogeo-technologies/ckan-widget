@@ -27,32 +27,33 @@ export class FacetList extends Component {
       ckanAPI,
       organizations,
       groups,
-      tags
+      tags,
+      queries,
     } = this.props;
 
     let facet_type = selectedFacet.split(':')[0]
     let facet_item = selectedFacet.split(':')[1]
     if ( !(facet_type === 'tags' && tags.includes(facet_item)) ) {
-      if (!facet_search.includes(facet_item)){
-        let fparams = ''
+      let fparams = ''
 
-        if (facet_search) {
-            fparams = `${facet_search}+${facet_type}:"${facet_item}"`
-        } else {
-            fparams = `${facet_type}:"${facet_item}"`
-        }
-
-        this.props.packageSearch({
-          ckanAPI: ckanAPI,
-          fq: fparams,
-          rows: rows,
-          sort: sort,
-          q: search,
-          organizations: organizations,
-          groups: groups,
-          tags: tags
-        })
+      if (facet_search) {
+        fparams = `${facet_search}+${facet_type}:"${facet_item}"`
+      } else {
+        fparams = `${facet_type}:"${facet_item}"`
       }
+      if (queries) queries[facet_type] = facet_item
+
+      this.props.packageSearch({
+        ckanAPI: ckanAPI,
+        fq: fparams,
+        rows: rows,
+        sort: sort,
+        q: search,
+        organizations: organizations,
+        groups: groups,
+        tags: tags,
+        queries: queries,
+      })
     }
   }
 
@@ -88,7 +89,8 @@ const mapStateToProps = state => {
     ckanAPI: state.packageSearch.ckanAPI,
     organizations: state.packageSearch.organizations,
     groups: state.packageSearch.groups,
-    tags: state.packageSearch.tags
+    tags: state.packageSearch.tags,
+    queries: state.packageSearch.queries
   };
 };
 

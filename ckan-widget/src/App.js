@@ -22,11 +22,11 @@ class App extends Component {
             search,
             sort,
             rows,
-            facet_search,
             ckanAPI,
             organizations,
             groups,
             tags,
+            queries,
             search_facets
         } = this.props
 
@@ -55,7 +55,8 @@ class App extends Component {
                                     organizations={organizations}
                                     groups={groups}
                                     tags={tags}
-                                    selected_facets={facet_search} />
+                                    queries={queries}
+                                 />
                             </ul>
                         </div>
                     </div>
@@ -111,7 +112,8 @@ const mapStateToProps = state => {
         facet_search: state.packageSearch.facet_search,
         ckanAPI: state.packageSearch.ckanAPI,
         linkToCkanHref: state.packageSearch.linkToCkanHref,
-        linkToCkanLabel: state.packageSearch.linkToCkanLabel
+        linkToCkanLabel: state.packageSearch.linkToCkanLabel,
+        queries: state.packageSearch.queries,
     }
 }
 
