@@ -8,9 +8,9 @@ JS integration library for CKAN data catalog
 
 ## Quickstarter
 
-You have a fully functional widget in the "build" folder. It is made of an index.html file and some css and js files. Look inside the index.html to see the parameters you can set, and the filters you can play with. Make the "ckan_api" parameter point towards the CKAN instance you want to integrate. Copy this part into your own web page if you wish so. See the app.css file to change the styles and colors of the widget, and make it fit your own environment. 
+You have a fully functional widget in the "build" folder. It is made of an index.html file and some css and js files. Look inside the index.html to see the parameters you can set, and the filters you can play with. Make the "ckan_api" parameter point towards the CKAN instance you want to integrate. Copy this part into your own web page if you wish so. See the app.css file to change the styles and colors of the widget, and make it fit your own environment.
 
-See below for full developpers instructions. 
+See below for full developpers instructions.
 
 ## Installation
 
@@ -31,62 +31,66 @@ cd ckan-widget && npm run build
 
 Minified bundle should be created inside build directory.
 
+## Project Deleivery
+
+Requierments: proceed with instalation
+
+* Update the version number in ckan-widget/package.json
+* Delete the build folder : `rm -Rf build`
+* Build : `cd ckan-widget/ ; npm run build`
+* Update the build id in this document and that the HTML snippets match the index.html generate by the build 
+* Commit
+* Tag
+* Push on Github.com
+
 ##  Integrate the widget
 
-First create an optimized production build
-```
-cd ckan-widget && npm run build
-```
 
-There is a simple HTML file(build/index.html) which integrates the widget. After running npm build you should be able to open the index.html from build folder, in browser with `doubleclick` from file location, without the need of npm or any server. Just add these lines of code in order to run the Widget.
+There is a HTML file (build/index.html) which integrates the widget. You should be able to open the index.html from build folder
+in browser with `doubleclick` from file location, without the need of npm or any server.
 
-```
-<script type="text/javascript">
-  ckanWidget.init()
-</script>
-```
+Full code of build/index.html file (the build version is minified, you should be able to make it readable usind a indenter program such as https://www.freeformatter.com/html-formatter.html) :
 
-Full code of build/index.html file:
-
-```
+```HTML
 <!doctype html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
     <link href="./app.css" rel="stylesheet">
-    <link rel="manifest" href="./manifest.json">
-    <link rel="shortcut icon" href="./favicon.ico">
-
-    <title>React App</title>
-
-    <link href="./static/css/main.e0c20ecf.css" rel="stylesheet">
+    <link href="./static/css/main.css" rel="stylesheet">
+    <title>Catalogue CKAN</title>
+    <link href="./static/css/main.4d1cfba5.chunk.css" rel="stylesheet">
   </head>
   <body>
-
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-
     <div id="ckan-widget"></div>
-    <script type="text/javascript" src="./static/js/main.52113898.js"></script>
-    <script type="text/javascript">
-      // Will run the widget with default configuration
-      ckanWidget.init()
-    </script>
+    <script>!function(a){function e(e){for(var t,r,n=e[0],o=e[1],u=e[2],i=0,l=[];i<n.length;i++)r=n[i],Object.prototype.hasOwnProperty.call(c,r)&&c[r]&&l.push(c[r][0]),c[r]=0;for(t in o)Object.prototype.hasOwnProperty.call(o,t)&&(a[t]=o[t]);for(s&&s(e);l.length;)l.shift()();return p.push.apply(p,u||[]),f()}function f(){for(var e,t=0;t<p.length;t++){for(var r=p[t],n=!0,o=1;o<r.length;o++){var u=r[o];0!==c[u]&&(n=!1)}n&&(p.splice(t--,1),e=i(i.s=r[0]))}return e}var r={},c={1:0},p=[];function i(e){if(r[e])return r[e].exports;var t=r[e]={i:e,l:!1,exports:{}};return a[e].call(t.exports,t,t.exports,i),t.l=!0,t.exports}i.m=a,i.c=r,i.d=function(e,t,r){i.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},i.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.t=function(t,e){if(1&e&&(t=i(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var r=Object.create(null);if(i.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var n in t)i.d(r,n,function(e){return t[e]}.bind(null,n));return r},i.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return i.d(t,"a",t),t},i.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},i.p="./";var t=this["webpackJsonpckan-widget"]=this["webpackJsonpckan-widget"]||[],n=t.push.bind(t);t.push=e,t=t.slice();for(var o=0;o<t.length;o++)e(t[o]);var s=n;f()}([])</script><script src="./static/js/2.85a3e85f.chunk.js"></script><script src="./static/js/main.404aabed.chunk.js"></script>
   </body>
+  <script src="./static/js/main.js" type="text/javascript"></script>
+  <script type="text/javascript">var config={};ckanWidget.init(config)</script>
 </html>
 ```
 
 ### Integrate in HTML Page/Web App
 
-To integrate the Widget in HTML page/Web App, take the JS and CSS files located at `build/static/js`, `build/static/css` and `public/app.css` and put wherever is suitable for the App/Page. Then import the files in the Page. The format of the minified file names is `main.id.js` and `main.id.css`. Also, you can rename the files if necessary. Using the `public/app.css` you can change the style of the Widget. HTML page example:
+To integrate the Widget in HTML page/Web App, take the JS and CSS files located at `build/static/js` and `build/static/css` and put wherever is suitable for the App/Page.
+Then import the files in the Page. The format of the minified file names is main.id.chunk.js, x.y.chunk.js and main.id.chunk.css.
+Also, you can rename the files if necessary.
+
+The script line `<script>!function(a)...</script>` is *mandatory*, it load the CKAN Widget in the variable `ckanWidget`.
+If you don't put it, you will have an error in the JavaScript console of the browser:
+```
+Uncaught ReferenceError: ckanWidget is not defined
+```
+
+Using the `public/app.css` you can change the style of the Widget. HTML page example:
+
 ```
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <link href="./app.css" rel="stylesheet">
-    <link href="./static/css/main.e0c20ecf.css" rel="stylesheet">
+    <link href="./static/css/main.4d1cfba5.chunk.css" rel="stylesheet">
     <title>Page Title</title>
   </head>
 
@@ -94,7 +98,9 @@ To integrate the Widget in HTML page/Web App, take the JS and CSS files located 
     <div id="ckan-widget"></div>
   </body>
 
-  <script src="./static/js/main.52113898.js" type="text/javascript"></script>
+  <script>!function(a){function e(e){for(var t,r,n=e[0],o=e[1],u=e[2],i=0,l=[];i<n.length;i++)r=n[i],Object.prototype.hasOwnProperty.call(c,r)&&c[r]&&l.push(c[r][0]),c[r]=0;for(t in o)Object.prototype.hasOwnProperty.call(o,t)&&(a[t]=o[t]);for(s&&s(e);l.length;)l.shift()();return p.push.apply(p,u||[]),f()}function f(){for(var e,t=0;t<p.length;t++){for(var r=p[t],n=!0,o=1;o<r.length;o++){var u=r[o];0!==c[u]&&(n=!1)}n&&(p.splice(t--,1),e=i(i.s=r[0]))}return e}var r={},c={1:0},p=[];function i(e){if(r[e])return r[e].exports;var t=r[e]={i:e,l:!1,exports:{}};return a[e].call(t.exports,t,t.exports,i),t.l=!0,t.exports}i.m=a,i.c=r,i.d=function(e,t,r){i.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},i.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.t=function(t,e){if(1&e&&(t=i(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var r=Object.create(null);if(i.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var n in t)i.d(r,n,function(e){return t[e]}.bind(null,n));return r},i.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return i.d(t,"a",t),t},i.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},i.p="./";var t=this["webpackJsonpckan-widget"]=this["webpackJsonpckan-widget"]||[],n=t.push.bind(t);t.push=e,t=t.slice();for(var o=0;o<t.length;o++)e(t[o]);var s=n;f()}([])</script>
+  <script src="./static/js/2.85a3e85f.chunk.js"></script>
+  <script type="text/javascript" src="./static/js/main.404aabed.chunk.js"></script>
   <script type="text/javascript">
     var config = {
       ckan_api: 'https://ckan-api.com',
@@ -115,6 +121,7 @@ To integrate the Widget in HTML page/Web App, take the JS and CSS files located 
   </script>
 </html>
 ```
+
 There must be `<div id="ckan-widget"></div>` because the Widget looking for `div` element with id `ckan-widget`.
 This example shows how you can pass configurations parameters.
 
