@@ -50,7 +50,7 @@ class DatasetDetails extends Component {
 
         let href
         if (!linkToCkanHref) {
-          href = `${ckanAPI}/${name}`
+          href = `${ckanAPI}/dataset/${name}/`
         } else {
           href = linkToCkanHref.replace('{name}', name)
         }
