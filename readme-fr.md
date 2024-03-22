@@ -11,6 +11,11 @@ Vous avez un widget entièrement fonctionnel dans le dossier "build". Il est com
 
 Voir ci-dessous pour les instructions complètes des développeurs.
 
+## Pré-requis
+
+__Node <= 16__
+
+
 ## Installation
 
 ```
