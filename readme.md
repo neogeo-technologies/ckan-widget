@@ -12,6 +12,11 @@ You have a fully functional widget in the "build" folder. It is made of an index
 
 See below for full developpers instructions.
 
+## Prerequisites
+
+__Node <= 16__
+
+
 ## Installation
 
 ```
