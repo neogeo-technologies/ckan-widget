@@ -105,6 +105,8 @@ Exemple de page HTML :
   <script type="text/javascript">
     var config = {
       ckan_api: 'https://ckan-api.com',
+      link_to_ckan_href: 'https://ckan-site/path-datasets/{name}/',
+      link_to_ckan_label: 'Voir sur le catalogue CKAN',
       ckan_organizations: ['org1', 'org2'],
       ckan_groups: ['group1'],
       ckan_tags: ['tag1'],
@@ -112,9 +114,12 @@ Exemple de page HTML :
         res_format: 'HTML',
         datatype: 'type'
       },
+      facet_display: ['facet1','facet1','facet3'],
       data_sort: 'title_string asc',
       result_page_size: 25,
-      thumbnails_display: true
+      thumbnails_display: true,
+      header_display: true,
+      sidebar_display: true
     }
 
     // Will run the Widget with custom configuration
@@ -144,6 +149,8 @@ Le Widget charge la configuration renseignée dans la fonction `init` au démarr
 ```
 var config = {
       ckan_api: 'https://ckan-api.com',
+      link_to_ckan_href: 'https://ckan-site/path-datasets/{name}/',
+      link_to_ckan_label: 'Voir sur le catalogue CKAN',
       ckan_organizations: ['org1', 'org2'],
       ckan_groups: ['group1'],
       ckan_tags: ['tag1'],
@@ -155,8 +162,8 @@ var config = {
       data_sort: 'title_string asc',
       result_page_size: 25,
       thumbnails_display: true,
-      display_header: true,
-      display_sidebar: true
+      header_display: true,
+      sidebar_display: true
     }
 ```
 
@@ -171,17 +178,19 @@ var config = {
 
 Propriétés de configuration :
 
-* **ckan-api** : URL de l’API de Ckan. Par défaut, `trouver.datasud.fr`.
-* **ckan-organizations** : noms des organisations CKAN à récupérer. Par défaut All. Sinon, liste des ID des organisations séparés par des virgules.
-* **ckan-groups** : noms de groupes CKAN à récupérer. Par défaut All. Sinon, liste des ID de groupes séparés par des virgules.
-* **ckan-facets** : paire de valeurs clés à utiliser pour filtrer les champs.
-* **ckan-tags** : noms des tags CKAN à récupérer. Par défaut All. Sinon, liste d’identifiants séparés par des virgules.
-* **facet-display** : liste des champs à afficher dans le widget. Par défaut all. Sinon, liste de noms de champs séparés par des virgules.
-* **data-sort** : mode de tri à utiliser. Identique à ceux de CKAN (popularité, pertinence, last_modified, alpha…). La valeur par défaut est `score desc, metadata_modified desc`.
-* **result-page-size** : nombre de résultats par page (10, 25, 50, 100). Valeur par défaut : `10`. Maximum : `100`.
-* **thumbnails-display** : booléen. Affichage de la vignette de l’ensemble de données. Par défaut `true`.
-* **header-display** : booléen. Affichage de l’en-tête du widget et de la barre de recherche.
-* **sidebar-display** : booléen. Affichage de la barre latérale.
+* **ckan_api** : URL de l’API de Ckan. Par défaut, `trouver.datasud.fr`.
+* **link_to_ckan_href** : pattern de l'URL d'une fiche dans le catalogue CKAN,
+* **link_to_ckan_label** : libellé qui sera affiché sur le lien pour ouvrir la fiche dans le catalogue CKAN,
+* **ckan_organizations** : noms des organisations CKAN à récupérer. Par défaut All. Sinon, liste des ID des organisations séparés par des virgules.
+* **ckan_groups** : noms de groupes CKAN à récupérer. Par défaut All. Sinon, liste des ID de groupes séparés par des virgules.
+* **ckan_tags** : noms des tags CKAN à récupérer. Par défaut All. Sinon, liste d’identifiants séparés par des virgules.
+* **ckan_facets** : paire de valeurs clés à utiliser pour filtrer les champs.
+* **facet_display** : liste des champs à afficher dans le widget. Par défaut all. Sinon, liste de noms de champs séparés par des virgules.
+* **data_sort** : mode de tri à utiliser. Identique à ceux de CKAN (popularité, pertinence, last_modified, alpha…). La valeur par défaut est `score desc, metadata_modified desc`.
+* **result_page_size** : nombre de résultats par page (10, 25, 50, 100). Valeur par défaut : `10`. Maximum : `100`.
+* **thumbnails_display** : booléen. Affichage de la vignette de l’ensemble de données. Par défaut `true`.
+* **header_display** : booléen. Affichage de l’en-tête du widget et de la barre de recherche.
+* **sidebar_display** : booléen. Affichage de la barre latérale.
 
 ### Définir la clé API
 
