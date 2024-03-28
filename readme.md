@@ -159,8 +159,8 @@ var config = {
       data_sort: 'title_string asc',
       result_page_size: 25,
       thumbnails_display: true,
-      display_header: true,
-      display_sidebar: true
+      header_display: true,
+      sidebar_display: true
     }
 ```
 
