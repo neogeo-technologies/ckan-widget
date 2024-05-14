@@ -1,0 +1,15 @@
+stages:
+  - test
+
+sonarqube-check:
+  stage: test
+  image:
+    name: sonarsource/sonar-scanner-cli:latest
+  variables:
+    SONAR_USER_HOME: "${CI_PROJECT_DIR}/.sonar"  # Defines the location of the analysis task cache
+  script:
+    - sonar-scanner -Dsonar.qualitygate.wait=true -Dsonar.projectKey=id-$CI_PROJECT_ID -Dsonar.projectName="$CI_PROJECT_PATH" -Dsonar.projectVersion=$CI_COMMIT_BRANCH
+  allow_failure: true
+  only:
+    - main # or the name of your main branch
+  when: always
