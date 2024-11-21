@@ -22,7 +22,7 @@ export class SelectedFacetList extends Component {
     delete queries[facet_type];
     
     let newQueryString = organizations && organizations.length > 0 ? 
-                          `(${organizations.map((org) => `organization:${org}`).join(' OR ')})` : '';
+                          `(${organizations.map((org) => `organization:"${org}"`).join(' OR ')})` : '';
     if (facet_type === 'tags' && tags.includes(facet_item)) {
       tags = tags.filter( tag => tag !== facet_item)
       
