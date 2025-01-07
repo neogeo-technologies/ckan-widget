@@ -43,7 +43,7 @@ Requierments: proceed with instalation
 * Update the version number in ckan-widget/package.json
 * Delete the build folder : `rm -Rf build`
 * Build : `cd ckan-widget/ ; npm run build`
-* Update the build id in this document and that the HTML snippets match the index.html generate by the build 
+* Update the build id in this document and that the HTML snippets match the index.html generate by the build
 * Commit
 * Tag
 * Push on Github.com
@@ -109,6 +109,8 @@ Using the `public/app.css` you can change the style of the Widget. HTML page exa
   <script type="text/javascript">
     var config = {
       ckan_api: 'https://ckan-api.com',
+      link_to_ckan_href: 'https://ckan-site/path-datasets/{name}/',
+      link_to_ckan_label: 'View on CKAN catalog',
       ckan_organizations: ['org1', 'org2'],
       ckan_groups: ['group1'],
       ckan_tags: ['tag1'],
@@ -116,9 +118,12 @@ Using the `public/app.css` you can change the style of the Widget. HTML page exa
         res_format: 'HTML',
         datatype: 'type'
       },
+      facet_display: ['facet1','facet1','facet3'],
       data_sort: 'title_string asc',
       result_page_size: 25,
-      thumbnails_display: true
+      thumbnails_display: true,
+      header_display: true,
+      sidebar_display: true
     }
 
     // Will run the Widget with custom configuration
@@ -146,6 +151,8 @@ The Widget loads the configuration that is passed to the `init` function at star
 ```
 var config = {
       ckan_api: 'https://ckan-api.com',
+      link_to_ckan_href: 'https://ckan-site/path-datasets/{name}/',
+      link_to_ckan_label: 'View on CKAN catalog',
       ckan_organizations: ['org1', 'org2'],
       ckan_groups: ['group1'],
       ckan_tags: ['tag1'],
@@ -157,8 +164,8 @@ var config = {
       data_sort: 'title_string asc',
       result_page_size: 25,
       thumbnails_display: true,
-      display_header: true,
-      display_sidebar: true
+      header_display: true,
+      sidebar_display: true
     }
 ```
 
@@ -173,17 +180,19 @@ var config = {
 
 Configuration properties:
 
-* **ckan-api**: Ckan API URL. Default to the `trouver.datasud.fr` one.
-* **ckan-organizations**: CKAN Organizations names to be retrieved. Default to All. Else, comma separated list of Organizations IDs.
-* **ckan-groups**: CKAN Groups names to be retrieved. Default to All. Else, comma separated list of Groups IDs.
-* **ckan-facets**: key-values pair to be used to filter on the facets.
-* **ckan-tags**: CKAN Tags names to be retrieved. Default to All. Else, comma separated list of Tags IDs.
-* **facet-display**: list of the facets to be displayed in the widget. Default to all. Else, comma separated list of facets names.
-* **data-sort**: sorting mode to be used. Same than the CKAN ones (popularity, relevance, last_modified, alpha…). Default to `score desc, metadata_modified desc`.
-* **result-page-size**: number of results per page(10, 25, 50, 100). Default to `10`. Max to `100`.
-* **thumbnails-display**: boolean. Whether to display dataset's thumbnail or not. Default to `true`.
-* **header-display**: boolean. Whether to display widget header and search bar
-* **sidebar-display**: boolean. Whether to display the sidebar
+* **ckan_api**: Ckan API URL. Default to the `trouver.datasud.fr` one.
+* **link_to_ckan_href** : URL pattern of a record in the CKAN catalog,
+* **link_to_ckan_label** : wording that will be displayed on the link to open the dataset in the CKAN catalog,
+* **ckan_organizations**: CKAN Organizations names to be retrieved. Default to All. Else, comma separated list of Organizations IDs.
+* **ckan_groups**: CKAN Groups names to be retrieved. Default to All. Else, comma separated list of Groups IDs.
+* **ckan_facets**: key-values pair to be used to filter on the facets.
+* **ckan_tags**: CKAN Tags names to be retrieved. Default to All. Else, comma separated list of Tags IDs.
+* **facet_display**: list of the facets to be displayed in the widget. Default to all. Else, comma separated list of facets names.
+* **data_sort**: sorting mode to be used. Same than the CKAN ones (popularity, relevance, last_modified, alpha…). Default to `score desc, metadata_modified desc`.
+* **result_page_size**: number of results per page(10, 25, 50, 100). Default to `10`. Max to `100`.
+* **thumbnails_display**: boolean. Whether to display dataset's thumbnail or not. Default to `true`.
+* **header_display**: boolean. Whether to display widget header and search bar
+* **sidebar_display**: boolean. Whether to display the sidebar
 
 
 ### Set API Key
